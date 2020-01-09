@@ -26,8 +26,6 @@ class MainActivity : BaseActivity() {
             offscreenPageLimit = mainPagerAdapter.count
             adapter = mainPagerAdapter
         }
-
-
         bottomTabView.setOnItemClickListener {bottomTabStatus ->
             view_pager.currentItem = when (bottomTabStatus) {
                 BottomTabState.WALLET -> 0
