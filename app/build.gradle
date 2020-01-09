@@ -34,11 +34,121 @@ android {
         disable 'CheckResult'
     }
 
+    signingConfigs {
+        release {
+            if (project.hasProperty("storeFile")) {
+                storeFile file("$project.storeFile")
+                storePassword "$project.storePassword"
+                keyAlias "$project.keyAlias"
+                keyPassword "$project.keyPassword"
+            }
+        }
+    }
+
+    flavorDimensions "api", "platform"
+
+    productFlavors {
+        web {
+            buildConfigField "String", "PLATFORM", "\"WEB\""
+            dimension "platform"
+        }
+
+        play {
+            buildConfigField "String", "PLATFORM", "\"PLAY\""
+            dimension "platform"
+        }
+
+        pro {
+            buildConfigField "String", "MIKE_API_URL", "\"http://54.64.162.167:3206/\""
+            buildConfigField "String", "GIT_WALLET_BALANCE_API_URL", "\"http://54.64.162.167:3206/\""
+            buildConfigField "String", "ROCKET_CHAT_SOCKET_URL", "\"ws://im.ttchainwallet.com:3000/websocket\""
+            buildConfigField "String", "ROCKET_CHAT_API_URL", "\"http://im.ttchainwallet.com:3000\""
+            buildConfigField "String", "GIT_IM_API_URL", "\"http://api.ttchainwallet.com\""
+            buildConfigField "String", "GIT_HELPER_API_URL", "\"http://api.ttchainwallet.com\""
+
+            buildConfigField "String", "MAINNET_INFURA_IO_API_URL", "\"https://mainnet.infura.io/\""
+            buildConfigField "String", "BLOCKEXPLORER_API_URL", "\"https://blockchain.info/\""
+            buildConfigField "String", "ETHERSCAN_API_URL", "\"http://api.etherscan.io/\""
+            buildConfigField "String", "ETHERSCAN_DOMAIN_URL", "\"https://etherscan.io/\""
+            buildConfigField "String", "BLOCKEXPLORER_DOMAIN_URL", "\"https://www.blockchain.com/btc/\""
+            buildConfigField "String", "OMNIEXPLORER_URL", "\"https://omniexplorer.info/\""
+            buildConfigField "String", "OMNIEXPLORER_API_URL", "\"https://api.omniexplorer.info/\""
+            buildConfigField "String", "APK_URL", "\"https://....apk\""
+            buildConfigField "String", "FLURRY_KEY", "\"S3N2JXS484SKD3X4QGFC\""
+            buildConfigField "String", "SYSTEM_ID", "\"2\""
+            dimension "api"
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig android.signingConfigs.release
+            buildConfigField "String", "DEVELOPER", "\"\""
+            buildConfigField "String", "APP_NAME", "\"TTChain\""
+            buildConfigField "String", "HOCKEY_APP_DOWNLOAD_URL", "\"http://www.ttchainwallet.com/downloads/app-pro-hockey-beta.apk\""
+            buildConfigField "String", "OFFICIAL_WEBSITE", "\"http://www.ttchainwallet.com/\""
+            resValue("string", "app_name", "TTChain")
         }
+        beta {
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig android.signingConfigs.release
+            applicationIdSuffix ".beta"
+            buildConfigField "String", "DEVELOPER", "\"\""
+            buildConfigField "String", "APP_NAME", "\"TTChain\""
+            buildConfigField "String", "HOCKEY_APP_DOWNLOAD_URL", "\"http://www.ttchainwallet.com/downloads/app-pro-hockey-beta.apk\""
+            buildConfigField "String", "OFFICIAL_WEBSITE", "\"http://www.ttchainwallet.com/\""
+            resValue("string", "app_name", "TTChain")
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig android.signingConfigs.debug
+            applicationIdSuffix ".dev"
+            if (project.hasProperty("developer")) {
+                buildConfigField "String", "DEVELOPER", "\"$project.developer\""
+            } else {
+                buildConfigField "String", "DEVELOPER", "\"\""
+            }
+            buildConfigField "String", "APP_NAME", "\"TTChain-Debug\""
+            buildConfigField "String", "HOCKEY_APP_DOWNLOAD_URL", "\"http://www.ttchainwallet.com/downloads/app-pro-hockey-beta.apk\""
+            buildConfigField "String", "OFFICIAL_WEBSITE", "\"http://www.ttchainwallet.com/\""
+            resValue("string", "app_name", "TTChain-Debug")
+        }
+        preBeta {
+            minifyEnabled true
+            shrinkResources true
+            debuggable true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig android.signingConfigs.debug
+            applicationIdSuffix ".dev"
+            buildConfigField "String", "DEVELOPER", "\"\""
+            buildConfigField "String", "APP_NAME", "\"TTChain-PreBeta\""
+            buildConfigField "String", "HOCKEY_APP_DOWNLOAD_URL", "\"http://www.ttchainwallet.com/downloads/app-pro-hockey-beta.apk\""
+            buildConfigField "String", "OFFICIAL_WEBSITE", "\"http://www.ttchainwallet.com/\""
+            resValue("string", "app_name", "TTChain-PreBeta")
+        }
+    }
+
+    variantFilter { variant ->
+        def needed = variant.name in [
+                'proWebBeta',            // for beta releases on Web
+                'proPlayBeta',           // for beta releases on Play
+                'proPlayPreBeta',        // for preBeta releases on Play
+                'proPlayDebug',
+                'proPlayRelease',
+        ]
+        variant.setIgnore(!needed)
     }
 }
 
