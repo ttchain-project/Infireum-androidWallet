@@ -29,8 +29,8 @@ class MainActivity : BaseActivity() {
         bottomTabView.setOnItemClickListener {bottomTabStatus ->
             view_pager.currentItem = when (bottomTabStatus) {
                 BottomTabState.WALLET -> 0
-                BottomTabState.EXPLORER -> 3
-                BottomTabState.ME -> 4
+                BottomTabState.EXPLORER -> 1
+                BottomTabState.ME -> 2
             }
             bottomTabView.setTabPosition(bottomTabStatus)
         }

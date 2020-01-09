@@ -1,7 +1,919 @@
 <resources>
-    <string name="tab_wallet">Wallet</string>
-    <string name="tab_mine">Me</string>
-    <string name="tab_explorer">Discovery</string>
-    <string name="tab_setting">Setting</string>
+    <string name="g_ok">OK</string>
+    <string name="g_cancel">Cancel</string>
+    <string name="g_loading">Loading, please wait.</string>
+    <string name="g_close">Close</string>
+    <string name="g_done">Done</string>
+    <string name="g_confirm">Confirm</string>
+    <string name="g_a_exit">Are you sure you want to leave?</string>
+    <string name="g_a_network_error">Network connection failed, please try again</string>
+    <string name="g_a_network_timeout_error">Connection has expired, please try again</string>
+    <string name="g_e_emptyform">Please enter</string>
+    <string name="g_copy">Copy</string>
+    <string name="g_edit">Edit</string>
+    <string name="g_next">Next</string>
+    <string name="g_delete">Delete</string>
+    <string name="g_select_photo">Select photo</string>
+    <string name="g_previous">Previous</string>
+    <string name="g_skip">skip</string>
 
+    <string name="g_add">Add</string>
+    <string name="g_search">Search</string>
+    <string name="g_manage">Manage</string>
+    <string name="g_save">Save</string>
+    <string name="g_scan">Scan</string>
+    <string name="g_share">Share</string>
+
+    <string name="error_empty_data">Data not found</string>
+
+    <string name="tab_wallet">Wallet</string>
+    <string name="tab_trade">Trade</string>
+    <string name="tab_mine">Me</string>
+
+    <string name="login_title">Create your first digital identity\nEasily manage multi-chain wallets</string>
+    <string name="login_create">Register New Account</string>
+    <string name="login_desc">Registered account will automatically add multi-chain wallet</string>
+    <string name="login_restore">Original Account Login</string>
+    <string name="login_or">Or</string>
+    <string name="create_id_title">Create identity</string>
+    <string name="create_id_create">Create</string>
+    <string name="create_id_name">Identity name</string>
+    <string name="create_id_password">Password</string>
+    <string name="create_id_confirm_password">Reenter password</string>
+    <string name="create_id_password_note">Password reminder message</string>
+    <string name="g_camera_permission_request">To enable QR code scanning, please enable access to camera</string>
+    <string name="g_pick_photo_permission_request">To enabled access to the album， please enable access to file</string>
+    <string name="miner_fee_setting">Miner fee setting</string>
+    <string name="miner_fee_input_p">Please enter miner fee</string>
+    <string name="payment_detail">Payment details</string>
+    <string name="payment_detail_title">Payment information</string>
+    <string name="receipt_address">Receipt address</string>
+    <string name="payment_address">Payment address</string>
+    <string name="chose_payment_address">Choose Payment address</string>
+    <string name="miner_fee">Miner fee</string>
+    <string name="amount_transfer">Change to</string>
+    <string name="price">Price</string>
+    <string name="transaction_account">Transfer</string>
+    <string name="fill_in_address_p">Please enter address</string>
+    <string name="choose_asset_type">Select asset type</string>
+    <string name="choose_wallet">Select wallet type</string>
+    <string name="fill_in_amount">Enter amount</string>
+    <string name="common_address">Common used address</string>
+    <string name="hint_fill_in_valid_bth_address">Enter a valid bitcoin address</string>
+    <string name="hint_fill_in_valid_eth_address">Enter a valid eth address or ens domain(end in .eth)</string>
+
+    <string name="error_pwd_rule">Must contain at least 8 characters</string>
+    <string name="error_pwd_not_equal">Two password entries do not match</string>
+    <string name="fail_create">Creation failed</string>
+    <string name="error_mnemonic_position">Incorrect mnemonic order</string>
+    <string name="create_contact_person">Add contact</string>
+    <string name="delete_contact_person">Delete contact</string>
+    <string name="name">Name</string>
+    <string name="note_option">Note (optional)</string>
+    <string name="error_choose_address_type_p">Please reselect address type</string>
+    <string name="note">Note</string>
+    <string name="address">Address</string>
+    <string name="my_identity">My identity</string>
+    <string name="name_2">Name</string>
+    <string name="my_identity_id">Identity ID</string>
+    <string name="back_identity">Backup identity</string>
+    <string name="logout_now_identity">Exit current identity</string>
+    <string name="logout_now_identity_message">Removing identity and all imported wallets, please make sure all wallets are backed up</string>
+    <string name="change_identity_name">Change identity name</string>
+    <string name="fill_in_change_nick_name_p">Please enter the name you want to replace</string>
+    <string name="fill_in_name_p">Please enter identity name</string>
+    <string name="fill_in_pwd_p">Please enter password</string>
+    <string name="back_up_warning_message">Warning: If you do not properly back up, you will not be able to retrieve your wallet after deleting. Please handle this operation carefully.</string>
+    <string name="language">Language</string>
+    <string name="currency_unit">Currency unit</string>
+    <string name="setting_use">User settings</string>
+    <string name="qa">QA</string>
+    <string name="privacy_mode">Privacy mode</string>
+    <string name="hint_privacy_message">The wallet’s assets and amount will be hidden when privacy mode is turned on.</string>
+    <string name="check_version_update">Check for version updates</string>
+
+    <string name="choose_receipt_address">Choose payment address</string>
+    <string name="setting_pwd">Set password</string>
+    <string name="setting_identity_name_and_pwd">Set identity name and password</string>
+    <string name="input_identity_name">Please enter identity name</string>
+    <string name="wallet_pwd">Wallet password</string>
+    <string name="fill_in_pwd_confirm">Reenter password</string>
+    <string name="pwd_hint_message">Password reminder information</string>
+    <string name="start_import">Start importing</string>
+    <string name="restore_identity">Restore identity</string>
+    <string name="import_etherum_wallet">Import ETHERUM wallet</string>
+    <string name="import_bitcoin_wallet">Import BITCOIN wallet</string>
+    <string name="import_cic_wallet">Import CIC wallet</string>
+    <string name="import_guc_wallet">Import GUC wallet</string>
+    <string name="import_uncompress_btc_address_wallet">Import uncompressed BTC address wallet</string>
+    <string name="import_specific_btc_address_wallet">Import specific BTC address wallet</string>
+    <string name="fail_import">Import failed</string>
+    <string name="failed_create">Create failed</string>
+    <string name="error_wallet_exist_already">Wallet already exists</string>
+    <string name="fail_restore_identity">Restore identity fail</string>
+    <string name="desc_mnemonic">The wallet password can be modified while the mnemonic is being imported.</string>
+    <string name="hint_fill_in_mnemonic">Enter mnemonics, separated by spaces</string>
+    <string name="desc_private_key">Copy and paste the contents of the PrivateKey file into the input box. Or enter the QR code generated by scanning the Private Key content.</string>
+    <string name="hint_fill_in_private_key">Enter the plaintext private key</string>
+    <string name="choose_import_wallet_type">Select wallet type</string>
+    <string name="eth_wallet">ETH wallet</string>
+    <string name="btc_wallet">BTC wallet</string>
+    <string name="cic_wallet">CIC wallet</string>
+    <string name="guc_wallet">GUC wallet</string>
+    <string name="thunder_exchange">Lightning transfer</string>
+    <string name="fail_amount_not_enough">insufficient balance</string>
+    <string name="transaction_record">Transfer history</string>
+    <string name="outcome">Withdrawal</string>
+    <string name="income">Deposit</string>
+
+    <string name="fail">Fail</string>
+    <string name="offline_save">Save offline</string>
+    <string name="offline_save_message">Don\'t save to email, notepad, web, chat, etc., it\'s very dangerous</string>
+    <string name="dont_trans_by_internet">Please do not transmit with the internet</string>
+    <string name="dont_trans_by_internet_message">Please do not transmit with the internet, once acquired by a hacker, it will cause irreparable loss of assets. It is recommended to transmit with offline devices by scanning QR code.</string>
+    <string name="pwd_manage_tool_save">Password management tool save</string>
+    <string name="pwd_manage_tool_save_message">It is recommended to manage with the password management tool</string>
+    <string name="provide_scan_directly_only">Direct scanning only</string>
+    <string name="provide_scan_directly_only_message">The QR code is forbidden to save, take screenshots or photos. It is only for users to scan directly in a secure environment to easily import the wallet</string>
+    <string name="use_in_save_environment">Use in a safe environment</string>
+    <string name="use_in_save_environment_message">Please make sure there is no one or no camera around before use. Once the QR code is acquired by others, it will cause irreparable loss of assets.</string>
+    <string name="changing_pwd_hint">Replace password hint</string>
+    <string name="fill_in_change_pwd_hint_p">Please enter the password hint you want to replace</string>
+    <string name="fill_in_pwd_hint_p">Please enter password hint</string>
+    <string name="g_clear">Clear</string>
+    <string name="update_succeed">Update success</string>
+    <string name="update_fail">Update fail</string>
+    <string name="change_wallet_name">Change wallet name</string>
+    <string name="fill_in_change_wallet_name_p">Please enter the name of the wallet you want to replace</string>
+    <string name="share_wallet_address_to">Share wallet address to &#8230;</string>
+    <string name="fail_capture_view_and_retry_p">Capture fail, please try again</string>
+    <string name="remain">Balance</string>
+    <string name="trade_transaction_account">Transaction</string>
+    <string name="fill_in_wallet_pwd_p">Please enter wallet password</string>
+    <string name="fill_in_receipt_address_p">Please enter receipt address</string>
+    <string name="fill_in_amount_p">Please Enter amount</string>
+    <string name="pwd">Passwod</string>
+    <string name="g_copied">Address copied</string>
+    <string name="fail_verify_pwd_and_reinput_p">Password verification failed, please enter again</string>
+
+    <string name="amount">Amount</string>
+    <string name="hide_zero_asset">Hide empty assets</string>
+    <string name="order_by_remain_mount">Sort by balance</string>
+    <string name="order_by_alphabet">Sort by alphabet</string>
+    <string name="remove_asset">Remove assets</string>
+    <string name="look_before">Go check</string>
+    <string name="export_private_key">Export private key</string>
+    <string name="private_key">Private key</string>
+    <string name="qrcode">QR code</string>
+    <string name="all">Total</string>
+    <string name="insert">Add</string>
+    <string name="insert_address">Create address</string>
+    <string name="change_succeed">Change success</string>
+    <string name="change_fail">Change fail</string>
+    <string name="my_asset">My asset</string>
+    <string name="manage">Manage</string>
+    <string name="scan_code">Scan code</string>
+    <string name="receipt">Deposit</string>
+    <string name="choose_wallet_type">Select wallet type</string>
+    <string name="create_identity_desc">Asset security cannot be guaranteed without proper backup. After deleting the app or wallet, you need your back up files to restore wallet.</string>
+    <string name="create_identity_desc_2">Please make a backup in a safe environment with no cameras around.</string>
+    <string name="back_up_mnemonic">Backup mnemonic</string>
+    <string name="back_up_qr_code">Backup QR CODE</string>
+    <string name="back_up_mnemonic_desc">Please carefully record the mnemonic below and we will verify it in the next step.</string>
+    <string name="order_mnemonic">Sorting mnemonic</string>
+    <string name="order_mnemonic_desc">Please click on the mnemonic in order to confirm that you are backing up correctly.</string>
+    <string name="show_qrcode">Display QR Code</string>
+    <string name="receipt_wallet">Receipt wallet</string>
+    <string name="change_asset">Change asset</string>
+
+    <string name="import_wallet">Import wallet</string>
+    <string name="contact_person">Contact</string>
+    <string name="exchange_record">Local exchange history</string>
+    <string name="slow">Slow</string>
+    <string name="faster">Fast</string>
+    <string name="advanced_mode">Advanced mode</string>
+    <string name="thunder_transaction_account">Lightning transfer</string>
+    <string name="rate">Exchange rate</string>
+    <string name="faster_exchange">Quick exchange</string>
+    <string name="offline">Offline</string>
+    <string name="add_and_manage_asset">Assets Management</string>
+    <string name="wallets_of_identity_now">Wallet under current identity</string>
+    <string name="wallets_of_import">Import external wallet</string>
+    <string name="wallets_import_fail_cause_by_wallet_size_limit">Import failed, has reached the maximum number of external wallets</string>
+    <string name="hint_custom_gas_price">Custom handling Gas Price</string>
+    <string name="hint_custom_gas">Custom handling Gas</string>
+    <string name="hint_custom_miner_fee_sat">Custom handling fee (btc)</string>
+    <string name="trans_outcome_amount">Transfer quantity</string>
+    <string name="trans_receive_amount">Received quantity</string>
+    <string name="fill_in_valid_address_p">Please enter a valid address</string>
+    <string name="transaction_account_succeed">Transaction Success</string>
+    <string name="transaction_account_fail">Transaction Fail</string>
+    <string name="user_agreement">User Agreement</string>
+    <string name="g_version">Version</string>
+    <string name="g_version_update">Version Update</string>
+    <string name="mini_version_comma">Minimum version:</string>
+    <string name="latest_version_comma">latest version:</string>
+    <string name="app_version_comma">Current version:</string>
+
+    <string name="hint_mini_version_limit">There is a new version, please update now to enjoy full functionality</string>
+    <string name="hint_launch_hockey_app_download_page">Click here to launch download apk website</string>
+    <string name="fail_backup">Backup fail</string>
+    <string name="version_is_latest">You currently have the latest version</string>
+    <string name="now_version_comma">Current version:</string>
+    <string name="error_input_with_space_at_start_or_end">Must not be blank at the beginning and end</string>
+    <string name="error_input_content_too_long">Text overflow</string>
+    <string name="error_mnemonic_format">The mnemonic has an incorrect format</string>
+    <string name="error_input_content_include_space">must not be blank</string>
+    <string name="error_format">Incorrect format</string>
+    <string name="error_coin_id">Data not found(%s)</string>
+    <string name="custom_define">Custom</string>
+    <string name="error_loading_data_and_try_again">Loading error, please try again</string>
+    <string name="setting_receipt_address_p">Please set the receipt address</string>
+    <string name="thunder_coin_asset_data_empty">Can\'t get asset amount, Please add coin asset into wallet first</string>
+    <string name="backup_succeed">Backup Success</string>
+    <string name="error_receipt_address_format">Please confirm the receipt address format</string>
+    <string name="error_address_of_pay_as_the_same_receipt">The receipt address must not be the same as the payment address</string>
+    <string name="hint_fill_in_valid_cic_address">Please enter a valid cic address</string>
+    <string name="hint_fill_in_valid_guc_address">Please enter a valid guc address</string>
+    <string name="error_invalid_address_retry_p">Invalid address, please input again</string>
+    <string name="error_invalid_address_type_retry_p">Invalid %s address, please input again</string>
+    <string name="edit_contact_person">Edit contact</string>
+    <string name="fingerprint_verify_dialog_title">Use Touch ID for</string>
+    <string name="fingerprint_verify_dialog_message">Please verify your identity to browse your wallet</string>
+    <string name="fingerprint_verify_failed">Validation failed</string>
+    <string name="show_only_once_per_day">Do not show again today</string>
+    <string name="switch_wallet">Switch wallet</string>
+    <string name="newSystemWallet_title">Hope Seed supports a new wallet!</string>
+
+    <string name="newSystemWallet_content">To add a wallet, please enter identity (wallet) password.</string>
+    <string name="identityPwd">Identity (wallet) password</string>
+    <string name="add_guc_wallet_success">Successful import</string>
+    <string name="backup_wallet_source_choose_label_title">Select backup type</string>
+    <string name="backup_wallet_source_choose_label_use_identity_qrcode">Backup identity QR CODE</string>
+    <string name="backupWallet_sourceChoose_label_identity_qrcode_desc">Selecting to use the identity QR CODE backup will back up all wallets (system wallet + external wallet) under the current identity. A unique QRCODE will be provided to restore all wallets when you restore your identity or import your wallet later.</string>
+    <string name="backup_wallet_source_choose_label_use_mnemonic">Backup identity mnemonic</string>
+    <string name="backup_wallet_source_choose_label_user_mnemonic_desc">When you choose to back up your identity mnemonics, the system will help you to export the wallet mnemonics under "Original Identity." Please note that this mnemonic does not include your externally imported wallet information. If you restore your identity with this mnemonic, you will not restore the externally imported wallet content.</string>
+    <string name="qr_code_export_alert_backup_title">Do you want to start QR CODE backup?</string>
+    <string name="qr_code_export_alert_note_content">The passwords and hints you enter will enable secure encryption protection and booting for the QR Code. Please use a password that is easy to remember and an appropriate hint message.</string>
+    <string name="pwd_hint">Password hint: </string>
+    <string name="qr_code_pwd_hint">Password hint: </string>
+    <string name="set_password_and_hint_error">Password and password hint can\'t be the same</string>
+    <string name="set_password_and_hint_empty">Password and password hint can\'t be empty</string>
+    <string name="qr_code_export_title">Backup QR CODE</string>
+    <string name="qr_code_export_btn_save_qrcode">Save QR CODE</string>
+    <string name="qr_code_export_label_desc">After storing the QR CODE, you can use the QR CODE for identity recovery and wallet import. Be sure to remember the QR CODE password you set, and you will be required to enter it to verify your identity when you use it.</string>
+    <string name="qr_code_backup_success">Backup up success</string>
+    <string name="qr_code_backup_fail">Back up fail</string>
+    <string name="restore_by_mnemonic">Restore mnemonic</string>
+    <string name="restore_by_qr_code">Restore QR CODE</string>
+    <string name="parse_qr_code_error">Your identity wallet could not be imported. Please try a different QR CODE</string>
+    <string name="parse_qr_code_pwd_error">Incorrect QR CODE password</string>
+    <string name="input_pwd">Enter password</string>
+    <string name="input_pwd_to_parse_qr_code">Please enter a QR CODE password to unlock</string>
+    <string name="qr_code_content">Identity QR CODE content</string>
+    <string name="will_not_import_existed_wallets">Existing wallet addresses will not be imported.</string>
+    <string name="list_of_include_wallets">List of included wallets</string>
+    <string name="user_system_wallet">User\'s system wallet</string>
+    <string name="external_wallet">Externally imported wallet</string>
+    <string name="qr_code_import_info_label_intro">Do you want to restore the contents of this QR CODE? \nAll wallets will use your newly set payment password and hint after importing</string>
+
+    <string name="qr_code_import_info_btn_start_import">Start importing</string>
+    <string name="qr_code_store">Save QR CODE</string>
+    <string name="qr_code_updated_store_tip">QR CODE has changed. Save it？</string>
+    <string name="select_import_wallet_method">Select import type</string>
+    <string name="use_private_key">Use wallet private key</string>
+    <string name="splash_slider_title_one">Welcome !\nWelcome to HopeSeed</string>
+    <string name="splash_slider_title_two">Multi-currency transaction</string>
+    <string name="splash_slider_title_three">Innovative fast and safe</string>
+    <string name="confirm_delete_wallet_title">Are you sure you want to delete the wallet?</string>
+    <string name="fii_in_payment_wallet_password_p">Please enter wallet password</string>
+    <string name="delete_wallet">Delete wallet</string>
+    <string name="id_manage">身份管理</string>
+    <string name="importWallet_sourceChoose_label_title">Select import type</string>
+    <string name="importWallet_sourceChoose_label_use_identity_qrcode">Use identity QR CODE</string>
+    <string name="importWallet_sourceChoose_label_identity_qrcode_desc">When you choose to use the identity QR CODE to import the wallet, you can quickly import all the contents of the wallet contained in the QR CODE to the current identity. When importing, you will be asked to enter the QR CODE password you set when you backed up.</string>
+    <string name="importWallet_sourceChoose_label_use_pKey">Use wallet private key</string>
+    <string name="importWallet_sourceChoose_label_user_pKey_desc">To choose to import using the wallet private key, you need to select the specific imported wallet type (BTC / ETH &#8230; ), and the system will import the content of the private key corresponding to the wallet type into the identity.</string>
+    <string name="Touch_ID">Touch ID</string>
+    <string name="error_server_busy_try_again_p_z">The server is busy, please try again later(z)</string>
+    <string name="copy_private_key">Copy private key</string>
+
+    <string name="note_hint_limit">Please enter a description within 30 words</string>
+    <string name="error_note_too_long">Remarks are too long, please re-enter</string>
+
+    <!--TTC-->
+    <string name="select_wallet_address">Please select wallet address</string>
+    <string name="stable_coin_btc">BTC type</string>
+    <string name="stable_coin_eth">ETH type</string>
+    <string name="stable_coin">Stable Coin</string>
+    <string name="sto_coin">Listed Coin</string>
+    <string name="tab_explorer">Discovery</string>
+    <string name="tab_social">Social</string>
+    <string name="tab_setting">Setting</string>
+    <string name="create_new_wallet">Create new wallet</string>
+    <string name="create_new_wallet_desc">Using mnemonics to generate new wallet</string>
+    <string name="create_new_btc_wallet">Create new BTC wallet</string>
+    <string name="create_new_eth_wallet">Create new ETH wallet</string>
+    <string name="create_new_wallet_finish">Create new wallet success, need restart App</string>
+    <string name="create_new_wallet_max">Wallet has reached maximum number</string>
+    <string name="make_friend">Make friend</string>
+    <string name="join_group">Join group</string>
+    <string name="create_group">Create group</string>
+    <string name="friend_request"> friend request</string>
+    <string name="restore_im_account_title">Restore IM account</string>
+    <string name="restore_im_account_content">Tips: Need setting on the original phones</string>
+    <string name="restore_im_account_hint">input password</string>
+    <string name="restore_im_account_transfer">start transfer</string>
+    <string name="restore_im_account_create_new">create new one</string>
+    <string name="agree">Agree</string>
+    <string name="deny">Deny</string>
+    <string name="delete_conversation_record">Delete conversation record?</string>
+    <string name="contact">Contact</string>
+    <string name="contact_msg">Message</string>
+    <string name="contact_individual">Friend</string>
+    <string name="contact_group">Community</string>
+    <string name="friend_request_title">Friend request</string>
+    <string name="friend">Friend</string>
+    <string name="group_request_title">Group request</string>
+    <string name="group">Group</string>
+    <string name="my_qr_code">My QrCode</string>
+    <string name="user_info">User Info</string>
+    <string name="account">Account</string>
+    <string name="input_friend_account">Input friend account</string>
+    <string name="select_from_camera">Camera</string>
+    <string name="select_from_gallery">Select from gallery</string>
+    <string name="group_name">Group mame</string>
+    <string name="group_type">Group type</string>
+    <string name="private_group">Private</string>
+    <string name="public_group">Public</string>
+    <string name="post_message">Post message</string>
+    <string name="post_by_admin">Only by admin</string>
+    <string name="post_by_any">Anyone</string>
+    <string name="group_description">Description</string>
+    <string name="add">Add</string>
+    <string name="member">Member</string>
+    <string name="inviting">Inviting</string>
+    <string name="manage_group">Manage group</string>
+    <string name="exit_group">Exit group</string>
+    <string name="input_friend_verify_msg">Input friend verification message</string>
+    <string name="transfer_account">Transfer account</string>
+    <string name="delete_friend">Delete friend</string>
+    <string name="setting_transfer_account_password_title">Setting transfer account password</string>
+    <string name="setting_transfer_account_password_desc">After setting password, you can transfer your IM account to another phone</string>
+    <string name="input_transfer_account_password">Input transfer account password</string>
+    <string name="setting_success">Setting success</string>
+    <string name="request_friend_success">Request friend success</string>
+    <string name="chat_room_receipt">Receipt</string>
+    <string name="chat_room_image">Image</string>
+    <string name="chat_room_camera">Camera</string>
+    <string name="chat_room_file">File</string>
+    <string name="chat_room_playing">Playing</string>
+    <string name="chat_room_download_error">Download failed</string>
+    <string name="chat_room_record_too_short">Recording time is too short</string>
+    <string name="copy_file_url">Copy file url</string>
+    <string name="download">Download</string>
+    <string name="chat_has_blocked">Chat partner has blocked</string>
+    <string name="chat_room_has_blocked">Chat room has blocked</string>
+    <string name="chat_secret_setting">Chat secret setting</string>
+    <string name="decentralize">Decentralize</string>
+    <string name="time_limit">Time limit</string>
+    <string name="chat_secret_single">Delete after turn off decentralize</string>
+    <string name="chat_secret_keep_5">Keep 5 minutes</string>
+    <string name="chat_secret_keep_10">Keep 10 minutes</string>
+    <string name="chat_secret_keep_20">Keep 20 minutes</string>
+    <string name="receive_coin">Receive coin</string>
+    <string name="please_select">Please select</string>
+    <string name="receive_amount">Receive coin amount</string>
+    <string name="input_receive_amount">Input receive coin amount</string>
+    <string name="send_receipt_msg">Send receipt message</string>
+    <string name="trend">Trend</string>
+    <string name="hot_group">Hot group</string>
+    <string name="media">Media</string>
+    <string name="blockchain_explorer">BlockChain explorer</string>
+    <string name="account_setting">Account setting</string>
+    <string name="basic_setting">Basic setting</string>
+    <string name="follow_us">Follow us</string>
+    <string name="others">Others</string>
+    <string name="restart_app">Restart app</string>
+    <string name="using_fingerprint">Using fingerprint</string>
+    <string name="using_pin">Using PIN</string>
+    <string name="switch_on_notification">Switch on notification</string>
+    <string name="switch_off_notification">Switch off notification</string>
+    <string name="export_mnemonics">Export Mnemonics</string>
+    <string name="export_btc_private_key">Export BTC private key</string>
+    <string name="export_eth_private_key">Export ETH private key</string>
+    <string name="transfer_all_amount">Total Transfer</string>
+    <string name="forward">Forward</string>
+    <string name="chat">Chat</string>
+    <string name="confirm_address_match">Please confirm the address matching</string>
+    <string name="transaction_success">Transaction Success</string>
+    <string name="transaction_fail">Transaction Fail</string>
+    <string name="downloading">Downloading</string>
+    <string name="download_success">Download success</string>
+    <string name="im_audio_call">Call</string>
+    <string name="press_to_speak">press to speak</string>
+    <string name="release_to_send">release to send</string>
+    <string name="transaction_packing">(packing)</string>
+
+    <string name="pwd_confirm">Confirm password</string>
+    <string name="click_to_display_backup_qrcode">Click to display backup qrcode</string>
+    <string name="backup_qrcode_tip">此行動條碼為甜甜圈錢包為您貼心設計，供您日後可方便快速恢復您在甜甜圈錢上的所有錢包帳號。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
+
+    <!--main-->
+    <string name="tab_chat">Chat</string>
+    <string name="tab_main_coin">Ｍain Chain</string>
+    <string name="tab_stable_coin">Stable Coin</string>
+    <string name="main_total_assets">Total Assets</string>
+
+    <!--select_import_wallet_method-->
+    <string name="select_import_wallet_method_create_new_wallet">Create new wallet</string>
+    <string name="select_import_wallet_method_create">Create</string>
+    <string name="select_import_wallet_method_btc">Bitcoin Wallet</string>
+    <string name="select_import_wallet_method_eth">Ethereum Wallet</string>
+    <string name="select_import_wallet_method_import_wallet">Import wallet</string>
+    <string name="select_import_wallet_method_import">Import</string>
+
+    <!--setting-->
+    <string name="setting_system_setting">System Setting</string>
+    <string name="setting_msg_notification">Message Notifications</string>
+    <string name="setting_language">Language</string>
+    <string name="setting_check_version">Check for version updates</string>
+    <string name="setting_wallet_setting">Wallet Setting</string>
+    <string name="setting_currency">Currency unit</string>
+    <string name="setting_export">Export</string>
+    <string name="setting_account_safety">Identity Safety</string>
+    <string name="setting_backup_account">Backup identity</string>
+    <string name="setting_delete_account">Delete account</string>
+    <string name="setting_using_locker">Using locker</string>
+
+    <!--export private key-->
+    <string name="export_private_key_qrcode">QR code</string>
+    <string name="export_private_key_pky">Private key</string>
+    <string name="export_private_key_title">Please read the precautions before exporting</string>
+    <string name="export_private_key_qrcode_1">Direct scanning only</string>
+    <string name="export_private_key_qrcode_2">The QR code is forbidden to save, take screenshots or photos. It is only for users to scan directly in a secure environment to easily import the wallet</string>
+    <string name="export_private_key_qrcode_3">Use in a safe environment</string>
+    <string name="export_private_key_qrcode_4">Please make sure there is no one or no camera around before use. Once the QR code is acquired by others, it will cause irreparable loss of assets</string>
+    <string name="export_private_key_qrcode_show">Display QR code</string>
+
+    <string name="export_private_key_pky_1">Save offline</string>
+    <string name="export_private_key_pky_2">Don\'t save to email, notepad, web, chat, etc., it\'s very dangerous</string>
+    <string name="export_private_key_pky_3">Please do not transmit with the internet</string>
+    <string name="export_private_key_pky_4">Please do not transmit with the internet, once acquired by a hacker, it will cause irreparable loss of assets. It is recommended to transmit with offline devices by scanning QR code.</string>
+    <string name="export_private_key_pky_5">Password management tool save</string>
+    <string name="export_private_key_pky_6">It is recommended to manage with the password management tool</string>
+    <string name="export_private_key_pky_show">Display private key</string>
+
+    <!--transfer-->
+    <string name="transfer_transfer_amount">Transfer Amount</string>
+    <string name="transfer_miner_fee_custom">Custom</string>
+    <string name="transfer_select_common_address">Common used address</string>
+    <string name="transfer_note">Note</string>
+    <string name="transfer_note_input">Please enter a description within 20 character</string>
+    <string name="transfer_modify">MODIFY</string>
+    <string name="transfer_confirm">Transfer Confirm</string>
+    <string name="transfer_address_input_hint">Please enter the %s address or scan the barcode</string>
+    <string name="transfer_withdraw_currency">Withdraw currency</string>
+    <string name="transfer_choose_withdraw_currency">Please select the proposed currency</string>
+
+    <!--ttn transfer-->
+    <string name="ttn_transfer_receipt_address_hint">Please enter TTN address or scan the qrcode</string>
+    <string name="lighten_transfer">Lightning Transfer</string>
+    <string name="lighten_wallet">Lightning Wallet</string>
+    <string name="ttn_deposit">Deposit</string>
+    <string name="ttn_withdraw">Withdraw</string>
+    <string name="ttn_detail_transfer">Lightning Transfer</string>
+    <string name="ttn_detail_receipt">Lightning Receipt</string>
+    <string name="ttn_detail_record">Transaction Details</string>
+    <string name="ttn_receipt_pay">Lightning transfer</string>
+    <string name="ttn_deposit_amount">Deposit amount</string>
+    <string name="ttn_deposit_amount_input">Please enter deposit amount</string>
+    <string name="ttn_withdraw_amount">Withdraw amount</string>
+    <string name="ttn_withdraw_amount_input">Please enter withdraw amount</string>
+    <string name="ttn_withdraw_address_btc_hint">Please enter BTC address or scan the qrcode</string>
+    <string name="ttn_withdraw_address">Withdraw address</string>
+    <string name="ttn_deposit_currency">Deposit currency</string>
+    <string name="ttn_deposit_choose_currency">Please choose to deposit currency</string>
+
+    <!--transaction record-->
+    <string name="transaction_record_receipt_success">Receipt Success</string>
+    <string name="transaction_record_receipt_amount">Receipt amount</string>
+    <string name="transaction_record_receipt_record">Receipt record</string>
+    <string name="transaction_record_pay_amount">Transfer amount</string>
+    <string name="transaction_record_pay_record">Transfer record</string>
+    <string name="transaction_record_note">Note</string>
+    <string name="transaction_record_txid">Transaction number</string>
+    <string name="transaction_record_block_num">Block numbers</string>
+    <string name="transaction_record_detail">Go check TXID</string>
+
+    <!--verify pwd dialog-->
+    <string name="verify_pwd_input_hint">Please enter wallet password</string>
+    <string name="verify_pwd_hint_title">Display password hint</string>
+
+    <!--wallet manage-->
+    <string name="wallet_manage_title">Wallet Setting</string>
+    <string name="wallet_manage_change_name">Change wallet name</string>
+    <string name="wallet_manage_hint">Password reminder message</string>
+    <string name="wallet_manage_export">Export private key</string>
+    <string name="wallet_manage_delete">Delete wallet</string>
+
+    <!--splash-->
+    <string name="system_loading">System loading, please wait</string>
+
+    <!--login-->
+    <string name="login_by_qrcode">Restore QR Code</string>
+    <string name="login_by_mnemonics">Restore mnemonics</string>
+    <string name="agree_privacy_policy">I agree《TTChain Privacy Policy》</string>
+
+    <!--asset list-->
+    <string name="main_chain_assets">Main Chain Assets</string>
+
+    <!--webview-->
+    <string name="webview_reload">Reload</string>
+    <string name="webview_copy_url">Copy link</string>
+    <string name="webview_share_url">Share in other app</string>
+    <string name="webview_launch_app">Open in other app</string>
+
+    <!--select backup method-->
+    <string name="select_backup_method_title">Select backup method</string>
+    <string name="select_backup_method_qrcode">Qr code</string>
+    <string name="select_backup_method_mnemonics">Mnemonics</string>
+    <string name="select_backup_method_recommend">Recommend</string>
+
+    <!--transfer status dialog-->
+    <string name="transfer_success_title">Transfer Success</string>
+    <string name="transfer_success_detail">Your transaction request has already done.You can check the transaction status from record.</string>
+    <string name="transfer_success_and_check_record">Check record</string>
+    <string name="back">Back</string>
+    <string name="deposit_success_title">Deposit Success</string>
+    <string name="deposit_success_detail">Your deposit request has already done.You can check the transaction status from record.</string>
+    <string name="withdraw_success_title">Withdraw Success</string>
+    <string name="withdraw_success_detail">Your withdraw request has already done.You can check the transaction status from record.</string>
+
+    <!--scaaner-->
+    <string name="scanner_import_by_gallery">Launch Gallery</string>
+    <string name="scanner_display_qrcode">Display QrCode</string>
+
+    <!--account setting-->
+    <string name="account_setting_nick_name">Nick Name</string>
+    <string name="account_setting_uid">IM ID</string>
+
+    <!-- bolt exchange -->
+    <string name="bolt_exchange_title">Bolt Exchange</string>
+    <string name="bolt_exchange_record">Bolt Exchange Record</string>
+    <string name="bolt_exchange_data">Bolt Exchange Data</string>
+    <!--new ttn main page-->
+    <string name="listed_currency">Listed currency</string>
+    <string name="cross_chain_currency">Cross-chain currency</string>
+    <string name="marquee_deposit_hint">As long as you deposit more than 10 USDTs in a single transaction, you will receive 1 TTN coin.</string>
+    <string name="lightning_exchange">Lightning exchange</string>
+
+    <string name="bolt_exchange_tip">The minimum number of transactions per transaction is %1$s %2$s</string>
+    <string name="bolt_exchange_hint">Export quantity</string>
+    <string name="bolt_receive_hint">Received quantity</string>
+
+    <string name="latest_exchange_rate">Latest exchange rate:</string>
+    <string name="convertible_quantity">Convertible quantity:</string>
+    <string name="convert_balance_not_enough">Exchange side lack of balance</string>
+    <string name="select_receive_currency">Please select the currency you received</string>
+
+    <string name="guide_dialog_title">Welcome to lightning exchange</string>
+    <string name="guide_dialog_message">Here is the TTChain Lightning Payment Wallet, where you can experience the second-speed arrival transaction on the TTChain chain. \n\nIf you are using it for the first time, we only need a few seconds to do a simple tour guide for you.</string>
+    <string name="ttn_skip">Skip</string>
+    <string name="ttn_guide">Start a tour</string>
+    <string name="bolt_balance">Balance: %1$s %2$s</string>
+    <string name="bolt_balance_error">Your balance is insufficient</string>
+
+    <string name="dialog_bolt_success_title">Lightning exchange success</string>
+    <string name="dialog_bolt_success_message">Your lightning exchange request has been successful. You can check the status of this transaction by going to the flash transaction record.</string>
+    <string name="dialog_bolt_success_record">Lightning exchange record</string>
+    <string name="ttn_end">End</string>
+    <!--lightning exchange policy-->
+    <string name="policy_title">《TTChainWallet Exchange Agreement》</string>
+    <string name="policy_update_time">Last updated on: October 24, 2019</string>
+    <string name="policy_content">Risks and Limitation of Liability\n
+Use of the Services and participation in Transactions may carry financial risk. \n
+You acknowledge and agree that you are aware of such risks, including the following:\n
+\n
+1. Definition and significance of TTN\n
+TTN is the proof of the rights of TTChain trading platform itself. TTN is the base currency and trading gas fee for TTChain decentralized trading platform. TTN holders can enjoy various benefits and benefits of the platform. At the same time, TTN holders can also participate in TTN community governance.\n
+\n
+*For more instructions on the usage of TTN platform token and its application in  TTChain public chain, please read the latest version of TTChain official website white paper.\n
+\n
+2. Trading Digital Tokens can be very risky. Digital Tokens are, by their nature, highly experimental, risky, volatile and Transactions are generally irreversible. All Transactions are final and there are no refunds. You acknowledge and agree that you will access and use the Services and participate in Transactions at your own risk. The risk of loss in trading Digital Tokens can be substantial. You should, therefore, carefully consider whether such trading is suitable for you in light of your circumstances and financial resources.\n
+\n
+3. Understanding Digital Tokens and Transactions may require advanced technical knowledge. Digital Tokens are often described in exceedingly technical language that requires a comprehensive understanding of applied cryptography and computer science in order to appreciate the inherent risks of trading Digital Tokens. Any reference to a type of Digital Token on the Services does not indicate our approval or disapproval of the underlying technology regarding such type of Token, and should not be used as a substitute for your own understanding of the risks specific to each type of Token. We make no warranty as to the suitability of the Digital Tokens referenced on the Services and assume no fiduciary duty in our relations with you.\n
+\n
+4. You accept the risk of trading Digital Tokens. TTChain does not advise on trading risk. In entering into any transactions, you represent that you have been, are and will be solely responsible for making your own independent appraisal and investigations into the risks of the Transaction and the underlying Digital Tokens. You represent that you have sufficient knowledge, market sophistication, professional advice and experience to make your own evaluation of the merits and risks of any Transaction or any underlying Token. You accept all consequences of participating in Transactions, including the risk that you may lose access to your Digital Tokens indefinitely. All Transaction decisions are made solely by you. Notwithstanding anything in these Terms of Service, we accept no responsibility whatsoever for and will in no circumstances be liable to you in connection with Transactions. Under no circumstances will the operation of all or any portion of the Services be deemed to create a relationship that includes the provision or tendering of investment advice.\n
+\n
+5. You are aware of and accept the risk of operational challenges. The Services may experience sophisticated cyber attacks, unexpected surges in activity or other operational or technical difficulties that may cause interruptions to or delays on the Services. You agree to accept the risk of a Transaction failure resulting from unanticipated or heightened technical difficulties, including those resulting from sophisticated attacks, and you agree not to hold us accountable for any related losses. We will not bear any liability, whatsoever, for any damage or interruptions caused by any viruses that may affect your computer or other equipment, or any phishing, spoofing or other attack. We advise the regular use of a reputable and readily available virus screening and prevention software.\n
+\n
+6. We do not own or control the underlying software protocols that govern the operation of Digital Tokens referenced on the Services. In general, the underlying protocols are open source and anyone can use, copy, modify, and distribute them. By accessing or using the Services, you acknowledge and agree that we are not responsible for operation of the underlying protocols and that we make no guarantee of their functionality, security, or availability; and that the underlying protocols are subject to sudden changes in operating rules, and that such forks may materially affect the value, function, and/or even the name of the Token referenced on the Services. In the event of a fork, you agree that we may temporarily suspend our operations (with or without advance notice to you) and that we may, in our sole discretion, decide whether or not to support (or cease supporting) either branch of the forked protocol entirely. You acknowledge and agree that we assume absolutely no responsibility whatsoever in respect of an unsupported branch of a forked protocol.\n
+\n
+7. Some of the Services may not work properly from time to time. We may not be held responsible regarding any damages you may have because of any failure of the Services.\n
+\n
+8. We make no representation that any materials or Services on TTChain are appropriate, lawful or available in any locations out of Republic of Angola. If you choose to access our services from other locations instead of Republic of Angola, we assume absolutely no responsibility whatsoever in respect of any breach of the local law of your jurisdiction.\n
+\n
+\n</string>
+    <string name="policy_agreement">I agree《TTChainWallet Exchange Agreement》</string>
+
+    <string name="privacy_title">《TTChainWallet Privacy Policy》</string>
+    <string name="privacy_update_time">Last updated on: December 18, 2018</string>
+    <string name="app_restart_title">The application will restart</string>
+    <string name="app_restart_message">Change language after reboot</string>
+
+    <string name="zh_tw_language" translatable="false">正體中文</string>
+    <string name="zh_cn_language" translatable="false">简体中文</string>
+    <string name="en_language" translatable="false">English</string>
+
+    <string name="create_group_group_announcement">Community Announcement</string>
+    <string name="create_group_group_input_text">Enter text </string>
+
+    <string name="edit_group_title">Community Information</string>
+    <string name="edit_group_group_announcement">Community Announcement</string>
+    <string name="edit_group_group_setting">Community settings </string>
+    <string name="edit_group_close_notify">Turn off reminders </string>
+    <string name="edit_group_member_management">Member management</string>
+    <string name="edit_group_community_management">Community Management</string>
+
+    <string name="group_manage_title">Community Management</string>
+    <string name="group_manage_text">Only administrators can post messages </string>
+
+    <string name="group_member_manage">Member management </string>
+
+    <string name="image_display_msg">Open file </string>
+    <string name="delete_account_title">Are you sure you want to delete your account?</string>
+    <string name="delete_account_message">After deleting the account, all the records in the TTChain App will be cleared. Please make sure that the backup information has been saved before executing.\n\nPlease note that if you delete an account without a backup account, you will never be able to retrieve assets such as your account and the included wallet.</string>
+    <string name="delete_account_confirm_title">Account will be deleted</string>
+    <string name="delete_account_confirm_message">Confirm that it will be restarted immediately after deletion</string>
+
+    <!-- 聊天收款页面 -->
+    <string name="request_coin_title">Payment request</string>
+    <string name="request_coin_receipt_currency">Receipt currency </string>
+    <string name="request_coin_receipt_currency_hint">Please select the receiving currency </string>
+    <string name="request_coin_receipt_address">Receipt address </string>
+    <string name="request_coin_receipt_address_hint">Please select the receiving currency first, the system will automatically detect </string>
+    <string name="request_coin_receipt_amount">Receipt amount </string>
+    <string name="request_coin_receipt_amount_hint">Please enter the amount of the payment </string>
+    <string name="request_coin_receipt_tip">When a payment request is sent, the miner’s fee will be paid by the payer. </string>
+    <string name="request_coin_time">Time limit </string>
+    <string name="request_coin_time_text">%d day</string>
+
+    <!-- Send payment request confirmation page -->
+    <string name="request_coin_confirm_title">Payment request</string>
+    <string name="request_coin_confirm_currency">Receipt currency </string>
+    <string name="request_coin_confirm_address">Receipt address </string>
+    <string name="request_coin_confirm_amount">Receipt amount </string>
+    <string name="request_coin_confirm_time">Receipt time limit </string>    
+    <string name="request_coin_confirm_time_text">%d day </string>
+    <string name="request_coin_confirm_confirm">Confirm</string>
+
+    <!-- Collection success Dialog -->
+    <string name="dialog_request_coin_success_title">Send payment request</string>
+    <string name="dialog_request_coin_success_message">Payment can be transferred directly to you within the time limit.</string>
+    <string name="dialog_request_coin_success_button">Confirm</string>
+
+    <!-- Message page receipt item -->
+    <string name="item_chat_room_send_request_coin_message">Send a payment message to \&#60; %s /&#62; </string>
+    <string name="item_chat_room_send_request_coin_button">View</string>
+    <string name="item_chat_room_receive_send_request_coin_message">Send a payment message to \&#60; you /&#62; </string>
+    <string name="item_chat_room_receive_request_coin_button">Transfer</string>
+
+    <!-- 个人资讯页面 -->
+    <string name="user_info_chat_name">Name</string>
+    <string name="user_info_chat_id">ID</string>    
+    <string name="user_info_chat_view_qr_code">View QRCODE</string>
+
+    <!-- explorer page -->
+    <string name="feedback">Feedback</string>
+    <string name="privacy_policy">Private Policy</string>
+    <string name="help_center">Help Center</string>
+    <string name="about_us">About Us</string>
+    <string name="trend_subtitle">Latest ups and downs</string>
+    <string name="coin_type">Currency</string>
+    <string name="usd_price">Price (%s)</string>
+    <string name="quote_change">Quote change</string>
+    <string name="hot_group_subtitle">The most popular community waiting for you to participate</string>
+    <string name="media_subtitle">The new knowledge of the currency circle is here</string>
+    <string name="dapp_subtitle">Grabbed the game</string>
+    <string name="blockchain_explorer_subtitle">Quickly check your trading information</string>
+
+    <string name="host_learn_more">Learn more</string>
+    <string name="host_check_file">Checking file</string>
+    <string name="host_host_version">Host version:</string>
+    <string name="host_host">Host:</string>
+    <string name="host_plugin">Plugin:</string>
+    <string name="host_update_finish">Update finish, Please wait</string>
+    <string name="host_install_apk_failure_dialog_title">Update failure</string>
+    <string name="host_install_apk_failure_dialog_message">Install apk failure, you have to allow install apps permission from %s. Try again?</string>
+    <string name="host_ok">Ok</string>
+    <string name="host_exit">Exit</string>
+
+    <string name="transaction_was_not_completed_title">BTC, USDT-Omni cannot transfer money continuously!</string>
+    <string name="transaction_was_not_completed_message">What reason leads to failure when you want to transfer second time if BTC and USDT-Omni that have just been transferred have not yet arrived?
+The reason is because of the design logic of Bitcoin public chain, the first transfer will take up UTXO (unconsumed transaction output) until the transfer is successful.
+It is recommended that you wait for the first BTC, USDT-Omni transfer to be successful before operating the second one.
+Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
+</string>
+
+    <!-- Authentication -->
+    <string name="using_locker_using_finger">Using Finger Print</string>
+    <string name="authentication_title">Authentication</string>
+    <string name="authentication_description">Please use fingerprint identification</string>
+    <string name="authentication_not_support">Device does not support fingerprint</string>
+
+    <!-- Private key Import wallet -->
+    <string name="import_wallet_by_prk_title_btc">Import wallet (BTC)</string>
+    <string name="import_wallet_by_prk_title_eth">Create a new wallet (ETH)</string>
+    <string name="import_wallet_by_prk_enter_privatekey">Enter the private key </string>
+    <string name="import_wallet_by_prk_enter_privatekey_hint">Please enter the private key or use the action barcode to scan </string>
+    <string name="import_wallet_by_prk_enter_wallet_name_bitcoin">wallet name (Bitcoin)</string>
+    <string name="import_wallet_by_prk_enter_wallet_name_eth">Import wallet (Ethereum)</string>
+    <string name="import_wallet_by_prk_enter_wallet_name_hint">Please name the new wallet </string>
+    <string name="import_wallet_by_prk_enter_wallet_password">wallet password</string>
+    <string name="import_wallet_by_prk_enter_wallet_password_confirm">Enter the wallet password again</string>
+    <string name="import_wallet_by_prk_tip_1">The TTChain team will not save your wallet password, nor will it assist you in recovering your wallet password. Please set a password and password prompt. </string>
+    <string name="import_wallet_by_prk_tip_2">If you forget the password, you will lose the assets in your wallet. Please pay special attention. </string>
+
+    <!-- select export wallet -->
+    <string name="select_export_wallet_title_btc">Select the exported wallet (BTC)</string>
+    <string name="select_export_wallet_title_eth">Select the exported wallet (ETH)</string>
+
+    <!-- Add a common address -->
+    <string name="operation_comm_address_title">Add common address</string>
+    <string name="operation_comm_address_name">Name</string>
+    <string name="operation_comm_address_name_hint">Please name this wallet</string>
+    <string name="operation_comm_address_address">Address</string>
+    <string name="operation_comm_address_address_hint">Please enter the address or use the action bar code to scan the address</string>
+    <string name="operation_comm_address_note">Note (optional)</string>
+    <string name="operation_comm_address_note_hint">Please enter a comment within twenty characters </string>
+
+    <!-- comm address dialog -->
+    <string name="dialog_comm_address_title">Added a common address </string>
+    <string name="dialog_comm_address_message">This address can be used quickly when transferring funds</string>
+    <string name="dialog_comm_address_title_edit">Edited common address </string>
+    <string name="dialog_comm_address_message_edit">Address content has been updated</string>
+
+    <!-- update dialog fragment -->
+    <string name="dialog_update_version_title">The latest version can be updated</string>
+    <string name="dialog_update_version_left_button">Later</string>
+    <string name="dialog_update_version_right_button">Update </string>
+
+
+    <!-- dialog red envelope receipt -->
+    <string name="dialog_red_envelope_receive">Receive</string>
+    <string name="dialog_red_envelope_later">Later</string>
+    <string name="dialog_red_envelope_setting">Red envelope setting</string>
+    <string name="dialog_red_envelope_received">Received</string>
+    <string name="dialog_red_envelope_unreceived">Not received</string>
+    <string name="dialog_red_envelope_error_too_late"> has expired, please come early! </string>
+
+    <!-- 餘額不足支付礦工費 -->
+    <string name="not_enough_mone_fee">The transferable balance is insufficient. If it is USDT transfer, please check if the BTC wallet balance is enough to pay the miner fee.</string>
+
+    <!-- red envelope info fragment -->
+    <string name="red_envelope_info_title">RedEnvelope</string>
+
+    <!-- chat mene -->
+    <string name="chat_menu_personal_info">Personal info</string>
+    <string name="chat_menu_add_friend">Add friend</string>
+    <string name="chat_menu_add_group">Add group </string>
+
+
+    <!--Add Friend Fragment-->
+    <string name="add_friend_fragment_title">Add friend</string>
+    <string name="add_friend_fragment_friend_id">Friend ID</string>
+    <string name="add_friend_fragment_friend_id_hint"> Please enter a friend ID or scan the QRcode </string>
+    <string name="add_friend_fragment_personal_info">User Information</string>
+    <string name="add_friend_fragment_add_button">Add friend</string>
+    <string name="add_friend_fragment_chat_button">Chat</string>
+    <string name="add_friend_fragment_no_user">Check no users</string>
+    <string name="add_friend_fragment_is_friend">Already in friend list </string>
+
+    <!-- add friend dialog-->
+    <string name="add_friend_dialog_title"> Joined friends </string>
+    <string name="add_friend_dialog_message"> You can start chatting with your friends! </string>
+
+    <!-- group qrcode fragment -->
+    <string name="group_qrcode_fragment_title">Community Barcode</string>
+    <string name="group_qrcode_fragment_share"> Share action barcode </string>
+    <string name="group_qrcode_fragment_save"> Save Action Barcode </string>
+
+    <!-- group member manage -->
+    <string name="group_member_manage_title">Member Management</string>
+    <string name="group_member_manage_add">Add</string>
+
+    <!-- invite group member -->
+    <string name="invite_group_member_title">Invite members</string>
+
+    <!-- invite success dialog -->
+    <string name="invite_member_success_dialog_title"> Successfully invited members </string>
+    <string name="invite_member_success_dialog_message"> Members have been invited to the community </string>
+
+    <!-- gourp menu -->
+    <string name="group_menu_qrcode">QRCode</string>
+    <string name="group_menu_delete">Dissolve community</string>
+    <string name="group_menu_leave">Leave community</string>
+
+    <!-- delete group dialog -->
+    <string name="delete_group_dialog_title">Community will be dissolved</string>
+    <string name="delete_group_dialog_message">After dissolving the community, all records in the community will be deleted and members will leave.</string>
+
+    <!-- item group invitation -->
+    <string name="item_group_invitation_tip_text">Invited to join community</string>
+    <string name="item_group_invitation_reject">Reject</string>
+    <string name="item_group_invitation_accept">Accept</string>
+
+    <!-- item firend invitation -->
+    <string name="item_friend_invitation_tip_text">Invited to be friend</string>
+
+    <!-- item chat block -->
+    <string name="item_chat_block_text"> You have blocked this user </string>
+
+    <!-- user info fragment -->
+    <string name="user_info_fragment_chat_name">Nickname</string>
+    <string name="user_info_fragment_chat_id">Chat ID</string>
+    <string name="user_info_fragment_system_setting">System settings</string>
+    <string name="user_info_fragment_block">Block friends</string>
+
+    <!-- item group member manage -->
+    <string name="item_group_member_manage_inviting">Inviting</string>    
+    <string name="item_group_member_manage_group_owner">Owner</string>
+
+    <!-- dialog invitation notice -->
+    <string name="dialog_invitation_notice">Waiting for response</string>
+
+    <!-- user wallet mnemonic fragment -->     
+    <string name="user_wallet_mnemonic_title">Backup account</string>
+    <string name="user_wallet_mnemonic_message_1">Backup account-mnemonic</string>
+    <string name="user_wallet_mnemonic_message_2">Back up your account information and do not upload to Drive or access it on any public network. This is crucial for your future actions such as maintaining asset security and restoring your account. </string>
+
+    <!-- enter password fragment -->
+    <string name="enter_password_top_message">Please enter your account password</string>
+    <string name="enter_password_password">Password</string>
+    <string name="enter_password_password_hint">Please enter your wallet password</string>
+    <string name="enter_password_password_tip">Password prompt message</string>
+
+    <!-- success login activity -->
+    <string name="success_login_message_1">You have successfully logged in</string>
+    <string name="success_login_message_2">Welcome back</string>
+
+    <!-- restore mnemonics with user -->
+    <string name="restore_with_user_info_nick_name">Nickname</string>
+    <string name="restore_with_user_info_nick_name_hint">This nickname refers to you in the chat system. Do not use indecent text</string>
+    <string name="restore_with_user_info_nick_password">Password</string>
+    <string name="restore_with_user_info_nick_password_hint">It is recommended to use a combination of English case and numbers</string>
+    <string name="restore_with_user_info_nick_confirm_password">Confirm password</string>
+    <string name="restore_with_user_info_nick_confirm_password_hint">Please enter your password again</string>
+    <string name="restore_with_user_info_nick_hint_password">Password reminder message</string>
+    <string name="restore_with_user_info_nick_hint_password_hint">The content of the prompt should not be the same as the password to avoid being easily stolen</string>
+    <string name="restore_with_user_info_nick_policy">I agree with the TTChain Privacy Policy</string>
+    <string name="account_info">Account information</string>
+
+    <!-- wallet settting fargment -->
+    <string name="wallet_setting_title">Wallet Settings</string>
+    <string name="wallet_setting_switch_address_type">Switch address type</string>
+    <string name="wallet_setting_change_wallet_name">Change wallet name</string>
+    <string name="wallet_setting_wallet_password_hint">Wallet password hint</string>
+    <string name="wallet_setting_export_wallet">Export Wallet</string>
+    <string name="wallet_setting_delete_wallet">Delete Wallet</string>
+
+    <!-- change wallet name fragment -->
+    <string name="change_wallet_name_title"> Change wallet name </string>
+    <string name="change_wallet_name_bitcoin_name"> Wallet Name (Bitcoin) </string>
+    <string name="change_wallet_name_hint"> Please enter a wallet name </string>
+
+    <!-- change wallet name success -->
+    <string name="change_wallet_name_success_title">Changed wallet name</string>
+    <string name="change_wallet_name_success_message">The wallet name will be changed to the new name</string>
+
+    <!-- wallet password hint -->
+    <string name="wallet_password_hint_title"> Wallet password hint </string>
+    <string name="wallet_password_hint_password_hint"> Wallet Password hint (Bitcoin) </string>
+
+    <!-- delete wallet dialog -->
+    <string name="delete_wallet_dialog_title"> You are about to delete this wallet </string>
+    <string name="delete_wallet_dialog_message"> The wallet cannot be recovered after it is deleted. Please make sure that all assets in the wallet have been transferred. </string>
+
+    <!-- create wallet by hd -->
+    <string name="create_wallet_by_hd_title_btc">Create wallet (BTC)</string>
+    <string name="create_wallet_by_hd_title_eth">Create wallet (ETH)</string>
+    <string name="create_wallet_by_hd_wallet_name_btc">Wallet Name (Bitcoin)</string>
+    <string name="create_wallet_by_hd_wallet_name_eth">Wallet Name (Ethereum)</string>
+    <string name="create_wallet_by_hd_wallet_name_btc_hint">Please name the new Bitcoin wallet</string>
+    <string name="create_wallet_by_hd_wallet_name_eth_hint">Please name the newly created Ethereum wallet</string>
+    <string name="create_wallet_by_hd_wallet_password">Wallet password</string>
+    <string name="create_wallet_by_hd_wallet_confirm_password">Enter the wallet password again</string>
+    <string name="create_wallet_by_hd_wallet_tip_1">The TTChain team will not save your wallet password, nor will it be able to assist in recovering it if you lose your wallet password. Please set up password and password reminders carefully.</string>
+    <string name="create_wallet_by_hd_wallet_tip_2">If you forget your password, you will lose the assets in your wallet, please pay special attention.</string>
+
+    <string name="please_check_btc_wallet">Please check BTC wallet</string>
+    <string name="please_check_usdt_wallet">Please check USDT wallet</string>
+
+    <!-- fragment mnemonic start -->
+    <string name="mnemonic_start_tip_1">This mobile barcode backup contains: all TTChainWallet-created wallets and lightning wallets, chat identity and chat history.</string>
+    <string name="mnemonic_start_tip_2">This mobile barcode is designed by TTChain for you, so that you can easily and quickly restore all wallets on your account in the future.\n\n Make a backup copy of your account information and do not upload to Drive or access it on any public network. This is important for your future actions such as maintaining asset security and restoring your account.</string>
+
+    <!-- restore by mnemonics -->
+    <string name="restore_by_mnemonics_tip_2">Enter Chinese mnemonics, a total of 12 Chinese characters</string>
 </resources>

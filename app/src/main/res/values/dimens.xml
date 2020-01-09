@@ -1,0 +1,78 @@
+<resources>
+    <!--text size-->
+    <dimen name="nav_title">20sp</dimen>
+
+    <dimen name="mini_text">12dp</dimen>
+    <dimen name="super_small_text">14sp</dimen>
+    <dimen name="small_text">16sp</dimen>
+    <dimen name="secondary_text">17sp</dimen>
+    <dimen name="primary_text">18sp</dimen>
+    <dimen name="big_text">20sp</dimen>
+    <dimen name="large_text">24sp</dimen>
+    <dimen name="super_large_text">32sp</dimen>
+    <dimen name="huge_text">56sp</dimen>
+    <dimen name="super_huge_text">75sp</dimen>
+
+    <dimen name="super_small_view">8dip</dimen>
+    <dimen name="small_view">16dip</dimen>
+    <dimen name="super_little_view">24dip</dimen>
+    <dimen name="little_view">36dip</dimen>
+    <dimen name="normal_view">48dip</dimen>
+    <dimen name="large_view">76dip</dimen>
+    <dimen name="super_large_view">96dip</dimen>
+    <dimen name="huge_view">144dip</dimen>
+    <dimen name="super_huge_view">192dip</dimen>
+
+    <dimen name="menu_cart">8sp</dimen>
+
+    <dimen name="padding_0">0dp</dimen>
+    <dimen name="padding_1">1dp</dimen>
+    <dimen name="padding_2">2dp</dimen>
+    <dimen name="padding_3">3dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_14">14dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_18">18dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_22">22dp</dimen>
+    <dimen name="padding_24">24dp</dimen>
+
+    <dimen name="padding_28">28dp</dimen>
+    <dimen name="padding_32">32dp</dimen>
+    <dimen name="padding_34">34dp</dimen>
+    <dimen name="padding_40">40dp</dimen>
+    <dimen name="padding_48">48dp</dimen>
+    <dimen name="padding_56">56dp</dimen>
+    <dimen name="padding_64">64dp</dimen>
+    <dimen name="padding_72">72dp</dimen>
+
+    <dimen name="label_height">56dp</dimen>
+    <dimen name="shadow_height">4dp</dimen>
+    <dimen name="indicator_stroke_width">0.4dp</dimen>
+
+    <dimen name="similar_width">150dp</dimen>
+
+    <dimen name="card_elevation">4dp</dimen>
+
+    <dimen name="radius_2">2dp</dimen>
+    <dimen name="radius_4">4dp</dimen>
+    <dimen name="radius_5">5dp</dimen>
+    <dimen name="radius_8">8dp</dimen>
+    <dimen name="radius_10">10dp</dimen>
+    <dimen name="radius_12">12dp</dimen>
+    <dimen name="radius_16">16dp</dimen>
+    <dimen name="radius_24">24dp</dimen>
+    <dimen name="radius_32">32dp</dimen>
+    <dimen name="radius_normal">5dp</dimen>
+    <dimen name="radius_large">100dp</dimen>
+
+    <dimen name="min_width">50dp</dimen>
+
+    <dimen name="trans_item_gap_h">@dimen/padding_20</dimen>
+
+</resources>

@@ -1,0 +1,949 @@
+<resources>
+    <string name="g_ok">確定</string>
+    <string name="g_cancel">取消</string>
+    <string name="g_loading">載入中，請稍等</string>
+    <string name="g_close">關閉</string>
+    <string name="g_done">完成</string>
+    <string name="g_confirm">確認</string>
+    <string name="g_a_exit">是否確認要離開？</string>
+    <string name="g_a_network_error">網路發生問題，請再試一次</string>
+    <string name="g_a_network_timeout_error">連線已逾時，請重新嘗試</string>
+    <string name="g_e_emptyform">請輸入</string>
+    <string name="g_copy">複製</string>
+    <string name="g_edit">編輯</string>
+    <string name="g_next">下一步</string>
+    <string name="g_delete">刪除</string>
+    <string name="g_select_photo">選擇相片</string>
+    <string name="g_previous">上一步</string>
+    <string name="g_skip">略過</string>
+
+    <string name="g_add">增加</string>
+    <string name="g_search">搜尋</string>
+    <string name="g_manage">管理</string>
+    <string name="g_save">存儲</string>
+    <string name="g_scan">掃描</string>
+    <string name="g_share">分享</string>
+
+    <string name="error_empty_data">查無資料</string>
+
+    <string name="tab_wallet">錢包</string>
+    <string name="tab_trade">交易</string>
+    <string name="tab_mine">我的</string>
+
+    <string name="login_title">創建您的第一個數字身份輕鬆管理多鏈錢包</string>
+    <string name="login_create">註冊新帳號</string>
+    <string name="login_desc">註冊帳號將自動新增多鏈錢包</string>
+    <string name="login_restore">原有帳號登入</string>
+    <string name="login_or">或</string>
+    <string name="create_id_title">備份帳號行動條碼</string>
+    <string name="create_id_create">創建</string>
+    <string name="create_id_name">帳號建立僅限英文字母與數字組合，至少8個字元</string>
+    <string name="create_id_password">建議使用英文字母大小寫與數字組合</string>
+    <string name="create_id_confirm_password">請再次輸入密碼</string>
+    <string name="create_id_password_note">提示內容請勿與密碼一樣，以免被輕易盜取</string>
+    <string name="g_camera_permission_request">如要開啟條碼掃描功能，請允許開啟相機權限</string>
+    <string name="g_pick_photo_permission_request">如要選擇照片功能，請允許存取檔案權限</string>
+    <string name="miner_fee_setting">礦工費用設置</string>
+    <string name="miner_fee_input_p">請輸入礦工費</string>
+    <string name="payment_detail">支付詳情</string>
+    <string name="payment_detail_title">支付信息</string>
+    <string name="receipt_address">收款地址</string>
+    <string name="payment_address">付款地址</string>
+    <string name="chose_payment_address">選擇付款地址</string>
+    <string name="miner_fee">礦工費用</string>
+    <string name="amount_transfer">換取</string>
+    <string name="price">價格</string>
+    <string name="transaction_account">轉帳</string>
+    <string name="fill_in_address_p">請填寫地址</string>
+    <string name="choose_asset_type">選擇資產類型</string>
+    <string name="choose_wallet">選擇錢包</string>
+    <string name="fill_in_amount">請輸入轉帳金額</string>
+    <string name="common_address">常用地址</string>
+    <string name="hint_fill_in_valid_bth_address">輸入有效的bitcoin 地址</string>
+    <string name="hint_fill_in_valid_eth_address">請輸入ETH收款地址 或 掃描行動條碼</string>
+
+    <string name="error_pwd_rule">不少於8位字母，建議混合大小寫、數字</string>
+    <string name="error_pwd_not_equal">您設定的密碼不一致</string>
+    <string name="fail_create">創建失敗</string>
+    <string name="error_mnemonic_position">助記詞順序錯誤</string>
+    <string name="create_contact_person">新增聯絡人</string>
+    <string name="delete_contact_person">刪除聯絡人</string>
+    <string name="name">名稱</string>
+    <string name="note_option">備註(選填)</string>
+    <string name="error_choose_address_type_p">請重新選擇地址類別</string>
+    <string name="note">備註</string>
+    <string name="address">地址</string>
+    <string name="my_identity">我的身份</string>
+    <string name="name_2">名字</string>
+    <string name="my_identity_id">身份ID</string>
+    <string name="back_identity">備份身份</string>
+    <string name="logout_now_identity">退出當前身份</string>
+    <string name="logout_now_identity_message">即將移除身份及所有已導入的錢包，請確保所有錢包已備份。</string>
+    <string name="change_identity_name">更換身份名</string>
+    <string name="fill_in_change_nick_name_p">請輸入要更換的暱稱</string>
+    <string name="fill_in_name_p">請輸入名字</string>
+    <string name="fill_in_pwd_p">請輸入密碼</string>
+    <string name="back_up_warning_message">警告:若無妥善備份，刪除錢包後將無法找回錢包，請慎重處理該操作</string>
+    <string name="language">語言</string>
+    <string name="currency_unit">貨幣單位</string>
+    <string name="setting_use">使用設置</string>
+    <string name="qa">常見問題</string>
+    <string name="privacy_mode">隱私模式</string>
+    <string name="hint_privacy_message">開啟隱私模式後錢包的資產和金額將會隱藏</string>
+    <string name="check_version_update">檢查版本更新</string>
+
+    <string name="choose_receipt_address">選擇收款地址</string>
+    <string name="setting_pwd">設置密碼</string>
+    <string name="setting_identity_name_and_pwd">設置身份名與密碼</string>
+    <string name="input_identity_name">請輸入身份名</string>
+    <string name="wallet_pwd">錢包密碼</string>
+    <string name="fill_in_pwd_confirm">重複輸入密碼</string>
+    <string name="pwd_hint_message">密碼提示訊息</string>
+    <string name="start_import">開始導入</string>
+    <string name="restore_identity">恢複身份</string>
+    <string name="import_etherum_wallet">導入ETHERUM錢包</string>
+    <string name="import_bitcoin_wallet">導入BITCOIN錢包</string>
+    <string name="import_cic_wallet">導入CIC錢包</string>
+    <string name="import_guc_wallet">導入GUC錢包</string>
+    <string name="import_uncompress_btc_address_wallet">導入未壓縮BTC地址錢包</string>
+    <string name="import_specific_btc_address_wallet">導入舊格式BTC錢包</string>
+    <string name="fail_import">導入失敗</string>
+    <string name="failed_create">創建失敗</string>
+    <string name="error_wallet_exist_already">此錢包已存在</string>
+    <string name="fail_restore_identity">恢複身份失敗</string>
+    <string name="desc_mnemonic">使用助記詞導入的同時可以修改錢包密碼。</string>
+    <string name="hint_fill_in_mnemonic">輸入助記詞，用空格分隔</string>
+    <string name="desc_private_key">複製黏貼 PrivateKey 文件內容至輸入框。或通過掃描 Private Key 內容生成的二維碼錄入。</string>
+    <string name="hint_fill_in_private_key">輸入明文私鑰</string>
+    <string name="choose_import_wallet_type">選擇導入錢包類型</string>
+    <string name="eth_wallet">以太坊錢包</string>
+    <string name="btc_wallet">比特幣錢包</string>
+    <string name="cic_wallet">CIC錢包</string>
+    <string name="guc_wallet">GUC錢包</string>
+    <string name="thunder_exchange">閃電兌換</string>
+    <string name="fail_amount_not_enough">餘額不足</string>
+    <string name="transaction_record">轉帳記錄</string>
+    <string name="outcome">轉帳</string>
+    <string name="income">收款</string>
+
+    <string name="fail">失敗</string>
+    <string name="offline_save">離線保存</string>
+    <string name="offline_save_message">切勿保存至郵箱、記事本、網盤、聊天工具等，非常危險</string>
+    <string name="dont_trans_by_internet">請勿使用網絡傳輸</string>
+    <string name="dont_trans_by_internet_message">請勿通過網絡工具傳輸，一旦被黑客獲取將造成不可挽回的資產損失。建議離線設備通過掃二維碼方式傳輸</string>
+    <string name="pwd_manage_tool_save">密碼管理工具保存</string>
+    <string name="pwd_manage_tool_save_message">建議使用密碼管理工具管理</string>
+    <string name="provide_scan_directly_only">僅供直接掃描</string>
+    <string name="provide_scan_directly_only_message">二維碼禁止保存、截圖、以及拍照。僅供用戶在安全環境下直接掃描來方便的導入錢包</string>
+    <string name="use_in_save_environment">在安全環境下使用</string>
+    <string name="use_in_save_environment_message">請在確保四周無人及無攝像頭的情況下使用。二維碼一旦被他人獲取將造成不可挽回的資產損失</string>
+    <string name="changing_pwd_hint">更換密碼提示</string>
+    <string name="fill_in_change_pwd_hint_p">請輸入要更換的密碼提示</string>
+    <string name="fill_in_pwd_hint_p">請輸入密碼提示</string>
+    <string name="g_clear">清除</string>
+    <string name="update_succeed">更新成功</string>
+    <string name="update_fail">更新失敗</string>
+    <string name="change_wallet_name">更換錢包名</string>
+    <string name="fill_in_change_wallet_name_p">請輸入要更換的錢包名字</string>
+    <string name="share_wallet_address_to">分享錢包地址至&#8230;</string>
+    <string name="fail_capture_view_and_retry_p">擷取失敗，請重新嘗試</string>
+    <string name="remain">餘額</string>
+    <string name="trade_transaction_account">交易轉帳</string>
+    <string name="fill_in_wallet_pwd_p">請輸入錢包密碼</string>
+    <string name="fill_in_receipt_address_p">請輸入收款地址</string>
+    <string name="fill_in_amount_p">請輸入金額</string>
+    <string name="pwd">密碼</string>
+    <string name="g_copied">已複製到剪貼簿</string>
+    <string name="fail_verify_pwd_and_reinput_p">密碼驗證失敗，請重新輸入</string>
+
+    <string name="amount">金額</string>
+    <string name="hide_zero_asset">隱藏無餘額資產</string>
+    <string name="order_by_remain_mount">按餘額排序</string>
+    <string name="order_by_alphabet">按字母排序</string>
+    <string name="remove_asset">移除資產</string>
+    <string name="look_before">前往查看</string>
+    <string name="export_private_key">導出錢包私鑰</string>
+    <string name="private_key">私鑰</string>
+    <string name="qrcode">二維碼</string>
+    <string name="all">全覽</string>
+    <string name="insert">添加</string>
+    <string name="insert_address">添加地址</string>
+    <string name="change_succeed">更換成功</string>
+    <string name="change_fail">更換失敗</string>
+    <string name="my_asset">我的資產</string>
+    <string name="manage">管理</string>
+    <string name="scan_code">行動條碼掃描器</string>
+    <string name="receipt">收款</string>
+    <string name="choose_wallet_type">選擇錢包類型</string>
+    <string name="create_identity_desc">沒有妥善備份就無法保障資產安全。刪除程序或錢包後，你需要備份文件來恢複錢包。</string>
+    <string name="create_identity_desc_2">請在四周無人、確保沒有攝像頭的安全環境進行備份。</string>
+    <string name="back_up_mnemonic">備份助記詞</string>
+    <string name="back_up_qr_code">備份QRCODE</string>
+    <string name="back_up_mnemonic_desc">請仔細抄寫下方助記詞，我們將在下一步驗證。</string>
+    <string name="order_mnemonic">排序助記詞</string>
+    <string name="order_mnemonic_desc">請按順序點擊助記詞，以確認您正確備份。</string>
+    <string name="show_qrcode">顯示二維碼</string>
+    <string name="receipt_wallet">收款錢包</string>
+    <string name="change_asset">更換資產</string>
+
+    <string name="import_wallet">導入錢包</string>
+    <string name="contact_person">聯繫人</string>
+    <string name="exchange_record">兌換紀錄</string>
+    <string name="slow">慢</string>
+    <string name="faster">快</string>
+    <string name="advanced_mode">高級模式</string>
+    <string name="thunder_transaction_account">閃電轉帳</string>
+    <string name="rate">匯率</string>
+    <string name="faster_exchange">快速兌換</string>
+    <string name="offline">離線</string>
+    <string name="add_and_manage_asset">資產管理</string>
+    <string name="wallets_of_identity_now">當前身份下的錢包</string>
+    <string name="wallets_of_import">導入外部錢包</string>
+    <string name="wallets_import_fail_cause_by_wallet_size_limit">導入失敗，已達外部錢包數量上限</string>
+    <string name="hint_custom_gas_price">自定義 Gas Price</string>
+    <string name="hint_custom_gas">自定義 Gas</string>
+    <string name="hint_custom_miner_fee_sat">自定義手續費 (btc)</string>
+    <string name="trans_outcome_amount">轉出數量</string>
+    <string name="trans_receive_amount">收到數量</string>
+    <string name="fill_in_valid_address_p">請輸入有效地址</string>
+    <string name="transaction_account_succeed">轉帳成功</string>
+    <string name="transaction_account_fail">轉帳失敗</string>
+    <string name="user_agreement">用戶協議</string>
+    <string name="g_version">版本</string>
+    <string name="g_version_update">版本更新</string>
+    <string name="mini_version_comma">最低版本:</string>
+    <string name="latest_version_comma">最新版本:</string>
+    <string name="app_version_comma">手機版本:</string>
+
+    <string name="hint_mini_version_limit">目前手機版本低於最低版本，請更新版本</string>
+    <string name="hint_launch_hockey_app_download_page">若安裝過程遇到問題，請點擊這裡</string>
+    <string name="fail_backup">備份失敗</string>
+    <string name="version_is_latest">目前已是最新版本</string>
+    <string name="now_version_comma">當前版本:</string>
+    <string name="error_input_with_space_at_start_or_end">首尾不得空白</string>
+    <string name="error_input_content_too_long">內容長度過長</string>
+    <string name="error_mnemonic_format">助記詞格式錯誤</string>
+    <string name="error_input_content_include_space">內容不得包含空白</string>
+    <string name="error_format">格式錯誤</string>
+    <string name="error_coin_id">查無此幣種(%s)</string>
+    <string name="custom_define">自訂</string>
+    <string name="error_loading_data_and_try_again">讀取資料發生錯誤，請嘗試重新執行</string>
+    <string name="setting_receipt_address_p">請設定收款地址</string>
+    <string name="thunder_coin_asset_data_empty">無法查詢餘額，請先新增幣種至資產錢包內</string>
+    <string name="backup_succeed">備份成功</string>
+    <string name="error_receipt_address_format">請確認收款地址格式是否正確</string>
+    <string name="error_address_of_pay_as_the_same_receipt">收款地址不得與付款地址相同</string>
+    <string name="hint_fill_in_valid_cic_address">輸入有效的cic地址</string>
+    <string name="hint_fill_in_valid_guc_address">輸入有效的guc地址</string>
+    <string name="error_invalid_address_retry_p">無效的地址，請重新輸入</string>
+    <string name="error_invalid_address_type_retry_p">無效的%s地址，請重新輸入</string>
+    <string name="edit_contact_person">編輯聯絡人</string>
+    <string name="fingerprint_verify_dialog_title">將Touch ID用於</string>
+    <string name="fingerprint_verify_dialog_message">請先驗證身份以瀏覽錢包</string>
+    <string name="fingerprint_verify_failed">辨識失敗</string>
+    <string name="show_only_once_per_day">今天內不要再顯示</string>
+    <string name="switch_wallet">切換錢包</string>
+    <string name="newSystemWallet_title">Hope Seed 支援了新的錢包！</string>
+
+    <string name="newSystemWallet_content">若要新增錢包，請輸入身份(錢包)密碼</string>
+    <string name="identityPwd">身份(錢包)密碼</string>
+    <string name="add_guc_wallet_success">導入成功</string>
+    <string name="backup_wallet_source_choose_label_title">選擇備份方式</string>
+    <string name="backup_wallet_source_choose_label_use_identity_qrcode">備份身份 QRCODE</string>
+    <string name="backupWallet_sourceChoose_label_identity_qrcode_desc">選擇使用身份 QRCODE 備份，將可以備份當前身份下所有的錢包 (系統錢包+外部錢包)，系統會提供一個您的專屬身份 QRCODE，日後在恢複身份或者導入錢包時，使用該 QRCODE 即可快速恢複所有錢包。</string>
+    <string name="backup_wallet_source_choose_label_use_mnemonic">備份身份助記詞</string>
+    <string name="backup_wallet_source_choose_label_user_mnemonic_desc">選擇備份身份助記詞，系統將協助您導出「原身份」底下的錢包助記詞。請特別留意該助記詞並不會包含您外部導入的錢包資訊，日後若以該助記詞恢複身份，將不會還原外部導入的錢包內容。</string>
+    <string name="qr_code_export_alert_backup_title">是否進行 QRcode 備份？</string>
+    <string name="qr_code_export_alert_note_content">您輸入的密碼與提示會使用於QRcode的安全加密防護與引導，請使用易於記得的密碼與適當的提示訊息。設定超過8位數字加上英文的組合(可與創建錢包、轉帳密碼不同)，密碼提示可輸入中文或英文。</string>
+    <string name="pwd_hint">密碼提示: </string>
+    <string name="qr_code_pwd_hint">密碼提示：\n設置一段告訴自己的暗號\n讓你可想起密碼。</string>
+    <string name="set_password_and_hint_error">密碼與密碼提示不得相同</string>
+    <string name="set_password_and_hint_empty">密碼與密碼提示不得空白</string>
+    <string name="qr_code_export_title">備份 QRCODE</string>
+    <string name="qr_code_export_btn_save_qrcode">儲存 QRCODE</string>
+    <string name="qr_code_export_label_desc">儲存身份 QRCODE 後，您可以使用該 QRCODE 進行身份恢複以及錢包導入功能。請務必記得設定的 QRCODE 密碼，在使用時系統需要您輸入該密碼以驗證身份。</string>
+    <string name="qr_code_backup_success">QRCODE備份成功</string>
+    <string name="qr_code_backup_fail">QRCODE備份失敗</string>
+    <string name="restore_by_mnemonic">助記詞恢複</string>
+    <string name="restore_by_qr_code">QRCODE恢複</string>
+    <string name="parse_qr_code_error">無效的QRCODE，請重新選取圖片</string>
+    <string name="parse_qr_code_pwd_error">密碼驗證失敗，請重新輸入</string>
+    <string name="input_pwd">輸入密碼</string>
+    <string name="input_pwd_to_parse_qr_code">請輸入 QRCODE 密碼以解鎖內容</string>
+    <string name="qr_code_content">Qrcode 內容</string>
+    <string name="will_not_import_existed_wallets">已經存在的錢包地址將不會進行導入。</string>
+    <string name="list_of_include_wallets">內含錢包列表</string>
+    <string name="user_system_wallet">內含的系統錢包</string>
+    <string name="external_wallet">外部導入的錢包</string>
+    <string name="qr_code_import_info_label_intro">是否要恢複此QRCODE內容？\n導入後所有錢包將使用您新設定的支付密碼與提示</string>
+
+    <string name="qr_code_import_info_btn_start_import">開始導入</string>
+    <string name="qr_code_store">QRCODE儲存</string>
+    <string name="qr_code_updated_store_tip">QRCODE 已變更，是否確定儲存？</string>
+    <string name="select_import_wallet_method">選擇導入方式</string>
+    <string name="use_private_key">使用錢包私鑰</string>
+    <string name="splash_slider_title_one">Welcome !\n歡迎來到HopeSeed</string>
+    <string name="splash_slider_title_two">多幣種交易</string>
+    <string name="splash_slider_title_three">創新快速安全</string>
+    <string name="confirm_delete_wallet_title">確認刪除錢包？</string>
+    <string name="fii_in_payment_wallet_password_p">請輸入錢包支付密碼</string>
+    <string name="delete_wallet">刪除錢包</string>
+    <string name="id_manage">身份管理</string>
+    <string name="importWallet_sourceChoose_label_title">選擇導入方式</string>
+    <string name="importWallet_sourceChoose_label_use_identity_qrcode">使用身份 QRCODE</string>
+    <string name="importWallet_sourceChoose_label_identity_qrcode_desc">選擇使用身份 QRCODE 導入錢包，將可以快速導入所有該 QRCODE 內含有的錢包內容至當前身份，導入時將會要求您輸入當初備份時設定的 QRCODE 密碼。</string>
+    <string name="importWallet_sourceChoose_label_use_pKey">使用錢包私鑰</string>
+    <string name="importWallet_sourceChoose_label_user_pKey_desc">選擇使用錢包私鑰導入，您需要選擇特定導入的錢包型態 (BTC / ETH &#8230; )，系統將會為您導入該私鑰對應錢包型態的內容至身份內。</string>
+    <string name="Touch_ID">Touch ID</string>
+    <string name="error_server_busy_try_again_p_z">伺服器忙碌中，請稍後再試(z)</string>
+    <string name="copy_private_key">複製私鑰</string>
+
+    <string name="note_hint_limit">請輸入30字以內的描述</string>
+    <string name="error_note_too_long">備註過長，請重新輸入</string>
+
+    <!--TTC-->
+    <string name="select_wallet_address">請選擇錢包地址</string>
+    <string name="stable_coin_btc">BTC類</string>
+    <string name="stable_coin_eth">ETH類</string>
+    <string name="stable_coin">穩定幣</string>
+    <string name="sto_coin">上市區</string>
+    <string name="tab_explorer">發現</string>
+    <string name="tab_social">社群</string>
+    <string name="tab_setting">設定</string>
+    <string name="create_new_wallet">新增錢包</string>
+    <string name="create_new_wallet_desc">選擇新增錢包，將使用助記詞產生新的錢包地址。</string>
+    <string name="create_new_btc_wallet">新增BTC錢包</string>
+    <string name="create_new_eth_wallet">新增ETH錢包</string>
+    <string name="create_new_wallet_finish">新增錢包完成，將重新開啟App</string>
+    <string name="create_new_wallet_max">錢包已達最大數量</string>
+    <string name="make_friend">加入好友</string>
+    <string name="join_group">加入群組</string>
+    <string name="create_group">新增社群</string>
+    <string name="friend_request">申请加为好友</string>
+    <string name="restore_im_account_title">取回通訊紀錄</string>
+    <string name="restore_im_account_content">小貼士：請先於原手機通訊>個人信息中設定</string>
+    <string name="restore_im_account_hint">請輸入移轉密碼</string>
+    <string name="restore_im_account_transfer">開始移轉</string>
+    <string name="restore_im_account_create_new">重新創建</string>
+    <string name="agree">同意</string>
+    <string name="deny">拒絕</string>
+    <string name="delete_conversation_record">刪除對話紀錄？</string>
+    <string name="contact">通訊錄</string>
+    <string name="contact_msg">訊息</string>
+    <string name="contact_individual">好友</string>
+    <string name="contact_group">社群</string>
+    <string name="friend_request_title">交友邀請</string>
+    <string name="friend">好友</string>
+    <string name="group_request_title">群组邀請</string>
+    <string name="group">群组</string>
+    <string name="my_qr_code">我的行動條碼</string>
+    <string name="user_info">個人資訊</string>
+    <string name="account">帳號</string>
+    <string name="input_friend_account">輸入朋友帳號</string>
+    <string name="select_from_camera">相機</string>
+    <string name="select_from_gallery">從照片相簿選取</string>
+    <string name="group_name">社群名稱</string>
+    <string name="group_type">群組類型</string>
+    <string name="private_group">私密群</string>
+    <string name="public_group">公開群</string>
+    <string name="post_message">張貼訊息</string>
+    <string name="post_by_admin">僅管理員</string>
+    <string name="post_by_any">所有成員</string>
+    <string name="group_description">描述</string>
+    <string name="add">新增</string>
+    <string name="member">成員</string>
+    <string name="inviting">正在邀請</string>
+    <string name="manage_group">管理群組</string>
+    <string name="exit_group">退出群組</string>
+    <string name="input_friend_verify_msg">請輸入好友驗證信息</string>
+    <string name="transfer_account">移轉帳號</string>
+    <string name="delete_friend">刪除好友</string>
+    <string name="setting_transfer_account_password_title">設定移轉密碼</string>
+    <string name="setting_transfer_account_password_desc">設定移轉密碼後即可將帳號移動至其他智慧手機</string>
+    <string name="input_transfer_account_password">請輸入移轉密碼</string>
+    <string name="setting_success">設定完成</string>
+    <string name="request_friend_success">已送出交友邀請</string>
+    <string name="chat_room_receipt">收款</string>
+    <string name="chat_room_image">圖片</string>
+    <string name="chat_room_camera">相機</string>
+    <string name="chat_room_file">檔案</string>
+    <string name="chat_room_playing">播放中</string>
+    <string name="chat_room_download_error">下載失敗</string>
+    <string name="chat_room_record_too_short">錄音時間過短</string>
+    <string name="copy_file_url">複製檔案網址</string>
+    <string name="download">下載</string>
+    <string name="chat_has_blocked">對方已封鎖聊天</string>
+    <string name="chat_room_has_blocked">這個聊天室被封鎖了</string>
+    <string name="chat_secret_setting">對話自爆功能</string>
+    <string name="decentralize">去中心化</string>
+    <string name="time_limit">時間限制</string>
+    <string name="chat_secret_single">單次對話</string>
+    <string name="chat_secret_keep_5">保留5分鐘</string>
+    <string name="chat_secret_keep_10">保留10分鐘</string>
+    <string name="chat_secret_keep_20">保留20分鐘</string>
+    <string name="receive_coin">收款幣別</string>
+    <string name="please_select">請選擇</string>
+    <string name="receive_amount">收款金額</string>
+    <string name="input_receive_amount">請輸入收款金額</string>
+    <string name="send_receipt_msg">發送收款信息</string>
+    <string name="trend">即時行情</string>
+    <string name="hot_group">熱門群組</string>
+    <string name="media">幣圈財經媒體</string>
+    <string name="blockchain_explorer">區塊鏈瀏覽器</string>
+    <string name="account_setting">帳戶設定</string>
+    <string name="basic_setting">基本設置</string>
+    <string name="follow_us">關注我們</string>
+    <string name="others">其他</string>
+    <string name="restart_app">將重新啟動app</string>
+    <string name="using_fingerprint">開啟指紋</string>
+    <string name="using_pin">使用Pin密碼</string>
+    <string name="switch_on_notification">開啟訊息通知</string>
+    <string name="switch_off_notification">關閉訊息通知</string>
+    <string name="export_mnemonics">導出助記詞</string>
+    <string name="export_btc_private_key">導出BTC私鑰</string>
+    <string name="export_eth_private_key">導出ETH私鑰</string>
+    <string name="transfer_all_amount">轉出總額</string>
+    <string name="forward">轉傳</string>
+    <string name="chat">聊天</string>
+    <string name="confirm_address_match">請確認地址是否相符</string>
+    <string name="transaction_success">轉帳成功</string>
+    <string name="transaction_fail">轉帳失敗</string>
+    <string name="downloading">下載中</string>
+    <string name="download_success">下載成功</string>
+    <string name="im_audio_call">通話</string>
+    <string name="press_to_speak">按住 說話</string>
+    <string name="release_to_send">鬆開 結束</string>
+    <string name="transaction_packing">(打包中)</string>
+
+    <string name="pwd_confirm">再次輸入密碼</string>
+    <string name="click_to_display_backup_qrcode">點選顯示備份行動條碼</string>
+    <string name="backup_qrcode_tip">此行動條碼為甜甜圈錢包為您貼心設計，供您日後可方便快速恢復您在甜甜圈錢上的所有錢包帳號。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
+
+    <!--main-->
+    <string name="tab_chat">聊天</string>
+    <string name="tab_main_coin">主鏈幣</string>
+    <string name="tab_stable_coin">穩定幣</string>
+    <string name="main_total_assets">總資產</string>
+
+    <!--select_import_wallet_method-->
+    <string name="select_import_wallet_method_create_new_wallet">創建新錢包</string>
+    <string name="select_import_wallet_method_create">創建</string>
+    <string name="select_import_wallet_method_btc">比特幣(Bitcoin) 錢包</string>
+    <string name="select_import_wallet_method_eth">以太幣(Ethereum) 錢包</string>
+    <string name="select_import_wallet_method_import_wallet">導入錢包</string>
+    <string name="select_import_wallet_method_import">導入</string>
+
+    <!--setting-->
+    <string name="setting_system_setting">系統設定</string>
+    <string name="setting_msg_notification">訊息通知</string>
+    <string name="setting_language">顯示語言</string>
+    <string name="setting_check_version">版本更新</string>
+    <string name="setting_wallet_setting">錢包設定</string>
+    <string name="setting_currency">變更計價貨幣</string>
+    <string name="setting_export">導出</string>
+    <string name="setting_account_safety">帳號安全</string>
+    <string name="setting_backup_account">備份帳號</string>
+    <string name="setting_delete_account">刪除帳號</string>
+    <string name="setting_using_locker">使用密碼鎖</string>
+
+    <!--export private key-->
+    <string name="export_private_key_qrcode">行動條碼</string>
+    <string name="export_private_key_pky">私鑰</string>
+    <string name="export_private_key_title">導出前請先閱讀注意事項</string>
+    <string name="export_private_key_qrcode_1">此行動條碼僅供直接掃描</string>
+    <string name="export_private_key_qrcode_2">請不要截圖或拍照來保存此行動條碼，僅供用戶在安全環境下自行使用掃描方式快速導入錢包。</string>
+    <string name="export_private_key_qrcode_3">請在安全環境下使用</string>
+    <string name="export_private_key_qrcode_4">請在四周無人、確保沒有監視器的安全環境中使用。行動條碼一旦被他人盜取，將造成不可挽回的資產損失。</string>
+    <string name="export_private_key_qrcode_show">點選此處\n顯示行動條碼</string>
+
+    <string name="export_private_key_pky_1">請務必使用離線保存</string>
+    <string name="export_private_key_pky_2">切勿保存在電子信箱、記事本、網路空間、聊天工具等，這會讓您的私鑰有被盜用的風險。</string>
+    <string name="export_private_key_pky_3">請絕對不要使用網路傳輸</string>
+    <string name="export_private_key_pky_4">請勿使用網路工具傳輸私鑰，一旦被駭客盜用將造成不可挽回的資產損失。建議使用離線設備通過掃描行動條碼的方式傳輸。</string>
+    <string name="export_private_key_pky_5">以密碼管理工具保存為佳</string>
+    <string name="export_private_key_pky_6">建議使用可信任的密碼管理相關工具保存私鑰</string>
+    <string name="export_private_key_pky_show">點選此處顯示私鑰</string>
+
+    <!--transfer-->
+    <string name="transfer_transfer_amount">轉帳金額</string>
+    <string name="transfer_miner_fee_custom">輸入自定義礦工費用</string>
+    <string name="transfer_select_common_address">選擇常用地址</string>
+    <string name="transfer_note">留言</string>
+    <string name="transfer_note_input">請輸入留言內容</string>
+    <string name="transfer_modify">修改</string>
+    <string name="transfer_confirm">轉帳確認</string>
+    <string name="transfer_address_input_hint">請輸入%s的收款地址 或 掃描行動條碼</string>
+    <string name="transfer_withdraw_currency">提出幣種</string>
+    <string name="transfer_choose_withdraw_currency">請選擇提出幣種</string>
+
+    <!--ttn transfer-->
+    <string name="ttn_transfer_receipt_address_hint">請輸入TTN閃電支付的收款地址 或 掃描行動條碼</string>
+    <string name="lighten_transfer">閃電支付</string>
+    <string name="lighten_wallet">閃電錢包</string>
+    <string name="ttn_deposit">存入</string>
+    <string name="ttn_withdraw">提出</string>
+    <string name="ttn_detail_transfer">閃電轉帳</string>
+    <string name="ttn_detail_receipt">閃電收款</string>
+    <string name="ttn_detail_record">交易明細</string>
+    <string name="ttn_receipt_pay">閃電支付</string>
+    <string name="ttn_deposit_amount">存入金額</string>
+    <string name="ttn_deposit_amount_input">請輸入要存入閃電支付錢包的金額</string>
+    <string name="ttn_withdraw_amount">提出金額</string>
+    <string name="ttn_withdraw_amount_input">請輸入從閃電支付錢包提出的金額</string>
+    <string name="ttn_withdraw_address_btc_hint">請輸入BTC的收款地址 或 掃描行動條碼</string>
+    <string name="ttn_withdraw_address">提出地址</string>
+    <string name="ttn_deposit_currency">存入幣種</string>
+    <string name="ttn_deposit_choose_currency">請選擇存入幣種</string>
+
+    <!--transaction record-->
+    <string name="transaction_record_receipt_success">收款成功</string>
+    <string name="transaction_record_receipt_amount">轉入金額</string>
+    <string name="transaction_record_receipt_record">收款紀錄</string>
+    <string name="transaction_record_pay_amount">轉出金額</string>
+    <string name="transaction_record_pay_record">轉帳紀錄</string>
+    <string name="transaction_record_note">交易留言</string>
+    <string name="transaction_record_txid">交易序號</string>
+    <string name="transaction_record_block_num">區塊編號</string>
+    <string name="transaction_record_detail">到瀏覽器查看詳細記錄</string>
+
+    <!--verify pwd dialog-->
+    <string name="verify_pwd_input_hint">請輸入您的錢包密碼</string>
+    <string name="verify_pwd_hint_title">顯示密碼提示訊息</string>
+
+    <!--wallet manage-->
+    <string name="wallet_manage_title">錢包設定</string>
+    <string name="wallet_manage_change_name">更改錢包名稱</string>
+    <string name="wallet_manage_hint">錢包密碼提示</string>
+    <string name="wallet_manage_export">導出錢包</string>
+    <string name="wallet_manage_delete">刪除錢包</string>
+
+    <!--splash-->
+    <string name="system_loading">系統更新中，請稍候</string>
+
+    <!--login-->
+    <string name="login_by_qrcode">使用《行動條碼》登入帳號</string>
+    <string name="login_by_mnemonics">使用《助記詞》登入帳號</string>
+    <string name="agree_privacy_policy">我同意《TTChain隱私政策》</string>
+
+    <!--asset list-->
+    <string name="main_chain_assets">主鏈總資產</string>
+
+    <!--webview-->
+    <string name="webview_reload">重新整理</string>
+    <string name="webview_copy_url">複製網址</string>
+    <string name="webview_share_url">分享網址</string>
+    <string name="webview_launch_app">以其他應用程式開啟</string>
+
+    <!--select backup method-->
+    <string name="select_backup_method_title">選擇備份帳號的方式</string>
+    <string name="select_backup_method_qrcode">行動條碼</string>
+    <string name="select_backup_method_mnemonics">助記詞</string>
+    <string name="select_backup_method_recommend">推薦</string>
+
+    <!--transfer status dialog-->
+    <string name="transfer_success_title">轉帳成功</string>
+    <string name="transfer_success_detail">您的轉帳請求已經成功。您可以到轉帳紀錄查看此筆交易狀態。</string>
+    <string name="transfer_success_and_check_record">查看轉帳紀錄</string>
+    <string name="back">返回</string>
+    <string name="deposit_success_title">存入成功</string>
+    <string name="deposit_success_detail">您的存入請求已經成功。您可以到轉帳紀錄查看此筆交易狀態。</string>
+    <string name="withdraw_success_title">提出成功</string>
+    <string name="withdraw_success_detail">您的提出請求已經成功。您可以到轉帳紀錄查看此筆交易狀態。</string>
+
+    <!--scaaner-->
+    <string name="scanner_import_by_gallery">從相簿讀入</string>
+    <string name="scanner_display_qrcode">顯示行動條碼與ID</string>
+
+    <!--account setting-->
+    <string name="account_setting_nick_name">聊天暱稱</string>
+    <string name="account_setting_uid">聊天ID</string>
+
+    <!-- bolt exchange -->
+    <string name="bolt_exchange_title">閃兌交易</string>
+    <string name="bolt_exchange_record">閃兌交易紀錄</string>
+    <string name="bolt_exchange_data">閃兌交易數據</string>
+    <!--new ttn main page-->
+    <string name="listed_currency">上市區</string>
+    <string name="cross_chain_currency">跨鏈幣種</string>
+    <string name="marquee_deposit_hint">只要單筆存入 USDT 10 顆以上，即送 1 顆 TTN 幣</string>
+    <string name="lightning_exchange">閃兌</string>
+
+    <string name="bolt_exchange_tip">每筆交易數量最低為  %1$s %2$s</string>
+    <string name="bolt_exchange_hint">輸入轉出數量</string>
+    <string name="bolt_receive_hint">輸入收到數量</string>
+
+    <string name="latest_exchange_rate">最新匯率：</string>
+    <string name="convertible_quantity">可兌換數量：</string>
+    <string name="convert_balance_not_enough">兌換方的餘額不足</string>
+
+    <string name="select_receive_currency">請選擇收到幣種</string>
+
+    <string name="guide_dialog_title">歡迎使用閃兌交易</string>
+    <string name="guide_dialog_message">這裡是TTChain閃電支付錢包，您可以在這裡體驗TTChain鏈上的秒速到帳交易功能。\n\n如果您是第一次使用，我們只需要花費幾秒鐘的時間來為您做簡易的操作導覽。</string>
+    <string name="ttn_skip">略過</string>
+    <string name="ttn_guide">開始導覽</string>
+    <string name="bolt_balance">餘額： %1$s %2$s</string>
+    <string name="bolt_balance_error">您的餘額不足</string>
+
+    <string name="dialog_bolt_success_title">閃兌交易成功</string>
+    <string name="dialog_bolt_success_message">您的閃兌交易請求已經成功。您可以到閃兌交易紀錄查看此筆交易狀態。</string>
+    <string name="dialog_bolt_success_record">查看閃兌紀錄</string>
+    <string name="ttn_end">結束</string>
+
+    <!--lightning exchange policy-->
+    <string name="policy_title">《 TTChainWallet兌換服務協議 》</string>
+    <string name="policy_update_time">最近更新於：2019年10月24日</string>
+    <string name="policy_content">附 1： 閃兌交易服務條款\n
+1、TTN的定義與意義\n
+TTN 是TTChain交易平台本身的權益證明，平台通用基礎通證，TTN作為TTChain去中心化交易平台的基礎幣種和交易燃料費，持有、交易TTN都可以享受\n
+平台的各項權益和福利。同時，TTN持有者也可以參與TTN的社區治理。\n
+*關於TTN平台幣的更多使用說明與其在TTChain公鏈上的應用，請詳閱TTChain官網最新版本白皮書為主。\n
+\n
+2、聲明\n
+ 本附件條款屬於《用戶服務協議》的有效組成部分，與主協議不可分割且具有同等法律效力。如果存在某一（些）條款與《用戶服務協議》產生爭議，我公司擁有最終解釋權。您在使用TTChain平台提供的閃兌交易服務之前，必須同意接受本條款。當您按照我們的約定填寫信息、提交文件、閱讀並同意本協議且完成註冊程序後，即表示您已充分閱讀、理解並接受本協議的全部內容。如您不同意接受其中任何條款約定，您應立即停止註冊程序並停止使用相關服務。\n
+\n
+3、服務內容\n
+ 3.1 TTChain平台向您提供區塊鏈資產交易技術服務，並在用戶需要時提供仲裁服務，以便促成您與其他用戶之間達成閃兌交易。\n
+\n
+ 3.2 為避免誤解，特澄清如下：TTChain平台並不提供區塊鏈資產的自營買賣服務，亦不提供交易中介及定價服務。閃兌交易服務是為您和其他用戶之間提供技術支持，協助您與其他用戶之間達成閃兌交易的網絡信息技術平台。您應該事先自行與其他用戶聯繫並達成交易意向。TTChain平台不對交易過程中產生的糾紛或爭議承擔責任，也不對任何一方使用閃兌交易服務過程中可能遭受的損失承擔責任，雙方應自行解決相關事宜，無法協商一致的可以請求TTChain仲裁、或者起訴和您進行交易的對方用戶。\n
+\n
+ 3.3 對於您使用閃兌交易服務向其他用戶或區塊鏈礦工等各方所提供的服務而支付或收取的費用，將由參與交易各方自行互相提供相應的收據，與TTChain平台無關。\n
+\n
+4、閃兌交易服務使用規則\n
+ 4.1用戶承擔TTChain錢包密語、賬號與密碼的保管責任，並就其賬號及密碼項下之一切活動（不論是否由用戶本人所為或得用戶本人授權而為）負全部責任。用戶賬號不是TTChain錢包密語，與用戶持有的區塊鏈資產無直接關聯，僅在使用TTChain服務時使用，收回賬號不會造成用戶的區塊鏈資產所有權變化或丟失。\n
+\n
+ 4.2 用戶不應將其TTChain密語、賬號、密碼轉讓或出借予他人使用。如用戶發現其賬號遭他人非法使用，應立即通知本公司。因黑客行為或用戶的保管疏忽導致賬號、密碼遭他人非法使用所發生的一切責任，均應由用戶本人承擔，本公司不承擔任何責任。若因此造成本公司責任，用戶同意賠償本公司的損失。\n
+\n
+4.3 當您使用閃兌交易服務與其他用戶產生糾紛時，TTChain或TTChain授權的第三方或您與TTChain一致同意的第三方有權基於您不可撤銷的授權受理您與其他會員因交易產生的爭議，並有權單方判斷與該爭議相關的事實及應適用的規則，進而作出處理決定，包括但不限於調整相關訂單的交易狀態，指令第三方支付公司或者客服將爭議貨款的全部或部分支付給交易一方或雙方。該處理決定對您有約束力。\n
+\n
+ 4.4 您理解並同意，TTChain或TTChain授權的第三方或您與TTChain一致同意的第三方並非司法機構，僅能以普通人的身份對證據進行鑑別，TTChain或TTChain授權的第三方或您與TTChain一致同意的第三方對爭議的調處完全是基於您不可撤銷得授權，其無法保證爭議處理結果符合您的期望，也不對爭議調處結論承擔任何責任。如您因此遭受損失，您同意自行向受益人索償。\n
+\n
+4.5 用戶在使用TTChain平台閃兌交易服務過程中，必須遵循以下原則：\n
+\n
+  •遵守安哥拉共和國有關的法律和法規；\n
+  •遵守用戶所在國家或地區有關的法律和法規；\n
+  •遵守所有與網絡服務有關的網絡協議、規定和程序；\n
+  •不得為任何非法目的而使用網絡服務系統；\n
+  •不得以任何形式使用TTChain平台服務侵犯本公司的商業利益，包括但不限於發布非經本公司許可的商業廣告；\n
+  •不得利用TTChain平台網絡服務系統進行任何可能對互聯網或移動網正常運轉造成不利影響的行為\n
+  •不得利用本產品提供的網絡服務上傳、展示或傳播任何虛假的、騷擾性的、中傷他人的、辱罵性的、恐嚇性的、庸俗淫穢的或其他任何非法的信息數據；\n
+  •不得侵犯其他任何第三方的專利權、著作權、商標權、名譽權或其他任何合法權益；\n
+  •不得利用TTChain平台服務系統進行任何不利於本公司的行為。\n
+\n
+5、風險提示\n
+\n
+5.1您了解並知悉，由於區塊鏈資產領域的法律法規政策尚未健全，該領域的數字代幣可能會產生無法兌現，技術變量等重大風險。對於其他金融資產。我們謹慎提醒您根據自身財務狀況和風險偏好，以合理的方式選擇持有或處置任何一種區塊鏈資產。您也了解TTChain提供的行情查看功能僅系抓取部分交易所的數字代幣匯率信息的搜索結果，並不表示為最新行情或最佳報價。\n
+\n
+5.2在使用TTChain服務時，若您或您的相對方未遵從本協議或相關網站說明，交易，支付頁面中之操作提示，規則，本公司並不保證交易會順利完成，且本公司不承擔責任損害賠償責任。如果發生重疊，而資金已先行入賬您的或您的交易方的TTChain錢包或第三方錢包，您理解區塊鏈操作具有的“不可逆”屬性，以及相關交易具有“不可撤銷”的特徵，由您及您的相對方自行承擔相應的風險後果。\n
+\n
+5.3您理解並知悉，閃兌和幣幣兌換交易均值在第三方智能合約上發生，進行並完成。TTChain僅作為界面工具幫助用戶和第三方智能合約交互並顯示該已完成交易的相應結果。\n
+\n
+5.4在您通過TTChain使用第三方服務時，本公司強烈建議您仔細閱讀這些第三方服務的用戶協議，所有權政策和其他相關的文件和信息等，了解交易對象及產品信息，謹慎評估風險後再在該第三方上進行交易。您理解該交易和有約束力的合同關係在您和您的相對方之間建立，與本公司無關。本公司對因您的交易行為造成的一切風險，責任，損失，費用不承擔任何責任。\n
+\n
+5.5當您將區塊鏈資產轉給其他錢包地址時，您在交易過程中是否自行判斷對方是否為完全民事行為能力人並自行決定是否與對方進行交易或轉賬給對方等。\n
+\n
+5.6在轉賬過程中，如果出現“交易失敗”，“打包超時”等類似的異常信息提示時，您應通過相關區塊鏈系統的官方途徑或其他的區塊鏈查詢工具進行再次確認，以避免重複轉賬；否則，引發所引起的一切損失和費用應由您自行承擔。\n
+\n
+5.7您理解當您在TTChain上創建或引入錢包之後，您的密鑰庫，私鑰，助記詞等信息僅存儲在當前的這台移動設備中，不存儲在TTChain或本公司的服務器上。可以按照TTChain提供的操作指南採取同步錢包等方式更換移動設備。但如果您未保存或備份錢包密碼，私鑰，助記詞，密鑰庫等信息且在您移動設備丟失的情況下，您的區塊鏈資產將因此丟失，本公司無法為您找回。若您在導出，保存或備份錢包密碼，私鑰，助記詞，Keystore等信息的時候洩密，或保存或備份上述信息的設備或服務器被黑客竊取攻擊或控制等情況下，您的區塊鏈資產將因此丟失，本公司無法為您找回。原因導致產生的任何及所有損失應由您自行承擔。\n
+\n
+\n</string>
+    <string name="policy_agreement">我同意《 TTChainWallet兌換服務協議 》</string>
+
+    <string name="privacy_title">《 TTChainWallet隱私政策 》</string>
+    <string name="privacy_update_time">最近更新於：2018年12月18日</string>
+    <string name="app_restart_title">應用程式即將重啟</string>
+    <string name="app_restart_message">重啟後即更換語言</string>
+
+    <string name="create_group_group_announcement">社群公告</string>
+    <string name="create_group_group_input_text">輸入文字</string>
+
+    <string name="edit_group_title">社群資訊</string>
+    <string name="edit_group_group_announcement">社群公告</string>
+    <string name="edit_group_group_setting">社群設定</string>
+    <string name="edit_group_close_notify">關閉提醒</string>
+    <string name="edit_group_member_management">成員管理</string>
+    <string name="edit_group_community_management">社群管理</string>
+
+    <string name="group_manage_title">社群管理</string>
+    <string name="group_manage_text">只有管理員以上階級可以張貼訊息</string>
+
+    <string name="group_member_manage">成員管理</string>
+
+    <string name="image_display_msg">開啟檔案</string>
+    <string name="delete_account_title">確定要刪除帳號嗎？</string>
+    <string name="delete_account_message">刪除帳號後將清空TTChain App內所有的紀錄，請務必確認已經儲存備份的資訊後再執行。\n\n請注意，如在無備份帳號的情況下刪除帳號將永遠無法尋回帳號和內含的錢包等資產。</string>
+    <string name="delete_account_confirm_title">即將刪除帳號</string>
+    <string name="delete_account_confirm_message">確認刪除後會立即重啟</string>
+
+    <!-- 聊天收款頁面 -->
+    <string name="request_coin_title">發送收款請求</string>
+    <string name="request_coin_receipt_currency">收款幣種</string>
+    <string name="request_coin_receipt_currency_hint">請選擇收款幣種</string>
+    <string name="request_coin_receipt_address">收款地址</string>
+    <string name="request_coin_receipt_address_hint">請先選擇收款幣種，系統將自動偵測</string>
+    <string name="request_coin_receipt_amount">收款金額</string>
+    <string name="request_coin_receipt_amount_hint">請輸入收款的金額</string>
+    <string name="request_coin_receipt_tip">發送收款請求時，礦工費用將由付款方支出。</string>
+    <string name="request_coin_time">收款時限</string>
+    <string name="request_coin_time_text">%d日</string>
+
+    <!-- 發送收款請求確認頁面 -->
+    <string name="request_coin_confirm_title">發送收款請求</string>
+    <string name="request_coin_confirm_currency">收款幣種</string>
+    <string name="request_coin_confirm_address">收款地址</string>
+    <string name="request_coin_confirm_amount">收款金額</string>
+    <string name="request_coin_confirm_time">收款時限</string>
+    <string name="request_coin_confirm_time_text">%d日</string>
+    <string name="request_coin_confirm_confirm">確認</string>
+
+    <!-- 收款成功 Dialog -->
+    <string name="dialog_request_coin_success_title">已發送收款請求</string>
+    <string name="dialog_request_coin_success_message">付款方可在時限內直接轉帳給您</string>
+    <string name="dialog_request_coin_success_button">確認</string>
+
+    <!-- 訊息頁收款 item -->
+    <string name="item_chat_room_send_request_coin_message">已向 \&#60; %s \&#62; 發送收款訊息</string>
+    <string name="item_chat_room_send_request_coin_button">查看</string>
+    <string name="item_chat_room_receive_send_request_coin_message">已向 \&#60; 您 \&#62; 發送收款訊息</string>
+    <string name="item_chat_room_receive_request_coin_button">轉帳</string>
+
+    <!-- 個人資訊頁面 -->
+    <string name="user_info_chat_name">聊天暱稱</string>
+    <string name="user_info_chat_id">聊天ID</string>
+    <string name="user_info_chat_view_qr_code">顯示行動條碼</string>
+
+    <!-- explorer page -->
+    <string name="feedback">意見回饋</string>
+    <string name="privacy_policy">隱私政策</string>
+    <string name="help_center">幫助中心</string>
+    <string name="about_us">關於我們</string>
+    <string name="trend_subtitle">最新漲跌資訊</string>
+    <string name="coin_type">幣種</string>
+    <string name="usd_price">價格 (%s)</string>
+    <string name="quote_change">漲跌幅</string>
+    <string name="hot_group_subtitle">最火社群等您來參與</string>
+    <string name="media_subtitle">幣圈新知都在這</string>
+    <string name="dapp_subtitle">遊戲一把抓</string>
+    <string name="blockchain_explorer_subtitle">快速查詢您的交易資訊</string>
+
+    <string name="host_learn_more">了解更多</string>
+    <string name="host_check_file">檢查檔案中</string>
+    <string name="host_host_version">下載器版本：</string>
+    <string name="host_host">下載器:</string>
+    <string name="host_plugin">更新包:</string>
+    <string name="host_update_finish">更新完成 載入中</string>
+    <string name="host_install_apk_failure_dialog_title">更新失敗</string>
+    <string name="host_install_apk_failure_dialog_message">安裝APK失敗，您必須允許安裝%s來源的應用程式權限。再試一次？</string>
+    <string name="host_ok">確定</string>
+    <string name="host_exit">離開</string>
+
+    <string name="transaction_was_not_completed_title">BTC、USDT-Omni無法連續轉帳！</string>
+    <string name="transaction_was_not_completed_message">剛轉出的 BTC、USDT-Omni 還未到帳，再轉第二筆為什麼會提示轉帳失敗？
+這是因為比特幣公鏈的設計邏輯關係，第一筆轉帳會佔用 UTXO（未消費的交易輸出）直至轉帳成功後才可被釋放。建議您等待第一筆 BTC、USDT-Omni 轉帳成功後，再操作第二筆。
+建議解決方式：使用TTChain公鏈轉賬BTC、USDT-Omni即可連續轉帳。
+</string>
+
+    <!-- Authentication -->
+    <string name="using_locker_using_finger">使用指紋辨識</string>
+    <string name="authentication_title">身份認證</string>
+    <string name="authentication_description">請使用指紋辨識</string>
+    <string name="authentication_not_support">手機不支援指紋辨識</string>
+
+    <!-- Private key 導入錢包 -->
+    <string name="import_wallet_by_prk_title_btc">導入錢包 (BTC)</string>
+    <string name="import_wallet_by_prk_title_eth">創建新錢包 (ETH)</string>
+    <string name="import_wallet_by_prk_enter_privatekey">輸入私鑰</string>
+    <string name="import_wallet_by_prk_enter_privatekey_hint">請輸入私鑰 或 使用行動條碼掃描</string>
+    <string name="import_wallet_by_prk_enter_wallet_name_bitcoin">錢包名稱 (Bitcoin)</string>
+    <string name="import_wallet_by_prk_enter_wallet_name_eth">導入錢包 (Ethereum)</string>
+    <string name="import_wallet_by_prk_enter_wallet_name_hint">請為新建的錢包命名</string>
+    <string name="import_wallet_by_prk_enter_wallet_password">錢包密碼</string>
+    <string name="import_wallet_by_prk_enter_wallet_password_confirm">再次輸入錢包密碼</string>
+    <string name="import_wallet_by_prk_tip_1">TTChain團隊不會保存您的錢包密碼，也無法在您遺失錢包密碼時協助尋回，請謹慎設立密碼與密碼提示。</string>
+    <string name="import_wallet_by_prk_tip_2">如遺忘密碼將一併遺失錢包內的資產，請特別注意。</string>
+
+
+    <!-- select export wallet -->
+    <string name="select_export_wallet_title_btc">選擇導出的錢包 (BTC)</string>
+    <string name="select_export_wallet_title_eth">選擇導出的錢包 (ETH)</string>
+
+
+    <!-- 新增常用地址 -->
+    <string name="operation_comm_address_title">新增常用地址</string>
+    <string name="operation_comm_address_name">名稱</string>
+    <string name="operation_comm_address_name_hint">請為此錢包命名</string>
+    <string name="operation_comm_address_address">地址</string>
+    <string name="operation_comm_address_address_hint">請輸入地址 或 使用行動條碼掃描地址</string>
+    <string name="operation_comm_address_note">備註(選填)</string>
+    <string name="operation_comm_address_note_hint">請輸入二十個字元以內的備註</string>
+
+    <!-- comm address dialog -->
+    <string name="dialog_comm_address_title">已新增常用地址</string>
+    <string name="dialog_comm_address_message">轉帳付款時已可快速使用此地址</string>
+    <string name="dialog_comm_address_title_edit">已編輯常用地址</string>
+    <string name="dialog_comm_address_message_edit">地址內容已更新</string>
+
+
+    <!-- update dialog fragment -->
+    <string name="dialog_update_version_title">有最新版本可以更新</string>
+    <string name="dialog_update_version_left_button">稍後</string>
+    <string name="dialog_update_version_right_button">更新</string>
+
+    <!-- dialog red envelope receipt -->
+    <string name="dialog_red_envelope_receive">收取</string>
+    <string name="dialog_red_envelope_later">稍後</string>
+    <string name="dialog_red_envelope_setting">紅包設定</string>
+    <string name="dialog_red_envelope_received">已领取</string>
+    <string name="dialog_red_envelope_unreceived">未领取</string>
+    <string name="dialog_red_envelope_error_too_late">已逾時，下次請早！</string>
+
+
+    <!-- 餘額不足支付礦工費 -->
+    <string name="not_enough_mone_fee">可轉帳餘額不足。若為USDT轉帳，請檢查BTC錢包餘額是否足夠支付礦工費</string>
+
+    <!-- red evnelope info fragment -->
+    <string name="red_envelope_info_title">查看红包</string>
+
+    <!-- chat mene -->
+    <string name="chat_menu_personal_info">個人資訊</string>
+    <string name="chat_menu_add_friend">新增好友</string>
+    <string name="chat_menu_add_group">新增群組</string>
+
+    <!-- Add Friend Fragment -->
+    <string name="add_friend_fragment_title">新增好友</string>
+    <string name="add_friend_fragment_friend_id">好友ID</string>
+    <string name="add_friend_fragment_friend_id_hint">請輸入好友ID 或 掃描QRcode</string>
+    <string name="add_friend_fragment_personal_info">用戶資訊</string>
+    <string name="add_friend_fragment_add_button">加入好友</string>
+    <string name="add_friend_fragment_chat_button">聊天</string>
+    <string name="add_friend_fragment_no_user">查無用戶</string>
+    <string name="add_friend_fragment_is_friend">已在好友名單中</string>
+
+    <!-- add friend dialog -->
+    <string name="add_friend_dialog_title">已加入好友</string>
+    <string name="add_friend_dialog_message">可以和您的好友開始聊天囉！</string>
+
+    <!-- group qrcode fragment -->
+    <string name="group_qrcode_fragment_title">社群行動條碼</string>
+    <string name="group_qrcode_fragment_share">分享行動條碼</string>
+    <string name="group_qrcode_fragment_save">儲存行動條碼</string>
+
+    <!-- group member manage -->
+    <string name="group_member_manage_title">成員管理</string>
+    <string name="group_member_manage_add">新增</string>
+
+    <!-- invite group member -->
+    <string name="invite_group_member_title">邀請成員</string>
+
+    <!-- invite success dialog -->
+    <string name="invite_member_success_dialog_title">成功邀請成員</string>
+    <string name="invite_member_success_dialog_message">成員已受邀至社群內</string>
+
+    <!-- gourp menu -->
+    <string name="group_menu_qrcode">行動條碼</string>
+    <string name="group_menu_delete">解散社群</string>
+    <string name="group_menu_leave">離開社群</string>
+
+    <!-- delete group dialog -->
+    <string name="delete_group_dialog_title">即將解散社群</string>
+    <string name="delete_group_dialog_message">解散社群後，社群內所有的紀錄將被刪除，成員也都會離開。</string>
+
+    <!-- item group invitation -->
+    <string name="item_group_invitation_tip_text">已被邀請加入社群</string>
+    <string name="item_group_invitation_reject">拒絕</string>
+    <string name="item_group_invitation_accept">接受</string>
+
+    <!-- item firend invitation -->
+    <string name="item_friend_invitation_tip_text">已被邀請成為好友</string>
+
+    <!-- item chat block -->
+    <string name="item_chat_block_text">您已封鎖此用戶</string>
+
+    <!-- user info fragment -->
+    <string name="user_info_fragment_chat_name">聊天暱稱</string>
+    <string name="user_info_fragment_chat_id">聊天ID</string>
+    <string name="user_info_fragment_system_setting">系統設定</string>
+    <string name="user_info_fragment_block">封鎖好友</string>
+
+    <!-- item group member manage -->
+    <string name="item_group_member_manage_inviting">邀請中</string>
+    <string name="item_group_member_manage_group_owner">群主</string>
+
+    <!-- dialog invitation notice -->
+    <string name="dialog_invitation_notice">等待對方回應中</string>
+
+    <!-- user wallet mnemonic fragment -->
+    <string name="user_wallet_mnemonic_title">備份帳號</string>
+    <string name="user_wallet_mnemonic_message_1">備份帳號－助記詞</string>
+    <string name="user_wallet_mnemonic_message_2">請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
+
+
+    <!-- enter password fragment -->
+    <string name="enter_password_top_message">請輸入帳號密碼</string>
+    <string name="enter_password_password">密碼</string>
+    <string name="enter_password_password_hint">請輸入錢包密碼</string>
+    <string name="enter_password_password_tip">密碼提示訊息</string>
+
+    <!-- success login activity -->
+    <string name="success_login_message_1">您已成功登入</string>
+    <string name="success_login_message_2">歡迎回來</string>
+
+    <!-- restore mnemonics with user -->
+    <string name="restore_with_user_info_nick_name">暱稱</string>
+    <string name="restore_with_user_info_nick_name_hint">該暱稱在聊天系統代表您的稱呼，請勿使用不雅文字</string>
+    <string name="restore_with_user_info_nick_password">密碼</string>
+    <string name="restore_with_user_info_nick_password_hint">建議使用英文字母大小寫與數字組合</string>
+    <string name="restore_with_user_info_nick_confirm_password">再次輸入密碼</string>
+    <string name="restore_with_user_info_nick_confirm_password_hint">請再次輸入密碼</string>
+    <string name="restore_with_user_info_nick_hint_password">密碼提示訊息</string>
+    <string name="restore_with_user_info_nick_hint_password_hint">提示內容請勿與密碼一樣，以免被輕易盜取</string>
+    <string name="restore_with_user_info_nick_policy">我同意《TTChain隱私政策》</string>
+    <string name="account_info">帳號資訊</string>
+
+    <!-- wallet settting fargment -->
+    <string name="wallet_setting_title">錢包設定</string>
+    <string name="wallet_setting_switch_address_type">切換地址類型</string>
+    <string name="wallet_setting_change_wallet_name">更改錢包名稱</string>
+    <string name="wallet_setting_wallet_password_hint">錢包密碼提示</string>
+    <string name="wallet_setting_export_wallet">導出錢包</string>
+    <string name="wallet_setting_delete_wallet">刪除錢包</string>
+
+    <!-- change wallet name fragment -->
+    <string name="change_wallet_name_title">更改錢包名稱</string>
+    <string name="change_wallet_name_bitcoin_name">錢包名稱 (Bitcoin)</string>
+    <string name="change_wallet_name_hint">請輸入錢包名稱</string>
+
+    <!-- change wallet name success -->
+    <string name="change_wallet_name_success_title">已更改錢包名稱</string>
+    <string name="change_wallet_name_success_message">錢包名稱將變更為新名稱</string>
+
+    <!-- wallet password hint -->
+    <string name="wallet_password_hint_title">錢包密碼提示</string>
+    <string name="wallet_password_hint_password_hint">錢包密碼提示 (Bitcoin)</string>
+
+    <!-- delete wallet dialog -->
+    <string name="delete_wallet_dialog_title">您即將刪除該錢包</string>
+    <string name="delete_wallet_dialog_message">錢包刪除後無法復原，請務必確認錢包內的所有資產已轉移。</string>
+
+    <!-- create wallet by hd -->
+    <string name="create_wallet_by_hd_title_btc">創建新錢包 (BTC)</string>
+    <string name="create_wallet_by_hd_title_eth">創建新錢包 (ETH)</string>
+    <string name="create_wallet_by_hd_wallet_name_btc">錢包名稱 (Bitcoin)</string>
+    <string name="create_wallet_by_hd_wallet_name_eth">錢包名稱 (Ethereum)</string>
+    <string name="create_wallet_by_hd_wallet_name_btc_hint">請為新建的比特幣錢包命名</string>
+    <string name="create_wallet_by_hd_wallet_name_eth_hint">請為新建的乙太幣錢包命名</string>
+    <string name="create_wallet_by_hd_wallet_password">錢包密碼</string>
+    <string name="create_wallet_by_hd_wallet_confirm_password">再次輸入錢包密碼</string>
+    <string name="create_wallet_by_hd_wallet_tip_1">TTChain團隊不會保存您的錢包密碼，也無法在您遺失錢包密碼時協助尋回，請謹慎設立密碼與密碼提示。</string>
+    <string name="create_wallet_by_hd_wallet_tip_2">如遺忘密碼將一併遺失錢包內的資產，請特別注意。</string>
+
+    <string name="please_check_btc_wallet">請查看BTC錢包</string>
+    <string name="please_check_usdt_wallet">請查看USDT錢包</string>
+
+    <!-- fragment mnemonic start -->
+    <string name="mnemonic_start_tip_1">此行動條碼備份內容包含：所有TTChainWallet創建錢包及閃電錢包、聊天身分與聊天紀錄。</string>
+    <string name="mnemonic_start_tip_2">此行動條碼為TTChain為您貼心設計，供您日後可以方便快速恢復您帳號上的所有錢包。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
+
+    <!-- restore by mnemonics -->
+    <string name="restore_by_mnemonics_tip_2">輸入中文助記詞，共 12 個中文字</string>
+</resources>

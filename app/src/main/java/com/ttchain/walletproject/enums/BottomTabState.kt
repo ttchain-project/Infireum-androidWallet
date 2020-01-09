@@ -7,6 +7,6 @@ enum class BottomTabState(val position:Int) {
     WALLET(0),
 //    CHAT(1),
 //    TTN(2),
-    EXPLORER(3),
-    ME(4);
+    EXPLORER(1),
+    ME(2);
 }

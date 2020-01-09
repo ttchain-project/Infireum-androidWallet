@@ -6,17 +6,17 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.ttchain.walletproject.enums.BottomTabState
 import com.ttchain.walletproject.ui.discovery.DiscoveryFragment
 import com.ttchain.walletproject.ui.me.MeFragment
-import com.ttchain.walletproject.ui.wallet.WalletFragment
+import com.ttchain.walletproject.ui.wallet.WalletMainFragment
 
 class MainPagerAdapter(fm: FragmentManager) :
     FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            BottomTabState.WALLET.position -> WalletFragment.newInstance()
+            BottomTabState.WALLET.position -> WalletMainFragment.newInstance()
             BottomTabState.EXPLORER.position -> DiscoveryFragment.newInstance()
             BottomTabState.ME.position -> MeFragment.newInstance()
-            else -> WalletFragment.newInstance()
+            else -> WalletMainFragment.newInstance()
         }
     }
 
