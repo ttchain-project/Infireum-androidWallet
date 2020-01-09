@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">Wallet Project</string>
-
     <string name="tab_wallet">Wallet</string>
     <string name="tab_mine">Me</string>
     <string name="tab_explorer">Discovery</string>
