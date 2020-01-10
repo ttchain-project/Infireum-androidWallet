@@ -10,6 +10,10 @@ import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 import java.lang.ref.WeakReference
 
+val preferenceHelper: Preferences by lazy {
+    App.preferenceHelper
+}
+
 class App :MultiDexApplication() {
 
     companion object {
@@ -34,6 +38,8 @@ class App :MultiDexApplication() {
         super.onCreate()
         INSTANCE = WeakReference(this)
         app = this
+        preferenceHelper =
+            Preferences(applicationContext.getSharedPreferences("setting", MODE_PRIVATE))
 
         // koin
         startKoin {

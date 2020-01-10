@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_warring_dialog_top"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_40"
+        android:paddingTop="@dimen/padding_40"
+        android:paddingRight="@dimen/padding_40"
+        android:paddingBottom="@dimen/padding_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/popups_img_notice" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextWhite.Big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_18"
+            android:textStyle="bold"
+            tools:text="您確定要略過嗎？" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_18"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            tools:text="@string/delete_account_message" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_warring_dialog_bottom"
+        android:paddingTop="@dimen/padding_24"
+        android:paddingBottom="@dimen/padding_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_container">
+
+        <TextView
+            android:id="@+id/buttonRight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_12"
+            android:layout_marginEnd="@dimen/padding_24"
+            android:background="@drawable/bg_white_rectangle_30_grey_stoke"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingBottom="@dimen/padding_6"
+            android:text="@string/g_confirm"
+            android:textColor="@color/_66000000"
+            app:layout_constraintLeft_toRightOf="@+id/buttonLeft"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/buttonLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_24"
+            android:layout_marginEnd="@dimen/padding_12"
+            android:background="@drawable/bg_white_rectangle_30_grey_stoke"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingBottom="@dimen/padding_6"
+            android:text="@string/g_cancel"
+            android:textColor="@color/_66000000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/buttonRight"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

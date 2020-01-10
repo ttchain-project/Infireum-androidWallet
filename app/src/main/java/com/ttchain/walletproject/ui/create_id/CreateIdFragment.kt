@@ -10,6 +10,7 @@ import com.ttchain.walletproject.enums.AgreementEnum
 import com.ttchain.walletproject.model.UserBean
 import com.ttchain.walletproject.setDelayClickListener
 import com.ttchain.walletproject.ui.agreement.AgreementActivity
+import com.ttchain.walletproject.ui.create_id.mnemonics.MnemonicsStartActivity
 import kotlinx.android.synthetic.main.fragment_create_id.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -97,7 +98,7 @@ class CreateIdFragment : BaseFragment() {
     }
 
     private fun launchMnemonicsStart(userData: UserBean) {
-//        MnemonicsStartActivity.launch(requireActivity(), userData)
+        MnemonicsStartActivity.launch(requireActivity(), userData)
     }
 
     private fun launchAgreementActivity() {
