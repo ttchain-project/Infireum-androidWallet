@@ -6,6 +6,7 @@ import com.ttchain.walletproject.model.*
 import com.ttchain.walletproject.repository.*
 import com.ttchain.walletproject.ui.dapp.DappViewModel
 import com.ttchain.walletproject.ui.discovery.DiscoveryViewModel
+import com.ttchain.walletproject.ui.login.LoginViewModel
 import com.ttchain.walletproject.ui.me.MeViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
 import com.ttchain.walletproject.ui.trend.TrendViewModel
@@ -17,6 +18,7 @@ import org.koin.dsl.module
 
 val viewModelModule = module {
     viewModel { SplashViewModel(get(), get(), get(), get(), get()) }
+    viewModel { LoginViewModel(get()) }
     viewModel { WalletMainViewModel() }
     viewModel { WalletListViewModel() }
     viewModel { DiscoveryViewModel(get(), get(), get()) }
@@ -27,8 +29,16 @@ val viewModelModule = module {
 }
 
 val repositoryModule = module {
+    //Core repository
+//    single { WalletRepository(get(), get(), get()) }
+    single { CoinRepository(get(), get(), get(), get()) }
+//    single { BalanceRepository(get()) }
+//    single { MinerFeeRepository(get()) }
     //Helper repository
     single { SplashRepository(get(), get(), get()) }
+    single { VerifyRepository(get(), get(), get()) }
+//    single { RestoreRepository(get(), get()) }
+//    single { TtnRepository(get(), get()) }
     //Api repository
     single { InfoRepositoryCo(get()) }
     single { HelperRepository(get()) }

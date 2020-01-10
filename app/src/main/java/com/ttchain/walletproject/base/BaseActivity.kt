@@ -1,5 +1,6 @@
 package com.ttchain.walletproject.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +8,18 @@ import androidx.core.app.NavUtils
 import androidx.core.app.TaskStackBuilder
 import com.afollestad.materialdialogs.MaterialDialog
 import com.ttchain.walletproject.App
+import com.ttchain.walletproject.ContextWrapper
+import com.ttchain.walletproject.R
+import com.ttchain.walletproject.addDialog
+import com.ttchain.walletproject.dialog.ProgressDialog
+import com.ttchain.walletproject.utils.Utility
+import kotlinx.android.synthetic.main.view_toolbar.*
 
 abstract class BaseActivity : AppCompatActivity() {
 
+    private var mProgressDialog: ProgressDialog? = null
+    private var mMessageDialog: MaterialDialog? = null
+    private var mMessageDialogFinish: MaterialDialog? = null
 
     private var mActiveServiceDialog: MaterialDialog? = null
     /**
@@ -32,13 +42,13 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutId)
-//        toolbar?.let {
-//            setSupportActionBar(it)
-//            displayHomeButton(true)
-//        }
+        toolbar?.let {
+            setSupportActionBar(it)
+            displayHomeButton(true)
+        }
     }
-//
-//
+
+
 //    override fun attachBaseContext(newBase: Context) {
 //        super.attachBaseContext(ContextWrapper.wrap(newBase, Utility.getPrefLocal(newBase)))
 //    }
@@ -75,6 +85,63 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
+    fun onShowLoading() {
+        if (mProgressDialog == null) {
+            mProgressDialog = ProgressDialog()
+            supportFragmentManager.addDialog(mProgressDialog!!, "loading")
+        }
+    }
+
+    fun onHideLoading() {
+        mProgressDialog?.dismissAllowingStateLoss()
+        mProgressDialog = null
+    }
+
+    fun onShowMessageDialog(msg: String?) {
+        onShowMessageDialog(msg, false)
+    }
+
+    fun onShowMessageDialog(msg: String?, showLatest: Boolean) {
+        if (msg.isNullOrEmpty() && mMessageDialog != null && mMessageDialog!!.isShowing && !showLatest) {
+            return
+        }
+        mMessageDialog = MaterialDialog.Builder(this)
+            .content(msg!!)
+            .positiveText(R.string.g_ok)
+            .show()
+    }
+
+      fun onShowMessageDialogFinish(msg: String?) {
+        if (msg.isNullOrEmpty() && mMessageDialogFinish != null && mMessageDialogFinish!!.isShowing) {
+            return
+        }
+        mMessageDialogFinish = MaterialDialog.Builder(this)
+            .autoDismiss(false)
+            .cancelable(false)
+            .content(msg!!)
+            .positiveText(R.string.g_ok)
+            .onPositive { dialog, _ ->
+                dialog.dismiss()
+                finish()
+            }
+            .show()
+    }
+
+    fun closeAllDialog() {
+        if (mProgressDialog != null && mProgressDialog?.isAdded == true) {
+            mProgressDialog?.dismissAllowingStateLoss()
+            mProgressDialog = null
+        }
+        if (mMessageDialog != null) {
+            mMessageDialog?.dismiss()
+            mMessageDialog = null
+        }
+        if (mMessageDialogFinish != null) {
+            mMessageDialogFinish?.dismiss()
+            mMessageDialogFinish = null
+        }
+    }
+
     fun finishActivity() {
         finish()
     }
@@ -84,6 +151,7 @@ abstract class BaseActivity : AppCompatActivity() {
             mActiveServiceDialog?.dismiss()
             mActiveServiceDialog = null
         }
+        closeAllDialog()
         super.onDestroy()
     }
 }

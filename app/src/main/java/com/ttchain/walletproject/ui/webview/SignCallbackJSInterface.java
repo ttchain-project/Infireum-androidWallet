@@ -5,6 +5,9 @@ import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 
+import com.ttchain.walletproject.model.Address;
+import com.ttchain.walletproject.model.Message;
+import com.ttchain.walletproject.model.Transaction;
 import com.ttchain.walletproject.utils.NumberUtils;
 
 

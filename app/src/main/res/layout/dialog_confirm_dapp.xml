@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/padding_24">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextBlack.Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/padding_40"
+        android:text="支付詳情"/>
+
+    <TextView
+        style="@style/TextBlack.SuperLarge"
+        android:id="@+id/amount_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="0 ETH"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_16"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <TextView
+        android:id="@+id/receipt_address_title_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="收款地址"
+        app:layout_constraintTop_toBottomOf="@+id/amount_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guide_line_v"
+        android:layout_marginTop="@dimen/padding_12"/>
+
+    <TextView
+        android:id="@+id/receipt_address_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="0xac3c22396dbaed9fd6b13193c753e1e34457e0e0"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_v"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/receipt_address_title_tv"
+        android:layout_marginStart="@dimen/padding_12"/>
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/silver"
+        app:layout_constraintTop_toBottomOf="@+id/receipt_address_tv"
+        app:layout_constraintStart_toStartOf="@+id/receipt_address_title_tv"
+        app:layout_constraintEnd_toEndOf="@+id/receipt_address_tv"
+        android:layout_marginTop="@dimen/padding_12"/>
+
+    <TextView
+        android:id="@+id/pay_address_title_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="付款地址"
+        app:layout_constraintTop_toBottomOf="@+id/divider_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guide_line_v"
+        android:layout_marginTop="@dimen/padding_12"/>
+
+    <TextView
+        android:id="@+id/pay_address_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="0xac3c22396dbaed9fd6b13193c753e1e34457e0e0"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_v"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pay_address_title_tv"
+        android:layout_marginStart="@dimen/padding_12"/>
+
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/silver"
+        app:layout_constraintTop_toBottomOf="@+id/pay_address_tv"
+        app:layout_constraintStart_toStartOf="@+id/pay_address_title_tv"
+        app:layout_constraintEnd_toEndOf="@+id/pay_address_tv"
+        android:layout_marginTop="@dimen/padding_12"/>
+
+    <TextView
+        android:id="@+id/miner_fee_title_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="礦工費用"
+        app:layout_constraintTop_toBottomOf="@+id/divider_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guide_line_v"
+        android:layout_marginTop="@dimen/padding_12"/>
+
+    <TextView
+        android:id="@+id/miner_fee_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="0.0054 ETH"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_v"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/miner_fee_title_tv"
+        android:layout_marginStart="@dimen/padding_12"/>
+
+    <Button
+        android:id="@+id/confirm"
+        style="@style/PrimaryButtonDark"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/miner_fee_title_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/cancel"
+        android:layout_marginRight="@dimen/padding_24"
+        android:layout_marginTop="@dimen/padding_24"
+        android:layout_marginLeft="@dimen/padding_12"
+        android:text="@string/g_confirm"/>
+
+    <Button
+        android:id="@+id/cancel"
+        style="@style/PrimaryButtonDarkEdge"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/miner_fee_title_tv"
+        app:layout_constraintRight_toLeftOf="@+id/confirm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/padding_24"
+        android:layout_marginRight="@dimen/padding_12"
+        android:layout_marginTop="@dimen/padding_24"
+        android:text="@string/g_cancel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

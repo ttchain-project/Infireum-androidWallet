@@ -19,6 +19,9 @@ import androidx.core.os.bundleOf
 import androidx.lifecycle.observe
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
+import com.ttchain.walletproject.model.Address
+import com.ttchain.walletproject.model.Message
+import com.ttchain.walletproject.model.Transaction
 import com.ttchain.walletproject.performCopyString
 import com.ttchain.walletproject.setDelayClickListener
 import kotlinx.android.synthetic.main.fragment_web_view.*

@@ -7,6 +7,7 @@ import android.util.Log;
 import androidx.annotation.RawRes;
 
 import com.ttchain.walletproject.R;
+import com.ttchain.walletproject.model.Address;
 
 import java.io.IOException;
 import java.io.InputStream;

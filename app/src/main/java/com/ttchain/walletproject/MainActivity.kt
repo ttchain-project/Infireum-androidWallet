@@ -1,11 +1,19 @@
 package com.ttchain.walletproject
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import com.ttchain.walletproject.base.BaseActivity
 import com.ttchain.walletproject.enums.BottomTabState
 import kotlinx.android.synthetic.main.main_activity.*
 
 class MainActivity : BaseActivity() {
+
+    companion object {
+         fun launch (activity: Activity){
+             activity.startActivity(Intent(activity, MainActivity::class.java))
+         }
+    }
 
     override val layoutId = R.layout.main_activity
 

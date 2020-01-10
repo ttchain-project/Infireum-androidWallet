@@ -3,11 +3,15 @@ package com.ttchain.walletproject.ui.webview
 import android.webkit.WebView
 import androidx.lifecycle.MutableLiveData
 import com.ttchain.walletproject.base.BaseViewModel
+import com.ttchain.walletproject.blockchain.Bitcoinj
 import com.ttchain.walletproject.database.data.WalletData
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.model.DbHelper
 import com.ttchain.walletproject.model.MainnetInfuraRequest
+import com.ttchain.walletproject.model.Message
+import com.ttchain.walletproject.model.Transaction
 import com.ttchain.walletproject.repository.BroadcastRepository
+import com.ttchain.walletproject.repository.VerifyRepository
 import com.ttchain.walletproject.toMain
 import com.ttchain.walletproject.utils.Utility
 import com.ttchain.walletproject.utils.Utils
@@ -171,5 +175,4 @@ class WebViewViewModel(
                 })
         )
     }
-
 }

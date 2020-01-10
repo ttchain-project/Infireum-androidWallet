@@ -1,4 +1,4 @@
-package com.ttchain.walletproject.ui.webview;
+package com.ttchain.walletproject.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
