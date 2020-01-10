@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_white_4dp"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_24">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/PrimaryBlackText.Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_40"
+        android:drawableTop="@mipmap/popups_img_success"
+        android:drawablePadding="@dimen/padding_18"
+        tools:text="@string/transfer_success_title" />
+
+    <TextView
+        android:id="@+id/content"
+        style="@style/PrimaryBlackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/padding_24"
+        android:layout_marginTop="@dimen/padding_18"
+        android:layout_marginEnd="@dimen/padding_24"
+        android:layout_marginBottom="@dimen/padding_24"
+        android:textColor="@color/_7F8890"
+        android:textSize="@dimen/sp_14"
+        tools:text="@string/transfer_success_detail" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_12"
+        android:layout_marginEnd="@dimen/padding_12"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/buttonLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_4"
+            android:layout_marginEnd="@dimen/padding_4"
+            android:layout_weight="1"
+            android:background="@drawable/bg_b9c0ca_radius_30"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingBottom="@dimen/padding_6"
+            android:textColor="@color/_B9C0CA"
+            android:textSize="@dimen/sp_14"
+            tools:text="@string/transfer_success_and_check_record" />
+
+        <TextView
+            android:id="@+id/buttonRight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_4"
+            android:layout_marginEnd="@dimen/padding_4"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dark_radius_30"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingBottom="@dimen/padding_6"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+</LinearLayout>

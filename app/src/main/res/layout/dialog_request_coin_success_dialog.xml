@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_bolt_success"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_40"
+        android:drawableTop="@mipmap/popups_img_success"
+        android:drawablePadding="@dimen/padding_6"
+        android:text="@string/dialog_request_coin_success_title"
+        android:textColor="@color/_CC000001"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_12"
+        android:text="@string/dialog_request_coin_success_message"
+        android:textColor="@color/_80000001"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/textViewConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_40"
+        android:layout_marginBottom="@dimen/padding_24"
+        android:background="@drawable/bg_request_coin_button"
+        android:paddingStart="46dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="46dp"
+        android:paddingBottom="6dp"
+        android:text="@string/dialog_request_coin_success_button" />
+
+</LinearLayout>
