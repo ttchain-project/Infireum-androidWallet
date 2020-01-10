@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/step_1_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewKeyboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="102dp"
+            android:src="@mipmap/login_keyword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/PrimaryBlackText.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/login_by_mnemonics"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewKeyboard" />
+
+        <TextView
+            android:id="@+id/dec_tv"
+            style="@style/PrimaryBlackText.Mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/restore_by_mnemonics_tip_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_48"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dec_tv">
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toStartOf="@+id/mnemonic_input_2"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="一" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_2"
+                android:padding="@dimen/padding_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toStartOf="@+id/mnemonic_input_3"
+                app:layout_constraintStart_toEndOf="@+id/mnemonic_input_1"
+                tools:text="二" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toStartOf="@+id/mnemonic_input_4"
+                app:layout_constraintStart_toEndOf="@+id/mnemonic_input_2"
+                tools:text="三" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mnemonic_input_3"
+                tools:text="四" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toStartOf="@+id/mnemonic_input_6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mnemonic_input_1"
+                tools:text="五" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toStartOf="@+id/mnemonic_input_7"
+                app:layout_constraintStart_toEndOf="@+id/mnemonic_input_5"
+                app:layout_constraintTop_toTopOf="@id/mnemonic_input_5"
+                tools:text="六" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toStartOf="@+id/mnemonic_input_8"
+                app:layout_constraintStart_toEndOf="@+id/mnemonic_input_6"
+                app:layout_constraintTop_toTopOf="@id/mnemonic_input_5"
+                tools:text="七" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mnemonic_input_7"
+                app:layout_constraintTop_toTopOf="@id/mnemonic_input_5"
+                tools:text="八" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toStartOf="@+id/mnemonic_input_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mnemonic_input_5"
+                tools:text="九" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toStartOf="@+id/mnemonic_input_11"
+                app:layout_constraintStart_toEndOf="@+id/mnemonic_input_9"
+                app:layout_constraintTop_toTopOf="@id/mnemonic_input_9"
+                tools:text="十" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toStartOf="@+id/mnemonic_input_12"
+                app:layout_constraintStart_toEndOf="@+id/mnemonic_input_10"
+                app:layout_constraintTop_toTopOf="@id/mnemonic_input_9"
+                tools:text="甲" />
+
+            <com.ttchain.walletproject.view.MnemonicsEditText
+                android:id="@+id/mnemonic_input_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:maxLength="1"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/_354252"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mnemonic_input_11"
+                app:layout_constraintTop_toTopOf="@id/mnemonic_input_9"
+                tools:text="乙" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.ttchain.walletproject.view.NextButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_24"
+            android:layout_marginBottom="@dimen/padding_16"
+            app:button_enable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.ttchain.walletproject.view.PreviousButton
+            android:id="@+id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_24"
+            android:layout_marginBottom="@dimen/padding_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

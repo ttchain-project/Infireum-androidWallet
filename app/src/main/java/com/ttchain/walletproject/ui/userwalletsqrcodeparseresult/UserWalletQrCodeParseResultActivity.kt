@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseActivity
 import com.ttchain.walletproject.model.UserWalletQrCodeImageBean
+import com.ttchain.walletproject.ui.success_login.SuccessLoginActivity
 import kotlinx.android.synthetic.main.activity_user_wallet_qr_code_parse_result.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -100,7 +101,7 @@ class UserWalletQrCodeParseResultActivity : BaseActivity() {
             onCreateClickLiveData.observe(this@UserWalletQrCodeParseResultActivity) { status ->
                 if (status) {
                     finishActivity()
-//                    SuccessLoginActivity.launch(this@UserWalletQrCodeParseResultActivity)
+                    SuccessLoginActivity.launch(this@UserWalletQrCodeParseResultActivity)
                 } else {
                     showToast(getString(R.string.fail_create))
                 }

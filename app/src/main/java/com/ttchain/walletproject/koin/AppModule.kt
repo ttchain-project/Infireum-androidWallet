@@ -12,6 +12,8 @@ import com.ttchain.walletproject.ui.discovery.DiscoveryViewModel
 import com.ttchain.walletproject.ui.enter_password.EnterPasswordViewModel
 import com.ttchain.walletproject.ui.login.LoginViewModel
 import com.ttchain.walletproject.ui.me.MeViewModel
+import com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsViewModel
+import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.RestoreNoUserInfoViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
 import com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultViewModel
 import com.ttchain.walletproject.ui.trend.TrendViewModel
@@ -29,6 +31,8 @@ val viewModelModule = module {
     viewModel { UserWalletQrCodeParseResultViewModel(get(), get(), get(), get(), get()) }
     viewModel { CreateIdViewModel(get(), get(), get()) }
     viewModel { MnemonicsStartViewModel(get(), get(), get(), get()) }
+    viewModel { RestoreByMnemonicsViewModel(get(), get()) }
+    viewModel { RestoreNoUserInfoViewModel(get(), get(), get()) }
 
     viewModel { WalletMainViewModel() }
     viewModel { WalletListViewModel() }
@@ -48,7 +52,7 @@ val repositoryModule = module {
     //Helper repository
     single { SplashRepository(get(), get(), get()) }
     single { VerifyRepository(get(), get(), get()) }
-//    single { RestoreRepository(get(), get()) }
+    single { RestoreRepository(get(), get()) }
 //    single { TtnRepository(get(), get()) }
     //Api repository
     single { InfoRepositoryCo(get()) }
@@ -64,6 +68,7 @@ val helperModule = module {
     single<UserHelper> { UserHelperImpl(get()) }
     single<DbHelper> { DbHelperImpl(get()) }
     single<MockHelper> { MockHelperImpl(get()) }
+    single { BaseMainModel(get(), get(), get()) }
 }
 
 val appModule = listOf(
