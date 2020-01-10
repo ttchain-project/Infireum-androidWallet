@@ -5,6 +5,7 @@ import com.ttchain.walletproject.net.client.GsonCustomConverterFactory
 import com.ttchain.walletproject.interceptor.HeaderAcceptInterceptor
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.ttchain.walletproject.*
+import com.ttchain.walletproject.net.BroadcastApi
 import com.ttchain.walletproject.net.HelperApi
 import com.ttchain.walletproject.net.HelperApiCo
 import com.ttchain.walletproject.net.InfoApiCo
@@ -101,7 +102,7 @@ val networkModule = module {
     single {
         providesApiCo<HelperApiCo>(get(), BuildConfig.GIT_HELPER_API_URL)
     }
-//    single { providesApi<BroadcastApi>(get(), BuildConfig.GIT_HELPER_API_URL) }
+    single { providesApi<BroadcastApi>(get(), BuildConfig.GIT_HELPER_API_URL) }
 //    single { providesApi<ImApi>(get(), BuildConfig.GIT_IM_API_URL) }
 //    single { providesApiCo<ImApiCo>(get(), BuildConfig.GIT_IM_API_URL) }
 //    single { providesApi<RedEnvelopeApi>(get(), BuildConfig.GIT_IM_API_URL) }

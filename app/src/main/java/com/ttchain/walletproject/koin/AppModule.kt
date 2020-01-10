@@ -3,15 +3,15 @@ package com.ttchain.walletproject.koin
 import com.ttchain.walletproject.helper.MockHelper
 import com.ttchain.walletproject.helper.MockHelperImpl
 import com.ttchain.walletproject.model.*
-import com.ttchain.walletproject.repository.HelperRepository
-import com.ttchain.walletproject.repository.HelperRepositoryCo
-import com.ttchain.walletproject.repository.InfoRepositoryCo
-import com.ttchain.walletproject.repository.SplashRepository
+import com.ttchain.walletproject.repository.*
+import com.ttchain.walletproject.ui.dapp.DappViewModel
 import com.ttchain.walletproject.ui.discovery.DiscoveryViewModel
 import com.ttchain.walletproject.ui.me.MeViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
+import com.ttchain.walletproject.ui.trend.TrendViewModel
 import com.ttchain.walletproject.ui.wallet.WalletMainViewModel
 import com.ttchain.walletproject.ui.wallet.wallet_list.WalletListViewModel
+import com.ttchain.walletproject.ui.webview.WebViewViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -20,6 +20,9 @@ val viewModelModule = module {
     viewModel { WalletMainViewModel() }
     viewModel { WalletListViewModel() }
     viewModel { DiscoveryViewModel(get(), get(), get()) }
+    viewModel { DappViewModel(get(), get()) }
+    viewModel { TrendViewModel(get(), get()) }
+    viewModel { WebViewViewModel(get(), get(), get()) }
     viewModel { MeViewModel() }
 }
 
@@ -30,6 +33,7 @@ val repositoryModule = module {
     single { InfoRepositoryCo(get()) }
     single { HelperRepository(get()) }
     single { HelperRepositoryCo(get()) }
+    single { BroadcastRepository(get()) }
 }
 
 val helperModule = module {

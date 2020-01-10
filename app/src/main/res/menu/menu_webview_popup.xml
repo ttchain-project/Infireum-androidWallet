@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/refresh"
+        android:icon="@mipmap/popovers_btn_reorganization"
+        android:title="@string/webview_reload"/>
+
+    <item
+        android:id="@+id/copy"
+        android:icon="@mipmap/btn_copy"
+        android:title="@string/webview_copy_url"/>
+
+    <item
+        android:id="@+id/share"
+        android:icon="@mipmap/popovers_btn_share"
+        android:title="@string/webview_share_url"/>
+
+    <item
+        android:id="@+id/intent"
+        android:icon="@mipmap/popovers_btn_openout"
+        android:title="@string/webview_launch_app"/>
+
+</menu>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/personalInfo"
+        android:icon="@mipmap/popovers_btn_user"
+        android:title="@string/chat_menu_personal_info"/>
+
+    <item
+        android:id="@+id/addFriend"
+        android:icon="@mipmap/popovers_btn_addfriend"
+        android:title="@string/chat_menu_add_friend"/>
+
+    <item
+        android:id="@+id/addGroup"
+        android:icon="@mipmap/popovers_btn_addgroup"
+        android:title="@string/chat_menu_add_group"/>
+</menu>
