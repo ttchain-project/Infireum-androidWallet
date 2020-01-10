@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/index_tv"
+        style="@style/PrimaryBlackText.SuperSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/icon_tv"
+        android:layout_width="@dimen/padding_20"
+        android:layout_height="@dimen/padding_20"
+        android:layout_marginStart="@dimen/padding_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/index_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@mipmap/wallet_coin_btc" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        style="@style/PrimaryBlackText.Mini"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_4"
+        android:gravity="start|center_vertical"
+        android:lineSpacingExtra="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/price_tv"
+        app:layout_constraintStart_toEndOf="@+id/icon_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bitcoin" />
+
+    <TextView
+        android:id="@+id/price_tv"
+        style="@style/PrimaryBlackText.Mini"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:lineSpacingExtra="0sp"
+        android:textColor="@color/_66C92E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/name_tv"
+        app:layout_constraintRight_toLeftOf="@+id/change_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="123446666666433381.78" />
+
+    <TextView
+        android:id="@+id/change_tv"
+        style="@style/PrimaryWhiteText.Mini"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price_tv"
+        android:layout_marginLeft="@dimen/padding_24"
+        android:layout_marginRight="@dimen/padding_24"
+        android:background="@drawable/bg_trend_green_radius_8"
+        android:gravity="center"
+        android:lineSpacingExtra="0sp"
+        android:paddingTop="@dimen/padding_6"
+        android:paddingBottom="@dimen/padding_6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/price_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2.74%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
