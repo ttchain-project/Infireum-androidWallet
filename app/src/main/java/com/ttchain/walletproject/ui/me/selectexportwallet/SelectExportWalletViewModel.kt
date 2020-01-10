@@ -1,4 +1,4 @@
-package com.ttchain.walletproject.ui.selectexportwallet
+package com.ttchain.walletproject.ui.me.selectexportwallet
 
 import androidx.lifecycle.MutableLiveData
 import com.ttchain.walletproject.base.BaseViewModel

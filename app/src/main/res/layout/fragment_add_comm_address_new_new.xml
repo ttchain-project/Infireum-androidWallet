@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_F9F9F9"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/padding_18"
+            android:paddingTop="@dimen/padding_16"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_16">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/operation_comm_address_name"
+                    android:textColor="@color/_98C736"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/textViewError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red_500"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/operation_comm_address_name_hint"
+                android:inputType="text"
+                android:textColor="@color/_354252"
+                android:textColorHint="@color/_B9C0CA"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/operation_comm_address_address"
+                    android:textColor="@color/_98C736"
+                    android:textSize="@dimen/sp_12" />
+
+                <ImageView
+                    android:id="@+id/copy"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/btn_list_copy_primary"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/operation_comm_address_address_hint"
+                android:inputType="text"
+                android:textColor="@color/_354252"
+                android:textColorHint="@color/_B9C0CA"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/operation_comm_address_note"
+                android:textColor="@color/_98C736"
+                android:textSize="@dimen/sp_12" />
+
+            <EditText
+                android:id="@+id/editTextNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/operation_comm_address_note_hint"
+                android:inputType="text"
+                android:textColor="@color/_354252"
+                android:textColorHint="@color/_B9C0CA"
+                android:textSize="@dimen/sp_14" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_16"
+        android:gravity="center_horizontal"
+        android:paddingStart="@dimen/padding_6"
+        android:paddingEnd="@dimen/padding_6">
+
+        <com.ttchain.walletproject.view.PreviousButton
+            android:id="@+id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            app:previous_button_text="@string/g_cancel" />
+
+        <com.ttchain.walletproject.view.NextButton
+            android:id="@+id/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            app:button_text="@string/g_confirm" />
+
+    </LinearLayout>
+</LinearLayout>

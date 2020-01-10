@@ -676,6 +676,12 @@ data class CustomCommentsData(
     var toAddress: String = ""
 )
 
+data class AddressBean(var addressID: Int = -1) : Serializable {
+    var name: String = ""
+    var coinName: String = ""
+    var address: String = ""
+    var icon: Int = 0
+}
 data class BalanceBean(var _id: Int = -1) : Serializable {
     var address: String = ""
     var coinId: String = ""

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextBlack.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="@string/create_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/display_qrcode_ly"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F1F1F1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="@dimen/padding_18"
+        app:layout_constraintWidth_percent="0.66">
+
+        <Button
+            android:id="@+id/create"
+            style="@style/PrimaryButtonAppleGreen"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/click_to_display_backup_qrcode"/>
+
+        <TextView
+            style="@style/TextBlack.SuperSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/create_identity_desc_2"
+            app:layout_constraintTop_toBottomOf="@+id/create"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/padding_24"
+            android:textColor="#FB6B5B"
+            android:layout_marginLeft="@dimen/padding_20"
+            android:layout_marginRight="@dimen/padding_20"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/qrcode"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="@dimen/padding_18"
+        app:layout_constraintWidth_percent="0.66"
+        android:visibility="gone"/>
+
+    <TextView
+        style="@style/TextBlack.SuperSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/backup_qrcode_tip"
+        app:layout_constraintTop_toBottomOf="@+id/display_qrcode_ly"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/padding_24"
+        android:layout_marginLeft="@dimen/padding_40"
+        android:layout_marginRight="@dimen/padding_40"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

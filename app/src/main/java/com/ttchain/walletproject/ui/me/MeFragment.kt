@@ -23,10 +23,12 @@ import com.ttchain.walletproject.dialog.UpdateVersionDialogFragment
 import com.ttchain.walletproject.dialog.WarningDialog
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.ui.login.LoginActivity
+import com.ttchain.walletproject.ui.me.commonaddress.CommonAddressActivity
 import com.ttchain.walletproject.ui.me.currency.CurrencyActivity
 import com.ttchain.walletproject.ui.me.languagesetting.LanguageSettingActivity
+import com.ttchain.walletproject.ui.me.selectbackupmethod.SelectBackupMethodActivity
 import com.ttchain.walletproject.ui.me.usinglocker.UsingLockerActivity
-import com.ttchain.walletproject.ui.selectexportwallet.SelectExportWalletActivity
+import com.ttchain.walletproject.ui.me.selectexportwallet.SelectExportWalletActivity
 import com.ttchain.walletproject.utils.FeatureUtils
 import com.ttchain.walletproject.utils.Utility
 import com.ttchain.walletproject.utils.Utils
@@ -67,7 +69,7 @@ class MeFragment : BaseFragment() {
 //            viewModel.performGetVersion()
 //        }
         textViewCommonAddress.setDelayClickListener {
-//            CommonAddressActivity.launch(requireActivity())
+            CommonAddressActivity.launch(requireActivity())
         }
         textViewCurrency.setDelayClickListener {
             CurrencyActivity.launch(requireActivity())
@@ -216,7 +218,7 @@ class MeFragment : BaseFragment() {
                     when (position) {
                         1 -> viewModel.onClickExitIdentityConfirm()
                         else -> {
-//                            SelectBackupMethodActivity.launch(requireActivity())
+                            SelectBackupMethodActivity.launch(requireActivity())
                         }
                     }
                     position = -1

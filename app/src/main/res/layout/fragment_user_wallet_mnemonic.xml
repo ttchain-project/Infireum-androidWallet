@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:text="@string/user_wallet_mnemonic_message_1"
+            android:textColor="@color/_354252"
+            android:textSize="20sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_32"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1"
+                tools:text="我" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMnemonic2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewMnemonic3"
+                app:layout_constraintStart_toEndOf="@+id/textViewMnemonic1"
+                app:layout_constraintTop_toTopOf="@+id/textViewMnemonic1"
+                tools:text="我" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMnemonic3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewMnemonic4"
+                app:layout_constraintStart_toEndOf="@+id/textViewMnemonic2"
+                app:layout_constraintTop_toTopOf="@+id/textViewMnemonic2"
+                tools:text="我" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMnemonic4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewMnemonic1"
+                tools:text="我" />
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="5"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMnemonic1" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:text="我" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMnemonic6"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewMnemonic7"
+                app:layout_constraintStart_toEndOf="@+id/textViewMnemonic5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:text="我" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMnemonic7"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewMnemonic8"
+                app:layout_constraintStart_toEndOf="@+id/textViewMnemonic6"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:text="我" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMnemonic8"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:text="我" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="9"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMnemonic5" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                tools:text="我" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="10"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMnemonic10"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMnemonic5" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewMnemonic11"
+                app:layout_constraintStart_toEndOf="@+id/textViewMnemonic9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                tools:text="我" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="11"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMnemonic11"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMnemonic5" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewMnemonic12"
+                app:layout_constraintStart_toEndOf="@+id/textViewMnemonic10"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                tools:text="我" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="12"
+                android:textColor="#CFCFCF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMnemonic12"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMnemonic5" />
+
+            <TextView
+                android:id="@+id/textViewMnemonic12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                android:background="@drawable/bg_mnemonic"
+                android:gravity="center"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:minWidth="54dp"
+                android:minHeight="54dp"
+                android:paddingStart="17dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="17dp"
+                android:paddingBottom="@dimen/padding_12"
+                android:textColor="@color/_354252"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                tools:text="我" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_40"
+            android:layout_marginTop="@dimen/padding_40"
+            android:layout_marginEnd="@dimen/padding_40"
+            android:layout_marginBottom="@dimen/padding_40"
+            android:text="@string/user_wallet_mnemonic_message_2"
+            android:textColor="@color/_354252"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
