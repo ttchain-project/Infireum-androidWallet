@@ -1,5 +1,6 @@
 package com.ttchain.walletproject.koin
 
+import com.ttchain.walletproject.base.BaseConfigViewModel
 import com.ttchain.walletproject.helper.MockHelper
 import com.ttchain.walletproject.helper.MockHelperImpl
 import com.ttchain.walletproject.model.*
@@ -18,6 +19,7 @@ import com.ttchain.walletproject.ui.me.currency.CurrencyViewModel
 import com.ttchain.walletproject.ui.me.languagesetting.LanguageSettingViewModel
 import com.ttchain.walletproject.ui.me.selectbackupmethod.SelectBackupMethodViewModel
 import com.ttchain.walletproject.ui.me.selectexportwallet.SelectExportWalletViewModel
+import com.ttchain.walletproject.ui.me.userwalletmnemonic.UserWalletMnemonicViewModel
 import com.ttchain.walletproject.ui.me.userwalletsqrcode.UserWalletQrCodeViewModel
 import com.ttchain.walletproject.ui.me.usinglocker.UsingLockerViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsViewModel
@@ -33,6 +35,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
+    viewModel { BaseConfigViewModel(get(), get()) }
     viewModel { SplashViewModel(get(), get(), get(), get(), get()) }
     viewModel { LoginViewModel(get()) }
     viewModel { AgreementViewModel(get(), get()) }
@@ -44,7 +47,7 @@ val viewModelModule = module {
     viewModel { RestoreNoUserInfoViewModel(get(), get(), get()) }
 
     viewModel { WalletMainViewModel(get(), get(), get()) }
-    viewModel { WalletListViewModel(get(), get(), get(), get(), get(), get()) }
+    viewModel { WalletListViewModel(get(), get(), get(), get(), get(), get(), get(), get()) }
     viewModel { DiscoveryViewModel(get(), get(), get()) }
     viewModel { DappViewModel(get(), get()) }
     viewModel { TrendViewModel(get(), get()) }
@@ -58,6 +61,7 @@ val viewModelModule = module {
     viewModel { SelectExportWalletViewModel(get(), get(), get()) }
     viewModel { ExportKeyViewModel(get(), get()) }
     viewModel { UserWalletQrCodeViewModel(get(), get(), get()) }
+    viewModel { UserWalletMnemonicViewModel(get(), get()) }
     viewModel { UsingLockerViewModel(get()) }
 }
 
@@ -71,7 +75,7 @@ val repositoryModule = module {
     single { SplashRepository(get(), get(), get()) }
     single { VerifyRepository(get(), get(), get()) }
     single { RestoreRepository(get(), get()) }
-//    single { TtnRepository(get(), get()) }
+    single { TtnRepository(get(), get()) }
     //Api repository
     single { InfoRepositoryCo(get()) }
     single { HelperRepository(get()) }
@@ -79,6 +83,7 @@ val repositoryModule = module {
     single { ImRepositoryCo(get()) }
     single { BroadcastRepository(get()) }
     single { BalanceApiRepository(get()) }
+    single { TtnServerApiRepository(get()) }
 }
 
 val helperModule = module {

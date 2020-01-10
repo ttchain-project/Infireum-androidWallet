@@ -11,7 +11,9 @@ class MainActivity : BaseActivity() {
 
     companion object {
          fun launch (activity: Activity){
-             activity.startActivity(Intent(activity, MainActivity::class.java))
+             activity.startActivity(Intent(activity, MainActivity::class.java).apply {
+                 flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+             })
          }
     }
 
@@ -20,11 +22,6 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initView()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        bottomTabView.setItemClick(BottomTabState.WALLET)
     }
 
     private fun initView() {
@@ -42,5 +39,6 @@ class MainActivity : BaseActivity() {
             }
             bottomTabView.setTabPosition(bottomTabStatus)
         }
+        bottomTabView.setItemClick(BottomTabState.WALLET)
     }
 }

@@ -10,10 +10,9 @@ import com.ttchain.walletproject.database.data.IdentityData
 import com.ttchain.walletproject.database.data.WalletData
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.enums.MainCoinType
+import com.ttchain.walletproject.handleAmount
 import com.ttchain.walletproject.model.*
-import com.ttchain.walletproject.repository.CoinRepository
-import com.ttchain.walletproject.repository.HelperRepository
-import com.ttchain.walletproject.repository.VerifyRepository
+import com.ttchain.walletproject.repository.*
 import com.ttchain.walletproject.toMain
 import com.ttchain.walletproject.utils.NumberUtils
 import com.ttchain.walletproject.utils.RuleUtils
@@ -21,6 +20,7 @@ import com.ttchain.walletproject.utils.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.bitcoinj.core.Coin
 import java.math.BigDecimal
 import java.util.ArrayList
 
@@ -30,8 +30,10 @@ class WalletListViewModel(
     private val userHelper: UserHelper,
     private val coinRepository: CoinRepository,
     private val helperRepository: HelperRepository,
-    private val verifyRepository: VerifyRepository
-):BaseViewModel() {
+    private val verifyRepository: VerifyRepository,
+    private val ttnRepository: TtnRepository,
+    private val ttnServerApiRepository: TtnServerApiRepository
+) : BaseViewModel() {
 
 
     var category = ""
@@ -92,6 +94,10 @@ class WalletListViewModel(
 
     val mainDataLiveData = MutableLiveData<List<ExpandableListBean>>()
 
+    var btc = ExpandableListBean()
+    var eth = ExpandableListBean()
+    var ttn = ExpandableListBean()
+
     private fun getMainData() {
         //BTC
         var btcAmount = BigDecimal("0")
@@ -100,7 +106,7 @@ class WalletListViewModel(
         for (assetData in dbHelper.getAssetDataListByCoinIDs(listOf(btcCoinID))) {
             btcAmount = btcAmount.add(assetData.amount)
         }
-        val btc = ExpandableListBean(
+        btc = ExpandableListBean(
             -1,
             CoinEnum.BTC.coinName,
             NumberUtils.show(btcAmount),
@@ -114,7 +120,7 @@ class WalletListViewModel(
         for (assetData in dbHelper.getAssetDataListByCoinIDs(listOf(ethCoinID))) {
             ethAmount = ethAmount.add(assetData.amount)
         }
-        val eth = ExpandableListBean(
+        eth = ExpandableListBean(
             -1,
             CoinEnum.ETH.coinName,
             NumberUtils.show(ethAmount),
@@ -122,35 +128,39 @@ class WalletListViewModel(
             ethIcon
         )
 
+
         val btcList = ArrayList<ExpandableListBean>()
         val ethList = ArrayList<ExpandableListBean>()
         for (walletData in getWalletDataList()) {
-            if (walletData.mainCoinId == CoinEnum.BTC.coinId) {
-                val amount =
-                    dbHelper.getAssetDataByWalletIDAndCoinID(walletData._id, btcCoinID).amount
-                btcList.add(
-                    ExpandableListBean(
-                        walletData._id,
-                        walletData.name,
-                        NumberUtils.show(amount),
-                        getFiatRateText(CoinEnum.BTC.coinId, amount, fiatSymbol),
-                        "",
-                        arrayListOf(),
-                        walletData.isFromSystem
+            when (walletData.mainCoinId) {
+                CoinEnum.BTC.coinId -> {
+                    val amount =
+                        dbHelper.getAssetDataByWalletIDAndCoinID(walletData._id, btcCoinID).amount
+                    btcList.add(
+                        ExpandableListBean(
+                            walletData._id,
+                            walletData.name,
+                            NumberUtils.show(amount),
+                            getFiatRateText(CoinEnum.BTC.coinId, amount, fiatSymbol),
+                            "",
+                            arrayListOf(),
+                            walletData.isFromSystem
+                        )
                     )
-                )
-            } else if (walletData.mainCoinId == CoinEnum.ETH.coinId) {
-                val amount =
-                    dbHelper.getAssetDataByWalletIDAndCoinID(walletData._id, ethCoinID).amount
-                ethList.add(
-                    ExpandableListBean(
-                        walletData._id,
-                        walletData.name,
-                        NumberUtils.show(amount),
-                        getFiatRateText(CoinEnum.ETH.coinId, amount, fiatSymbol),
-                        ""
+                }
+                CoinEnum.ETH.coinId -> {
+                    val amount =
+                        dbHelper.getAssetDataByWalletIDAndCoinID(walletData._id, ethCoinID).amount
+                    ethList.add(
+                        ExpandableListBean(
+                            walletData._id,
+                            walletData.name,
+                            NumberUtils.show(amount),
+                            getFiatRateText(CoinEnum.ETH.coinId, amount, fiatSymbol),
+                            ""
+                        )
                     )
-                )
+                }
             }
         }
         // 依照 isFromSystem 以及 Uncompress 排序
@@ -160,8 +170,7 @@ class WalletListViewModel(
         )
         btc.childData = btcList.asReversed()
         eth.childData = ethList
-        val groupList = listOf(btc, eth)
-        mainDataLiveData.value = groupList
+        getRateAndBalance()
     }
 
     private fun getStableData() {
@@ -212,8 +221,10 @@ class WalletListViewModel(
         return dbHelper.getCoinData(id).iconPath.orEmpty()
     }
 
+    var total = BigDecimal("0")
+
+
     private fun getTotalAssetAmount() {
-        var total = BigDecimal("0")
         if (category == CoinRepository.COIN_MAIN_CHAIN_IDENTIFIER) {
             //BTC
             var btcAmount = BigDecimal("0")
@@ -238,7 +249,6 @@ class WalletListViewModel(
             }
             total = total.add(getFiatRate(CoinEnum.USDT.coinId, usdtAmount))
         }
-        totalAssetAmountLiveData.value = NumberUtils.showFiat(total)
     }
 
 
@@ -333,7 +343,78 @@ class WalletListViewModel(
             walletData.identityData = data
             return dbHelper.addWalletData(walletData)
         }
+
+
         return -1
     }
+
+    var ttnAddress = ttnRepository.getTtnWalletData().address
+    val ttnFiatSymbol = ttnRepository.getPrefFiatData().symbol
+
+    fun getRateAndBalance() {
+        add(
+            helperRepository.getAllCoinToCurrency(ttnRepository.getPrefFiatData().name)
+                .toMain()
+                .subscribe({
+                    rateList = it.data ?: arrayListOf()
+                    getBalance()
+                }, {
+                })
+        )
+    }
+
+    var getBalanceLiveData = MutableLiveData<ApiTtnBalanceResponse>()
+
+    fun getBalance() {
+        add(
+            ttnServerApiRepository.performGetTtnBalanceWithContractAddress(ttnAddress)
+                .toMain()
+                .subscribe({
+                    //TTN
+                    var ttnAmount = BigDecimal(it.balance.handleAmount(CoinEnum.TTN.coinId))
+                    total = total.add(ttnAmount)
+                    val ttnCoinID = getCoinIDByCoinId(CoinEnum.TTN.coinId)
+                    val ttnIcon = getIconPathByCoinId(ttnCoinID)
+                    for (assetData in dbHelper.getAssetDataListByCoinIDs(listOf(ttnCoinID))) {
+                        ttnAmount = ttnAmount.add(assetData.amount)
+                    }
+                    ttn = ExpandableListBean(
+                        -1,
+                        CoinEnum.TTN.coinName,
+                        NumberUtils.show(ttnAmount),
+                        getFiatRateText(CoinEnum.TTN.coinId, ttnAmount, ttnFiatSymbol),
+                        ttnIcon
+                    )
+
+                    val ttnList = ArrayList<ExpandableListBean>()
+
+                    val amount = it.balance.handleAmount(CoinEnum.TTN.coinId)
+                    for (walletData in getWalletDataList()) {
+                        if (walletData.mainCoinId == CoinEnum.TTN.coinId) {
+                            ttnList.add(
+                                ExpandableListBean(
+                                    walletData._id,
+                                    walletData.name,
+                                    NumberUtils.show(BigDecimal(amount)),
+                                    getFiatRateText(
+                                        CoinEnum.TTN.coinId,
+                                        BigDecimal(amount),
+                                        ttnFiatSymbol
+                                    ),
+                                    ""
+                                )
+                            )
+                        }
+                    }
+
+                    ttn.childData = ttnList
+                    val groupList = listOf(btc, eth, ttn)
+                    mainDataLiveData.value = groupList
+                    totalAssetAmountLiveData.value = NumberUtils.showFiat(total)
+                }, {
+                })
+        )
+    }
+
 
 }
