@@ -14,6 +14,7 @@ import com.ttchain.walletproject.setDelayClickListener
 import com.ttchain.walletproject.ui.agreement.AgreementActivity
 import com.ttchain.walletproject.ui.enter_password.EnterPasswordActivity
 import com.ttchain.walletproject.ui.scanner_new.ScannerActivity
+import com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultActivity
 import com.ttchain.walletproject.utils.Utils
 import kotlinx.android.synthetic.main.fragment_login.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -112,13 +113,12 @@ class LoginFragment : BaseFragment() {
                         Utils.decryptPrivateKey(walletContent.privateKey, qrCodeImagePwd)
                     walletContent.privateKey = pkyDecrypt
                 }
-//
-//                UserWalletQrCodeParseResultActivity.launch(
-//                    requireActivity(),
-//                    data,
-//                    qrCodeImagePwd,
-//                    data.hint
-//                )
+                UserWalletQrCodeParseResultActivity.launch(
+                    requireActivity(),
+                    data,
+                    qrCodeImagePwd,
+                    data.hint
+                )
             }
             qrCodeImageBeanError.observe(requireActivity()) {
                 onShowMessageDialog(getString(R.string.parse_qr_code_error))
