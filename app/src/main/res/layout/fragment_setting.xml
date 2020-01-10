@@ -1,6 +1,373 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_F9F9F9">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="100dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_container"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/_354252"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar_iv"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="@dimen/padding_16"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@mipmap/user_avatar_default_01_180" />
+
+            <TextView
+                android:id="@+id/user_name_tv"
+                style="@style/PrimaryWhiteText.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/avatar_iv"
+                app:layout_constraintRight_toLeftOf="@+id/user_setting_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="你的名字你的名字" />
+
+            <ImageButton
+                android:id="@+id/user_setting_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="14dp"
+                android:src="@mipmap/tt_icon_setting"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/system_setting_tv"
+            style="@style/PrimaryText.Mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_18"
+            android:layout_marginTop="@dimen/padding_16"
+            android:text="@string/setting_system_setting"
+            android:textColor="@color/_98C736" />
+
+        <TextView
+            android:id="@+id/textViewNotification"
+            style="@style/PrimaryBlackText.SuperSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:drawableStart="@mipmap/setting_icon_message"
+            android:drawableEnd="@mipmap/btn_next"
+            android:drawablePadding="@dimen/padding_14"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_14"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_14"
+            android:text="@string/setting_msg_notification"
+            android:textColor="@color/_354252" />
+
+        <TextView
+            android:id="@+id/textViewLanguage"
+            style="@style/PrimaryBlackText.SuperSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:drawableStart="@mipmap/setting_icon_language"
+            android:drawableEnd="@mipmap/btn_next"
+            android:drawablePadding="@dimen/padding_14"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_14"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_14"
+            android:text="@string/setting_language" />
+
+        <TextView
+            android:id="@+id/textViewCheckUpdate"
+            style="@style/PrimaryBlackText.SuperSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:drawableStart="@mipmap/setting_icon_patch"
+            android:drawableEnd="@mipmap/btn_next"
+            android:drawablePadding="@dimen/padding_14"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_14"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_14"
+            android:text="@string/setting_check_version" />
+
+        <TextView
+            android:id="@+id/wallet_setting_tv"
+            style="@style/PrimaryText.Mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_18"
+            android:layout_marginTop="@dimen/padding_24"
+            android:text="@string/setting_wallet_setting"
+            android:textColor="@color/_98C736" />
+
+        <TextView
+            android:id="@+id/textViewCommonAddress"
+            style="@style/PrimaryBlackText.SuperSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:drawableStart="@mipmap/setting_icon_address"
+            android:drawableEnd="@mipmap/btn_next"
+            android:drawablePadding="@dimen/padding_14"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_14"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_14"
+            android:text="@string/common_address"
+            android:textColor="@color/_354252" />
+
+        <TextView
+            android:id="@+id/textViewCurrency"
+            style="@style/PrimaryBlackText.SuperSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:drawableStart="@mipmap/setting_icon_money"
+            android:drawableEnd="@mipmap/btn_next"
+            android:drawablePadding="@dimen/padding_14"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_14"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_14"
+            android:text="@string/setting_currency" />
+
+        <TextView
+            android:id="@+id/textViewBackup"
+            style="@style/PrimaryBlackText.SuperSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_1"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:drawableStart="@mipmap/setting_icon_export"
+            android:drawableEnd="@mipmap/btn_open"
+            android:drawablePadding="@dimen/padding_14"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_14"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_14"
+            android:text="@string/wallet_manage_export" />
+
+        <LinearLayout
+            android:id="@+id/export_btc_container"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/export_btc_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:src="@mipmap/setting_icon_money"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_export"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/wallet_coin_btc_small" />
+
+                <TextView
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_import_wallet_method_btc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/export_btc_next_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_18"
+                android:src="@mipmap/btn_next" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/export_eth_container"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/export_eth_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:src="@mipmap/setting_icon_money"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_export"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/wallet_coin_eth_small" />
+
+                <TextView
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_import_wallet_method_eth"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/export_eth_next_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_18"
+                android:src="@mipmap/btn_next" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/account_safety_setting_tv"
+            style="@style/PrimaryText.Mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_18"
+            android:layout_marginTop="@dimen/padding_16"
+            android:text="@string/setting_account_safety"
+            android:textColor="@color/_98C736" />
+
+        <TextView
+            android:id="@+id/textViewUsingLocker"
+            style="@style/PrimaryBlackText.SuperSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:drawableStart="@mipmap/setting_icon_passlock"
+            android:drawableEnd="@mipmap/btn_next"
+            android:drawablePadding="@dimen/padding_14"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_14"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_14"
+            android:text="@string/setting_using_locker" />
+
+        <TextView
+            android:id="@+id/textViewBackupWallet"
+            style="@style/PrimaryBlackText.SuperSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:drawableStart="@mipmap/setting_icon_backup"
+            android:drawableEnd="@mipmap/btn_next"
+            android:drawablePadding="@dimen/padding_14"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_14"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_14"
+            android:text="@string/setting_backup_account" />
+
+        <TextView
+            android:id="@+id/textViewDelete"
+            style="@style/PrimaryBlackText.SuperSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_1"
+            android:background="@drawable/ripple_white"
+            android:clickable="true"
+            android:drawableStart="@mipmap/setting_icon_delete"
+            android:drawableEnd="@mipmap/btn_next"
+            android:drawablePadding="@dimen/padding_14"
+            android:focusable="true"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_14"
+            android:paddingEnd="@dimen/padding_18"
+            android:paddingBottom="@dimen/padding_14"
+            android:text="@string/setting_delete_account" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

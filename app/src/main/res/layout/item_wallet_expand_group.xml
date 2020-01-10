@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/padding_18"
+    android:paddingTop="@dimen/padding_6"
+    android:paddingEnd="@dimen/padding_18"
+    android:paddingBottom="@dimen/padding_6">
+
+    <ImageView
+        android:id="@+id/coin_iv"
+        android:layout_width="@dimen/padding_24"
+        android:layout_height="@dimen/padding_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/coin_name_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@mipmap/wallet_coin_btc" />
+
+    <TextView
+        android:id="@+id/coin_name_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_12"
+        android:textColor="@color/_354252"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coin_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="BTC" />
+
+    <TextView
+        android:id="@+id/coin_amount_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_12"
+        android:textColor="@color/_354252"
+        app:layout_constraintBottom_toTopOf="@+id/coin_fiat_tv"
+        app:layout_constraintEnd_toStartOf="@+id/arrow_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12.12345678" />
+
+    <TextView
+        android:id="@+id/coin_fiat_tv"
+        style="@style/TextBlack.Mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_12"
+        android:textColor="@color/_7F8890"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/arrow_btn"
+        app:layout_constraintTop_toBottomOf="@+id/coin_amount_tv"
+        tools:text="≈$ 0.00" />
+
+    <ImageView
+        android:id="@+id/arrow_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/btn_open"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

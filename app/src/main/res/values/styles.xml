@@ -8,21 +8,579 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="PrimaryTheme" parent="@style/ThemeSnow" />
-
-    <style name="ThemeSnow" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/grey_300</item>
-        <item name="colorAccent">@color/blue_500</item>
-        <item name="actionModeBackground">@color/blue_500</item>
-        <item name="itemBackground">@color/blue_500</item>
-        <item name="windowActionModeOverlay">true</item>
-        <item name="windowActionBarOverlay">true</item>
+    <style name="AppTheme.NoActionBar">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="containerLayoutStyle">
-        <item name="android:paddingTop">10dp</item>
-        <item name="android:paddingBottom">10dp</item>
+    <style name="AppTheme.SplashTheme" parent="AppTheme.NoActionBar">
+<!--        <item name="android:windowBackground">@drawable/bg_splash</item>-->
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="PrimaryTheme" parent="@style/ThemeSnow" />
+
+    <style name="PrimaryButton">
+        <item name="colorAccent">@color/_9ad9d0</item>
+        <item name="android:background">@color/_9ad9d0</item>
+    </style>
+
+    <style name="PrimaryButtonGreen" parent="@style/Button.Green" />
+
+    <style name="PrimaryButtonRed" parent="@style/Button.Red" />
+
+    <style name="PrimaryButtonBlue" parent="@style/Button.Blue" />
+
+    <style name="PrimaryButtonTrans" parent="@style/Button.Trans.Blue" />
+
+    <style name="PrimaryButtonDeep" parent="@style/Button.BlueDark" />
+
+    <style name="PrimaryButtonTtn" parent="@style/Button.Ttn" />
+
+    <style name="PrimaryButton_223742" parent="@style/Button._223742" />
+
+    <style name="SecondButton" parent="@style/Button.White.Blue" />
+
+    <style name="PrimaryEditText" parent="@style/InputLayoutWhiteLightBlue" />
+
+    <style name="SecondEditText" parent="@style/InputLayoutWhiteLight" />
+
+    <style name="SecondHintText" parent="@style/HintTextWhite" />
+
+    <style name="ThirdButton" parent="@style/ButtonGrey" />
+
+    <style name="PrimaryButtonDark" parent="@style/Button.Dark">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="TtnPrimaryButtonSelector" parent="@style/Button.TtnSelected">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="PrimaryButtonDarkEdge" parent="@style/Button.DarkEdge">
+        <item name="android:textColor">#354252</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="PrimaryButtonNext" parent="@style/PrimaryButtonDark">
+        <item name="android:drawableRight">@mipmap/btn_arrow_next</item>
+        <item name="android:text">@string/g_next</item>
+    </style>
+
+    <style name="TtnPrimaryButtonNext" parent="@style/TtnPrimaryButtonSelector">
+        <item name="android:drawableRight">@mipmap/btn_arrow_next</item>
+        <item name="android:text">@string/g_next</item>
+    </style>
+
+
+    <style name="PrimaryButtonPrevious" parent="@style/PrimaryButtonDarkEdge">
+        <item name="android:drawableLeft">@mipmap/btn_arrow_previous</item>
+        <item name="android:text">@string/g_previous</item>
+    </style>
+
+    <style name="PrimaryButtonAppleGreen" parent="@style/Button.AppleGreen">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="PrimaryButtonTtn30" parent="@style/Button.Ttn30">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="SecondProgressBar" parent="@style/ProgressWhite" />
+
+    <!-- PrimaryText Azure = Blue -->
+    <style name="PrimaryText" parent="@style/TextBlue">
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="PrimaryText.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="PrimaryText.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryText.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryText.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="PrimaryText.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="PrimaryText.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="PrimaryText.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="PrimaryText.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- PrimaryTextLight Azure-Light -->
+    <style name="PrimaryTextLight" parent="@style/TextBlueLight" />
+
+    <style name="PrimaryTextLight.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="PrimaryTextLight.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryTextLight.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryTextLight.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="PrimaryTextLight.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="PrimaryTextLight.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="PrimaryTextLight.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="PrimaryTextLight.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- PrimaryTextDeep Azure-Deep -->
+    <style name="PrimaryTextDeep" parent="@style/TextBlueDeep" />
+
+    <style name="PrimaryTextDeep.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="PrimaryTextDeep.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryTextDeep.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryTextDeep.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="PrimaryTextDeep.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="PrimaryTextDeep.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="PrimaryTextDeep.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="PrimaryTextDeep.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- PrimaryDeepBlueText -->
+    <style name="PrimaryDeepBlueText" parent="@style/TextDeepBlue">
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="PrimaryDeepBlueText.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="PrimaryDeepBlueText.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryDeepBlueText.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryDeepBlueText.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="PrimaryDeepBlueText.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="PrimaryDeepBlueText.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="PrimaryDeepBlueText.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="PrimaryDeepBlueText.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- TextDisable -->
+    <style name="TextDisable" parent="@style/TextGreyLight" />
+
+    <style name="TextDisable.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="TextDisable.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="TextDisable.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextDisable.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="TextDisable.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="TextDisable.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="TextDisable.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="TextDisable.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- PrimaryBlackText -->
+    <style name="PrimaryBlackText" parent="@style/TextBlack" />
+
+    <style name="PrimaryBlackText.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="PrimaryBlackText.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryBlackText.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryBlackText.Primary">
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="PrimaryBlackText.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="PrimaryBlackText.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="PrimaryBlackText.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="PrimaryBlackText.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="PrimaryBlackText.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- PrimaryWhiteText -->
+    <style name="PrimaryWhiteText" parent="@style/TextWhite">
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="PrimaryWhiteText.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="PrimaryWhiteText.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryWhiteText.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryWhiteText.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="PrimaryWhiteText.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="PrimaryWhiteText.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="PrimaryWhiteText.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="PrimaryWhiteText.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- PrimaryGreyText Zeplin -> warm_grey -->
+    <style name="PrimaryGreyText" parent="@style/TextGrey" />
+
+    <style name="PrimaryGreyText.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="PrimaryGreyText.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryGreyText.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryGreyText.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="PrimaryGreyText.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="PrimaryGreyText.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="PrimaryGreyText.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="PrimaryGreyText.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- PrimaryGreyLightText zeplin -> silver -->
+    <style name="PrimaryGreyLightText" parent="@style/TextGreyLight" />
+
+    <style name="PrimaryGreyLightText.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="PrimaryGreyLightText.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryGreyLightText.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryGreyLightText.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="PrimaryGreyLightText.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="PrimaryGreyLightText.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="PrimaryGreyLightText.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="PrimaryGreyLightText.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- PrimaryWhiteLightText zeplin -> white_2 -->
+    <style name="PrimaryWhiteLightText" parent="@style/TextWhiteLight" />
+
+    <style name="PrimaryWhiteLightText.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="PrimaryWhiteLightText.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryWhiteLightText.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryWhiteLightText.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="PrimaryWhiteLightText.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="PrimaryWhiteLightText.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="PrimaryWhiteLightText.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="PrimaryWhiteLightText.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- PrimaryGreenText zeplin -> color_green -->
+    <style name="PrimaryGreenText" parent="@style/TextGreen" />
+
+    <style name="PrimaryGreenText.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="PrimaryGreenText.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryGreenText.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryGreenText.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="PrimaryGreenText.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="PrimaryGreenText.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="PrimaryGreenText.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="PrimaryGreenText.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <style name="PrimaryInputHintAppear" parent="@style/TextSnow">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="PrimaryInputErrorAppear" parent="@style/TextSnowLight">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="PrimaryInputCounterOverFlowAppear" parent="@style/TextSnowLight">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="SecondInputLayout" parent="@style/HintTextWhite">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="SecondInputHintAppear" parent="@style/TextGreyLight">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="SecondInputErrorAppear" parent="@style/TextOrangeLight">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="SecondInputCounterOverFlowAppear" parent="@style/TextOrangeLight">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="WalletListHeaderGap">
+        <item name="android:paddingLeft">@dimen/padding_24</item>
+        <item name="android:paddingRight">@dimen/padding_24</item>
+        <item name="android:paddingBottom">@dimen/padding_8</item>
+        <item name="android:paddingTop">@dimen/padding_8</item>
+        <item name="android:layout_marginBottom">@dimen/padding_24</item>
+        <item name="android:layout_marginTop">@dimen/padding_24</item>
+    </style>
+
+    <style name="WalletListItemContentGap">
+        <item name="android:paddingLeft">@dimen/padding_24</item>
+        <item name="android:paddingRight">@dimen/padding_24</item>
+        <item name="android:paddingBottom">@dimen/padding_8</item>
+        <item name="android:paddingTop">@dimen/padding_8</item>
+    </style>
+
+    <style name="CoinNormalItemContentGap">
+        <item name="android:paddingLeft">@dimen/padding_18</item>
+        <item name="android:paddingRight">@dimen/padding_18</item>
+        <item name="android:paddingBottom">@dimen/padding_16</item>
+        <item name="android:paddingTop">@dimen/padding_16</item>
+    </style>
+
+    <style name="CoinDeleteItemContentGap">
+        <item name="android:paddingLeft">@dimen/padding_12</item>
+        <item name="android:paddingRight">@dimen/padding_12</item>
+        <item name="android:paddingBottom">@dimen/padding_16</item>
+        <item name="android:paddingTop">@dimen/padding_16</item>
+    </style>
+
+    <style name="WalletPickItemContentGap">
+        <item name="android:paddingLeft">@dimen/padding_24</item>
+        <item name="android:paddingRight">@dimen/padding_24</item>
+        <item name="android:paddingBottom">@dimen/padding_16</item>
+        <item name="android:paddingTop">@dimen/padding_16</item>
+    </style>
+
+    <style name="WalletNameStyle" parent="@style/PrimaryWhiteText" />
+
+    <style name="WalletAddressTheme.Clickable">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="WalletAddressTheme" parent="android:Widget.TextView">
+        <item name="android:padding">@dimen/padding_4</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">@dimen/padding_8</item>
+    </style>
+
+    <style name="WalletAddressStyle" parent="@style/PrimaryGreyLightText.Mini">
+        <item name="android:drawablePadding">@dimen/padding_8</item>
+        <item name="android:drawableRight">@mipmap/tt_icon_copy_circle</item>
     </style>
 
     <style name="RecordTabLayoutStyle" parent="Widget.Design.TabLayout">
@@ -48,6 +606,58 @@
 
     <style name="RecordTabLayoutStyle.RedEnvelope">
         <item name="tabIndicatorColor">@color/azure</item>
+    </style>
+
+    <style name="ChatRoomText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="containerLayoutStyle">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="Dialog" parent="Theme.Design.Light.NoActionBar">
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@color/black_85</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="PreviousButton" parent="@style/Button.DarkEdge">
+        <item name="android:paddingBottom">@dimen/dp_4</item>
+        <item name="android:paddingTop">@dimen/dp_4</item>
+        <item name="android:paddingStart">@dimen/padding_20</item>
+        <item name="android:paddingEnd">@dimen/padding_20</item>
+        <item name="android:textColor">@color/_354252</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">@dimen/padding_4</item>
+        <item name="android:drawableLeft">@mipmap/btn_arrow_previous</item>
+        <item name="android:text">@string/g_previous</item>
+    </style>
+
+    <style name="NextButton" parent="@style/Button.Dark">
+        <item name="android:drawableRight">@mipmap/btn_arrow_next</item>
+        <item name="android:text">@string/g_next</item>
+        <item name="android:paddingBottom">@dimen/dp_4</item>
+        <item name="android:paddingTop">@dimen/dp_4</item>
+        <item name="android:paddingStart">@dimen/padding_20</item>
+        <item name="android:paddingEnd">@dimen/padding_20</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">@dimen/padding_4</item>
+    </style>
+
+    <style name="EditText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/_98C736</item>
     </style>
 
 </resources>

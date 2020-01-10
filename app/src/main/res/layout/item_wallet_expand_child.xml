@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/padding_18">
+
+    <View
+        android:layout_marginStart="29dp"
+        android:id="@+id/line"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/_98C736"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wallet_name_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:textColor="@color/_354252"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="錢包一號" />
+
+    <TextView
+        android:id="@+id/wallet_amount_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_12"
+        android:paddingTop="@dimen/padding_6"
+        android:textColor="@color/_354252"
+        app:layout_constraintBottom_toTopOf="@+id/wallet_fiat_tv"
+        app:layout_constraintRight_toLeftOf="@+id/arrow_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12.12345678" />
+
+    <TextView
+        android:id="@+id/wallet_fiat_tv"
+        style="@style/TextBlack.Mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_12"
+        android:paddingBottom="@dimen/padding_6"
+        android:textColor="@color/_7F8890"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/arrow_btn"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_amount_tv"
+        tools:text="≈$ 0.00" />
+
+    <ImageView
+        android:id="@+id/arrow_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/btn_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

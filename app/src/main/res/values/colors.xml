@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">@color/blue_500</color>
+    <color name="colorPrimaryDark">@color/blue_700</color>
+    <color name="colorAccent">@color/blue_500</color>
+
+    <color name="colorPrimaryWarn">@color/pink_red</color>
+    <color name="colorPrimaryDivider">#B9C0CA</color>
+    <color name="colorPrimaryHint">@color/silver</color>
+    <color name="colorPrimaryGrey">@color/warm_grey</color>
+    <color name="colorPrimaryGreyLight">@color/silver</color>
+    <color name="colorPrimaryWhiteLight">@color/white_2</color>
+    <color name="colorPrimaryWhiteLightLight">@color/pale_grey</color>
+    <color name="colorPrimaryGreen">@color/cool_green</color>
+    <color name="colorPrimaryReceiptAddressBg">@color/deep_blue_1</color>
+    <color name="colorPrimaryDeepBlue">@color/deep_blue_1</color>
+    <color name="colorPrimaryThunderButtonBg">@color/purple</color>
+    <color name="colorPrimaryPinkLight">@color/_ff39c9</color>
 
     <color name="azure">#108ee9</color>
     <color name="warm_grey">#888888</color>
@@ -15,9 +28,103 @@
     <color name="purple">#0d79c6</color>
     <color name="_43464d">#43464d</color>
 
+    <color name="receipt_header_eth_primary_color">@color/colorPrimary</color>
+    <color name="receipt_header_eth_gradient_start">#0094FF</color>
+    <color name="receipt_header_eth_gradient_end">#CE88FF</color>
 
-    <color name="_66354252">#66354252</color>
-    <color name="_354252">#354252</color>
+    <color name="receipt_header_btc_primary_color">#ff8603</color>
+    <color name="receipt_header_btc_gradient_start">#ff8603</color>
+    <color name="receipt_header_btc_gradient_end">#ffd500</color>
+
+    <color name="receipt_header_cic_primary_color">#38be58</color>
+    <color name="receipt_header_cic_gradient_start">#168d46</color>
+    <color name="receipt_header_cic_gradient_end">#d4d736</color>
+
+    <color name="receipt_header_guc_primary_color">@color/colorPrimary</color>
+    <color name="receipt_header_guc_gradient_start">#27386d</color>
+    <color name="receipt_header_guc_gradient_end">#4894cc</color>
+
+    <color name="_32333b">#32333b</color>
+    <color name="_242329">#242329</color>
+    <color name="_45464c">#45464c</color>
+
+    <color name="_ffc600">#ffc600</color>
+    <color name="_fff5b4">#fff5b4</color>
+
+    <color name="_364B58">#364B58</color>
+
+    <color name="_bdbdbd">#bdbdbd</color>
+
+    <color name="_ffe94d">#ffe94d</color>
+    <color name="_ffedf6">#ffedf6</color>
+    <color name="_ef57a3">#ef57a3</color>
+    <color name="_f69697">#f69697</color>
+    <color name="_ff4b4b">#ff4b4b</color>
+    <color name="_ff39c9">#ff39c9</color>
+    <color name="_bb266c">#bb266c</color>
+    <color name="_fba4d1">#fba4d1</color>
+
+    <color name="_38495c">#38495c</color>
+    <color name="_9ad9d0">#9ad9d0</color>
+    <color name="_EB8565">#EB8565</color>
+    <color name="_80FFFFFF">#80FFFFFF</color>
+    <color name="_ADD2ED">#ADD2ED</color>
+    <color name="_333333">#333333</color>
+    <color name="_cf6995">#cf6995</color>
+    <color name="_b8d4ea">#b8d4ea</color>
+    <color name="_E9F2F9">#E9F2F9</color>
+    <color name="_4ccd0c">#4ccd0c</color>
+    <color name="_f93f3f">#f93f3f</color>
+
+    <color name="_A5E990">#A5E990</color>
+    <color name="_A0A0A0">#A0A0A0</color>
+    <color name="_e85461">#e85461</color>
+    <color name="chat_group_default_avatar_1">#33a6b8</color>
+    <color name="chat_group_default_avatar_2">#7BA23F</color>
+    <color name="chat_group_default_avatar_3">#F28821</color>
+    <color name="chat_group_default_avatar_4">#8A6BBE</color>
+    <color name="chat_group_default_avatar_5">#A07829</color>
+
+    <color name="_f4f4f6">#f4f4f6</color>
+    <color name="_676578">#676578</color>
+
+    <color name="watermelon">#e85461</color>
+    <color name="_fef8bc">#fef8bc</color>
+    <color name="blue_grey">#8a9199</color>
+    <color name="snot_green">#a5be00</color>
+    <color name="windows_blue">#33a6b8</color>
+    <color name="purplish_grey">#676578</color>
+    <color name="very_light_pink">#d8d8d8</color>
+
+    <color name="_F6B55F">#F6B55F</color>
+    <color name="_DEDEDE">#DEDEDE</color>
+    <color name="_67BBB8">#67BBB8</color>
+    <color name="_7CB741">#7CB741</color>
+    <color name="_E64B4B">#E64B4B</color>
+    <color name="_FF8603">#ff8603</color>
+
+    <color name="_2C3C4E">#2C3C4E</color>
+    <color name="_B9C0CA">#B9C0CA</color>
     <color name="_98C736">#98C736</color>
+    <color name="_354252">#354252</color>
+    <color name="_66354252">#66354252</color>
+    <color name="_F9F9F9">#F9F9F9</color>
+    <color name="_EFEFEF">#EFEFEF</color>
 
+    <color name="_FB6B5B">#FB6B5B</color>
+    <color name="_50BE53">#50BE53</color>
+
+    <color name="_FF576E">#FF576E</color>
+    <color name="_66C92E">#66C92E</color>
+    <color name="_7F8890">#7F8890</color>
+    <color name="_1184C7">#1184C7</color>
+
+    <color name="_F7BE73">#F7BE73</color>
+    <color name="_0000001A">#1A000000</color>
+
+    <color name="_1A000001">#1A000001</color>
+    <color name="_80000001">#80000001</color>
+    <color name="_CC000001">#CC000001</color>
+
+    <color name="_66000000">#66000000</color>
 </resources>

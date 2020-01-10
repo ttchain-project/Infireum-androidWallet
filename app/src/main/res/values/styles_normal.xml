@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorButtonNormal">@color/grey_800</item>
+    </style>
+
+    <style name="Button.White">
+        <item name="colorAccent">@color/grey_100</item>
+    </style>
+
+    <style name="Button.Green">
+        <item name="colorAccent">#50BE53</item>
+    </style>
+
+    <style name="Button._223742">
+        <item name="colorAccent">#223742</item>
+    </style>
+
+    <style name="Button.Dark">
+        <item name="android:background">@drawable/bg_dark_radius_30</item>
+    </style>
+
+    <style name="Button.TtnSelected">
+        <item name="android:background">@drawable/ttn_button_selector</item>
+    </style>
+
+    <style name="Button.DarkEdge">
+        <item name="android:background">@drawable/bg_dark_edge_radius_30</item>
+    </style>
+
+    <style name="Button.AppleGreen">
+        <item name="android:background">@drawable/bg_apple_green_radius_30</item>
+    </style>
+
+    <style name="Button.Ttn30">
+        <item name="android:background">@drawable/bg_ttn_radius_30</item>
+    </style>
+
+    <style name="Button.Red">
+        <item name="colorAccent">#FB6B5B</item>
+    </style>
+
+    <style name="Button.Ttn">
+        <item name="colorAccent">#18ADD4</item>
+    </style>
+
+    <style name="Button.Trans" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorButtonNormal">@color/grey_500_trans</item>
+    </style>
+
+    <style name="TextOrangeLight" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/orange_300</item>
+    </style>
+
+    <style name="TextOrange" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/orange_500</item>
+    </style>
+
+    <style name="TextOrangeDeep" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/orange_700</item>
+    </style>
+
+    <style name="TextGreyLight" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorPrimaryGreyLight</item>
+    </style>
+
+    <!-- White -->
+    <style name="TextWhite" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextWhite.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="TextWhite.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="TextWhite.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextWhite.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="TextWhite.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="TextWhite.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="TextWhite.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="TextWhite.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- White Light -->
+    <style name="TextWhiteLight" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorPrimaryWhiteLight</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextWhiteLight.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="TextWhiteLight.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="TextWhiteLight.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextWhiteLight.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="TextWhiteLight.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="TextWhiteLight.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="TextWhiteLight.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="TextWhiteLight.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- Azure -->
+    <style name="TextAzure" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/azure</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextAzure.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="TextAzure.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="TextAzure.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextAzure.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="TextAzure.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="TextAzure.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="TextAzure.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="TextAzure.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- Green -->
+    <style name="TextGreen" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorPrimaryGreen</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <!-- WarmGrey -->
+    <style name="TextWarmGrey" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/warm_grey</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextWarmGrey.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="TextWarmGrey.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="TextWarmGrey.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextWarmGrey.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="TextWarmGrey.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="TextWarmGrey.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="TextWarmGrey.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="TextWarmGrey.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- Grey -->
+    <style name="TextGrey" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorPrimaryGrey</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextGrey.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="TextGrey.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="TextGrey.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextGrey.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="TextGrey.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="TextGrey.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="TextGrey.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="TextGrey.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- Grey Deep -->
+    <style name="TextGreyDeep" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/grey_700</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextGreyDeep.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="TextGreyDeep.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="TextGreyDeep.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextGreyDeep.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="TextGreyDeep.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="TextGreyDeep.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="TextGreyDeep.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="TextGreyDeep.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- Black -->
+    <style name="TextBlack" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#354252</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextBlack.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="TextBlack.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="TextBlack.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextBlack.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="TextBlack.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="TextBlack.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="TextBlack.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="TextBlack.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <!-- Watermelon -->
+    <style name="TextWatermelon" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/watermelon</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextWatermelon.Big" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/watermelon</item>
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <!-- Purplish_grey -->
+    <style name="TextPurplishGrey" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/purplish_grey</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextPurplishGrey.Secondary">
+        <item name="android:textSize">@dimen/secondary_text</item>
+    </style>
+
+    <style name="TextPurplishGrey.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <!-- Blue Grey -->
+    <style name="TextBlueGrey" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/blue_grey</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextBlueGrey.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <!-- Black light -->
+    <style name="TextBlackLight" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/grey_A200</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextBlackLight.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="TextBlackLight.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="TextBlackLight.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextBlackLight.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="TextBlackLight.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="TextBlackLight.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="TextBlackLight.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="TextBlackLight.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+
+    <style name="TextBlackDeep" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/grey_A700</item>
+    </style>
+
+    <style name="HintTextWhite" parent="Widget.Design.TextInputLayout">
+        <item name="android:textColorHint">@color/grey_300</item>
+    </style>
+
+    <style name="InputLayoutWhiteLight" parent="Widget.Design.TextInputLayout">
+        <item name="colorControlNormal">@color/colorPrimaryGreyLight</item>
+        <item name="colorControlActivated">@color/grey_300</item>
+    </style>
+
+    <style name="InputLayoutWhiteLightBlue" parent="Widget.Design.TextInputLayout">
+        <item name="colorControlNormal">@color/colorPrimaryGreyLight</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="InputLayoutTtn" parent="Widget.Design.TextInputLayout">
+        <item name="colorControlNormal">@color/colorPrimaryGreyLight</item>
+        <item name="colorControlActivated">@color/grey_300</item>
+        <item name="colorControlHighlight">@color/grey_300</item>
+    </style>
+
+    <style name="ButtonGrey" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorButtonNormal">@color/grey_500</item>
+        <item name="colorAccent">@color/grey_700</item>
+        <item name="colorControlHighlight">@color/grey_A100</item>
+    </style>
+
+    <style name="ProgressWhiteLight" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/grey_100</item>
+    </style>
+
+    <style name="ProgressWhite" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/grey_300</item>
+    </style>
+
+    <style name="ProgressWhiteDark" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+
+    <!-- Green -->
+    <style name="TextAppleGreen" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#98C736</item>
+        <item name="android:textSize">@dimen/primary_text</item>
+    </style>
+
+    <style name="TextAppleGreen.Mini">
+        <item name="android:textSize">@dimen/mini_text</item>
+    </style>
+
+    <style name="TextAppleGreen.SuperSmall">
+        <item name="android:textSize">@dimen/super_small_text</item>
+    </style>
+
+    <style name="TextAppleGreen.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="TextAppleGreen.Big">
+        <item name="android:textSize">@dimen/big_text</item>
+    </style>
+
+    <style name="TextAppleGreen.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="TextAppleGreen.SuperLarge">
+        <item name="android:textSize">@dimen/super_large_text</item>
+    </style>
+
+    <style name="TextAppleGreen.Huge">
+        <item name="android:textSize">@dimen/huge_text</item>
+    </style>
+
+    <style name="TextAppleGreen.SuperHuge">
+        <item name="android:textSize">@dimen/super_huge_text</item>
+    </style>
+</resources>
