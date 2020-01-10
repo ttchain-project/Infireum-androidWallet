@@ -6,6 +6,7 @@ import com.ttchain.walletproject.model.*
 import com.ttchain.walletproject.repository.*
 import com.ttchain.walletproject.ui.agreement.AgreementViewModel
 import com.ttchain.walletproject.ui.create_id.CreateIdViewModel
+import com.ttchain.walletproject.ui.create_id.mnemonics.MnemonicsStartViewModel
 import com.ttchain.walletproject.ui.dapp.DappViewModel
 import com.ttchain.walletproject.ui.discovery.DiscoveryViewModel
 import com.ttchain.walletproject.ui.enter_password.EnterPasswordViewModel
@@ -27,6 +28,7 @@ val viewModelModule = module {
     viewModel { EnterPasswordViewModel() }
     viewModel { UserWalletQrCodeParseResultViewModel(get(), get(), get(), get(), get()) }
     viewModel { CreateIdViewModel(get(), get(), get()) }
+    viewModel { MnemonicsStartViewModel(get(), get(), get(), get()) }
 
     viewModel { WalletMainViewModel() }
     viewModel { WalletListViewModel() }

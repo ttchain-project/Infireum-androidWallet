@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextBlack.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="@string/create_id_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/display_qrcode_ly"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/padding_18"
+        android:background="#F1F1F1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintWidth_percent="0.66">
+
+        <Button
+            android:id="@+id/create"
+            style="@style/PrimaryButtonAppleGreen"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_marginEnd="@dimen/padding_20"
+            android:text="@string/click_to_display_backup_qrcode"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/TextBlack.SuperSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_marginTop="@dimen/padding_24"
+            android:layout_marginEnd="@dimen/padding_20"
+            android:text="@string/create_identity_desc_2"
+            android:textColor="#FB6B5B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/qrcode"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/padding_18"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintWidth_percent="0.66" />
+
+    <TextView
+        android:id="@+id/textViewTip1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_40"
+        android:layout_marginTop="@dimen/padding_24"
+        android:layout_marginEnd="@dimen/padding_40"
+        android:text="@string/mnemonic_start_tip_1"
+        android:textColor="@color/_98C736"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/display_qrcode_ly" />
+
+    <TextView
+        style="@style/TextBlack.Mini"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_40"
+        android:layout_marginTop="@dimen/padding_8"
+        android:layout_marginEnd="@dimen/padding_40"
+        android:text="@string/mnemonic_start_tip_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTip1" />
+
+    <TextView
+        android:id="@+id/skip_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_24"
+        android:layout_marginBottom="@dimen/padding_20"
+        android:background="@drawable/bg_dark_edge_radius_30"
+        android:drawableEnd="@mipmap/btn_notice"
+        android:drawablePadding="@dimen/dp_4"
+        android:gravity="center_vertical"
+        android:paddingStart="29dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="29dp"
+        android:paddingBottom="4dp"
+        android:text="@string/g_skip"
+        android:textColor="@color/_354252"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/finish_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_24"
+        android:layout_marginBottom="@dimen/padding_20"
+        android:background="@drawable/bg_dark_radius_30"
+        android:drawableEnd="@mipmap/btn_agree"
+        android:drawablePadding="@dimen/dp_4"
+        android:paddingStart="29dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="29dp"
+        android:paddingBottom="4dp"
+        android:text="@string/g_done"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
