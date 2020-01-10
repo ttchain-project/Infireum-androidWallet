@@ -13,6 +13,7 @@ import com.ttchain.walletproject.enums.QRCodeEnum
 import com.ttchain.walletproject.setDelayClickListener
 import com.ttchain.walletproject.ui.agreement.AgreementActivity
 import com.ttchain.walletproject.ui.enter_password.EnterPasswordActivity
+import com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsActivity
 import com.ttchain.walletproject.ui.scanner_new.ScannerActivity
 import com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultActivity
 import com.ttchain.walletproject.utils.Utils
@@ -49,7 +50,7 @@ class LoginFragment : BaseFragment() {
             ScannerActivity.launchForResult(this, ScannerActivity.BASIC, QRCodeEnum.TYPE_IMPORT)
         }
         restore_by_mnemonics_btn.setDelayClickListener {
-//            RestoreByMnemonicsActivity.launch(requireActivity())
+            RestoreByMnemonicsActivity.launch(requireActivity())
         }
         restore.setDelayClickListener {
             new_user_container.visibility = View.INVISIBLE

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ttchain.walletproject.view.CustomEditTextItem
+                android:id="@+id/customEditTextNickName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                android:visibility="gone"
+                app:editTextHint="@string/restore_with_user_info_nick_name_hint"
+                app:editTextType="none"
+                app:titleText="@string/restore_with_user_info_nick_name"
+                tools:visibility="visible" />
+
+            <com.ttchain.walletproject.view.CustomEditTextItem
+                android:id="@+id/customEditTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                app:editTextHint="@string/restore_with_user_info_nick_password_hint"
+                app:editTextType="password"
+                app:titleText="@string/restore_with_user_info_nick_password" />
+
+            <com.ttchain.walletproject.view.CustomEditTextItem
+                android:id="@+id/customEditTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                app:editTextHint="@string/restore_with_user_info_nick_confirm_password_hint"
+                app:editTextType="password"
+                app:titleText="@string/restore_with_user_info_nick_confirm_password" />
+
+            <com.ttchain.walletproject.view.CustomEditTextItem
+                android:id="@+id/customEditTextHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                app:editTextHint="@string/restore_with_user_info_nick_hint_password_hint"
+                app:editTextType="none"
+                app:titleText="@string/restore_with_user_info_nick_hint_password" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="39dp"
+                android:layout_marginBottom="39dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/agreement_ckb"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:button="@drawable/check_box_style_green"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/agreement_tv"
+                    style="@style/PrimaryText.Mini"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_8"
+                    android:text="@string/restore_with_user_info_nick_policy"
+                    android:textColor="@color/_98C736" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_16">
+
+        <com.ttchain.walletproject.view.NextButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_24"
+            android:layout_marginBottom="@dimen/padding_16"
+            app:button_enable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.ttchain.walletproject.view.PreviousButton
+            android:id="@+id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_24"
+            android:layout_marginBottom="@dimen/padding_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
