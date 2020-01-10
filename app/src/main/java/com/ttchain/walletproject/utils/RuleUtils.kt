@@ -1,10 +1,10 @@
-package com.git4u.tt_wallet_android.utils
+package com.ttchain.walletproject.utils
 
-import com.git4u.tt_wallet_android.cache.GlobalConstant
-import com.git4u.tt_wallet_android.enums.CoinEnum
-import com.git4u.tt_wallet_android.model.type.ChainType
-import com.git4u.tt_wallet_android.model.type.MainCoinType
-import com.git4u.tt_wallet_android.repository.CoinRepository
+import com.ttchain.walletproject.cache.GlobalConstant
+import com.ttchain.walletproject.enums.ChainType
+import com.ttchain.walletproject.enums.CoinEnum
+import com.ttchain.walletproject.enums.MainCoinType
+import com.ttchain.walletproject.repository.CoinRepository
 import java.util.regex.Pattern
 
 class RuleUtils {

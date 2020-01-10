@@ -1,7 +1,6 @@
 package com.ttchain.walletproject.repository
 
 import android.content.Context
-import com.git4u.tt_wallet_android.utils.RuleUtils
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.ttchain.walletproject.R

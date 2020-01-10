@@ -3,6 +3,8 @@ package com.ttchain.walletproject.model
 import android.content.Context
 import android.os.Build
 import androidx.core.content.edit
+import com.ttchain.walletproject.App.Companion.preferenceHelper
+import com.ttchain.walletproject.utils.Utility
 import java.util.*
 
 

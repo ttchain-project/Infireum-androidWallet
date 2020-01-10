@@ -30,7 +30,7 @@ class DiscoveryFragment : BaseFragment() {
             .toMain()
             .subscribe { status ->
                 if (status) {
-                    viewModel.getQuotes()
+//                    viewModel.getQuotes()
                 }
             }
         initView()

@@ -4,6 +4,17 @@ import com.google.gson.annotations.SerializedName
 import com.ttchain.walletproject.enums.ManageBeanIdType
 import java.io.Serializable
 import java.math.BigDecimal
+import com.ttchain.walletproject.enums.ApiCodeEnum
+
+/**
+ * 統一 Api Result
+ */
+data class ApiResult<T>(
+    @SerializedName("code")
+    val code: ApiCodeEnum = ApiCodeEnum.NUMBER_0,
+    val message: String = "",
+    val data: T
+)
 
 /**
  * 取得所有虛擬貨幣的指定法幣行情 data class
@@ -12,6 +23,55 @@ data class DecimalData(
     val coinName: String,
     val identifier: String,
     val rate: Double
+)
+
+/**
+ * SignETHOrSignETHContract data class
+ */
+data class SignETHBodyRequest(
+    @SerializedName("contractAddress")
+    var contractAddress: String? = null,
+    @SerializedName("encry")
+    var encry: Boolean = false,
+    @SerializedName("privateKey")
+    var privateKey: String = "",
+    @SerializedName("token")
+    var token: String = ""
+)
+
+/**
+ * SignBTCOrSignBTCRelay data class
+ */
+data class SignBTCBodyData(
+    @SerializedName("compressed")
+    var compressed: Boolean = false,
+    @SerializedName("tx")
+    var tx: List<TxData>? = null,
+    @SerializedName("unspend")
+    var unspend: List<UnspendData>? = null,
+    @SerializedName("privatekey")
+    var privatekey: String = "",
+    @SerializedName("token")
+    var token: String = "",
+    @SerializedName("encry")
+    var encry: Boolean = false,
+    @SerializedName("cicAddress")
+    var cicAddress: String = ""
+)
+
+data class TxData(
+    @SerializedName("address")
+    var address: String = "",
+    @SerializedName("value")
+    var value: Double = 0.toDouble()
+)
+
+data class UnspendData(
+    @SerializedName("txid")
+    var txid: String = "",
+    @SerializedName("value")
+    var value: Double = 0.toDouble()
+
 )
 
 data class ExplorerDappBean(
@@ -158,4 +218,94 @@ data class ApiCoinData(
     val icon: String = "",
     @SerializedName("addressRegex")
     val addressRegex: String = ""
+)
+
+/**
+ * 取得以美金為基準的法幣兌換匯率表 data class
+ */
+data class ApiFiatTableData(
+    @SerializedName("fiatId")
+    var fiatId: Int = 0,
+    @SerializedName("toUSDRate")
+    val toUSDRate: Double = 0.toDouble()
+)
+
+/**
+ * 取得系統支援法幣清單 data class
+ */
+data class ApiFiatData(
+    @SerializedName("id")
+    var id: Int = 0,
+    @SerializedName("name")
+    val name: String = "",
+    @SerializedName("symbol")
+    val symbol: String = ""
+)
+
+/**
+ * Im get user data
+ */
+data class PersonalInfo(
+    var nickName: String = "",
+    var introduction: String = "",
+    var headImg: HeadImage = HeadImage(),
+    // 狀態。0:未建立 1:已開通 2:停權
+    val status: Int = 0
+) : Serializable
+
+data class HeadImage(
+    var original: String = "",
+    var small: String = "",
+    var medium: String = ""
+)
+
+/**
+ * 取得地址本地址 data class
+ */
+data class AddressBookData(
+    @SerializedName("id")
+    var id: String = "",
+    @SerializedName("chainType")
+    var chainType: Int = 0,
+    @SerializedName("mainCoinID")
+    var mainCoinID: String = "",
+    @SerializedName("address")
+    var address: String = "",
+    @SerializedName("name")
+    var name: String = "",
+    @SerializedName("note")
+    var note: String = ""
+)
+
+/**
+ * 取得 BTC 轉帳建議鍊費 (regular/priority) data class
+ */
+data class ApiBTCFeeData(
+    @SerializedName("regular")
+    var regular: Double = 0.toDouble(),
+    @SerializedName("priority")
+    val priority: Double = 0.toDouble()
+)
+
+/**
+ * 取得 ETH 轉帳建議鍊費 data class
+ */
+data class ApiETHFeeData(
+    @SerializedName("suggestGasPrice")
+    var suggestGasPrice: Double = 0.toDouble(),
+    @SerializedName("minGasPrice")
+    val minGasPrice: Double = 0.toDouble(),
+    @SerializedName("maxGasPrice")
+    val maxGasPrice: Double = 0.toDouble()
+)
+
+/**
+ * 取得虛擬幣漲跌幅資訊 data class
+ */
+data class QuotesData(
+    val change: String,
+    val img: String,
+    val price: String,
+    val title: String,
+    val url: String
 )

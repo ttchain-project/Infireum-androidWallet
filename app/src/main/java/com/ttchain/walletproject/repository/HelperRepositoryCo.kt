@@ -1,7 +1,7 @@
 package com.ttchain.walletproject.repository
 
-import com.git4u.tt_wallet_android.model.bean.*
-import com.git4u.tt_wallet_android.net.api.swagger.HelperApiCo
+import com.ttchain.walletproject.model.*
+import com.ttchain.walletproject.net.HelperApiCo
 import io.reactivex.Observable
 
 class HelperRepositoryCo(
