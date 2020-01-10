@@ -8,6 +8,7 @@ import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseActivity
 import com.ttchain.walletproject.changeFragment
 import com.ttchain.walletproject.ui.agreement.AgreementActivity
+import com.ttchain.walletproject.ui.create_id.CreateIdActivity
 
 class LoginActivity : BaseActivity() {
 
@@ -35,8 +36,8 @@ class LoginActivity : BaseActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK && requestCode == AgreementActivity.REQUEST_CODE) {
-//            if (data?.getBooleanExtra(AgreementActivity.RESULT_DATA, false) == true)
-//                CreateIdActivity.launch(this)
+            if (data?.getBooleanExtra(AgreementActivity.RESULT_DATA, false) == true)
+                CreateIdActivity.launch(this)
         }
     }
 }

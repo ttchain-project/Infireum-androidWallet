@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <com.ttchain.walletproject.view.CustomEditTextItem
+        android:id="@+id/customEditTextNickName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16"
+        app:editTextHint="@string/restore_with_user_info_nick_name_hint"
+        app:editTextType="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="@string/restore_with_user_info_nick_name" />
+
+    <com.ttchain.walletproject.view.CustomEditTextItem
+        android:id="@+id/customEditTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16"
+        app:editTextHint="@string/create_id_password"
+        app:editTextType="password"
+        app:layout_constraintTop_toBottomOf="@+id/customEditTextNickName"
+        app:titleText="@string/pwd" />
+
+    <com.ttchain.walletproject.view.CustomEditTextItem
+        android:id="@+id/customEditTextConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16"
+        app:editTextHint="@string/create_id_confirm_password"
+        app:editTextType="password"
+        app:layout_constraintTop_toBottomOf="@+id/customEditTextPassword"
+        app:titleText="@string/pwd_confirm" />
+
+    <com.ttchain.walletproject.view.CustomEditTextItem
+        android:id="@+id/customEditTextHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16"
+        app:editTextHint="@string/create_id_password_note"
+        app:editTextType="none"
+        app:layout_constraintTop_toBottomOf="@+id/customEditTextConfirmPassword"
+        app:titleText="@string/pwd_hint_message" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/create"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customEditTextHint">
+
+        <CheckBox
+            android:id="@+id/agreement_ckb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/check_box_style_green"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/agreement_tv"
+            style="@style/PrimaryText.Mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_8"
+            android:text="@string/agree_privacy_policy"
+            android:textColor="@color/_98C736" />
+
+    </LinearLayout>
+
+    <com.ttchain.walletproject.view.NextButton
+        android:id="@+id/create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_24"
+        android:layout_marginBottom="@dimen/padding_16"
+        app:button_enable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.ttchain.walletproject.view.PreviousButton
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_24"
+        android:layout_marginBottom="@dimen/padding_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
