@@ -35,7 +35,7 @@ val viewModelModule = module {
     viewModel { RestoreNoUserInfoViewModel(get(), get(), get()) }
 
     viewModel { WalletMainViewModel(get(), get(), get()) }
-    viewModel { WalletListViewModel(get(), get(), get(), get(), get(), get()) }
+    viewModel { WalletListViewModel(get(), get(), get(), get(), get(), get(), get(), get()) }
     viewModel { DiscoveryViewModel(get(), get(), get()) }
     viewModel { DappViewModel(get(), get()) }
     viewModel { TrendViewModel(get(), get()) }
@@ -53,7 +53,7 @@ val repositoryModule = module {
     single { SplashRepository(get(), get(), get()) }
     single { VerifyRepository(get(), get(), get()) }
     single { RestoreRepository(get(), get()) }
-//    single { TtnRepository(get(), get()) }
+    single { TtnRepository(get(), get()) }
     //Api repository
     single { InfoRepositoryCo(get()) }
     single { HelperRepository(get()) }
@@ -61,6 +61,7 @@ val repositoryModule = module {
     single { ImRepositoryCo(get()) }
     single { BroadcastRepository(get()) }
     single { BalanceApiRepository(get()) }
+    single { TtnServerApiRepository(get()) }
 }
 
 val helperModule = module {
