@@ -674,3 +674,10 @@ data class CustomCommentsData(
     @SerializedName("toAddress")
     var toAddress: String = ""
 )
+
+data class AddressBean(var addressID: Int = -1) : Serializable {
+    var name: String = ""
+    var coinName: String = ""
+    var address: String = ""
+    var icon: Int = 0
+}

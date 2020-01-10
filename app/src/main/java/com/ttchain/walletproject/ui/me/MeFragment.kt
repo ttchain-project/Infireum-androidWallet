@@ -23,6 +23,7 @@ import com.ttchain.walletproject.dialog.UpdateVersionDialogFragment
 import com.ttchain.walletproject.dialog.WarningDialog
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.ui.login.LoginActivity
+import com.ttchain.walletproject.ui.me.commonaddress.CommonAddressActivity
 import com.ttchain.walletproject.ui.me.currency.CurrencyActivity
 import com.ttchain.walletproject.ui.me.languagesetting.LanguageSettingActivity
 import com.ttchain.walletproject.ui.me.usinglocker.UsingLockerActivity
@@ -67,7 +68,7 @@ class MeFragment : BaseFragment() {
 //            viewModel.performGetVersion()
 //        }
         textViewCommonAddress.setDelayClickListener {
-//            CommonAddressActivity.launch(requireActivity())
+            CommonAddressActivity.launch(requireActivity())
         }
         textViewCurrency.setDelayClickListener {
             CurrencyActivity.launch(requireActivity())
