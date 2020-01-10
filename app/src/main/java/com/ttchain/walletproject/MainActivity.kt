@@ -24,11 +24,6 @@ class MainActivity : BaseActivity() {
         initView()
     }
 
-    override fun onResume() {
-        super.onResume()
-        bottomTabView.setItemClick(BottomTabState.WALLET)
-    }
-
     private fun initView() {
         val mainPagerAdapter = MainPagerAdapter(supportFragmentManager)
         view_pager.apply {
@@ -44,5 +39,6 @@ class MainActivity : BaseActivity() {
             }
             bottomTabView.setTabPosition(bottomTabStatus)
         }
+        bottomTabView.setItemClick(BottomTabState.WALLET)
     }
 }

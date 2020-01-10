@@ -221,8 +221,10 @@ class WalletListViewModel(
         return dbHelper.getCoinData(id).iconPath.orEmpty()
     }
 
+    var total = BigDecimal("0")
+
+
     private fun getTotalAssetAmount() {
-        var total = BigDecimal("0")
         if (category == CoinRepository.COIN_MAIN_CHAIN_IDENTIFIER) {
             //BTC
             var btcAmount = BigDecimal("0")
@@ -247,7 +249,6 @@ class WalletListViewModel(
             }
             total = total.add(getFiatRate(CoinEnum.USDT.coinId, usdtAmount))
         }
-        totalAssetAmountLiveData.value = NumberUtils.showFiat(total)
     }
 
 
@@ -371,6 +372,7 @@ class WalletListViewModel(
                 .subscribe({
                     //TTN
                     var ttnAmount = BigDecimal(it.balance.handleAmount(CoinEnum.TTN.coinId))
+                    total = total.add(ttnAmount)
                     val ttnCoinID = getCoinIDByCoinId(CoinEnum.TTN.coinId)
                     val ttnIcon = getIconPathByCoinId(ttnCoinID)
                     for (assetData in dbHelper.getAssetDataListByCoinIDs(listOf(ttnCoinID))) {
@@ -383,7 +385,7 @@ class WalletListViewModel(
                         getFiatRateText(CoinEnum.TTN.coinId, ttnAmount, ttnFiatSymbol),
                         ttnIcon
                     )
-                    
+
                     val ttnList = ArrayList<ExpandableListBean>()
 
                     val amount = it.balance.handleAmount(CoinEnum.TTN.coinId)
@@ -408,6 +410,7 @@ class WalletListViewModel(
                     ttn.childData = ttnList
                     val groupList = listOf(btc, eth, ttn)
                     mainDataLiveData.value = groupList
+                    totalAssetAmountLiveData.value = NumberUtils.showFiat(total)
                 }, {
                 })
         )
