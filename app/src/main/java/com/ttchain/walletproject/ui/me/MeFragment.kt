@@ -23,6 +23,8 @@ import com.ttchain.walletproject.dialog.UpdateVersionDialogFragment
 import com.ttchain.walletproject.dialog.WarningDialog
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.ui.login.LoginActivity
+import com.ttchain.walletproject.ui.me.usinglocker.UsingLockerActivity
+import com.ttchain.walletproject.ui.selectexportwallet.SelectExportWalletActivity
 import com.ttchain.walletproject.utils.FeatureUtils
 import com.ttchain.walletproject.utils.Utility
 import com.ttchain.walletproject.utils.Utils
@@ -69,10 +71,10 @@ class MeFragment : BaseFragment() {
 //            CurrencyActivity.launch(requireActivity())
         }
         export_btc_container.setDelayClickListener {
-//            SelectExportWalletActivity.launch(requireActivity(), CoinEnum.BTC)
+            SelectExportWalletActivity.launch(requireActivity(), CoinEnum.BTC)
         }
         export_eth_container.setDelayClickListener {
-//            SelectExportWalletActivity.launch(requireActivity(), CoinEnum.ETH)
+            SelectExportWalletActivity.launch(requireActivity(), CoinEnum.ETH)
         }
         textViewBackupWallet.setDelayClickListener {
             position = 2
@@ -116,7 +118,7 @@ class MeFragment : BaseFragment() {
         }
         // 使用密碼鎖
         textViewUsingLocker.setDelayClickListener {
-//            UsingLockerActivity.launch(requireActivity())
+            UsingLockerActivity.launch(requireActivity())
         }
         //工程師模式
         if (BuildConfig.DEBUG) {
