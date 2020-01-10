@@ -8,6 +8,7 @@ import com.ttchain.walletproject.base.BaseViewModel
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.model.UserHelper
 import com.ttchain.walletproject.repository.CoinRepository
+import com.ttchain.walletproject.repository.HelperRepository
 import com.ttchain.walletproject.repository.InfoRepositoryCo
 import com.ttchain.walletproject.repository.SplashRepository
 import com.ttchain.walletproject.toMain

@@ -3,6 +3,8 @@ package com.ttchain.walletproject.koin
 import com.ttchain.walletproject.helper.MockHelper
 import com.ttchain.walletproject.helper.MockHelperImpl
 import com.ttchain.walletproject.model.*
+import com.ttchain.walletproject.repository.HelperRepository
+import com.ttchain.walletproject.repository.HelperRepositoryCo
 import com.ttchain.walletproject.repository.InfoRepositoryCo
 import com.ttchain.walletproject.repository.SplashRepository
 import com.ttchain.walletproject.ui.discovery.DiscoveryViewModel
@@ -26,6 +28,8 @@ val repositoryModule = module {
     single { SplashRepository(get(), get(), get()) }
     //Api repository
     single { InfoRepositoryCo(get()) }
+    single { HelperRepository(get()) }
+    single { HelperRepositoryCo(get()) }
 }
 
 val helperModule = module {
