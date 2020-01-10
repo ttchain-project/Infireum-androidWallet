@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/PrimaryText.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_18"
+        android:layout_marginTop="@dimen/padding_16"
+        android:text="@string/select_backup_method_title"
+        android:textColor="@color/_98C736"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/qrcode_container"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/padding_8"
+        android:background="@drawable/ripple_white"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/PrimaryBlackText.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_weight="1"
+            android:drawableStart="@mipmap/popovers_btn_qrcode"
+            android:drawablePadding="@dimen/padding_14"
+            android:text="@string/select_backup_method_qrcode" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@style/PrimaryBlackText.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_18"
+            android:drawableEnd="@mipmap/btn_next"
+            android:drawablePadding="@dimen/padding_4"
+            android:text="@string/select_backup_method_recommend"
+            android:textColor="@color/_98C736" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mnemonics_container"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/ripple_white"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/qrcode_container">
+
+        <TextView
+            style="@style/PrimaryBlackText.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_marginEnd="@dimen/padding_18"
+            android:drawableStart="@mipmap/setting_icon_message"
+            android:drawableEnd="@mipmap/btn_next"
+            android:drawablePadding="@dimen/padding_14"
+            android:text="@string/select_backup_method_mnemonics"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

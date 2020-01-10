@@ -1,4 +1,4 @@
-package com.ttchain.walletproject.ui.selectexportwallet
+package com.ttchain.walletproject.ui.me.selectexportwallet
 
 import android.view.LayoutInflater
 import android.view.View
