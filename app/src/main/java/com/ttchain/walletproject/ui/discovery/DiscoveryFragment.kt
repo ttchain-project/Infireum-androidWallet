@@ -130,7 +130,7 @@ class DiscoveryFragment : BaseFragment() {
                 mBlockChainExplorerAdapter.updateData(it)
             }
             throwableMessage.observe(owner) {
-//                onShowMessageDialog(it)
+                onShowMessageDialog(it)
             }
             getNews()
         }

@@ -8,6 +8,7 @@ import com.ttchain.walletproject.model.ApiVersionData
 import com.ttchain.walletproject.model.DbHelper
 import com.ttchain.walletproject.model.SystemHelper
 import com.ttchain.walletproject.model.UserHelper
+import com.ttchain.walletproject.repository.ImRepositoryCo
 import com.ttchain.walletproject.repository.InfoRepositoryCo
 import com.ttchain.walletproject.repository.VerifyRepository
 

@@ -31,7 +31,7 @@ val viewModelModule = module {
     viewModel { DappViewModel(get(), get()) }
     viewModel { TrendViewModel(get(), get()) }
     viewModel { WebViewViewModel(get(), get(), get()) }
-    viewModel { MeViewModel() }
+    viewModel { MeViewModel(get(), get(), get(), get(), get(), get()) }
 }
 
 val repositoryModule = module {
