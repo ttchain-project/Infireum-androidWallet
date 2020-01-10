@@ -23,6 +23,8 @@ import com.ttchain.walletproject.dialog.UpdateVersionDialogFragment
 import com.ttchain.walletproject.dialog.WarningDialog
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.ui.login.LoginActivity
+import com.ttchain.walletproject.ui.me.currency.CurrencyActivity
+import com.ttchain.walletproject.ui.me.languagesetting.LanguageSettingActivity
 import com.ttchain.walletproject.ui.me.usinglocker.UsingLockerActivity
 import com.ttchain.walletproject.ui.selectexportwallet.SelectExportWalletActivity
 import com.ttchain.walletproject.utils.FeatureUtils
@@ -59,7 +61,7 @@ class MeFragment : BaseFragment() {
             }.show()
         }
         textViewLanguage.setDelayClickListener {
-//            LanguageSettingActivity.launch(requireActivity())
+            LanguageSettingActivity.launch(requireActivity())
         }
 //        textViewCheckUpdate.setDelayClickListener {
 //            viewModel.performGetVersion()
@@ -68,7 +70,7 @@ class MeFragment : BaseFragment() {
 //            CommonAddressActivity.launch(requireActivity())
         }
         textViewCurrency.setDelayClickListener {
-//            CurrencyActivity.launch(requireActivity())
+            CurrencyActivity.launch(requireActivity())
         }
         export_btc_container.setDelayClickListener {
             SelectExportWalletActivity.launch(requireActivity(), CoinEnum.BTC)
