@@ -15,6 +15,7 @@ class App :MultiDexApplication() {
 
         // 虛擬貨幣的指定法幣行情列表
         var rateList = listOf<DecimalData>()
+        var isMainNet = true
 
 
         lateinit var INSTANCE: WeakReference<App>

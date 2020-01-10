@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_bolt_success"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_40"
+        android:drawableTop="@mipmap/popups_img_patch"
+        android:drawablePadding="@dimen/padding_6"
+        android:text="@string/dialog_update_version_title"
+        android:textColor="@color/_354252"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_12"
+        android:textColor="@color/_7F8890"
+        android:textSize="@dimen/sp_14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_16"
+        android:layout_marginTop="@dimen/padding_40"
+        android:layout_marginEnd="@dimen/padding_16"
+        android:layout_marginBottom="@dimen/padding_24"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/textViewLater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_4"
+            android:layout_weight="1"
+            android:background="@drawable/bg_white_rectangle_30_grey_stoke"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingBottom="@dimen/padding_6"
+            android:text="@string/dialog_update_version_left_button"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/textViewUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_4"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dark_radius_30"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingBottom="@dimen/padding_6"
+            android:text="@string/dialog_update_version_right_button"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+</LinearLayout>

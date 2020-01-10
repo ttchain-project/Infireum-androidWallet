@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_bolt_success"
+    android:paddingBottom="@dimen/padding_24">
+
+    <LinearLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/padding_40"
+        android:paddingTop="@dimen/padding_40"
+        android:paddingEnd="@dimen/padding_40"
+        android:paddingBottom="@dimen/padding_24">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/PrimaryBlackText.Big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableTop="@mipmap/popups_img_success"
+            android:drawablePadding="@dimen/padding_18"
+            android:textSize="20sp"
+            tools:text="@string/transfer_success_title" />
+
+        <TextView
+            android:id="@+id/content"
+            style="@style/PrimaryBlackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_12"
+            android:textColor="#80000000"
+            android:textSize="@dimen/sp_14"
+            tools:text="@string/transfer_success_detail" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_12"
+        android:layout_marginTop="@dimen/padding_24"
+        android:layout_marginEnd="@dimen/padding_24"
+        android:background="@drawable/bg_b9c0ca_radius_30"
+        android:paddingStart="46dp"
+        android:paddingTop="@dimen/padding_6"
+        android:paddingEnd="46dp"
+        android:paddingBottom="@dimen/padding_6"
+        android:text="@string/g_confirm"
+        android:textColor="@color/_B9C0CA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
