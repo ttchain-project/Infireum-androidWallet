@@ -2,8 +2,10 @@ package com.ttchain.walletproject.ui.wallet
 
 import android.os.Bundle
 import android.view.View
+import com.git4u.tt_wallet_android.rx.RxBusTag
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
+import com.ttchain.walletproject.rx.RxBus
 import com.ttchain.walletproject.setDelayClickListener
 import kotlinx.android.synthetic.main.fragment_wallet_main.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -40,6 +42,14 @@ class WalletMainFragment : BaseFragment() {
     }
 
     private fun initData() {
+        viewModel.apply {
+            initSubject()
+            updateAssetDataByApi()
+        }
+    }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        RxBus.getInstance().unregister(RxBusTag.CT_WALLET_QUERY_API)
     }
 }

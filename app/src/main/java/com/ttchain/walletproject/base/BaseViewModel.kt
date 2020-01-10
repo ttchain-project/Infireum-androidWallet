@@ -9,6 +9,8 @@ import com.ttchain.walletproject.App.Companion.rateList
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.net.ApiError
 import com.ttchain.walletproject.net.ApiException
+import com.ttchain.walletproject.showNumber
+import com.ttchain.walletproject.utils.NumberUtils
 import io.reactivex.ObservableTransformer
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
@@ -212,9 +214,9 @@ abstract class BaseViewModel : AndroidViewModel(app) {
         val rate = getRate(coinId)
         return amount.multiply(rate)
     }
-//
-//    fun getFiatRateText(coinId: String, amount: BigDecimal, symbol: String): String {
-//        val fiat = getFiatRate(coinId, amount)
-//        return "≈$symbol ${NumberUtils.show(fiat, showNumber)}"
-//    }
+
+    fun getFiatRateText(coinId: String, amount: BigDecimal, symbol: String): String {
+        val fiat = getFiatRate(coinId, amount)
+        return "≈$symbol ${NumberUtils.show(fiat, showNumber)}"
+    }
 }

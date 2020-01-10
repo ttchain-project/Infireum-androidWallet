@@ -20,6 +20,10 @@ class App :MultiDexApplication() {
 
         // 虛擬貨幣的指定法幣行情列表
         var rateList = listOf<DecimalData>()
+
+        // default amount
+        const val DEFAULT_AMOUNT = "0.00"
+
         var isMainNet = true
 
 
