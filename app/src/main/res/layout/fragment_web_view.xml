@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/_354252">
+
+        <ImageButton
+            android:id="@+id/nav_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/padding_8"
+            android:src="@mipmap/back_button_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/PrimaryWhiteText.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginEnd="@dimen/padding_10"
+            android:singleLine="true"
+            app:layout_constraintEnd_toStartOf="@+id/more_btn"
+            app:layout_constraintStart_toEndOf="@+id/nav_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Web Title Web Title Web Title Web Title Web Title" />
+
+        <TextView
+            android:id="@+id/url_tv"
+            style="@style/PrimaryWhiteText.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginEnd="@dimen/padding_10"
+            android:singleLine="true"
+            app:layout_constraintEnd_toStartOf="@+id/more_btn"
+            app:layout_constraintStart_toEndOf="@+id/nav_btn"
+            app:layout_constraintTop_toBottomOf="@+id/title_tv"
+            tools:text="https://www.webspace.com.tw/123434124124124" />
+
+        <ImageButton
+            android:id="@+id/more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_10"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/padding_8"
+            android:src="@mipmap/btn_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_2"
+        android:background="@color/_354252"/>
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

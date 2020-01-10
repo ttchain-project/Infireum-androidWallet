@@ -26,55 +26,6 @@ data class DecimalData(
     val rate: Double
 )
 
-/**
- * SignETHOrSignETHContract data class
- */
-data class SignETHBodyRequest(
-    @SerializedName("contractAddress")
-    var contractAddress: String? = null,
-    @SerializedName("encry")
-    var encry: Boolean = false,
-    @SerializedName("privateKey")
-    var privateKey: String = "",
-    @SerializedName("token")
-    var token: String = ""
-)
-
-/**
- * SignBTCOrSignBTCRelay data class
- */
-data class SignBTCBodyData(
-    @SerializedName("compressed")
-    var compressed: Boolean = false,
-    @SerializedName("tx")
-    var tx: List<TxData>? = null,
-    @SerializedName("unspend")
-    var unspend: List<UnspendData>? = null,
-    @SerializedName("privatekey")
-    var privatekey: String = "",
-    @SerializedName("token")
-    var token: String = "",
-    @SerializedName("encry")
-    var encry: Boolean = false,
-    @SerializedName("cicAddress")
-    var cicAddress: String = ""
-)
-
-data class TxData(
-    @SerializedName("address")
-    var address: String = "",
-    @SerializedName("value")
-    var value: Double = 0.toDouble()
-)
-
-data class UnspendData(
-    @SerializedName("txid")
-    var txid: String = "",
-    @SerializedName("value")
-    var value: Double = 0.toDouble()
-
-)
-
 data class ExplorerDappBean(
     var name: String,
     var url: String = "",
@@ -115,28 +66,6 @@ data class CoinBean(var coinId: String = "") {
     var mainCoinId: String = ""
     var chainName: String = ""
 }
-
-/**
- * 取得BTC Unspent data class
- */
-data class ResponseBTCTransactionData(
-    @SerializedName("address")
-    var address: String = "",
-    @SerializedName("txid")
-    val txid: String = "",
-    @SerializedName("vout")
-    val vout: Long = 0.toLong(),
-    @SerializedName("scriptPubKey")
-    val scriptPubKey: String = "",
-    @SerializedName("amount")
-    val amount: Double = 0.toDouble(),
-    @SerializedName("satoshis")
-    val satoshis: Long = 0.toLong(),
-    @SerializedName("height")
-    val height: Long = 0.toLong(),
-    @SerializedName("confirmations")
-    val confirmations: Long = 0.toLong()
-)
 
 data class RecordBean(var _id: Int = -1) : Serializable {
     var detailText: String = ""
@@ -592,4 +521,156 @@ data class ChatRoomNotificationSetting(
     var roomId: String = "",
     @SerializedName("isNotificaitonActive")
     var isNotificaitonActive: Boolean = false
+)
+/*-------------------------------- Broadcast Api data --------------------------------*/
+
+/**
+ * ETH廣播 data class
+ */
+data class MainnetInfuraRequest(
+    @SerializedName("jsonrpc")
+    var jsonrpc: String = "",
+    @SerializedName("method")
+    var method: String = "",
+    @SerializedName("params")
+    var params: MutableList<Any> = arrayListOf(),
+    @SerializedName("id")
+    var id: Int = 0,
+    @SerializedName("comments")
+    var comments: String = ""
+) {
+    fun addParamsItem(paramsItem: Any): MainnetInfuraRequest {
+        params.add(paramsItem)
+        return this
+    }
+}
+
+/**
+ * BTC廣播 data class
+ */
+data class BlockExplorerRequest(
+    @SerializedName("rawtx")
+    var rawtx: String = "",
+    @SerializedName("comments")
+    var comments: String = ""
+)
+
+/**
+ * SignETHOrSignETHContract data class
+ */
+data class SignETHBodyRequest(
+    @SerializedName("contractAddress")
+    var contractAddress: String? = null,
+    @SerializedName("encry")
+    var encry: Boolean = false,
+    @SerializedName("privateKey")
+    var privateKey: String = "",
+    @SerializedName("token")
+    var token: String = ""
+)
+
+data class ResponseSignETHData(
+    @SerializedName("signText")
+    var signText: String = "",
+    @SerializedName("tx")
+    val tx: ResponseTxData? = null
+)
+
+data class ResponseTxData(
+    @SerializedName("nonce")
+    var nonce: String = "",
+    @SerializedName("gasLimit")
+    val gasLimit: String = "",
+    @SerializedName("to")
+    val to: String = "",
+    @SerializedName("value")
+    val value: String = "",
+    @SerializedName("gasPrice")
+    val gasPrice: String = ""
+)
+
+/**
+ * 取得BTC Unspent data class
+ */
+data class ResponseBTCTransactionData(
+    @SerializedName("address")
+    var address: String = "",
+    @SerializedName("txid")
+    val txid: String = "",
+    @SerializedName("vout")
+    val vout: Long = 0.toLong(),
+    @SerializedName("scriptPubKey")
+    val scriptPubKey: String = "",
+    @SerializedName("amount")
+    val amount: Double = 0.toDouble(),
+    @SerializedName("satoshis")
+    val satoshis: Long = 0.toLong(),
+    @SerializedName("height")
+    val height: Long = 0.toLong(),
+    @SerializedName("confirmations")
+    val confirmations: Long = 0.toLong()
+)
+
+/**
+ * SignBTCOrSignBTCRelay data class
+ */
+data class SignBTCBodyData(
+    @SerializedName("compressed")
+    var compressed: Boolean = false,
+    @SerializedName("tx")
+    var tx: List<TxData>? = null,
+    @SerializedName("unspend")
+    var unspend: List<UnspendData>? = null,
+    @SerializedName("privatekey")
+    var privatekey: String = "",
+    @SerializedName("token")
+    var token: String = "",
+    @SerializedName("encry")
+    var encry: Boolean = false,
+    @SerializedName("cicAddress")
+    var cicAddress: String = ""
+)
+
+data class TxData(
+    @SerializedName("address")
+    var address: String = "",
+    @SerializedName("value")
+    var value: Double = 0.toDouble()
+)
+
+data class UnspendData(
+    @SerializedName("txid")
+    var txid: String = "",
+    @SerializedName("value")
+    var value: Double = 0.toDouble()
+)
+
+data class ResponseSignBTCData(
+    @SerializedName("signText")
+    var signText: String = ""
+)
+
+/**
+ * 取得客戶備註 data class
+ */
+data class TransactionData(
+    @SerializedName("txIDs")
+    var txIDs: MutableList<String> = arrayListOf()
+) {
+
+    fun addTxIDsItem(txIDsItem: String): TransactionData? {
+        txIDs.add(txIDsItem)
+        return this
+    }
+}
+
+data class CustomCommentsData(
+    @SerializedName("txID")
+    var txID: String = "",
+    @SerializedName("comments")
+    var comments: String = "",
+    @SerializedName("toIdentifier")
+    var toIdentifier: String = "",
+    @SerializedName("toAddress")
+    var toAddress: String = ""
 )

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/qrcode_group"
+        android:icon="@mipmap/popovers_btn_qrcode"
+        android:title="@string/group_menu_qrcode"/>
+
+    <item
+        android:id="@+id/exit_group"
+        android:icon="@mipmap/popovers_btn_leave"
+        android:title="@string/group_menu_leave"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/delete_group"
+        android:icon="@mipmap/popovers_btn_delete"
+        android:title="@string/group_menu_delete"
+        android:visible="false"/>
+
+</menu>

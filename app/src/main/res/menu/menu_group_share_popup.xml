@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/share"
+        android:icon="@mipmap/popovers_btn_share"
+        android:title="@string/group_qrcode_fragment_share"/>
+
+    <item
+        android:id="@+id/save"
+        android:icon="@mipmap/popovers_btn_download"
+        android:title="@string/group_qrcode_fragment_save"/>
+</menu>
