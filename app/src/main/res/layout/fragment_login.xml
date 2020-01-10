@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:scaleType="center"
+        android:src="@mipmap/defoult_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/new_user_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_iv">
+
+        <TextView
+            android:id="@+id/create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dark_radius_30"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingBottom="@dimen/padding_6"
+            android:text="@string/login_create"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/desc"
+            style="@style/TextAppleGreen.Mini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_2"
+            android:layout_marginBottom="@dimen/padding_14"
+            android:gravity="center"
+            android:text="@string/login_desc" />
+
+        <TextView
+            android:id="@+id/restore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dark_edge_radius_30"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingBottom="@dimen/padding_6"
+            android:text="@string/login_restore"
+            android:textColor="@color/_354252"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_24"
+            android:background="@drawable/bg_white_rectangle_30_grey_stoke"
+            android:drawableStart="@mipmap/setting_icon_language"
+            android:drawableEnd="@mipmap/btn_open_gray"
+            android:paddingStart="@dimen/padding_20"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingEnd="@dimen/padding_20"
+            android:paddingBottom="@dimen/padding_6"
+            android:textColor="@color/grey_b9c0ca"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            tools:text="正體中文" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exists_user_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/new_user_container">
+
+        <TextView
+            android:id="@+id/restore_by_qrcode_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dark_radius_30"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingBottom="@dimen/padding_6"
+            android:text="@string/login_by_qrcode"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/restore_by_mnemonics_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16"
+            android:background="@drawable/bg_dark_radius_30"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_6"
+            android:paddingBottom="@dimen/padding_6"
+            android:text="@string/login_by_mnemonics"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+    <com.ttchain.walletproject.view.PreviousButton
+        android:id="@+id/previous_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_24"
+        android:layout_marginBottom="@dimen/padding_16"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

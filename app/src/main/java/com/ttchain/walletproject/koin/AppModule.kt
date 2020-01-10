@@ -3,11 +3,9 @@ package com.ttchain.walletproject.koin
 import com.ttchain.walletproject.helper.MockHelper
 import com.ttchain.walletproject.helper.MockHelperImpl
 import com.ttchain.walletproject.model.*
-import com.ttchain.walletproject.repository.HelperRepository
-import com.ttchain.walletproject.repository.HelperRepositoryCo
-import com.ttchain.walletproject.repository.InfoRepositoryCo
-import com.ttchain.walletproject.repository.SplashRepository
+import com.ttchain.walletproject.repository.*
 import com.ttchain.walletproject.ui.discovery.DiscoveryViewModel
+import com.ttchain.walletproject.ui.login.LoginViewModel
 import com.ttchain.walletproject.ui.me.MeViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
 import com.ttchain.walletproject.ui.wallet.WalletMainViewModel
@@ -17,6 +15,7 @@ import org.koin.dsl.module
 
 val viewModelModule = module {
     viewModel { SplashViewModel(get(), get(), get(), get(), get()) }
+    viewModel { LoginViewModel(get()) }
     viewModel { WalletMainViewModel() }
     viewModel { WalletListViewModel() }
     viewModel { DiscoveryViewModel(get(), get(), get()) }
@@ -30,6 +29,7 @@ val repositoryModule = module {
     single { InfoRepositoryCo(get()) }
     single { HelperRepository(get()) }
     single { HelperRepositoryCo(get()) }
+    single { CoinRepository(get(), get(), get(), get()) }
 }
 
 val helperModule = module {

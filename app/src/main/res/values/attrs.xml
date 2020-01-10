@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NormalEditTextItem">
+        <attr name="et_hint" format="string" />
+        <attr name="et_type">
+            <flag name="none" value="0" />
+            <flag name="email" value="1" />
+            <flag name="password" value="2" />
+            <flag name="integer" value="3" />
+            <flag name="phone" value="4" />
+            <flag name="uri" value="5" />
+        </attr>
+        <attr name="et_maxLength" format="integer" />
+        <attr name="et_text" format="string" />
+        <attr name="error_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="NormalFreeLabelItem">
+        <attr name="content_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonAddressItem">
+        <attr name="common_address_et_hint" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="NextButton">
+        <attr name="button_text" format="string"/>
+        <attr name="button_image" format="reference"/>
+        <attr name="button_enable" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PreviousButton">
+        <attr name="previous_button_text" format="string"/>
+        <attr name="previous_button_image" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditTextItem">
+        <attr name="editTextHint" format="string" />
+        <attr name="editTextType">
+            <flag name="none" value="0" />
+            <flag name="email" value="1" />
+            <flag name="password" value="2" />
+            <flag name="integer" value="3" />
+            <flag name="phone" value="4" />
+            <flag name="uri" value="5" />
+        </attr>
+        <attr name="titleText" format="string" />
+    </declare-styleable>
+
+</resources>
