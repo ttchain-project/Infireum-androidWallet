@@ -1,6 +1,17 @@
 package com.ttchain.walletproject.model
 
 import com.google.gson.annotations.SerializedName
+import com.ttchain.walletproject.enums.ApiCodeEnum
+
+/**
+ * 統一 Api Result
+ */
+data class ApiResult<T>(
+    @SerializedName("code")
+    val code: ApiCodeEnum = ApiCodeEnum.NUMBER_0,
+    val message: String = "",
+    val data: T
+)
 
 /**
  * 取得所有虛擬貨幣的指定法幣行情 data class
@@ -73,4 +84,27 @@ data class ExplorerBean(
 
     var price: String = "",
     var change: String = ""
+)
+
+
+/**
+ * 取得以美金為基準的法幣兌換匯率表 data class
+ */
+data class ApiFiatTableData(
+    @SerializedName("fiatId")
+    var fiatId: Int = 0,
+    @SerializedName("toUSDRate")
+    val toUSDRate: Double = 0.toDouble()
+)
+
+/**
+ * 取得系統支援法幣清單 data class
+ */
+data class ApiFiatData(
+    @SerializedName("id")
+    var id: Int = 0,
+    @SerializedName("name")
+    val name: String = "",
+    @SerializedName("symbol")
+    val symbol: String = ""
 )
