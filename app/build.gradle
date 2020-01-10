@@ -222,6 +222,8 @@ dependencies {
     kapt "com.github.bumptech.glide:compiler:$glide_version"
 
     // Tools
+    // Download
+    implementation 'com.mindorks.android:prdownloader:0.4.0'
 
     // AES256
     implementation 'com.scottyab:aescrypt:0.0.1'

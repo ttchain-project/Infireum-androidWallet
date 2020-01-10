@@ -1,6 +1,5 @@
-package com.git4u.tt_wallet_android.utils
+package com.ttchain.walletproject.utils
 
-import com.awesomegaming.walletlibs.util.CustomPDF417Writer
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
 import com.google.zxing.Writer

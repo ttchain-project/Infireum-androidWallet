@@ -1,4 +1,4 @@
-package com.awesomegaming.walletlibs.util
+package com.ttchain.walletproject.utils
 
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType

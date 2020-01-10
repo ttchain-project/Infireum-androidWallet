@@ -1,4 +1,4 @@
-package com.git4u.tt_wallet_android.utils
+package com.ttchain.walletproject.utils
 
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType

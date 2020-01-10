@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/TextBlack.Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_20"
+        android:text="@string/export_private_key_title"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle_1_star"
+        style="@style/TextBlack.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_22"
+        android:layout_marginTop="@dimen/padding_20"
+        android:text="＊"
+        android:textColor="#FB6B5B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+    <TextView
+        android:id="@+id/subtitle_1_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_4"
+        android:text="@string/export_private_key_pky_1"
+        android:textColor="#FB6B5B"
+        app:layout_constraintStart_toEndOf="@+id/subtitle_1_star"
+        app:layout_constraintTop_toTopOf="@+id/subtitle_1_star" />
+
+    <View
+        android:id="@+id/subtitle_1_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/padding_6"
+        android:layout_marginEnd="38dp"
+        android:background="#80FB6B5B"
+        app:layout_constraintBottom_toBottomOf="@+id/subtitle_1_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subtitle_1_tv"
+        app:layout_constraintTop_toTopOf="@+id/subtitle_1_tv" />
+
+    <TextView
+        android:id="@+id/desc_1_tv"
+        style="@style/TextBlack.SuperSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/export_private_key_pky_2"
+        app:layout_constraintEnd_toEndOf="@+id/subtitle_1_line"
+        app:layout_constraintStart_toStartOf="@+id/subtitle_1_tv"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle_1_tv" />
+
+    <TextView
+        android:id="@+id/subtitle_2_star"
+        style="@style/TextBlack.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_22"
+        android:layout_marginTop="@dimen/padding_16"
+        android:text="＊"
+        android:textColor="#FB6B5B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_1_tv" />
+
+    <TextView
+        android:id="@+id/subtitle_2_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_4"
+        android:text="@string/export_private_key_pky_3"
+        android:textColor="#FB6B5B"
+        app:layout_constraintStart_toEndOf="@+id/subtitle_2_star"
+        app:layout_constraintTop_toTopOf="@+id/subtitle_2_star" />
+
+    <View
+        android:id="@+id/subtitle_2_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/padding_6"
+        android:layout_marginEnd="38dp"
+        android:background="#80FB6B5B"
+        app:layout_constraintBottom_toBottomOf="@+id/subtitle_2_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subtitle_2_tv"
+        app:layout_constraintTop_toTopOf="@+id/subtitle_2_tv" />
+
+    <TextView
+        android:id="@+id/desc_2_tv"
+        style="@style/TextBlack.SuperSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/export_private_key_pky_4"
+        app:layout_constraintEnd_toEndOf="@+id/subtitle_2_line"
+        app:layout_constraintStart_toStartOf="@+id/subtitle_2_tv"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle_2_tv" />
+
+    <TextView
+        android:id="@+id/subtitle_3_star"
+        style="@style/TextBlack.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_22"
+        android:layout_marginTop="@dimen/padding_16"
+        android:text="＊"
+        android:textColor="#FB6B5B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_2_tv" />
+
+    <TextView
+        android:id="@+id/subtitle_3_tv"
+        style="@style/TextBlack.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_4"
+        android:text="@string/export_private_key_pky_5"
+        android:textColor="#FB6B5B"
+        app:layout_constraintStart_toEndOf="@+id/subtitle_3_star"
+        app:layout_constraintTop_toTopOf="@+id/subtitle_3_star" />
+
+    <View
+        android:id="@+id/subtitle_3_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/padding_6"
+        android:layout_marginEnd="38dp"
+        android:background="#80FB6B5B"
+        app:layout_constraintBottom_toBottomOf="@+id/subtitle_3_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subtitle_3_tv"
+        app:layout_constraintTop_toTopOf="@+id/subtitle_3_tv" />
+
+    <TextView
+        android:id="@+id/desc_3_tv"
+        style="@style/TextBlack.SuperSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/export_private_key_pky_6"
+        app:layout_constraintEnd_toEndOf="@+id/subtitle_3_line"
+        app:layout_constraintStart_toStartOf="@+id/subtitle_3_tv"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle_3_tv" />
+
+    <RelativeLayout
+        android:id="@+id/private_key_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_grey_edge_white_radius_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_3_tv"
+        app:layout_constraintWidth_percent="0.72">
+
+        <TextView
+            android:id="@+id/private_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_22"
+            android:visibility="invisible"
+            tools:text="a083afc8c62c2f8c03c25e6aaccc55911545e6cdc425967ef21856757293c14e" />
+
+        <TextView
+            android:id="@+id/show_private_key"
+            style="@style/TextBlack.SuperSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/export_private_key_pky_show"
+            android:textColor="#40000000" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/anchor"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/padding_14"
+        app:layout_constraintBottom_toBottomOf="@+id/private_key_container"
+        app:layout_constraintEnd_toEndOf="@+id/private_key_container"
+        app:layout_constraintStart_toStartOf="@+id/private_key_container" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/copy_key"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@mipmap/btn_copy_white"
+        android:visibility="invisible"
+        app:backgroundTint="#F7BE73"
+        app:fabCustomSize="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/private_key_container"
+        app:layout_constraintStart_toStartOf="@+id/private_key_container"
+        app:layout_constraintTop_toBottomOf="@+id/anchor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
