@@ -1,45 +1,12 @@
-package com.git4u.tt_wallet_android.model
+package com.ttchain.walletproject.model
 
 import android.content.Context
-
-import com.git4u.tt_wallet_android.cache.GlobalConstant
-import com.git4u.tt_wallet_android.database.AddressDao
-import com.git4u.tt_wallet_android.database.AssetDao
-import com.git4u.tt_wallet_android.database.ChatCommunicationDao
-import com.git4u.tt_wallet_android.database.ChatGroupDao
-import com.git4u.tt_wallet_android.database.ChatMessageDao
-import com.git4u.tt_wallet_android.database.ChatRoomDao
-import com.git4u.tt_wallet_android.database.CoinDao
-import com.git4u.tt_wallet_android.database.CoinSelectionDao
-import com.git4u.tt_wallet_android.database.CoinToCoinRateDao
-import com.git4u.tt_wallet_android.database.CoinToFiatRateDao
-import com.git4u.tt_wallet_android.database.FiatDao
-import com.git4u.tt_wallet_android.database.FiatToFiatRateDao
-import com.git4u.tt_wallet_android.database.IdentityDao
-import com.git4u.tt_wallet_android.database.LanguageDao
-import com.git4u.tt_wallet_android.database.LightningTransRecordDao
-import com.git4u.tt_wallet_android.database.TransRecordDao
-import com.git4u.tt_wallet_android.database.UsdtTransRecordDao
-import com.git4u.tt_wallet_android.database.WalletDao
-import com.git4u.tt_wallet_android.database.data.AddressData
-import com.git4u.tt_wallet_android.database.data.AssetData
-import com.git4u.tt_wallet_android.database.data.ChatCommunicationData
-import com.git4u.tt_wallet_android.database.data.ChatGroupData
-import com.git4u.tt_wallet_android.database.data.ChatMessageData
-import com.git4u.tt_wallet_android.database.data.ChatRoomData
-import com.git4u.tt_wallet_android.database.data.CoinData
-import com.git4u.tt_wallet_android.database.data.CoinSelectionData
-import com.git4u.tt_wallet_android.database.data.CoinToCoinRateData
-import com.git4u.tt_wallet_android.database.data.CoinToFiatRateData
-import com.git4u.tt_wallet_android.database.data.FiatData
-import com.git4u.tt_wallet_android.database.data.FiatToFiatRateData
-import com.git4u.tt_wallet_android.database.data.IdentityData
-import com.git4u.tt_wallet_android.database.data.LanguageData
-import com.git4u.tt_wallet_android.database.data.LightningTransRecordData
-import com.git4u.tt_wallet_android.database.data.TransRecordData
-import com.git4u.tt_wallet_android.database.data.UsdtTransRecordData
-import com.git4u.tt_wallet_android.database.data.WalletData
-import com.ttchain.walletproject.model.DbHelper
+import com.ttchain.walletproject.database.UsdtTransRecordDao
+import com.ttchain.walletproject.database.TransRecordDao
+import com.ttchain.walletproject.database.WalletDao
+import com.ttchain.walletproject.cache.GlobalConstant
+import com.ttchain.walletproject.database.*
+import com.ttchain.walletproject.database.data.*
 
 class DbHelperImpl(private val mContext: Context) : DbHelper {
 

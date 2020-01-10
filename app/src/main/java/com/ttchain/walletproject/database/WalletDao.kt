@@ -1,8 +1,7 @@
-package com.git4u.tt_wallet_android.database
+package com.ttchain.walletproject.database
 
 import android.content.Context
-import com.git4u.tt_wallet_android.cache.GlobalConstant
-import com.ttchain.walletproject.database.DbConstants
+import com.ttchain.walletproject.cache.GlobalConstant
 import com.ttchain.walletproject.database.data.WalletData
 import java.util.*
 

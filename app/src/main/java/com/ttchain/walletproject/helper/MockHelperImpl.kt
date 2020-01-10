@@ -1,11 +1,8 @@
-package com.git4u.tt_wallet_android.model
+package com.ttchain.walletproject.helper
 
 import android.content.Context
-import com.git4u.tt_wallet_android.cache.GlobalConstant
-import com.git4u.tt_wallet_android.database.data.*
-import com.git4u.tt_wallet_android.enums.CoinEnum
-import com.git4u.tt_wallet_android.repository.CoinRepository
 import com.ttchain.walletproject.cache.GlobalConstant
+import com.ttchain.walletproject.database.data.*
 import com.ttchain.walletproject.enums.CoinEnum
 import java.math.BigDecimal
 import java.util.*

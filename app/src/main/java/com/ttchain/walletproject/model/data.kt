@@ -309,3 +309,42 @@ data class QuotesData(
     val title: String,
     val url: String
 )
+
+data class ApiVersionData(
+    @SerializedName("iOS")
+    var iOS: IOSData = IOSData(),
+    @SerializedName("android")
+    val android: AndroidData = AndroidData()
+)
+
+data class IOSData(
+    @SerializedName("latest")
+    var latest: String = "",
+    @SerializedName("minimum")
+    val minimum: String = ""
+)
+
+data class AndroidData(
+    @SerializedName("androidLastestVersion")
+    var androidLastestVersion: String = "",
+    @SerializedName("androidMinVersion")
+    val androidMinVersion: String = "",
+    @SerializedName("plugin")
+    val plugin: String = "",
+    @SerializedName("googlePlay")
+    val googlePlay: String = ""
+)
+
+/**
+ * 取得隱私權資訊 data class
+ */
+data class GetPrivatePolicyData(
+    @SerializedName("title")
+    var title: String = "",
+    @SerializedName("content")
+    var content: String = "",
+    @SerializedName("url")
+    var url: String = "",
+    @SerializedName("img")
+    var img: String = ""
+)

@@ -144,12 +144,12 @@
 -keep class rx.internal.util.unsafe.** { *; }
 -keep class okhttp3.internal.huc.** { *; }
 
--keep class com.git4u.tt_wallet_android.net.** { *; }
--keep class com.git4u.tt_wallet_android.cache.** { *; }
--keep class com.git4u.tt_wallet_android.ui.** { *; }
--keep class com.git4u.tt_wallet_android.database.** { *; }
--keep class com.git4u.tt_wallet_android.model.** { *; }
--keep class com.git4u.tt_wallet_android.enums.** { *; }
+-keep class com.ttchain.walletproject.net.** { *; }
+-keep class com.ttchain.walletproject.cache.** { *; }
+-keep class com.ttchain.walletproject.ui.** { *; }
+-keep class com.ttchain.walletproject.database.** { *; }
+-keep class com.ttchain.walletproject.model.** { *; }
+-keep class com.ttchain.walletproject.enums.** { *; }
 
 -keep class com.igexin.** { *; }
 -keep class com.huawei.** { *; }

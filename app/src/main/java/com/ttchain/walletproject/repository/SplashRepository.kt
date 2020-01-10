@@ -1,16 +1,12 @@
 package com.ttchain.walletproject.repository
 
-import com.git4u.tt_wallet_android.cache.GlobalConstant
-import com.git4u.tt_wallet_android.database.data.*
-import com.git4u.tt_wallet_android.model.DbHelper
-import com.git4u.tt_wallet_android.model.MockHelper
-import com.git4u.tt_wallet_android.model.UserHelper
-import com.git4u.tt_wallet_android.model.bean.ApiFiatData
-import com.git4u.tt_wallet_android.model.bean.ApiFiatTableData
-import com.git4u.tt_wallet_android.utils.TimeUtils
+import com.ttchain.walletproject.helper.MockHelper
 import com.ttchain.walletproject.cache.GlobalConstant
+import com.ttchain.walletproject.database.data.*
 import com.ttchain.walletproject.model.ApiFiatData
 import com.ttchain.walletproject.model.ApiFiatTableData
+import com.ttchain.walletproject.model.DbHelper
+import com.ttchain.walletproject.model.UserHelper
 import com.ttchain.walletproject.utils.TimeUtils
 import java.math.BigDecimal
 import java.util.*

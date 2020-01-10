@@ -3,9 +3,6 @@ package com.ttchain.walletproject.ui.splash
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import com.git4u.tt_wallet_android.R
-import com.git4u.tt_wallet_android.activity.base.BaseActivity
-import com.git4u.tt_wallet_android.changeFragment
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel

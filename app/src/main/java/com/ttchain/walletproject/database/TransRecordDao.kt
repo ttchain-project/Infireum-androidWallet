@@ -1,10 +1,9 @@
-package com.git4u.tt_wallet_android.database
+package com.ttchain.walletproject.database
 
 import android.content.Context
-import com.git4u.tt_wallet_android.cache.GlobalConstant
 import com.ttchain.walletproject.database.data.TransRecordData
 import com.j256.ormlite.stmt.Where
-import com.ttchain.walletproject.database.DbConstants
+import com.ttchain.walletproject.cache.GlobalConstant
 import java.util.*
 
 class TransRecordDao(context: Context) : BaseDao<TransRecordData, Int>(context, TransRecordData::class.java) {
@@ -24,11 +23,11 @@ class TransRecordDao(context: Context) : BaseDao<TransRecordData, Int>(context, 
     }
 
     fun getTransRecordDataListByCondition(
-            walletAddress: String,
-            coinID: Int = -1,
-            state: Int = GlobalConstant.TRANSACTION_STATE_ALL,
-            page: Int = 1,
-            limit: Long = GlobalConstant.PAGE_LIMIT_NORMAL.toLong()
+        walletAddress: String,
+        coinID: Int = -1,
+        state: Int = GlobalConstant.TRANSACTION_STATE_ALL,
+        page: Int = 1,
+        limit: Long = GlobalConstant.PAGE_LIMIT_NORMAL.toLong()
     ): List<TransRecordData> {
         try {
             dao?.let {

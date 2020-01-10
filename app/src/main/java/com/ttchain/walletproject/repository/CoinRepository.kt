@@ -15,6 +15,7 @@ import com.ttchain.walletproject.enums.ManageBeanType
 import com.ttchain.walletproject.model.*
 import com.ttchain.walletproject.showNumber
 import com.ttchain.walletproject.utils.NumberUtils
+import com.ttchain.walletproject.utils.RuleUtils
 import com.ttchain.walletproject.utils.SortUtils
 import java.math.BigDecimal
 import java.util.*
