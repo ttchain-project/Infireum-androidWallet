@@ -57,4 +57,20 @@ data class UnspendData(
     var txid: String = "",
     @SerializedName("value")
     var value: Double = 0.toDouble()
+
+)
+data class ExplorerDappBean(
+    var name: String,
+    var url: String = "",
+    var icon: String = ""
+)
+
+data class ExplorerBean(
+    var title: String = "",
+    var content: String = "",
+    var url: String = "",
+    var img: String = "",
+
+    var price: String = "",
+    var change: String = ""
 )
