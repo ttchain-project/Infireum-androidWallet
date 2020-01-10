@@ -5,6 +5,7 @@ import com.ttchain.walletproject.enums.ManageBeanIdType
 import java.io.Serializable
 import java.math.BigDecimal
 import com.ttchain.walletproject.enums.ApiCodeEnum
+import com.ttchain.walletproject.enums.ChainType
 import java.util.*
 
 /**
@@ -680,4 +681,24 @@ data class AddressBean(var addressID: Int = -1) : Serializable {
     var coinName: String = ""
     var address: String = ""
     var icon: Int = 0
+}
+data class BalanceBean(var _id: Int = -1) : Serializable {
+    var address: String = ""
+    var coinId: String = ""
+    var balance: String = ""
+}
+
+data class WalletBean(var walletID: Int = -1) : Serializable {
+    var chainType: Int = ChainType.NONE.value
+    var name: String = ""
+    var address: String = ""
+    var totalFiat: String = ""
+    var bgDrawableId: Int = -1
+    var online: Boolean = true
+    var isPicked: Boolean = false
+    var pickedCoinName: String = ""
+    var pickedCoinAmount: String = ""
+    var pickedCoinAmountDecimal: BigDecimal = BigDecimal(0)
+    var enough: Boolean = false
+    var isFromSystem: Boolean = true
 }
