@@ -1,6 +1,6 @@
 package com.ttchain.walletproject.enums
 
-import com.git4u.tt_wallet_android.R
+import com.ttchain.walletproject.R
 import java.io.Serializable
 
 enum class CoinEnum(

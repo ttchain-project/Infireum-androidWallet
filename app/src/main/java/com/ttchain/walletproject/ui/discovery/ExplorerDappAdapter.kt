@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ttchain.walletproject.R
+import com.ttchain.walletproject.dp2px
 import com.ttchain.walletproject.loadCenterInsideRoundedCorners
 import com.ttchain.walletproject.model.ExplorerDappBean
 import kotlinx.android.synthetic.main.item_explorer_dapp.view.*
@@ -51,19 +52,19 @@ class ExplorerDappAdapter : RecyclerView.Adapter<ExplorerDappAdapter.ExplorerDap
                 icon.loadCenterInsideRoundedCorners(data.icon, 8)
                 setOnClickListener { onItemClick?.invoke(data.url) }
                 if (position == 0) {
-//                    setPadding(
-//                        24f.dp2px(context),
-//                        0,
-//                        9f.dp2px(context),
-//                        0
-//                    )
+                    setPadding(
+                        24f.dp2px(context),
+                        0,
+                        9f.dp2px(context),
+                        0
+                    )
                 } else {
-//                    setPadding(
-//                        9f.dp2px(context),
-//                        0,
-//                        9f.dp2px(context),
-//                        0
-//                    )
+                    setPadding(
+                        9f.dp2px(context),
+                        0,
+                        9f.dp2px(context),
+                        0
+                    )
                 }
             }
         }
