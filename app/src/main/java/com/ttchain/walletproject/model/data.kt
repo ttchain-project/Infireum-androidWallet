@@ -5,6 +5,7 @@ import com.ttchain.walletproject.enums.ManageBeanIdType
 import java.io.Serializable
 import java.math.BigDecimal
 import com.ttchain.walletproject.enums.ApiCodeEnum
+import java.util.*
 
 /**
  * 統一 Api Result
@@ -278,6 +279,249 @@ data class GetPrivatePolicyData(
     var img: String = ""
 )
 
+
+/**
+ * 預登入取得使用帳號 (Orange) data class
+ */
+data class PreLoginData(
+    @SerializedName("userID")
+    var userID: String = "",
+    @SerializedName("deviceID")
+    val deviceID: String = ""
+)
+
+data class RegisterUserData(
+    @SerializedName("uid")
+    var uid: String = "",
+    // 狀態。0: 不存在 1:存在 2:Device ID不符 3:密碼錯誤
+    @SerializedName("status")
+    val status: Int = 0,
+    @SerializedName("isSetRecoveryKey")
+    val isSetRecoveryKey: Boolean = false
+)
+
+
+/**
+ * 預登入取得使用帳號 (Orange) data class
+ */
+data class PreLoginRequest(
+    @SerializedName("userID")
+    var userID: String = "",
+    @SerializedName("deviceID")
+    var deviceID: String = ""
+)
+
+
+/**
+ * 更新使用者資訊 (Orange) data class
+ */
+data class UpdateUserInfoRequest(
+    @SerializedName("uid")
+    var uid: UUID? = null,
+    @SerializedName("deviceID")
+    val deviceID: String = "",
+    @SerializedName("recoveryKey")
+    val recoveryKey: String = "",
+    @SerializedName("nickName")
+    var nickName: String = "",
+    @SerializedName("introduction")
+    val introduction: String = "",
+    @SerializedName("headImg")
+    val headImg: String = ""
+)
+
+
+/**
+ * 取得他人個人信息(Albert) data class
+ */
+data class QueryUserResponse(
+    @SerializedName("uid")
+    var uid: String = "",
+    @SerializedName("nickname")
+    val nickname: String = "",
+    @SerializedName("headImg")
+    val headImg: HeadImage = HeadImage(),
+    @SerializedName("isFriend")
+    val isFriend: Boolean = false,
+    @SerializedName("isBlock")
+    val isBlock: Boolean = false
+)
+
+/**
+ * 設置 Recovery Key (Orange) data class
+ */
+data class RecoveryKeyRequest(
+    @SerializedName("uid")
+    var uid: UUID? = null,
+    @SerializedName("recoveryKey")
+    var recoveryKey: String = ""
+)
+
+/**
+ * 封鎖/解除封鎖好友(Albert) data class
+ */
+data class FriendshipBlockRequest(
+    @SerializedName("uid")
+    var uid: UUID? = null,
+    @SerializedName("blockedUid")
+    var blockedUid: UUID? = null,
+    @SerializedName("action")
+    var action: String = ""
+)
+
+/**
+ * 發送好友邀請(Albert) data class
+ */
+data class FriendshipRequest(
+    @SerializedName("inviterUID")
+    var inviterUID: UUID? = null,
+    @SerializedName("inviteeUID")
+    var inviteeUID: UUID? = null,
+    @SerializedName("invitationMessage")
+    var invitationMessage: String = ""
+)
+
+
+/**
+ * 群組資訊 AddGroupModel data class
+ */
+data class AddGroupData(
+    @SerializedName("groupOwnerUID")
+    var groupOwnerUID: UUID? = null,
+    @SerializedName("groupName")
+    var groupName: String = "",
+    @SerializedName("isPrivate")
+    var isPrivate: Boolean = false,
+    @SerializedName("isPostMsg")
+    var isPostMsg: Boolean = false,
+    @SerializedName("introduction")
+    var introduction: String = "",
+    @SerializedName("authToken")
+    var authToken: String = "",
+    @SerializedName("rocketChatUserId")
+    var rocketChatUserId: String = "",
+    @SerializedName("headImg")
+    var headImg: String = ""
+)
+
+/**
+ * 群組資訊 data class
+ */
+data class GroupInfoData(
+    @SerializedName("groupID")
+    var groupID: String = "",
+    @SerializedName("imGroupID")
+    val imGroupID: String = "",
+    @SerializedName("groupOwnerUID")
+    val groupOwnerUID: String = "",
+    @SerializedName("ownerName")
+    val ownerName: String = "",
+    @SerializedName("isPrivate")
+    val isPrivate: Boolean = false,
+    @SerializedName("invitationMembers")
+    val invitationMembers: List<GroupMemberData> = arrayListOf(),
+    @SerializedName("members")
+    val members: List<GroupMemberData> = arrayListOf(),
+    @SerializedName("blockList")
+    val blockList: List<GroupMemberData> = arrayListOf(),
+    @SerializedName("status")
+    val status: Int = 0,
+    @SerializedName("groupName")
+    val groupName: String = "",
+    @SerializedName("isPostMsg")
+    val isPostMsg: Boolean = false,
+    @SerializedName("headImg")
+    var headImg: HeadImage = HeadImage(),
+    @SerializedName("introduction")
+    val introduction: String = ""
+)
+
+data class GroupMemberData(
+    @SerializedName("uid")
+    var uid: String = "",
+    @SerializedName("nickName")
+    val nickName: String = "",
+    @SerializedName("headImg")
+    val headImg: HeadImage = HeadImage(),
+    @SerializedName("isFriend")
+    val isFriend: Boolean = false,
+    @SerializedName("isBlock")
+    val isBlock: Boolean = false,
+    @SerializedName("status")
+    val status: Int = 0
+)
+
+
+/**
+ * 回覆群組邀請 (Orange)
+ * 退出群組請送 Status&#x3D;2
+ * Request
+ * */
+data class GroupMemberInviteRequest(
+    @SerializedName("groupID")
+    var groupID: UUID? = null,
+    @SerializedName("uid")
+    var uid: UUID? = null,
+    @SerializedName("status")
+    var status: Int = 0,
+    @SerializedName("authToken")
+    var authToken: String = "",
+    @SerializedName("rocketChatUserId")
+    var rocketChatUserId: String = ""
+)
+
+
+/**
+ * 取得使用者關閉提醒的聊天室Id清單 data class
+ */
+data class MuteRoomData(
+    @SerializedName("uid")
+    var uid: UUID? = null,
+    @SerializedName("roomId")
+    val roomId: String = ""
+)
+
+/**
+ * 刪除群組成員請求 data class
+ */
+data class GroupDeleteRequest(
+    @SerializedName("groupID")
+    var groupID: UUID? = null,
+    @SerializedName("uid")
+    var uid: UUID? = null,
+    @SerializedName("authToken")
+    var authToken: String = "",
+    @SerializedName("rocketChatUserId")
+    var rocketChatUserId: String = ""
+)
+
+/**
+ * 更新群組資訊 (Orange)data class
+ */
+data class UpdateGroupInfoData(
+    @SerializedName("groupID")
+    var groupID: UUID? = null,
+    @SerializedName("groupName")
+    var groupName: String = "",
+    @SerializedName("isPostMsg")
+    var isPostMsg: Boolean = false,
+    @SerializedName("introduction")
+    var introduction: String = "",
+    @SerializedName("headImg")
+    var headImg: String = ""
+)
+
+/**
+ * 設定使用者聊天室訊息提醒 data class
+ */
+data class ChatRoomNotificationSetting(
+    @SerializedName("uid")
+    var uid: UUID? = null,
+    @SerializedName("roomId")
+    var roomId: String = "",
+    @SerializedName("isNotificaitonActive")
+    var isNotificaitonActive: Boolean = false
+)
 /*-------------------------------- Broadcast Api data --------------------------------*/
 
 /**

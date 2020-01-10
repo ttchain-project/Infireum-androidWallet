@@ -3,6 +3,7 @@ package com.ttchain.walletproject.base
 import android.content.Context
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NavUtils
 import androidx.core.app.TaskStackBuilder
@@ -111,7 +112,7 @@ abstract class BaseActivity : AppCompatActivity() {
             .show()
     }
 
-      fun onShowMessageDialogFinish(msg: String?) {
+    fun onShowMessageDialogFinish(msg: String?) {
         if (msg.isNullOrEmpty() && mMessageDialogFinish != null && mMessageDialogFinish!!.isShowing) {
             return
         }
@@ -153,5 +154,13 @@ abstract class BaseActivity : AppCompatActivity() {
         }
         closeAllDialog()
         super.onDestroy()
+    }
+
+    fun showToast(message: String) {
+        showToast(message, Toast.LENGTH_LONG)
+    }
+
+    fun showToast(message: String, lengthLong: Int) {
+        Toast.makeText(this, message, lengthLong).show()
     }
 }
