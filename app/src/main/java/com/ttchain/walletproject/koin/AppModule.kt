@@ -1,5 +1,6 @@
 package com.ttchain.walletproject.koin
 
+import com.ttchain.walletproject.base.BaseConfigViewModel
 import com.ttchain.walletproject.helper.MockHelper
 import com.ttchain.walletproject.helper.MockHelperImpl
 import com.ttchain.walletproject.model.*
@@ -12,6 +13,7 @@ import com.ttchain.walletproject.ui.discovery.DiscoveryViewModel
 import com.ttchain.walletproject.ui.enter_password.EnterPasswordViewModel
 import com.ttchain.walletproject.ui.login.LoginViewModel
 import com.ttchain.walletproject.ui.me.MeViewModel
+import com.ttchain.walletproject.ui.me.selectbackupmethod.SelectBackupMethodViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.RestoreNoUserInfoViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
@@ -24,6 +26,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
+    viewModel { BaseConfigViewModel(get(), get()) }
     viewModel { SplashViewModel(get(), get(), get(), get(), get()) }
     viewModel { LoginViewModel(get()) }
     viewModel { AgreementViewModel(get(), get()) }
@@ -41,6 +44,7 @@ val viewModelModule = module {
     viewModel { TrendViewModel(get(), get()) }
     viewModel { WebViewViewModel(get(), get(), get()) }
     viewModel { MeViewModel(get(), get(), get(), get(), get(), get()) }
+    viewModel { SelectBackupMethodViewModel(get(), get(), get()) }
 }
 
 val repositoryModule = module {
