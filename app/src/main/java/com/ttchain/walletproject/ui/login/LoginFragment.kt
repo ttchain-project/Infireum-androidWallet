@@ -12,6 +12,7 @@ import com.ttchain.walletproject.enums.AgreementEnum
 import com.ttchain.walletproject.enums.QRCodeEnum
 import com.ttchain.walletproject.setDelayClickListener
 import com.ttchain.walletproject.ui.agreement.AgreementActivity
+import com.ttchain.walletproject.ui.enter_password.EnterPasswordActivity
 import com.ttchain.walletproject.ui.scanner_new.ScannerActivity
 import com.ttchain.walletproject.utils.Utils
 import kotlinx.android.synthetic.main.fragment_login.*
@@ -68,7 +69,7 @@ class LoginFragment : BaseFragment() {
     private fun initData() {
         viewModel.apply {
             qrCodeParseLiveData.observe(requireActivity()) {
-//                EnterPasswordActivity.launch(requireActivity(), it)
+                EnterPasswordActivity.launch(requireActivity(), it)
             }
             hintLiveData.observe(requireActivity()) {
                 showInputDialog(

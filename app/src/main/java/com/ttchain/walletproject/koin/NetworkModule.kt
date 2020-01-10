@@ -7,6 +7,7 @@ import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterF
 import com.ttchain.walletproject.*
 import com.ttchain.walletproject.net.HelperApi
 import com.ttchain.walletproject.net.HelperApiCo
+import com.ttchain.walletproject.net.ImApiCo
 import com.ttchain.walletproject.net.InfoApiCo
 import com.ttchain.walletproject.net.client.JSON
 import okhttp3.HttpUrl
@@ -103,7 +104,7 @@ val networkModule = module {
     }
 //    single { providesApi<BroadcastApi>(get(), BuildConfig.GIT_HELPER_API_URL) }
 //    single { providesApi<ImApi>(get(), BuildConfig.GIT_IM_API_URL) }
-//    single { providesApiCo<ImApiCo>(get(), BuildConfig.GIT_IM_API_URL) }
+    single { providesApiCo<ImApiCo>(get(), BuildConfig.GIT_IM_API_URL) }
 //    single { providesApi<RedEnvelopeApi>(get(), BuildConfig.GIT_IM_API_URL) }
 //    single { providesApi<RocketChatApi>(get(), BuildConfig.ROCKET_CHAT_API_URL) }
 //    single { providesApi<InfoApi>(get(), BuildConfig.GIT_IM_API_URL) }
