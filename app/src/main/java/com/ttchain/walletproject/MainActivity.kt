@@ -10,11 +10,11 @@ import kotlinx.android.synthetic.main.main_activity.*
 class MainActivity : BaseActivity() {
 
     companion object {
-         fun launch (activity: Activity){
-             activity.startActivity(Intent(activity, MainActivity::class.java).apply {
-                 flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-             })
-         }
+        fun launch(activity: Activity) {
+            activity.startActivity(Intent(activity, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            })
+        }
     }
 
     override val layoutId = R.layout.main_activity
@@ -31,7 +31,7 @@ class MainActivity : BaseActivity() {
             offscreenPageLimit = mainPagerAdapter.count
             adapter = mainPagerAdapter
         }
-        bottomTabView.setOnItemClickListener {bottomTabStatus ->
+        bottomTabView.setOnItemClickListener { bottomTabStatus ->
             view_pager.currentItem = when (bottomTabStatus) {
                 BottomTabState.WALLET -> 0
                 BottomTabState.EXPLORER -> 1

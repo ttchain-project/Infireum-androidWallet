@@ -42,6 +42,7 @@ class WalletListViewModel(
     val getRateAndWalletDataErrorLiveData = MutableLiveData<Boolean>()
 
     fun getRateAndWalletData() {
+        total = BigDecimal("0")
         add(
             helperRepository.getAllCoinToCurrency(coinRepository.getUserPrefFiatName())
                 .toMain()
