@@ -7,6 +7,7 @@ import com.quincysx.crypto.ethereum.ECDSASignature
 import com.quincysx.crypto.ethereum.EthECKeyPair
 import com.quincysx.crypto.utils.Base58
 import com.ttchain.walletproject.BuildConfig
+import com.ttchain.walletproject.cache.GlobalConstant
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.model.*
 import com.ttchain.walletproject.utils.HexUtil
@@ -62,88 +63,6 @@ object BitcoinjNew {
             Timber.e(msg)
         }
     }
-
-    suspend fun init(): ResponseUserIdentity = init("")
-
-    suspend fun init(mnemonicsRaw: String) = withContext(Dispatchers.IO) {
-        var mnemonics = mnemonicsRaw
-        if (mnemonics.isEmpty()) {
-            val initialEntropy = ByteArray(16)
-            val secureRandom = SecureRandom()
-            secureRandom.nextBytes(initialEntropy)
-            mnemonics = MnemonicUtil.generateMnemonic(initialEntropy)
-        }
-        LOG("mnemonics $mnemonics")
-
-
-        val deterministicSeed = DeterministicSeed(mnemonics, null, "", 0L)
-        val rootPrivateKey =
-            HDKeyDerivation.createMasterPrivateKey(deterministicSeed.seedBytes)
-
-        val mainNetParams = MainNetParams.get()
-
-        val hdKey = rootPrivateKey.serializePrivB58(mainNetParams)
-        LOG("HdKey $hdKey")
-
-        val deterministicKeyChain =
-            DeterministicKeyChain.builder().seed(deterministicSeed).build()
-        val privateKey = deterministicKeyChain.getKeyByPath(
-            HDUtils.parsePath("44H / 60H / 0H / 0 / 0"), true
-        ).privKey
-        val ecKey = ECKey.fromPrivate(privateKey)
-
-        //BTC
-        val btcKey = ecKey.getPrivateKeyEncoded(mainNetParams).toString()
-        val compressAddress = LegacyAddress.fromKey(mainNetParams, ecKey)
-        LOG("btc compress address : $compressAddress")
-        val uncompressAddress = LegacyAddress.fromKey(mainNetParams, ecKey.decompress())
-        LOG("btc uncompress address : $uncompressAddress")
-        val btcAdr = compressAddress.toString()
-        LOG("btc pky $btcKey")
-        LOG("btc adr $btcAdr")
-
-
-        //ETH
-        val childEcKeyPair0 =
-            ECKeyPair.create(privateKey)
-        val ethPky = ecKey.privateKeyAsHex
-        val ethAdr = "0x" + Keys.getAddress(childEcKeyPair0)
-        LOG("eth pky $ethPky")
-        LOG("eth adr $ethAdr")
-        LOG(
-            "eth getPublicKeyAsHex ${ecKey.decompress().publicKeyAsHex.substring(2)}"
-        )
-
-        val noPrefixAddress =
-            Utility.getSHA256(ecKey.decompress().publicKeyAsHex.substring(2)).substring(24, 64)
-
-        LOG("noPrefixAddress $noPrefixAddress")
-
-        val responseUserIdentity = ResponseUserIdentity()
-        responseUserIdentity.version = "0.01"
-        responseUserIdentity.mnemonic = mnemonics
-        responseUserIdentity.HDkey = hdKey
-
-        val bitCoinWallet = ApiWalletData()
-        bitCoinWallet.privateKey = btcKey
-        bitCoinWallet.address = btcAdr
-        responseUserIdentity.bitcoin = bitCoinWallet
-
-
-        val ethWallet = ApiWalletData()
-        ethWallet.privateKey = ethPky
-        ethWallet.address = ethAdr
-        responseUserIdentity.ethereum = ethWallet
-
-        val noPrefixWallet = ApiWalletData()
-        noPrefixWallet.privateKey = ethPky
-        noPrefixWallet.address = noPrefixAddress
-        responseUserIdentity.noprefix = noPrefixWallet
-
-        Timber.d(Gson().toJson(responseUserIdentity))
-        return@withContext responseUserIdentity
-    }
-
 
     suspend fun createBtcAddressByMnemonic(
         mnemonic: String,
@@ -1084,7 +1003,7 @@ object BitcoinjNew {
         //BTC wallet
         systemWalletSets.add(
             UserWalletQrCodeImageBean.WalletContent(
-                CoinEnum.BTC.coinId, "BTC Wallet", btcKeyNew, btcAdrNew
+                CoinEnum.BTC.coinId, GlobalConstant.DEFAULT_WALLET_NAME_BTC, btcKeyNew, btcAdrNew
             )
         )
 //        systemWalletSets.add(
@@ -1100,13 +1019,13 @@ object BitcoinjNew {
         //ETH wallet
         systemWalletSets.add(
             UserWalletQrCodeImageBean.WalletContent(
-                CoinEnum.ETH.coinId, "ETH Wallet", ethPky, ethAdr
+                CoinEnum.ETH.coinId, GlobalConstant.DEFAULT_WALLET_NAME_ETH, ethPky, ethAdr
             )
         )
         //TTH wallet
         systemWalletSets.add(
             UserWalletQrCodeImageBean.WalletContent(
-                CoinEnum.TTN.coinId, "TTN Wallet", ethPky, noPrefixAddress
+                CoinEnum.TTN.coinId, GlobalConstant.DEFAULT_WALLET_NAME_TTN, ethPky, noPrefixAddress
             )
         )
         Timber.d(Gson().toJson(systemWalletSets))
