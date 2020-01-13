@@ -10,6 +10,8 @@ import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.rx.RxBus
 import com.ttchain.walletproject.toMain
+import com.ttchain.walletproject.ui.asset.AssetListActivity
+import com.ttchain.walletproject.ui.coin_record.CoinRecordActivity
 import kotlinx.android.synthetic.main.fragment_wallet_list.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -132,11 +134,11 @@ class WalletListFragment : BaseFragment() {
                 currency_symbol_tv.text = it
             }
             launchAssetListActivityLiveData.observe(this@WalletListFragment) {
-//                if (it)
-//                    AssetListActivity.launch(requireActivity())
+                if (it)
+                    AssetListActivity.launch(requireActivity())
             }
             launchCoinRecordLiveData.observe(this@WalletListFragment) {
-//                CoinRecordActivity.launch(requireActivity(), it, walletId)
+                CoinRecordActivity.launch(requireActivity(), it, walletId)
             }
         }
     }
