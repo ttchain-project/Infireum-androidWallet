@@ -16,7 +16,6 @@ import com.ttchain.walletproject.utils.RuleUtils
 import com.ttchain.walletproject.utils.Utility
 import io.reactivex.Observable
 import io.reactivex.functions.BiFunction
-import io.reactivex.functions.Function3
 import io.reactivex.subjects.BehaviorSubject
 import java.util.*
 
@@ -34,7 +33,6 @@ class SplashViewModel(
     var launchLoginResult = MutableLiveData<Boolean>()
 
     private val firstTaskResultCoinData = BehaviorSubject.create<Boolean>()
-    private val firstTaskResultCoinDataFromMike = BehaviorSubject.create<Boolean>()
     private val firstTaskResultFiatData = BehaviorSubject.create<Boolean>()
 
     private val secondTaskResultCheckCoinToFiatRate = BehaviorSubject.create<Boolean>()
@@ -45,10 +43,9 @@ class SplashViewModel(
         add(
             Observable.combineLatest(
                 firstTaskResultCoinData,
-                firstTaskResultCoinDataFromMike,
                 firstTaskResultFiatData,
-                Function3<Boolean, Boolean, Boolean, Boolean> { t1, t2, t3 ->
-                    return@Function3 t1 && t2 && t3
+                BiFunction<Boolean, Boolean, Boolean> { t1, t2 ->
+                    return@BiFunction t1 && t2
                 })
                 .subscribe({
                     if (it) {
@@ -107,7 +104,6 @@ class SplashViewModel(
             splashRepository.isCoinDataEmpty() -> performCreateDefaultCoinDataList()
             else -> {
                 firstTaskResultCoinData.onNext(true)
-                firstTaskResultCoinDataFromMike.onNext(true)
             }
         }
     }
@@ -152,13 +148,12 @@ class SplashViewModel(
     }
 
     private fun performGetCoinDataList() {
-        viewModelLaunch ({
+        viewModelLaunch({
             val result = infoRepositoryCo.getCoinTest()
             val response = result.data
             coinRepository.updateCoinDataList(response ?: arrayListOf())
             firstTaskResultCoinData.onNext(true)
-            firstTaskResultCoinDataFromMike.onNext(true)
-        },{
+        }, {
             performCheckCoinDbData()
         })
     }
