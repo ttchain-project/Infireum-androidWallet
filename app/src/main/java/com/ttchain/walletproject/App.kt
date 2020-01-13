@@ -2,6 +2,7 @@ package com.ttchain.walletproject
 
 import androidx.multidex.MultiDexApplication
 import com.ttchain.walletproject.cache.Preferences
+import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.koin.appModule
 import com.ttchain.walletproject.model.DecimalData
 import org.koin.android.ext.koin.androidContext
@@ -25,7 +26,9 @@ class App :MultiDexApplication() {
         const val DEFAULT_AMOUNT = "0.00"
 
         var isMainNet = true
-
+        // 預設礦工費
+        var ttnFee = "0.1"
+        var ttnFeeText = "$ttnFee ${CoinEnum.TTN.coinName}"
 
         lateinit var INSTANCE: WeakReference<App>
 

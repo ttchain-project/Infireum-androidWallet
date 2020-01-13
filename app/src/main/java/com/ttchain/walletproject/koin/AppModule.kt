@@ -27,6 +27,9 @@ import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.Res
 import com.ttchain.walletproject.ui.splash.SplashViewModel
 import com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultViewModel
 import com.ttchain.walletproject.ui.trend.TrendViewModel
+import com.ttchain.walletproject.ui.ttn.ttnreceipt.TtnReceiptAssetViewModel
+import com.ttchain.walletproject.ui.ttn.ttnrecord.TtnRecordViewModel
+import com.ttchain.walletproject.ui.ttn.ttntransfer.TtnTransferViewModel
 import com.ttchain.walletproject.ui.wallet.WalletMainViewModel
 import com.ttchain.walletproject.ui.wallet.exportkey.ExportKeyViewModel
 import com.ttchain.walletproject.ui.wallet.wallet_list.WalletListViewModel
@@ -63,6 +66,11 @@ val viewModelModule = module {
     viewModel { UserWalletQrCodeViewModel(get(), get(), get()) }
     viewModel { UserWalletMnemonicViewModel(get(), get()) }
     viewModel { UsingLockerViewModel(get()) }
+    //ttn
+    viewModel { TtnRecordViewModel(get(), get(), get(), get()) }
+    viewModel { TtnReceiptAssetViewModel(get(), get()) }
+    viewModel { TtnRecordViewModel(get(), get(), get(), get()) }
+    viewModel { TtnTransferViewModel(get(), get(), get(), get(), get(), get()) }
 }
 
 val repositoryModule = module {
@@ -84,6 +92,7 @@ val repositoryModule = module {
     single { BroadcastRepository(get()) }
     single { BalanceApiRepository(get()) }
     single { TtnServerApiRepository(get()) }
+    single { TtnClientApiRepository(get()) }
 }
 
 val helperModule = module {

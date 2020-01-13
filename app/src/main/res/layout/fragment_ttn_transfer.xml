@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/buttonApply"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_14"
+                android:paddingRight="@dimen/padding_16"
+                android:paddingBottom="@dimen/padding_14">
+
+                <TextView
+                    android:id="@+id/transfer_title_tv"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transfer_transfer_amount"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/transfer_remains_tv"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_4"
+                    android:maxLines="1"
+                    android:textColor="#7F8890"
+                    app:autoSizeMaxTextSize="@dimen/super_small_text"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintEnd_toStartOf="@+id/transfer_all_btn"
+                    app:layout_constraintStart_toEndOf="@+id/transfer_title_tv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="(ETH餘額：100.12345678)" />
+
+                <Button
+                    android:id="@+id/transfer_all_btn"
+                    style="@style/PrimaryButtonTtn30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/transfer_all_amount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/transfer_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/fill_in_amount"
+                    android:inputType="numberDecimal"
+                    app:layout_constraintTop_toBottomOf="@+id/transfer_title_tv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/miner_fee_header_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_14"
+                android:paddingRight="@dimen/padding_16"
+                android:paddingBottom="@dimen/padding_14">
+
+                <TextView
+                    android:id="@+id/miner_fee_title_tv"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/miner_fee"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/miner_fee_tv"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/miner_fee_fiat_tv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="0.2 TTN" />
+
+                <TextView
+                    android:id="@+id/miner_fee_fiat_tv"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_20"
+                    android:textColor="#18ADD4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/miner_fee_arrow_iv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="≈$ 0.00" />
+
+                <ImageView
+                    android:id="@+id/miner_fee_arrow_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/btn_open"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_14"
+                android:paddingRight="@dimen/padding_16"
+                android:paddingBottom="@dimen/padding_14">
+
+                <TextView
+                    android:id="@+id/receipt_address_title_tv"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receipt_address"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/common_address_btn"
+                    style="@style/PrimaryButtonTtn30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:drawableEnd="@mipmap/arrow_right_white"
+                    android:text="@string/transfer_select_common_address"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/receive_address_et"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/ttn_transfer_receipt_address_hint"
+                    android:inputType="text"
+                    app:layout_constraintTop_toBottomOf="@+id/receipt_address_title_tv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_14"
+                android:paddingRight="@dimen/padding_16"
+                android:paddingBottom="@dimen/padding_14">
+
+                <TextView
+                    android:id="@+id/pay_address_title_tv"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_address"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/pay_wallet_tv"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_4"
+                    android:textColor="#7F8890"
+                    app:layout_constraintLeft_toRightOf="@+id/pay_address_title_tv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="( 錢包一號 )" />
+
+                <TextView
+                    android:id="@+id/pay_address_tv"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_8"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pay_address_title_tv"
+                    tools:text="0x20fed2d6bb0505e08013c5326e7316fdc88a6b11" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_14"
+                android:paddingRight="@dimen/padding_16"
+                android:paddingBottom="@dimen/padding_14">
+
+                <TextView
+                    android:id="@+id/note_title_tv"
+                    style="@style/PrimaryBlackText.SuperSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transfer_note"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/note_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/transfer_note_input"
+                    android:inputType="text"
+                    app:layout_constraintTop_toBottomOf="@+id/note_title_tv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.ttchain.walletproject.view.NextButton
+        android:id="@+id/buttonApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/guide_line_v"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.ttchain.walletproject.view.PreviousButton
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guide_line_v"
+        app:previous_button_text="@string/g_cancel" />
+
+    <include
+        layout="@layout/view_ttn_transfer_confirm"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

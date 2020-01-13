@@ -254,6 +254,7 @@ class WalletListViewModel(
 
 
     val launchCoinRecordLiveData = MutableLiveData<String>()
+    val launchTtnCoinRecordLiveData = MutableLiveData<String>()
     val launchAssetListActivityLiveData = MutableLiveData<Boolean>()
 
     fun launchAssetListActivity(expandableData: ExpandableListBean, childPosition: Int) {
@@ -272,6 +273,10 @@ class WalletListViewModel(
             usdtChainName -> {
                 userHelper.selectedWalletCategory = CoinRepository.COIN_FIAT_IDENTIFIER
                 launchCoinRecordLiveData.value = CoinEnum.USDT.coinId
+                return
+            }
+            CoinEnum.TTN.coinName -> {
+                launchTtnCoinRecordLiveData.value = CoinEnum.TTN.coinId
                 return
             }
         }

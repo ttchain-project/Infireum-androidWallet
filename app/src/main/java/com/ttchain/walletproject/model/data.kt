@@ -702,3 +702,35 @@ data class WalletBean(var walletID: Int = -1) : Serializable {
     var enough: Boolean = false
     var isFromSystem: Boolean = true
 }
+
+data class CoinTransferBean(var _id: Int = -1) {
+    var viewTitleName: String = ""
+    var viewCoinRemindAmount: String = ""
+    var viewTransPayWalletName: String = ""
+    var viewTransMinerFeeToFiatAmount: String = ""
+
+    var transCoinId: String = ""
+    var transCoinDigit: Int = 0
+    var transCoinName: String = ""
+    var transCoinChainName: String = ""
+
+    var transToPrefFiatSymbol: String = ""
+    var transPayAddress: String = ""
+    var transReceiptAddress: String = ""
+    var transComment: String = ""
+
+    var transWalletCoinRemindAmount: BigDecimal = BigDecimal("0")
+    var transCoinToFiatAmount: BigDecimal = BigDecimal("0")
+    var transCoinToFiatRate: BigDecimal = BigDecimal("0")
+    var transCoinAmount: BigDecimal = BigDecimal("0")
+    var transMinerFeeToFiatAmount: BigDecimal = BigDecimal("0")
+    var transMinerFeeAmount: BigDecimal = BigDecimal("0")
+
+    var transCoinToCoinRate: BigDecimal = BigDecimal("0")
+    var transToCoinId: String = ""
+    var transToCoinName: String = ""
+    var transToCoinChainName: String = ""
+
+    var transThunderReceiptWalletID: Int = -1
+    var transThunderReceiptWalletType: Int = -1
+}

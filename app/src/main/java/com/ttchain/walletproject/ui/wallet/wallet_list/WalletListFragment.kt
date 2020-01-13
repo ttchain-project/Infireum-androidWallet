@@ -10,6 +10,7 @@ import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.rx.RxBus
 import com.ttchain.walletproject.toMain
+import com.ttchain.walletproject.ui.ttn.ttnrecord.TtnRecordActivity
 import kotlinx.android.synthetic.main.fragment_wallet_list.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -137,6 +138,9 @@ class WalletListFragment : BaseFragment() {
             }
             launchCoinRecordLiveData.observe(this@WalletListFragment) {
 //                CoinRecordActivity.launch(requireActivity(), it, walletId)
+            }
+            launchTtnCoinRecordLiveData.observe(this@WalletListFragment) {
+                TtnRecordActivity.launch(requireActivity(), it)
             }
         }
     }
