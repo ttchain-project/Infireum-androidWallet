@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/bg_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/regular_fee"
+        style="@style/PrimaryWhiteText.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/trans_item_gap_h"
+        android:layout_marginLeft="@dimen/trans_item_gap_h"
+        android:layout_marginRight="@dimen/trans_item_gap_h"
+        android:layout_marginStart="@dimen/trans_item_gap_h"
+        android:layout_marginTop="@dimen/padding_24"
+        android:maxLines="1"
+        android:textColor="@color/_333333"
+        app:layout_constraintBottom_toTopOf="@+id/priority_fee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:drawableEnd="@mipmap/tt_btn_list_check"
+        tools:drawableRight="@mipmap/tt_btn_list_check"
+        tools:text="Regular: 35 sat/b" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/priority_fee"
+        style="@style/PrimaryWhiteText.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/trans_item_gap_h"
+        android:layout_marginLeft="@dimen/trans_item_gap_h"
+        android:layout_marginRight="@dimen/trans_item_gap_h"
+        android:layout_marginStart="@dimen/trans_item_gap_h"
+        android:maxLines="1"
+        android:textColor="@color/_333333"
+        app:layout_constraintBottom_toTopOf="@+id/custom_fee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regular_fee"
+        tools:drawableEnd="@mipmap/tt_btn_list_check"
+        tools:drawableRight="@mipmap/tt_btn_list_check"
+        tools:text="Priority: 45 sat/b " />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/custom_fee"
+        style="@style/PrimaryWhiteText.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_64"
+        android:layout_marginEnd="@dimen/trans_item_gap_h"
+        android:layout_marginLeft="@dimen/trans_item_gap_h"
+        android:layout_marginRight="@dimen/trans_item_gap_h"
+        android:layout_marginStart="@dimen/trans_item_gap_h"
+        android:hint="@string/hint_custom_miner_fee_sat"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:textColor="@color/_333333"
+        android:textColorHint="@color/warm_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priority_fee"
+        tools:drawableEnd="@mipmap/tt_btn_list_check"
+        tools:drawableRight="@mipmap/tt_btn_list_check"
+        tools:text="54" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

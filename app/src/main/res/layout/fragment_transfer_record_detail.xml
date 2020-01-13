@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#354252">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_40">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="@dimen/padding_14"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/bg_white_radius_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/status_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_28"
+                android:src="@mipmap/wallet_receipt_success"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/status_tv"
+                style="@style/PrimaryBlackText.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/status_iv"
+                tools:text="轉帳成功" />
+
+            <TextView
+                android:id="@+id/date_tv"
+                style="@style/PrimaryBlackText.Mini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/status_tv"
+                tools:text="2019/1/10 20:59" />
+
+            <View
+                android:id="@+id/dot_line"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="@dimen/padding_8"
+                android:layout_marginTop="@dimen/padding_20"
+                android:layout_marginEnd="@dimen/padding_8"
+                android:background="@drawable/dot_line_grey"
+                android:layerType="software"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_tv" />
+
+            <TextView
+                android:id="@+id/amount_title_tv"
+                style="@style/PrimaryBlackText.Mini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_18"
+                android:layout_marginTop="39dp"
+                android:text="轉出金額"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dot_line"
+                app:layout_constraintWidth_percent="0.25" />
+
+            <TextView
+                android:id="@+id/amount_tv"
+                style="@style/PrimaryBlackText.Big"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_28"
+                app:layout_constraintBottom_toBottomOf="@+id/amount_title_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/amount_title_tv"
+                tools:text="0.002455" />
+
+            <TextView
+                android:id="@+id/payment_address_title_tv"
+                style="@style/PrimaryBlackText.Mini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_24"
+                android:text="@string/payment_address"
+                app:layout_constraintEnd_toEndOf="@id/amount_title_tv"
+                app:layout_constraintStart_toStartOf="@+id/amount_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/amount_title_tv" />
+
+            <TextView
+                android:id="@+id/payment_address_tv"
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_18"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/payment_address_title_tv"
+                app:layout_constraintEnd_toStartOf="@+id/payment_address_btn"
+                app:layout_constraintStart_toStartOf="@id/amount_tv"
+                tools:text="17ojaUjas5K1zDrzhFknFxsBg3JdeL97UJ17ojaUjas5K1zDrzhFknFxsBg3JdeL97UJ" />
+
+            <ImageButton
+                android:id="@+id/payment_address_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_12"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/btn_copy"
+                app:layout_constraintBottom_toBottomOf="@+id/payment_address_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/payment_address_tv" />
+
+            <TextView
+                android:id="@+id/receipt_address_title_tv"
+                style="@style/PrimaryBlackText.Mini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_24"
+                android:text="@string/receipt_address"
+                app:layout_constraintEnd_toEndOf="@id/amount_title_tv"
+                app:layout_constraintStart_toStartOf="@+id/amount_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/payment_address_title_tv" />
+
+            <TextView
+                android:id="@+id/receipt_address_tv"
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                android:layout_marginEnd="@dimen/padding_18"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/receipt_address_title_tv"
+                app:layout_constraintEnd_toStartOf="@+id/receipt_address_btn"
+                app:layout_constraintStart_toStartOf="@id/amount_tv"
+                tools:text="1BS86hT3yZF3HdTDwtZJiPkc8UL7xAbH9m1BS86hT3yZF3HdTDwtZJiPkc8UL7xAbH9m" />
+
+            <ImageButton
+                android:id="@+id/receipt_address_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_12"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/btn_copy"
+                app:layout_constraintBottom_toBottomOf="@+id/receipt_address_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/receipt_address_tv" />
+
+            <TextView
+                android:id="@+id/miner_fee_title_tv"
+                style="@style/PrimaryBlackText.Mini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_24"
+                android:text="@string/miner_fee"
+                app:layout_constraintEnd_toEndOf="@id/amount_title_tv"
+                app:layout_constraintStart_toStartOf="@+id/amount_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/receipt_address_title_tv" />
+
+            <TextView
+                android:id="@+id/miner_fee_tv"
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                app:layout_constraintBottom_toBottomOf="@+id/miner_fee_title_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/amount_tv"
+                tools:text="0.0000021" />
+
+            <TextView
+                android:id="@+id/note_title_tv"
+                style="@style/PrimaryBlackText.Mini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_24"
+                android:text="@string/transaction_record_note"
+                app:layout_constraintEnd_toEndOf="@id/amount_title_tv"
+                app:layout_constraintStart_toStartOf="@+id/amount_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/miner_fee_title_tv" />
+
+            <TextView
+                android:id="@+id/note_tv"
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_28"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/amount_tv"
+                app:layout_constraintTop_toTopOf="@+id/note_title_tv"
+                tools:text="二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字二十個字" />
+
+            <View
+                android:id="@+id/bottom_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/padding_18"
+                app:layout_constraintBottom_toBottomOf="@+id/block_no_tv"
+                app:layout_constraintTop_toBottomOf="@+id/note_tv"
+                tools:background="@drawable/bg_green_radius_8_bottom" />
+
+            <TextView
+                android:id="@+id/txid_title_tv"
+                style="@style/PrimaryWhiteText.Mini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                android:text="@string/transaction_record_txid"
+                app:layout_constraintEnd_toEndOf="@id/amount_title_tv"
+                app:layout_constraintStart_toStartOf="@+id/amount_title_tv"
+                app:layout_constraintTop_toTopOf="@+id/bottom_view" />
+
+            <TextView
+                android:id="@+id/txid_tv"
+                style="@style/PrimaryWhiteText.SuperSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_28"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                app:layout_constraintEnd_toStartOf="@+id/txid_btn"
+                app:layout_constraintStart_toStartOf="@id/amount_tv"
+                app:layout_constraintTop_toTopOf="@+id/txid_title_tv"
+                tools:text="d7f4273e302b6a690337a8deb959f996d2a2904d52b338de04e63b0ebde2699e" />
+
+            <ImageButton
+                android:id="@+id/txid_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_12"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/btn_copy_white"
+                app:layout_constraintBottom_toBottomOf="@+id/txid_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txid_tv" />
+
+            <TextView
+                android:id="@+id/block_no_title_tv"
+                style="@style/PrimaryWhiteText.Mini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                android:text="@string/transaction_record_block_num"
+                app:layout_constraintEnd_toEndOf="@id/amount_title_tv"
+                app:layout_constraintStart_toStartOf="@+id/amount_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/txid_title_tv" />
+
+            <TextView
+                android:id="@+id/block_no_tv"
+                style="@style/PrimaryWhiteText.SuperSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_40"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/amount_tv"
+                app:layout_constraintTop_toTopOf="@+id/block_no_title_tv"
+                tools:text="1234567" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/grey_200"
+                app:layout_constraintBottom_toBottomOf="@+id/block_no_title_tv"
+                app:layout_constraintEnd_toStartOf="@+id/amount_tv"
+                app:layout_constraintStart_toEndOf="@+id/amount_title_tv"
+                app:layout_constraintTop_toTopOf="@+id/amount_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/look_up_btn"
+            style="@style/PrimaryButtonDark"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/padding_24"
+            android:background="@drawable/bg_edbb4e_radius_30"
+            android:text="@string/transaction_record_detail"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_container" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

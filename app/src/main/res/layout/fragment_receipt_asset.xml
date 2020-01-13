@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C3C4E">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_sliver_radius_8_top"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_container"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.26">
+
+        <TextView
+            android:id="@+id/wallet_name"
+            style="@style/PrimaryBlackText.Big"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_4"
+            android:gravity="center_vertical"
+            android:theme="@style/WalletAddressTheme.Clickable"
+            app:layout_constraintBottom_toTopOf="@+id/wallet_address"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            tools:drawableLeft="@mipmap/tt_icon_receipt_asset"
+            tools:text="錢包一號" />
+
+        <TextView
+            android:id="@+id/wallet_address"
+            style="@style/PrimaryGreyText.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/btn_copy"
+            android:gravity="center_vertical"
+            android:theme="@style/WalletAddressTheme.Clickable"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wallet_title"
+            app:layout_constraintWidth_percent="0.85"
+            tools:text="0x99D88949a0259b92C100e00e6662e6fC2f588De4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="34dp"
+        android:background="@drawable/bg_white_radius_8_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_container"
+        app:layout_constraintVertical_weight="0.74">
+
+        <ImageView
+            android:id="@+id/qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            tools:src="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/padding_56" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_btn"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@mipmap/btn_download"
+        app:backgroundTint="#F7BE73"
+        app:fabCustomSize="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_container"
+        app:layout_constraintStart_toStartOf="@+id/bottom_container"
+        app:layout_constraintTop_toBottomOf="@+id/guide_line" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
