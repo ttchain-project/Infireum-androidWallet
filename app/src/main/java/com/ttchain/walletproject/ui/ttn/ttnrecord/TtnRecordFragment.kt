@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.lifecycle.observe
+import com.git4u.tt_wallet_android.activity.coin.record_new.CoinRecordPagerAdapter
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.enums.CoinEnum

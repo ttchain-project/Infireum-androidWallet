@@ -24,6 +24,7 @@ import com.bumptech.glide.load.resource.bitmap.CenterInside
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.ttchain.walletproject.App.Companion.isMainNet
+import com.ttchain.walletproject.base.BaseDialogFragment
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.utils.DelayOnClickListener
 import com.ttchain.walletproject.utils.NumberUtils
@@ -37,20 +38,20 @@ import java.math.BigDecimal
 fun <T> Observable<T>.toMain(): Observable<T> {
     return subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
 }
-//
-//fun BaseDialogFragment.add(subscription: Disposable) {
-//    mCompositeDisposable.add(subscription)
-//}
-//
-//fun BaseDialogFragment.clear() {
-//    mCompositeDisposable.clear()
-//}
-//
-//fun BaseDialogFragment.setBehaviorView(view: View) {
-//    view.parent?.let {
-//        mBehavior = com.google.android.material.bottomsheet.BottomSheetBehavior.from(view.parent as View)
-//    }
-//}
+
+fun BaseDialogFragment.add(subscription: Disposable) {
+    mCompositeDisposable.add(subscription)
+}
+
+fun BaseDialogFragment.clear() {
+    mCompositeDisposable.clear()
+}
+
+fun BaseDialogFragment.setBehaviorView(view: View) {
+    view.parent?.let {
+        mBehavior = com.google.android.material.bottomsheet.BottomSheetBehavior.from(view.parent as View)
+    }
+}
 
 fun BigDecimal.isZero(): Boolean {
     return this.toDouble() == 0.0

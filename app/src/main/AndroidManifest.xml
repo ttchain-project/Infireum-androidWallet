@@ -143,19 +143,33 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
-        <activity android:name=".ui.ttn.ttndetail.TtnDetailActivity"
+        <activity
+            android:name=".ui.ttn.ttndetail.TtnDetailActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
-        <activity android:name=".ui.ttn.ttntransfer.TtnTransferActivity"
+        <activity
+            android:name=".ui.ttn.ttntransfer.TtnTransferActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
-        <activity android:name=".ui.ttn.ttnreceipt.TtnReceiptAssetActivity"
+        <activity
+            android:name=".ui.ttn.ttnreceipt.TtnReceiptAssetActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
-        <activity android:name=".ui.ttn.ttnrecord.TtnRecordActivity"
+        <activity
+            android:name=".ui.ttn.ttnrecord.TtnRecordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.asset.AssetListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.coin_record.CoinRecordActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 

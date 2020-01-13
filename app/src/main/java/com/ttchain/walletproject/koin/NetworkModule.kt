@@ -107,19 +107,19 @@ val networkModule = module {
 //    single { providesApi<InfoApi>(get(), BuildConfig.GIT_IM_API_URL) }
     single { providesApiCo<InfoApiCo>(get(), BuildConfig.GIT_IM_API_URL) }
 //
-//    single { providesApi<BlockExplorerApi>(get(), BuildConfig.BLOCKEXPLORER_API_URL) }
-//    single { providesApi<EtherscanApi>(get(), BuildConfig.ETHERSCAN_API_URL) }
-//    single { providesApi<OmniExplorerApi>(get(), BuildConfig.OMNIEXPLORER_API_URL) }
+    single { providesApi<BlockExplorerApi>(get(), BuildConfig.BLOCKEXPLORER_API_URL) }
+    single { providesApi<EtherscanApi>(get(), BuildConfig.ETHERSCAN_API_URL) }
+    single { providesApi<OmniExplorerApi>(get(), BuildConfig.OMNIEXPLORER_API_URL) }
     single {
         providesApi<TtnServerApi>(
             get(named(ttnServer)), getTtnServerNet()
         )
     }
-//    single {
-//        providesApi<TtnClientApi>(
-//            get(named(ttnClient)), getTtnClientNet()
-//        )
-//    }
+    single {
+        providesApi<TtnClientApi>(
+            get(named(ttnClient)), getTtnClientNet()
+        )
+    }
 }
 
 class ServerHostSelectionInterceptor : Interceptor {

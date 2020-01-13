@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingLeft="@dimen/padding_8"
+    android:paddingTop="@dimen/padding_16"
+    android:paddingRight="@dimen/padding_8"
+    android:paddingBottom="@dimen/padding_16">
+
+    <ImageView
+        android:id="@+id/status_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_8"
+        android:layout_marginLeft="@dimen/padding_8"
+        android:padding="@dimen/padding_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/icon_lighting_normal"
+        tools:background="@color/blue_400" />
+
+    <TextView
+        android:id="@+id/coin_to_coin"
+        style="@style/PrimaryGreyText.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_8"
+        android:layout_marginLeft="@dimen/padding_8"
+        android:maxLines="1"
+        android:padding="@dimen/padding_1"
+        app:layout_constraintBottom_toTopOf="@+id/miner_fee"
+        app:layout_constraintEnd_toStartOf="@+id/amount"
+        app:layout_constraintStart_toEndOf="@+id/status_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="1 BTC Relay → 1 BTC Relay" />
+
+    <TextView
+        android:id="@+id/miner_fee"
+        style="@style/PrimaryGreyText.SuperSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:padding="@dimen/padding_1"
+        app:layout_constraintBottom_toTopOf="@+id/day"
+        app:layout_constraintEnd_toEndOf="@+id/coin_to_coin"
+        app:layout_constraintStart_toStartOf="@+id/coin_to_coin"
+        app:layout_constraintTop_toBottomOf="@+id/coin_to_coin"
+        tools:text="礦工費用 : 0.0225 CIC" />
+
+    <TextView
+        android:id="@+id/day"
+        style="@style/PrimaryGreyLightText.SuperSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:padding="@dimen/padding_1"
+        app:layout_constraintBottom_toTopOf="@+id/note"
+        app:layout_constraintEnd_toEndOf="@+id/coin_to_coin"
+        app:layout_constraintStart_toStartOf="@+id/coin_to_coin"
+        app:layout_constraintTop_toBottomOf="@+id/miner_fee"
+        tools:text="05/24/2018 02:57:11" />
+
+    <TextView
+        android:id="@+id/note"
+        style="@style/PrimaryGreyLightText.SuperSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:padding="@dimen/padding_1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/day"
+        app:layout_constraintStart_toStartOf="@+id/day"
+        app:layout_constraintTop_toBottomOf="@+id/day"
+        tools:text="还 selena 1000元"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/amount"
+        style="@style/PrimaryText.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_8"
+        android:layout_marginRight="@dimen/padding_8"
+        android:paddingEnd="@dimen/padding_4"
+        android:paddingRight="@dimen/padding_4"
+        app:layout_constraintBottom_toTopOf="@+id/detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="-0.0050" />
+
+    <TextView
+        android:id="@+id/detail"
+        style="@style/PrimaryText.Mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="@dimen/padding_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/amount"
+        app:layout_constraintTop_toBottomOf="@+id/amount"
+        tools:text="前往查看" />
+</androidx.constraintlayout.widget.ConstraintLayout>

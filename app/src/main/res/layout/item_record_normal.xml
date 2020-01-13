@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingLeft="@dimen/padding_8"
+    android:paddingTop="@dimen/padding_16"
+    android:paddingRight="@dimen/padding_8"
+    android:paddingBottom="@dimen/padding_16">
+
+    <ImageView
+        android:id="@+id/status_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/icon_list_transfer_out" />
+
+    <TextView
+        android:id="@+id/address"
+        style="@style/PrimaryBlackText.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:padding="@dimen/padding_1"
+        android:singleLine="true"
+        android:textColor="@color/_354252"
+        app:layout_constraintBottom_toTopOf="@+id/day"
+        app:layout_constraintStart_toEndOf="@+id/status_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.42"
+        tools:text="0x7Cf7807307A0edB530807307A0edB530" />
+
+    <TextView
+        android:id="@+id/day"
+        style="@style/PrimaryBlackText.SuperSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:padding="@dimen/padding_1"
+        android:textColor="@color/_354252"
+        app:layout_constraintEnd_toEndOf="@id/address"
+        app:layout_constraintStart_toEndOf="@+id/status_icon"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        tools:text="05/24/2018 02:57:11" />
+
+    <TextView
+        android:id="@+id/note"
+        style="@style/PrimaryGreyText.Mini"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:padding="@dimen/padding_1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/address"
+        app:layout_constraintStart_toEndOf="@+id/status_icon"
+        app:layout_constraintTop_toBottomOf="@+id/day"
+        tools:text="还 selena 1000元"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/amount"
+        style="@style/PrimaryBlackText.SuperSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_8"
+        android:gravity="end"
+        android:maxLines="1"
+        android:paddingEnd="@dimen/padding_4"
+        app:autoSizeMaxTextSize="@dimen/small_text"
+        app:autoSizeMinTextSize="8sp"
+        app:autoSizeStepGranularity="1sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/day"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="-0.00500000" />
+
+    <TextView
+        android:id="@+id/detail"
+        style="@style/PrimaryBlackText.Mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="@dimen/padding_4"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/amount"
+        app:layout_constraintTop_toBottomOf="@+id/amount"
+        tools:text="前往查看" />
+</androidx.constraintlayout.widget.ConstraintLayout>

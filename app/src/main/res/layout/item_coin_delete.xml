@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CoinDeleteItemContentGap"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/blue_500">
+
+    <ImageView
+        android:id="@+id/delete_bg"
+        android:layout_width="@dimen/little_view"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_circle_red"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_2"
+        android:gravity="center"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/delete_bg"
+        app:layout_constraintLeft_toLeftOf="@+id/delete_bg"
+        app:layout_constraintRight_toRightOf="@+id/delete_bg"
+        app:layout_constraintTop_toTopOf="@+id/delete_bg" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/padding_16"
+        android:src="@mipmap/icon_list_wallet_btc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@+id/delete_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.1"
+        tools:src="@mipmap/icon_list_wallet_btc" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/PrimaryBlackText.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_12"
+        android:layout_marginLeft="@dimen/padding_12"
+        android:layout_marginRight="@dimen/padding_12"
+        android:layout_marginStart="@dimen/padding_12"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/full_name"
+        app:layout_constraintLeft_toRightOf="@+id/image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ETH" />
+
+    <TextView
+        android:id="@+id/full_name"
+        style="@style/PrimaryGreyText.SuperSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_12"
+        android:layout_marginLeft="@dimen/padding_12"
+        android:layout_marginRight="@dimen/padding_12"
+        android:layout_marginStart="@dimen/padding_12"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/address"
+        app:layout_constraintLeft_toRightOf="@+id/image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:text="NT$ 1345.32" />
+
+    <TextView
+        android:id="@+id/address"
+        style="@style/WalletAddressStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_12"
+        android:padding="@dimen/padding_0"
+        android:theme="@style/WalletAddressTheme.Clickable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/full_name"
+        tools:text="0x000000…00000000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
