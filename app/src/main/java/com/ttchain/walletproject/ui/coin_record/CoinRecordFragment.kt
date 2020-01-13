@@ -15,6 +15,8 @@ import com.ttchain.walletproject.lazy
 import com.ttchain.walletproject.model.CoinRecordBean
 import com.ttchain.walletproject.rx.RxBus
 import com.ttchain.walletproject.setDelayClickListener
+import com.ttchain.walletproject.ui.coin_transfer.CoinTransferActivity
+import com.ttchain.walletproject.ui.receiptasset.ReceiptAssetActivity
 import kotlinx.android.synthetic.main.fragment_coin_record.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -135,11 +137,11 @@ class CoinRecordFragment : BaseFragment() {
     }
 
     private fun launchReceiptAssetActivity(coinID: Int) {
-//        ReceiptAssetActivity.launch(requireActivity(), coinID)
+        ReceiptAssetActivity.launch(requireActivity(), coinID)
     }
 
     private fun launchCoinTransferActivity() {
-//        CoinTransferActivity.launch(requireActivity(), bundleValue, "")
+        CoinTransferActivity.launch(requireActivity(), bundleValue, "")
     }
 
     private fun showLightenBtn() {

@@ -1,5 +1,7 @@
 package com.ttchain.walletproject.model
 
+import android.text.TextWatcher
+import android.view.View
 import com.google.gson.annotations.SerializedName
 import com.ttchain.walletproject.enums.ManageBeanIdType
 import java.io.Serializable
@@ -733,4 +735,41 @@ data class CoinTransferBean(var _id: Int = -1) {
 
     var transThunderReceiptWalletID: Int = -1
     var transThunderReceiptWalletType: Int = -1
+}
+
+data class BtcTxBean(
+    var address: String = "",
+    var value: Double = 0.0
+) : Serializable
+
+data class BtcUnSpendBean(
+    var txid: String = "",
+    var value: Double = 0.0
+) : Serializable
+
+
+data class PickWalletBean(var _id: Int = -1) : Serializable {
+    var wallet_Id: Int = -1
+    var coinId: String = ""
+    var transCoinAmount: BigDecimal = BigDecimal("0")
+    var requestShowFromPaymentDetailDialog = false
+}
+
+data class TransCoinItemBean(var name: String = "") {
+    var hasFiatEquals: Boolean = false
+    var subName: String = ""
+    var subNameIcon: Int = -1
+    var subNameClickable: Boolean = false
+    var inputText: String = ""
+    var hideInputText: Boolean = false
+    var inputTextSize: Float = -1f
+    var inputHintText: String = ""
+    var inputHideUnderLine: Boolean = false
+    var layoutPaddingTop: Int = -1
+    var layoutPaddingBottom: Int = -1
+    var inputTextChangedListener: TextWatcher? = null
+    var subNameCallListener: View.OnClickListener? = null
+    var hasFocusedChecked: Boolean = false
+    var focusedDrawableRes: Int = -1
+    var inputFocusChangedListener: View.OnFocusChangeListener? = null
 }

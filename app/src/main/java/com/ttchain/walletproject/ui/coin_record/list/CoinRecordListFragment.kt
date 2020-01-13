@@ -9,6 +9,7 @@ import com.ttchain.walletproject.base.BaseRecordAdapter
 import com.ttchain.walletproject.base.BaseRecyclerViewFragmentNew
 import com.ttchain.walletproject.model.CoinRecordListBean
 import com.ttchain.walletproject.model.RecordEntity
+import com.ttchain.walletproject.ui.transferrecorddetail.TransferRecordDetailActivity
 import com.ttchain.walletproject.ui.webview.WebViewActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -56,7 +57,7 @@ class CoinRecordListFragment : BaseRecyclerViewFragmentNew<RecordEntity>() {
                 }
         }
         setOnItemClickListener {
-//            TransferRecordDetailActivity.launch(requireActivity(), it.data)
+            TransferRecordDetailActivity.launch(requireActivity(), it.data)
         }
     }
 

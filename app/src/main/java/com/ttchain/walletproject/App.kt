@@ -1,5 +1,6 @@
 package com.ttchain.walletproject
 
+import android.content.Context
 import androidx.multidex.MultiDexApplication
 import com.ttchain.walletproject.cache.Preferences
 import com.ttchain.walletproject.enums.CoinEnum
@@ -18,6 +19,10 @@ val preferenceHelper: Preferences by lazy {
 class App :MultiDexApplication() {
 
     companion object {
+
+        val context: Context by lazy {
+            app.applicationContext
+        }
 
         // 虛擬貨幣的指定法幣行情列表
         var rateList = listOf<DecimalData>()

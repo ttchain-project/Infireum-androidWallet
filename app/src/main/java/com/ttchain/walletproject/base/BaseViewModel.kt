@@ -7,6 +7,9 @@ import com.ttchain.walletproject.App
 import com.ttchain.walletproject.App.Companion.app
 import com.ttchain.walletproject.App.Companion.rateList
 import com.ttchain.walletproject.R
+import com.ttchain.walletproject.model.BtcTransferException
+import com.ttchain.walletproject.model.MinerFeeEditBean
+import com.ttchain.walletproject.model.MinerFeeSatItemBean
 import com.ttchain.walletproject.net.ApiError
 import com.ttchain.walletproject.net.ApiException
 import com.ttchain.walletproject.showNumber
@@ -28,9 +31,9 @@ abstract class BaseViewModel : AndroidViewModel(app) {
     val RATE_DATA_CACHE_TIME_IN_SEC = 60 * 5
 
     var minerFeeHeaderItemAmountText = MutableLiveData<String>()
-//    var minerFeeSatItem = MutableLiveData<MinerFeeSatItemBean>()
-//    var minerFeeSatItemGas = MutableLiveData<MinerFeeEditBean>()
-//    var minerFeeGasItemGasPriceRange = MutableLiveData<MinerFeeEditBean>()
+    var minerFeeSatItem = MutableLiveData<MinerFeeSatItemBean>()
+    var minerFeeSatItemGas = MutableLiveData<MinerFeeEditBean>()
+    var minerFeeGasItemGasPriceRange = MutableLiveData<MinerFeeEditBean>()
 
     var showToastText = MutableLiveData<String>()
     var isViewFinished = MutableLiveData<Boolean>()
@@ -160,7 +163,7 @@ abstract class BaseViewModel : AndroidViewModel(app) {
         consumerThrowable(throwable, true)
     }
 
-//    var btcTransferExceptionLiveData = MutableLiveData<BtcTransferException>()
+    var btcTransferExceptionLiveData = MutableLiveData<BtcTransferException>()
 
     fun consumerThrowable(throwable: Throwable, showMessage: Boolean) {
         isPageFinish = false
@@ -195,10 +198,10 @@ abstract class BaseViewModel : AndroidViewModel(app) {
                 Timber.e("IllegalArgumentException: ${throwable.message}")
                 throwableMessage.postValue(throwable.message)
             }
-//            is BtcTransferException -> {
-//                Timber.e("BtcTransferException: ${throwable.message}")
-//                btcTransferExceptionLiveData.postValue(throwable)
-//            }
+            is BtcTransferException -> {
+                Timber.e("BtcTransferException: ${throwable.message}")
+                btcTransferExceptionLiveData.postValue(throwable)
+            }
             else -> {
                 throwableMessage.postValue(throwable.message)
             }

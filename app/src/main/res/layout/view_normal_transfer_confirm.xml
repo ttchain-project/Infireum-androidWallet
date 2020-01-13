@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/confirm_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_apply"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingTop="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16">
+
+            <TextView
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transfer_transfer_amount"
+                android:textColor="#98C736"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/confirm_amount_tv"
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_14"
+                tools:text="100 BTC" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/padding_6"
+                android:background="#354252" />
+
+            <TextView
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_24"
+                android:text="@string/receipt_address"
+                android:textColor="#98C736"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/confirm_receipt_address_tv"
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_14"
+                tools:text="TTCHAIN_myaccountnumber123456" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/padding_6"
+                android:background="#354252" />
+
+            <TextView
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_24"
+                android:text="@string/payment_address"
+                android:textColor="#98C736"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/confirm_pay_address_tv"
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_14"
+                tools:text="TTCHAIN_myaccountnumber123456" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/padding_6"
+                android:background="#354252" />
+
+            <TextView
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_24"
+                android:text="@string/miner_fee"
+                android:textColor="#98C736"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/confirm_miner_fee_tv"
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_14"
+                tools:text="0.007 BTC" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/padding_6"
+                android:background="#354252" />
+
+            <TextView
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_24"
+                android:text="@string/transfer_note"
+                android:textColor="#98C736"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/confirm_note_tv"
+                style="@style/PrimaryBlackText.SuperSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_14"
+                tools:text="這裡是我給你的留言" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/padding_6"
+                android:background="#354252" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.ttchain.walletproject.view.NextButton
+        android:id="@+id/confirm_apply"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginBottom="@dimen/padding_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/guide_line_v"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.ttchain.walletproject.view.PreviousButton
+        android:id="@+id/confirm_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guide_line_v"
+        app:layout_constraintWidth_percent="0.35"
+        app:previous_button_text="@string/transfer_modify" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

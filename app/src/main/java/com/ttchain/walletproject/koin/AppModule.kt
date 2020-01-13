@@ -1,6 +1,7 @@
 package com.ttchain.walletproject.koin
 
 import com.ttchain.walletproject.base.BaseCoinRecordViewModel
+import com.ttchain.walletproject.base.BaseCoinTransferViewModel
 import com.ttchain.walletproject.base.BaseConfigViewModel
 import com.ttchain.walletproject.helper.MockHelper
 import com.ttchain.walletproject.helper.MockHelperImpl
@@ -10,6 +11,7 @@ import com.ttchain.walletproject.ui.agreement.AgreementViewModel
 import com.ttchain.walletproject.ui.asset.AssetListViewModel
 import com.ttchain.walletproject.ui.coin_record.CoinRecordViewModel
 import com.ttchain.walletproject.ui.coin_record.list.CoinRecordListViewModel
+import com.ttchain.walletproject.ui.coin_transfer.CoinTransferViewModel
 import com.ttchain.walletproject.ui.create_id.CreateIdViewModel
 import com.ttchain.walletproject.ui.create_id.mnemonics.MnemonicsStartViewModel
 import com.ttchain.walletproject.ui.dapp.DappViewModel
@@ -26,6 +28,7 @@ import com.ttchain.walletproject.ui.me.selectexportwallet.SelectExportWalletView
 import com.ttchain.walletproject.ui.me.userwalletmnemonic.UserWalletMnemonicViewModel
 import com.ttchain.walletproject.ui.me.userwalletsqrcode.UserWalletQrCodeViewModel
 import com.ttchain.walletproject.ui.me.usinglocker.UsingLockerViewModel
+import com.ttchain.walletproject.ui.receiptasset.ReceiptAssetViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.RestoreNoUserInfoViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
@@ -57,6 +60,21 @@ val viewModelModule = module {
     viewModel { AssetListViewModel(get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordViewModel(get(), get(), get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordListViewModel(get(), get()) }
+    viewModel { ReceiptAssetViewModel(get(), get(), get(), get()) }
+    viewModel { BaseCoinTransferViewModel(get(), get(), get(), get(), get(), get()) }
+    viewModel {
+        CoinTransferViewModel(
+            get(),
+            get(),
+            get(),
+            get(),
+            get(),
+            get(),
+            get(),
+            get(),
+            get()
+        )
+    }
 
     viewModel { WalletMainViewModel(get(), get(), get()) }
     viewModel { WalletListViewModel(get(), get(), get(), get(), get(), get(), get(), get()) }
@@ -83,11 +101,12 @@ val viewModelModule = module {
 }
 
 val repositoryModule = module {
+    single { BaseCoinTransferRepository(get(), get(), get()) }
     //Core repository
-//    single { WalletRepository(get(), get(), get()) }
+    single { WalletRepository(get(), get(), get()) }
     single { CoinRepository(get(), get(), get(), get()) }
     single { BalanceRepository(get()) }
-//    single { MinerFeeRepository(get()) }
+    single { MinerFeeRepository(get()) }
     //Helper repository
     single { SplashRepository(get(), get(), get()) }
     single { VerifyRepository(get(), get(), get()) }

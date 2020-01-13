@@ -14,6 +14,7 @@ import com.ttchain.walletproject.model.CoinEntity
 import com.ttchain.walletproject.model.RefreshUiDataBean
 import com.ttchain.walletproject.rx.RxBus
 import com.ttchain.walletproject.setDelayClickListener
+import com.ttchain.walletproject.ui.coin_record.CoinRecordActivity
 import kotlinx.android.synthetic.main.fragment_asset_list.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -59,7 +60,7 @@ class AssetListFragment : BaseRecyclerViewFragmentNew<CoinEntity>() {
 //            AssetManageActivity.launch(requireActivity())
         }
         setOnItemClickListener {
-//            CoinRecordActivity.launch(requireActivity(), it.data.coinId)
+            CoinRecordActivity.launch(requireActivity(), it.data.coinId)
         }
         RxBus.getInstance().register<Boolean>(RxBusTag.UPDATE_WALLET_NAME_OK)
             .subscribe {
