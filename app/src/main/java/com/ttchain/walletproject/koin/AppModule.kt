@@ -13,13 +13,22 @@ import com.ttchain.walletproject.ui.discovery.DiscoveryViewModel
 import com.ttchain.walletproject.ui.enter_password.EnterPasswordViewModel
 import com.ttchain.walletproject.ui.login.LoginViewModel
 import com.ttchain.walletproject.ui.me.MeViewModel
+import com.ttchain.walletproject.ui.me.commonaddress.CommonAddressViewModel
+import com.ttchain.walletproject.ui.me.commonaddress.operation_new.OperationCommAddressNewViewModel
+import com.ttchain.walletproject.ui.me.currency.CurrencyViewModel
+import com.ttchain.walletproject.ui.me.languagesetting.LanguageSettingViewModel
 import com.ttchain.walletproject.ui.me.selectbackupmethod.SelectBackupMethodViewModel
+import com.ttchain.walletproject.ui.me.selectexportwallet.SelectExportWalletViewModel
+import com.ttchain.walletproject.ui.me.userwalletmnemonic.UserWalletMnemonicViewModel
+import com.ttchain.walletproject.ui.me.userwalletsqrcode.UserWalletQrCodeViewModel
+import com.ttchain.walletproject.ui.me.usinglocker.UsingLockerViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.RestoreNoUserInfoViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
 import com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultViewModel
 import com.ttchain.walletproject.ui.trend.TrendViewModel
 import com.ttchain.walletproject.ui.wallet.WalletMainViewModel
+import com.ttchain.walletproject.ui.wallet.exportkey.ExportKeyViewModel
 import com.ttchain.walletproject.ui.wallet.wallet_list.WalletListViewModel
 import com.ttchain.walletproject.ui.webview.WebViewViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -44,7 +53,16 @@ val viewModelModule = module {
     viewModel { TrendViewModel(get(), get()) }
     viewModel { WebViewViewModel(get(), get(), get()) }
     viewModel { MeViewModel(get(), get(), get(), get(), get(), get()) }
+    viewModel { LanguageSettingViewModel(get()) }
+    viewModel { CurrencyViewModel(get(), get()) }
+    viewModel { CommonAddressViewModel(get(), get(), get(), get()) }
+    viewModel { OperationCommAddressNewViewModel(get(), get(), get(), get(), get()) }
     viewModel { SelectBackupMethodViewModel(get(), get(), get()) }
+    viewModel { SelectExportWalletViewModel(get(), get(), get()) }
+    viewModel { ExportKeyViewModel(get(), get()) }
+    viewModel { UserWalletQrCodeViewModel(get(), get(), get()) }
+    viewModel { UserWalletMnemonicViewModel(get(), get()) }
+    viewModel { UsingLockerViewModel(get()) }
 }
 
 val repositoryModule = module {
