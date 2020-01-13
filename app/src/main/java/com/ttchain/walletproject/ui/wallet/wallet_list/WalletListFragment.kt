@@ -10,7 +10,6 @@ import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.rx.RxBus
 import com.ttchain.walletproject.toMain
-import com.ttchain.walletproject.ui.ttn.ttnrecord.TtnRecordActivity
 import com.ttchain.walletproject.ui.asset.AssetListActivity
 import com.ttchain.walletproject.ui.coin_record.CoinRecordActivity
 import com.ttchain.walletproject.ui.ttn.ttndetail.TtnDetailActivity
@@ -104,7 +103,6 @@ class WalletListFragment : BaseFragment() {
         }
         swipe_layout.setOnRefreshListener {
             swipe_layout.isRefreshing = true
-            RxBus.getInstance().post(RxBusTag.CT_WALLET_QUERY_API, true)
             viewModel.getRateAndWalletData()
         }
     }

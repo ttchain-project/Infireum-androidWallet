@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.observe
 import com.ttchain.walletproject.ui.login.LoginActivity
-import com.ttchain.walletproject.MainActivity
+import com.ttchain.walletproject.ui.main.MainActivity
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_splash.*

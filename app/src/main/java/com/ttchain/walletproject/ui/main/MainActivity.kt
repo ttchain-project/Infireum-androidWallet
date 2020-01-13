@@ -1,8 +1,9 @@
-package com.ttchain.walletproject
+package com.ttchain.walletproject.ui.main
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseActivity
 import com.ttchain.walletproject.enums.BottomTabState
 import kotlinx.android.synthetic.main.main_activity.*

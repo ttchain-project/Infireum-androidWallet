@@ -1,4 +1,4 @@
-package com.ttchain.walletproject
+package com.ttchain.walletproject.ui.main
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

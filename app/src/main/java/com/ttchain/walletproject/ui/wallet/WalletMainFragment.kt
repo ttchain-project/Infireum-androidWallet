@@ -2,11 +2,8 @@ package com.ttchain.walletproject.ui.wallet
 
 import android.os.Bundle
 import android.view.View
-import com.git4u.tt_wallet_android.rx.RxBusTag
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
-import com.ttchain.walletproject.rx.RxBus
-import com.ttchain.walletproject.setDelayClickListener
 import kotlinx.android.synthetic.main.fragment_wallet_main.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -27,9 +24,8 @@ class WalletMainFragment : BaseFragment() {
     }
 
     override fun initView() {
-        add_wallet_btn.setDelayClickListener {
-            // todo add wallet button
-        }
+//        add_wallet_btn.setDelayClickListener {
+//        }
         val pagerAdapter = WalletMainPagerAdapter(requireContext(), childFragmentManager)
         view_pager.apply {
             offscreenPageLimit = 2
@@ -46,10 +42,5 @@ class WalletMainFragment : BaseFragment() {
             initSubject()
             updateAssetDataByApi()
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        RxBus.getInstance().unregister(RxBusTag.CT_WALLET_QUERY_API)
     }
 }
