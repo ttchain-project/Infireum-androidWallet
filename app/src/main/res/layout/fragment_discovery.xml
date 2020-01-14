@@ -170,7 +170,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/padding_24"
                         android:text="@string/trend"
-                        android:textColor="@color/_98C736"
+                        android:textColor="@color/_506EF5"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -295,7 +295,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/padding_24"
                         android:text="@string/media"
-                        android:textColor="@color/_98C736"
+                        android:textColor="@color/_506EF5"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -336,7 +336,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/padding_24"
                         android:text="Dapp"
-                        android:textColor="@color/_98C736"
+                        android:textColor="@color/_506EF5"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:ignore="HardcodedText" />
@@ -378,7 +378,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/padding_24"
                         android:text="@string/blockchain_explorer"
-                        android:textColor="@color/_98C736"
+                        android:textColor="@color/_506EF5"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 

@@ -46,7 +46,7 @@ class TransferRecordDetailFragment : BaseFragment() {
         }
 
         if (bundleValue.amountText.startsWith("+")) {
-            val amounts = bundleValue.amountText.replace("+", "")
+            val amounts =    bundleValue.amountText.replace("+", "")
             amount_tv.text = amounts
             amount_title_tv.text = getString(R.string.transaction_record_receipt_amount)
             requireActivity().title =

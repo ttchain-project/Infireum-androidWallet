@@ -454,7 +454,7 @@
 
     <!-- Green -->
     <style name="TextAppleGreen" parent="@android:style/TextAppearance">
-        <item name="android:textColor">#98C736</item>
+        <item name="android:textColor">@color/_506EF5</item>
         <item name="android:textSize">@dimen/primary_text</item>
     </style>
 

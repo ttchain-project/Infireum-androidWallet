@@ -103,7 +103,7 @@
                         android:layout_width="0dp"
                         android:layout_height="1dp"
                         android:layout_marginEnd="@dimen/padding_8"
-                        android:background="@color/_98C736"
+                        android:background="@color/_506EF5"
                         app:layout_constraintBottom_toBottomOf="@+id/asset_manage"
                         app:layout_constraintEnd_toStartOf="@+id/asset_manage"
                         app:layout_constraintTop_toTopOf="@+id/asset_manage" />
@@ -116,7 +116,7 @@
                         android:layout_marginBottom="@dimen/padding_6"
                         android:drawableEnd="@mipmap/wallet_btn_add"
                         android:text="@string/add_and_manage_asset"
-                        android:textColor="@color/_98C736"
+                        android:textColor="@color/_506EF5"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -126,7 +126,7 @@
                         android:layout_width="0dp"
                         android:layout_height="1dp"
                         android:layout_marginStart="@dimen/padding_8"
-                        android:background="@color/_98C736"
+                        android:background="@color/_506EF5"
                         app:layout_constraintBottom_toBottomOf="@+id/asset_manage"
                         app:layout_constraintStart_toEndOf="@+id/asset_manage"
                         app:layout_constraintTop_toTopOf="@+id/asset_manage" />

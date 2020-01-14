@@ -41,7 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/user_system_wallet"
-                    android:textColor="@color/_98C736"
+                    android:textColor="@color/_506EF5"
                     android:textSize="@dimen/sp_12" />
 
                 <View
@@ -49,7 +49,7 @@
                     android:layout_height="1dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="@dimen/padding_8"
-                    android:background="@color/_98C736" />
+                    android:background="@color/_506EF5" />
 
             </LinearLayout>
 
@@ -73,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/external_wallet"
-                    android:textColor="@color/_98C736"
+                    android:textColor="@color/_506EF5"
                     android:textSize="@dimen/sp_12" />
 
                 <View
@@ -81,7 +81,7 @@
                     android:layout_height="1dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="@dimen/padding_8"
-                    android:background="@color/_98C736" />
+                    android:background="@color/_506EF5" />
 
             </LinearLayout>
 

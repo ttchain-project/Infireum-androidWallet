@@ -25,7 +25,7 @@ class SplashActivity : BaseActivity() {
 
     private fun initViews() {
         progress_bar.indeterminateDrawable.setColorFilter(
-            ContextCompat.getColor(this, R.color._98C736),
+            ContextCompat.getColor(this, R.color._506EF5),
             PorterDuff.Mode.SRC_IN
         )
     }

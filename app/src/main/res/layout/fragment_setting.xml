@@ -64,7 +64,7 @@
             android:layout_marginStart="@dimen/padding_18"
             android:layout_marginTop="@dimen/padding_24"
             android:text="@string/setting_system_setting"
-            android:textColor="@color/_98C736" />
+            android:textColor="@color/_506EF5" />
 
         <TextView
             android:id="@+id/textViewNotification"
@@ -130,7 +130,7 @@
             android:layout_marginStart="@dimen/padding_18"
             android:layout_marginTop="@dimen/padding_24"
             android:text="@string/setting_wallet_setting"
-            android:textColor="@color/_98C736" />
+            android:textColor="@color/_506EF5" />
 
         <TextView
             android:id="@+id/textViewCommonAddress"
@@ -313,7 +313,7 @@
             android:layout_marginStart="@dimen/padding_18"
             android:layout_marginTop="@dimen/padding_16"
             android:text="@string/setting_account_safety"
-            android:textColor="@color/_98C736" />
+            android:textColor="@color/_506EF5" />
 
         <TextView
             android:id="@+id/textViewUsingLocker"

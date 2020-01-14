@@ -64,7 +64,7 @@ class CoinRecordViewModel(
         }
     }
 
-    fun performSyncTransferRecordDataList() {
+    private fun performSyncTransferRecordDataList() {
         val walletData = baseMainModel.selectedWalletData
         if (mCoinId == null || !Utils.getInternetStatus(context)) {
             syncTransRecordDataListFinish.value = true
