@@ -3,7 +3,7 @@ package com.ttchain.walletproject.ui.me.currency
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.observe
-import com.git4u.tt_wallet_android.rx.RxBusTag
+import com.ttchain.walletproject.rx.RxBusTag
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.enums.CurrencyEnum

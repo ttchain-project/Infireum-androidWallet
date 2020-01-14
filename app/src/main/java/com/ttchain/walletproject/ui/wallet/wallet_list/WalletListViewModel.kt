@@ -249,6 +249,7 @@ class WalletListViewModel(
                 usdtAmount = usdtAmount.add(assetData.amount)
             }
             total = total.add(getFiatRate(CoinEnum.USDT.coinId, usdtAmount))
+            totalAssetAmountLiveData.value = NumberUtils.showFiat(total)
         }
     }
 

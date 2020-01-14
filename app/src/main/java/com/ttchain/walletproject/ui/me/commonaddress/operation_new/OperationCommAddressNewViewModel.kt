@@ -2,7 +2,7 @@ package com.ttchain.walletproject.ui.me.commonaddress.operation_new
 
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
-import com.git4u.tt_wallet_android.rx.RxBusTag
+import com.ttchain.walletproject.rx.RxBusTag
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseViewModel
 import com.ttchain.walletproject.database.data.AddressData
