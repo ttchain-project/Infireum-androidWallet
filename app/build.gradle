@@ -91,7 +91,7 @@ android {
             buildConfigField "String", "DEVELOPER", "\"\""
             buildConfigField "String", "HOCKEY_APP_DOWNLOAD_URL", "\"http://www.ttchainwallet.com/downloads/app-pro-hockey-beta.apk\""
             buildConfigField "String", "OFFICIAL_WEBSITE", "\"http://www.ttchainwallet.com/\""
-            resValue("string", "app_name", "NTChain")
+            resValue("string", "app_name", "Infireum")
         }
         beta {
             minifyEnabled true
@@ -104,7 +104,7 @@ android {
             buildConfigField "String", "DEVELOPER", "\"\""
             buildConfigField "String", "HOCKEY_APP_DOWNLOAD_URL", "\"http://www.ttchainwallet.com/downloads/app-pro-hockey-beta.apk\""
             buildConfigField "String", "OFFICIAL_WEBSITE", "\"http://www.ttchainwallet.com/\""
-            resValue("string", "app_name", "NTChain")
+            resValue("string", "app_name", "Infireum")
         }
         debug {
             minifyEnabled false
@@ -119,7 +119,7 @@ android {
             }
             buildConfigField "String", "HOCKEY_APP_DOWNLOAD_URL", "\"http://www.ttchainwallet.com/downloads/app-pro-hockey-beta.apk\""
             buildConfigField "String", "OFFICIAL_WEBSITE", "\"http://www.ttchainwallet.com/\""
-            resValue("string", "app_name", "NTChain-Debug")
+            resValue("string", "app_name", "Infireum-Debug")
         }
         preBeta {
             minifyEnabled true
@@ -132,7 +132,7 @@ android {
             buildConfigField "String", "DEVELOPER", "\"\""
             buildConfigField "String", "HOCKEY_APP_DOWNLOAD_URL", "\"http://www.ttchainwallet.com/downloads/app-pro-hockey-beta.apk\""
             buildConfigField "String", "OFFICIAL_WEBSITE", "\"http://www.ttchainwallet.com/\""
-            resValue("string", "app_name", "NTChain-PreBeta")
+            resValue("string", "app_name", "Infireum-PreBeta")
         }
     }
 
