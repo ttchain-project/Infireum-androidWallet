@@ -1,7 +1,7 @@
 package com.ttchain.walletproject.base
 
 import android.content.Context
-import com.git4u.tt_wallet_android.rx.RxBusTag
+import com.ttchain.walletproject.rx.RxBusTag
 import com.google.gson.Gson
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.blockchain.Bitcoinj

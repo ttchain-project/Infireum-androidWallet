@@ -12,7 +12,7 @@ import android.view.View
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.bundleOf
 import com.afollestad.materialdialogs.MaterialDialog
-import com.git4u.tt_wallet_android.rx.RxBusTag
+import com.ttchain.walletproject.rx.RxBusTag
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.ResultPoint
 import com.journeyapps.barcodescanner.BarcodeCallback

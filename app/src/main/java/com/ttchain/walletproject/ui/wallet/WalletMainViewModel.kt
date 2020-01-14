@@ -1,7 +1,7 @@
 package com.ttchain.walletproject.ui.wallet
 
 import android.text.TextUtils
-import com.git4u.tt_wallet_android.rx.RxBusTag
+import com.ttchain.walletproject.rx.RxBusTag
 import com.ttchain.walletproject.base.BaseViewModel
 import com.ttchain.walletproject.database.data.WalletData
 import com.ttchain.walletproject.enums.CoinEnum

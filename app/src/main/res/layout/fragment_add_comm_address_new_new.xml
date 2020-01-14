@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/operation_comm_address_name"
-                    android:textColor="@color/_98C736"
+                    android:textColor="@color/_506EF5"
                     android:textSize="@dimen/sp_12" />
 
                 <TextView
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/operation_comm_address_address"
-                    android:textColor="@color/_98C736"
+                    android:textColor="@color/_506EF5"
                     android:textSize="@dimen/sp_12" />
 
                 <ImageView
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/operation_comm_address_note"
-                android:textColor="@color/_98C736"
+                android:textColor="@color/_506EF5"
                 android:textSize="@dimen/sp_12" />
 
             <EditText

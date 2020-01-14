@@ -6,8 +6,7 @@ import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.afollestad.materialdialogs.MaterialDialog
-import com.git4u.tt_wallet_android.rx.RxBusTag
-import com.google.gson.Gson
+import com.ttchain.walletproject.rx.RxBusTag
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.rx.RxBus

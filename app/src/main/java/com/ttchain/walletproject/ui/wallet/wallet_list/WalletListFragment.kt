@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.AbsListView
 import androidx.core.os.bundleOf
 import androidx.lifecycle.observe
-import com.git4u.tt_wallet_android.rx.RxBusTag
+import com.ttchain.walletproject.rx.RxBusTag
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.rx.RxBus

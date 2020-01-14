@@ -1,4 +1,4 @@
-package com.git4u.tt_wallet_android.rx
+package com.ttchain.walletproject.rx
 
 object RxBusTag {
 
