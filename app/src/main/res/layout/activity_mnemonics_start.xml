@@ -77,7 +77,7 @@
         android:layout_marginTop="@dimen/padding_24"
         android:layout_marginEnd="@dimen/padding_40"
         android:text="@string/mnemonic_start_tip_1"
-        android:textColor="@color/_98C736"
+        android:textColor="@color/_506EF5"
         android:textSize="@dimen/sp_12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

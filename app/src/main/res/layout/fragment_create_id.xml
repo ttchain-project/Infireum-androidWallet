@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/padding_8"
             android:text="@string/agree_privacy_policy"
-            android:textColor="@color/_98C736" />
+            android:textColor="@color/_506EF5" />
 
     </LinearLayout>
 
