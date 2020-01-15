@@ -7,19 +7,17 @@ import com.ttchain.walletproject.database.data.CoinData
 import com.ttchain.walletproject.database.data.WalletData
 import com.ttchain.walletproject.model.ApiTtnBalanceResponse
 import com.ttchain.walletproject.model.DbHelper
-import com.ttchain.walletproject.repository.HelperRepository
+import com.ttchain.walletproject.repository.HelperRepositoryCo
 import com.ttchain.walletproject.repository.TtnRepository
 import com.ttchain.walletproject.repository.TtnServerApiRepository
-import com.ttchain.walletproject.showNumber
 import com.ttchain.walletproject.toMain
-import com.ttchain.walletproject.utils.NumberUtils
 import io.reactivex.Observable
 import java.util.concurrent.TimeUnit
 
 class TtnDetailViewModel(
     private val dbHelper: DbHelper,
     private val ttnRepository: TtnRepository,
-    private val helperRepository: HelperRepository,
+    private val helperRepository: HelperRepositoryCo,
     private val ttnServerApiRepository: TtnServerApiRepository
 ) : BaseViewModel() {
 
@@ -38,15 +36,12 @@ class TtnDetailViewModel(
     }
 
     fun getRateAndBalance() {
-        add(
-            helperRepository.getAllCoinToCurrency(ttnRepository.getPrefFiatData().name)
-                .toMain()
-                .subscribe({
-                    rateList = it.data ?: arrayListOf()
-                    getBalance()
-                }, {
-                })
-        )
+        viewModelLaunch({
+            val result = helperRepository.allCoinToCurrency(ttnRepository.getPrefFiatData().name)
+            rateList = result.data.orEmpty()
+            getBalance()
+        }, {
+        })
     }
 
     var getBalanceLiveData = MutableLiveData<ApiTtnBalanceResponse>()
@@ -65,9 +60,7 @@ class TtnDetailViewModel(
     }
 
     fun getFiat(coinId: String, amount: String): String {
-        val rate =
-            rateList.find { it.identifier == coinId }?.rate?.toBigDecimal() ?: 0.toBigDecimal()
-        return "≈$fiatIcon ${NumberUtils.show(amount.toBigDecimal().multiply(rate), showNumber)}"
+        return getFiatRateText(coinId, amount.toBigDecimal(), fiatIcon)
     }
 
     fun getCoinDataByCoinId(coinId: String): CoinData {
