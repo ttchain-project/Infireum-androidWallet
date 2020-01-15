@@ -72,6 +72,13 @@ class HelperRepositoryCo(
     }
 
     /**
+     * 取得系統支援法幣清單
+     */
+    suspend fun getFiatDataList(): RepositoryResult<List<ApiFiatData>> {
+        return checkDeferred(api.getFiat())
+    }
+
+    /**
      * 取得以美金為基準的法幣兌換匯率表
      */
     fun performGetFiatIdToUsdRateDataList(): Observable<RepositoryResult<List<ApiFiatTableData>>> {
@@ -118,6 +125,15 @@ class HelperRepositoryCo(
     ): Observable<RepositoryResult<List<DecimalData>>> {
         return getApi(api.getAllCoinToCurrency(currency))
             .map { checkResultRepository(it) }
+    }
+
+    /**
+     * 取得所有虛擬貨幣的指定法幣行情
+     */
+    suspend fun allCoinToCurrency(
+        currency: String
+    ): RepositoryResult<List<DecimalData>> {
+        return checkDeferred(api.allCoinToCurrency(currency))
     }
 
     /**

@@ -75,6 +75,12 @@ interface HelperApiCo {
     fun helperGetFiat(): Observable<ApiResult<List<ApiFiatData>>>
 
     /**
+     * 取得系統支援法幣清單
+     */
+    @GET("Fiats")
+    fun getFiat(): Deferred<ApiResult<List<ApiFiatData>>>
+
+    /**
      * 取得以美金為基準的法幣兌換匯率表
      */
     @GET("Rate/FiatTable")
@@ -111,6 +117,13 @@ interface HelperApiCo {
         @Query("currency") currency: String
     ): Observable<ApiResult<List<DecimalData>>>
 
+    /**
+     * 取得所有虛擬貨幣的指定法幣行情
+     */
+    @GET("Rate/AllCoinToCurrency")
+    fun allCoinToCurrency(
+        @Query("currency") currency: String
+    ): Deferred<ApiResult<List<DecimalData>>>
 
     /**
      * 取得虛擬幣漲跌幅資訊
