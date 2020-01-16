@@ -63,8 +63,8 @@ android {
             buildConfigField "String", "GIT_WALLET_BALANCE_API_URL", "\"http://54.64.162.167:3206/\""
             buildConfigField "String", "ROCKET_CHAT_SOCKET_URL", "\"ws://im.ttchainwallet.com:3000/websocket\""
             buildConfigField "String", "ROCKET_CHAT_API_URL", "\"http://im.ttchainwallet.com:3000\""
-            buildConfigField "String", "GIT_IM_API_URL", "\"http://api.ttchainwallet.com\""
-            buildConfigField "String", "GIT_HELPER_API_URL", "\"http://api.ttchainwallet.com\""
+            buildConfigField "String", "GIT_IM_API_URL", "\"http://sit-api.ttchainwallet.com\""
+            buildConfigField "String", "GIT_HELPER_API_URL", "\"http://sit-api.ttchainwallet.com\""
 
             buildConfigField "String", "MAINNET_INFURA_IO_API_URL", "\"https://mainnet.infura.io/\""
             buildConfigField "String", "BLOCKEXPLORER_API_URL", "\"https://blockchain.info/\""
