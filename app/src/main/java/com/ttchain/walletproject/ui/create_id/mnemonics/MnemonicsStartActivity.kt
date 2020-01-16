@@ -60,19 +60,7 @@ class MnemonicsStartActivity : BaseActivity() {
             MainActivity.launch(this)
         }
         create.setDelayClickListener {
-            RxPermissions(this)
-                .request(
-                    Manifest.permission.READ_EXTERNAL_STORAGE,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE
-                )
-                .subscribe { granted ->
-                    if (granted) {
-//                        showTwoInputDialog()
-                        viewModel.getTwoInput(bundleValue.pwd, bundleValue.note)
-                    } else {
-                        //showPermissionDenied(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE, getString(R.string.g_pick_photo_permission_request));
-                    }
-                }
+            onbackUp()
         }
     }
 
@@ -102,17 +90,35 @@ class MnemonicsStartActivity : BaseActivity() {
         }
     }
 
+    private fun onbackUp() {
+        RxPermissions(this)
+            .request(
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            )
+            .subscribe { granted ->
+                if (granted) {
+//                        showTwoInputDialog()
+                    viewModel.getTwoInput(bundleValue.pwd, bundleValue.note)
+                } else {
+                    //showPermissionDenied(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE, getString(R.string.g_pick_photo_permission_request));
+                }
+            }
+    }
+
     private fun showWarningDialog() {
         val warningDialog = WarningDialog()
-            .setTitle("您確定要略過嗎？")
-            .setContent("備份帳號行動碼與您日後要維護資產安全、恢復帳號等動作相當重要。\n\n如在無備份帳號的情況下遺失手機或各種意外導致帳號遺失，將永遠無法尋回。")
+            .setTitle(getString(R.string.mnemonic_start_warring_title))
+            .setContent(getString(R.string.mnemonic_start_warring_message))
             .setBtnText(getString(R.string.g_confirm), getString(R.string.setting_backup_account))
             .setLeftBtnRedBg()
+            .setOnLeftClickListener {
+                onbackUp()
+            }
             .setOnRightClickListener {
                 finishActivity()
                 MainActivity.launch(this)
             }
-            .setOnLeftClickListener { }
         supportFragmentManager.addDialog(warningDialog, WarningDialog::class.java.simpleName)
     }
 

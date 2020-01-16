@@ -9,6 +9,7 @@ import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.Res
 import com.ttchain.walletproject.ui.restorebymnemonics_new.restorewithuserinfo.RestoreWithUserInfoFragment
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.model.ResponseUserIdentity
+import kotlinx.android.synthetic.main.dialog_input.*
 import kotlinx.android.synthetic.main.fragment_restore_by_mnemonics_new.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -36,122 +37,20 @@ class RestoreByMnemonicsFragment : BaseFragment() {
     }
 
     override fun initView() {
-        mnemonic_input_1.addTextChangedListener {
+        editTextMnemonics.addTextChangedListener {
             checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_2.requestFocus()
-                mnemonic_input_2.setSelection(mnemonic_input_2.text.toString().length)
-            }
-        }
-        mnemonic_input_2.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_3.requestFocus()
-                mnemonic_input_3.setSelection(mnemonic_input_3.text.toString().length)
-            }
-        }
-        mnemonic_input_3.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_4.requestFocus()
-                mnemonic_input_4.setSelection(mnemonic_input_4.text.toString().length)
-            }
-        }
-        mnemonic_input_4.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_5.requestFocus()
-                mnemonic_input_5.setSelection(mnemonic_input_5.text.toString().length)
-            }
-        }
-        mnemonic_input_5.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_6.requestFocus()
-                mnemonic_input_6.setSelection(mnemonic_input_6.text.toString().length)
-            }
-        }
-        mnemonic_input_6.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_7.requestFocus()
-                mnemonic_input_7.setSelection(mnemonic_input_7.text.toString().length)
-            }
-        }
-        mnemonic_input_7.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_8.requestFocus()
-                mnemonic_input_8.setSelection(mnemonic_input_8.text.toString().length)
-            }
-        }
-        mnemonic_input_8.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_9.requestFocus()
-                mnemonic_input_9.setSelection(mnemonic_input_9.text.toString().length)
-            }
-        }
-        mnemonic_input_9.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_10.requestFocus()
-                mnemonic_input_10.setSelection(mnemonic_input_10.text.toString().length)
-            }
-        }
-        mnemonic_input_10.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_11.requestFocus()
-                mnemonic_input_11.setSelection(mnemonic_input_11.text.toString().length)
-            }
-        }
-        mnemonic_input_11.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                mnemonic_input_12.requestFocus()
-                mnemonic_input_12.setSelection(mnemonic_input_12.text.toString().length)
-            }
-        }
-        mnemonic_input_12.addTextChangedListener {
-            checkInput()
-            if (it.toString().isNotEmpty()) {
-                requireActivity().hideKeyboard()
-            }
         }
         previous.setDelayClickListener { finishActivity() }
         next.setOnClickListener {
-            val mnemonics = StringBuilder().apply {
-                append(mnemonic_input_1.text.toString()).append(" ")
-                append(mnemonic_input_2.text.toString()).append(" ")
-                append(mnemonic_input_3.text.toString()).append(" ")
-                append(mnemonic_input_4.text.toString()).append(" ")
-                append(mnemonic_input_5.text.toString()).append(" ")
-                append(mnemonic_input_6.text.toString()).append(" ")
-                append(mnemonic_input_7.text.toString()).append(" ")
-                append(mnemonic_input_8.text.toString()).append(" ")
-                append(mnemonic_input_9.text.toString()).append(" ")
-                append(mnemonic_input_10.text.toString()).append(" ")
-                append(mnemonic_input_11.text.toString()).append(" ")
-                append(mnemonic_input_12.text.toString())
-            }
-            viewModel.setMnemonics(mnemonics.toString())
+            val mnemonics = editTextMnemonics.text.toString()
+            viewModel.setMnemonics(mnemonics)
         }
         // debug mode data
         if (BuildConfig.DEBUG) {
             title_tv.setDelayClickListener {
-                mnemonic_input_1.setText("患")
-                mnemonic_input_2.setText("烘")
-                mnemonic_input_3.setText("杭")
-                mnemonic_input_4.setText("有")
-                mnemonic_input_5.setText("六")
-                mnemonic_input_6.setText("污")
-                mnemonic_input_7.setText("星")
-                mnemonic_input_8.setText("吏")
-                mnemonic_input_9.setText("踏")
-                mnemonic_input_10.setText("师")
-                mnemonic_input_11.setText("业")
-                mnemonic_input_12.setText("材")
+                editTextMnemonics.setText(
+                    "患 烘 杭 有 六 污 星 吏 踏 师 业 材"
+                )
             }
         }
     }
@@ -189,19 +88,20 @@ class RestoreByMnemonicsFragment : BaseFragment() {
 
     private fun checkInput() {
         next.setEnable(
-            mnemonic_input_1.text.toString().isNotEmpty() &&
-                    mnemonic_input_1.text.toString().isNotEmpty() &&
-                    mnemonic_input_2.text.toString().isNotEmpty() &&
-                    mnemonic_input_3.text.toString().isNotEmpty() &&
-                    mnemonic_input_4.text.toString().isNotEmpty() &&
-                    mnemonic_input_5.text.toString().isNotEmpty() &&
-                    mnemonic_input_6.text.toString().isNotEmpty() &&
-                    mnemonic_input_7.text.toString().isNotEmpty() &&
-                    mnemonic_input_8.text.toString().isNotEmpty() &&
-                    mnemonic_input_9.text.toString().isNotEmpty() &&
-                    mnemonic_input_10.text.toString().isNotEmpty() &&
-                    mnemonic_input_11.text.toString().isNotEmpty() &&
-                    mnemonic_input_12.text.toString().isNotEmpty()
+            editTextMnemonics.text.toString().isNotEmpty()
+//            mnemonic_input_1.text.toString().isNotEmpty() &&
+//                    mnemonic_input_1.text.toString().isNotEmpty() &&
+//                    mnemonic_input_2.text.toString().isNotEmpty() &&
+//                    mnemonic_input_3.text.toString().isNotEmpty() &&
+//                    mnemonic_input_4.text.toString().isNotEmpty() &&
+//                    mnemonic_input_5.text.toString().isNotEmpty() &&
+//                    mnemonic_input_6.text.toString().isNotEmpty() &&
+//                    mnemonic_input_7.text.toString().isNotEmpty() &&
+//                    mnemonic_input_8.text.toString().isNotEmpty() &&
+//                    mnemonic_input_9.text.toString().isNotEmpty() &&
+//                    mnemonic_input_10.text.toString().isNotEmpty() &&
+//                    mnemonic_input_11.text.toString().isNotEmpty() &&
+//                    mnemonic_input_12.text.toString().isNotEmpty()
         )
     }
 }

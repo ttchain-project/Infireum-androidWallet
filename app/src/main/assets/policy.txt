@@ -1,0 +1,123 @@
+<br>
+<h4>Article 1 Purpose and Basis.</h4>
+<br>
+In order to provide the services of the Platform to Users, INFIREUM needs collect some of your information when you register with the Platform, log in to the Platform and/or use the services offered by the Platform. This Privacy Policy, in combination with INFIREUM Global’s User Service Agreement, User Service Agreement for the INFIREUM Global APP and any other applicable policies, set out the rules as to the use and protection of the collected information in order to prevent misuse.
+<br>
+<h4>Article 2 Designation.</h4>
+<br>
+<blockquote>For the convenience of wording in this agreement (the “Agreement”), the Platform is referred to as “we”, “us” or “our”. Users of and other visitors to the Platform are referred to as “you”, “your” or “User”. We and you are collectively referred to as “both parties” and as “a/one party” individually.</blockquote>
+<br>
+<h4>Article 3 Definition and Interpretation.</h4>
+<br>
+The following terms or expressions shall have the meanings ascribed to them below, unless any other term or condition hereunder provides otherwise:
+<OL>
+<LI>(1) Personal Information:<p>all information that is recorded electronically or otherwise and can be used, whether independently or in combination with any other information, to identify any particular natural person or reflect the pattern of behaviour, including, but not limited to, sensitive personal information;</p>
+</LI>
+<LI>(2) Sensitive Personal Information:<p>including but not limited to identity card and other proof of identity documents details, personal biometric information, bank account details, registered address, whereabouts, transaction information, etc.;</p>
+</LI>
+<LI>(3) Deletion of personal information:<p>
+the deletion of personal information from any system involved in carrying out routine business functions so that such personal information cannot be accessed or retrieved.</p>
+</LI>
+</OL>
+
+<br>
+<h4>Article 4 Scope of Application.</h4>
+<br>
+This Agreement shall apply to all Users trading on the INFIREUM Global website and on its APP (the "Platform"). Users shall comply with the terms and conditions of this Agreement, subject to and as permitted by any and all laws relating to the protection of personal information and data in the country or region where they are based.
+<br>
+<h4>Article 5 Invocation.</h4>
+<br>
+Any code or statutory decree or administrative regulation referred to in this Agreement shall refer to the latest amended version thereof, regardless of whether such amendment is made before or after the signing of this Agreement.
+<br>
+<h4>Article 6 Headings.</h4>
+<br>
+The headings used in this Agreement are for convenience only and shall not be used for the purpose of interpreting the terms and conditions of this Agreement. References herein to any statement, term, condition, annex, schedule shall refer to statements, terms, conditions, annexes and schedules hereunder.
+<br>
+<h4>Article 7 Use of the term "include".</h4>
+<br>
+The term “include” used herein shall, under any and all circumstances always have the meaning of “include but not limited to”, unless this Agreement specifies otherwise.
+<br>
+<h4>Article 8 User Consent and Authorization.</h4>
+<br>
+The Users acknowledge and understand that, at the point of logging into the Platform, the User will be deemed to have expressed to us their acceptance, consent, undertaking and confirmation of the following, regardless of whether the User has completed their registration on the Platform:
+(1) that the User agrees, on a voluntary basis, to disclose personal information to us;
+(2) the User agrees and authorises the Platform to collect the User’s personal information when the User registers with the Platform, logs into the Platform and/or uses the Platform services;
+(3) the User agrees to all the terms and conditions of this Agreement and agrees to accept any amendment that may subsequently be made to the Privacy Policy;
+(4) the User agrees that any of our branch companies, subsidiary companies, or employees will contact the User in connection with any product and service that may be of interest to the User (unless the User has indicated that he or she does not wish to receive such information).
+<br>
+<h4>Article 9 Information Collected.</h4>
+<br>
+The Users agree that the Platform may use cookies to track the User’s actions in connection with their use of the Platform and may collect and record all information left by Users, including but not limited to their IP address, geographical location and other data.
+<br>
+<h4>Article 10 Supply of Information.</h4>
+<br>
+If Users voluntarily use the services provided by the Platform, they will be required to fill in and/or provide the following two categories of information in accordance with the requirements of Chapter III of the User Service Agreement of INFIREUM Global and the corresponding clauses of the Anti-Money-Laundering and Anti-Terrorism Financing Rules of INFIREUM Global:
+(1) Identity Information:
+this category of the User information, which may help the Platform verify whether the User is eligible to register on the Platform, includes, but is not limited to: the User's full name, registered address, postal address, official proof of identity documents and the document numbers, as well as all other information that may assist the Platform in verifying the User’s identity (hereinafter collectively referred to as "Identity Information");
+(2) Service Information:
+this category of User information helps the Platform to contact the User and to provide a smooth service experience It includes, but is not limited to, the User’s telephone number, fax number, valid email address, postal address, and debit card information and/or other account information (hereinafter collectively referred to as "Service Information").
+<br>
+<h4>Article 11 Changes in the Method of Information Collection.</h4>
+<br>
+When a User uses this Website or the services provided by this Website, the Platform may collect additional necessary information by an email box that is exclusively owned by the Platform and released to the public via the Platform or by any other method that is deemed as in compliance with relevant laws and regulations, so as to improve the functionality of the Platform and enhance the Users' experience of using the Platform services and the security thereof, or as is required by any order of a court, any applicable law or regulation, or any other competent government agency.
+<br>
+>h4>Article 12 Third-party Websites.</h4>
+<br>
+If an User visits any link on this Website that leads to a third party website or to a third-party partner’s website, the User agrees to and shall comply with the separate and independent privacy policies of such third party websites. The User understands and acknowledges that the Platform is not responsible for the content or activities of such third-party websites or partners.
+<br>
+<h4>Article 13 Installation of Cookies.</h4>
+<br>
+When an User visits the Platform, the Platform will use Google Stats via Cookies to record the Platform’s performance and check the effectiveness of online advertising. Cookies are a small amount of data that is sent to the User’s browser and stored in the User’s computer hard drive. Only when the User uses his/her computer to access the Platform can the Cookies be sent to the User’s computer hard drive.
+<br>
+<h4>Article 14 Function of Cookies.</h4>
+<br>
+Cookies are frequently used to record the habits and preferences of visitors when they browse various items on the Platform. Cookies collect anonymous collective statistics which do not contain personal data. Cookies cannot be used to obtain data from the User’ hard drive, the User’s email address or personal data; they can enable the Platform or a service provider’s system to recognize the User’s web browser as well as capture and remember information.
+<br>
+<h4>Article 15 Disabling Cookies.</h4>
+<br>
+Most browsers are preset to accept Cookies and Users can choose to set their web browsers to reject Cookies or to notify Users upon the installation of Cookies. Users should be aware that they may be unable to start or use certain features of the Platform if they opt to disable Cookies.
+<br>
+<h4>Article 16 Use of Information.</h4>
+<br>
+The information collected by the Platform is used by the Platform for the following purposes or in the following manner:
+(1) to provide the Users with the Platform’s services via the Platform;
+(2) to identify and confirm the Users’ identities when Users use the Platform;
+(3) to improve and upgrade the services of the Platform (the Users' information and feedback received by the Platform can help the Platform improve the services of the Platform, so that the Platform can respond to the Users' service requests and support needs in a more effective manner);
+(4) to keep statistics relating to the use of the Platform and for use in data analysis carried out in cooperation with government agencies and public affairs institutions;
+(5) to personalise the User experience (more specifically, the User information will help the Platform to better respond to each User's personalised needs);
+(6) to facilitate transactions. The Users' personal information will not be sold, exchanged, transferred, or otherwise provided to any third party company on any ground without the Users' consent, except for where doing so is expressly for the purpose of completing the transactions the Users require;
+(7) to send regular emails. More specifically, email addresses will be used by the Platform to send Users newsletters, updates, relevant product or service information, as well as announcements and updates on the Users’ orders;
+(8) to fulfill other purposes as specified in the User Service Agreement and to be used for all the legal means adopted for fulfilling such purposes.
+<br>
+<h4>Article 17 Information Disclosure to Third Parties.</h4>
+<br>
+The Platform does not sell, trade, or otherwise transfer information or allow any other party to collect or use any information from our Platform. However, this does not involve the following parties and does not include the following information: the Platform's affiliates, trusted third parties who help the Platform operate the Platform's websites, manage the Platform's business or provide services to Users, provided that these parties agree to keep such information confidential. If the Platform discloses information to the above-mentioned parties, such information disclosure shall in accordance with any applicable laws, regulations, rules or by any order of any court or other competent authorities, or necessary for executing the strategy of the Platform and ensuring the proper functioning of the Website, or as may be necessary for the related parties to provide services, or for the protection of the rights, property or safety of us or other persons. Any such information disclosure will not be used by any of the above-mentioned parties for marketing, advertising or any other purpose that has not been agreed on by all the parties concerned.
+<br>
+<h4>Article 18 Protection of Personal Data.</h4>
+<br>
+The Platform adopts appropriate physical, electronic, management and technical measures to protect and safeguard the security of the Users' personal data. The Platform will, to the greatest extent possible, ensure that any personal data collected through the Platform shall be free from being subject to nuisance by any third party unrelated to us. The security measures that the Platform may take include but are not limited to:
+(1) Physical measures: records of Users' personal information will be stored in an appropriately secure location.
+(2) Electronic measures: computer data containing Users' personal information will be stored in computer systems and storage medias that are subject to strict login restrictions.
+(3) Management measures: only staff members duly authorized by the Platform may access the Users' personal data and such staff members shall comply with the Platform’s internal code concerning personal data confidentiality.
+(4) Technical measures: encryption techniques such as Secure Socket Layer Encryption may be used to transmit Users' personal data.
+(5) Other measures: the Platform’s network servers are protected by a proper "firewall".
+<br>
+<h4>Article 19 Reporting of Flaws.</h4>
+<br>
+If any User becomes aware of any security flaw in the Platform, the User should contact the Platform through the service email promptly so that the Platform can take appropriate measures to address any such flaw as soon as possible.
+<br>
+<h4>Article 20 Exemption.</h4>
+<br>
+Despite the above-mentioned technical and security measures, the Platform cannot guarantee that the information transmitted via the Internet is absolutely safe, so the Platform does not provide any guarantees with respect to the security of the personal information that the Users provide to the Platform; and the Platform may not be held liable for any loss or damage arising from or caused by any event that may occur in connection with unauthorized access to the Users’ personal information.
+<br>
+<h4>Article 21 Amendment of this Agreement.</h4>
+<br>
+The Platform reserves the right to modify this Agreement at any time. The Platform will inform the Users of the amendments made to the Privacy Policy by releasing updates thereof, publishing the effective date of new versions thereof and highlighting the amendments thereto. Sometimes, but not always, the Platform may issue a notice to Users to inform them of any amendments made to the Privacy Policy. Users shall regularly review the Privacy Policy and focus on amendments thereto, if any; and if the Users do not agree to any such amendments, the Users shall promptly stop accessing this Website. Whenever an updated version of this Privacy Policy is released, the User’s continued access to and use of this Website shall demonstrate the User’s agreement to the updated version of the Privacy Policy.
+<br>
+<h4>Article 22 Communication with Us.</h4>
+<br>
+Any User comments or feedback should be sent to the following email address: service@ INFIREUMplus.io. This is the only valid and official email address through which the Platform communicates with Users. If an User uses any other means of communication to contact the Platform, the Platform shall not be obliged to reply and the Platform will not be held liable in any manner whatsoever.
+<br>
+<h4>Article 23 Publication of Announcements.</h4>
+<br>
+The Platform publishes announcements and information exclusively via the use of valid and up-to-date contact information provided to this Website or by posting announcements on the Platform. Therefore, the Platform shall not be held liable for any loss arising from any User’s trust in any information that is obtained in any manner other than the above-mentioned means.

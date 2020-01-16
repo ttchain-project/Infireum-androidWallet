@@ -417,7 +417,7 @@
 
     <string name="pwd_confirm">再次輸入密碼</string>
     <string name="click_to_display_backup_qrcode">點選顯示備份行動條碼</string>
-    <string name="backup_qrcode_tip">此行動條碼為甜甜圈錢包為您貼心設計，供您日後可方便快速恢復您在甜甜圈錢上的所有錢包帳號。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
+    <string name="backup_qrcode_tip">此行動條碼為 INFIREUM 錢包為您貼心設計，供您日後可方便快速恢復您在 INFIREUM 上的所有錢包帳號。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
 
     <!--main-->
     <string name="tab_chat">聊天</string>
@@ -523,7 +523,7 @@
     <!--login-->
     <string name="login_by_qrcode">使用《行動條碼》登入帳號</string>
     <string name="login_by_mnemonics">使用《助記詞》登入帳號</string>
-    <string name="agree_privacy_policy">我同意《TTChain隱私政策》</string>
+    <string name="agree_privacy_policy">我同意《INFIREUM隱私政策》</string>
 
     <!--asset list-->
     <string name="main_chain_assets">主鏈總資產</string>
@@ -579,7 +579,7 @@
     <string name="select_receive_currency">請選擇收到幣種</string>
 
     <string name="guide_dialog_title">歡迎使用閃兌交易</string>
-    <string name="guide_dialog_message">這裡是TTChain閃電支付錢包，您可以在這裡體驗TTChain鏈上的秒速到帳交易功能。\n\n如果您是第一次使用，我們只需要花費幾秒鐘的時間來為您做簡易的操作導覽。</string>
+    <string name="guide_dialog_message">這裡是INFIREUM閃電支付錢包，您可以在這裡體驗INFIREUM鏈上的秒速到帳交易功能。\n\n如果您是第一次使用，我們只需要花費幾秒鐘的時間來為您做簡易的操作導覽。</string>
     <string name="ttn_skip">略過</string>
     <string name="ttn_guide">開始導覽</string>
     <string name="bolt_balance">餘額： %1$s %2$s</string>
@@ -591,65 +591,65 @@
     <string name="ttn_end">結束</string>
 
     <!--lightning exchange policy-->
-    <string name="policy_title">《 TTChainWallet兌換服務協議 》</string>
+    <string name="policy_title">《 INFIREUMWallet兌換服務協議 》</string>
     <string name="policy_update_time">最近更新於：2019年10月24日</string>
     <string name="policy_content">附 1： 閃兌交易服務條款\n
 1、TTN的定義與意義\n
-TTN 是TTChain交易平台本身的權益證明，平台通用基礎通證，TTN作為TTChain去中心化交易平台的基礎幣種和交易燃料費，持有、交易TTN都可以享受\n
+TTN 是INFIREUM交易平台本身的權益證明，平台通用基礎通證，TTN作為INFIREUM去中心化交易平台的基礎幣種和交易燃料費，持有、交易TTN都可以享受\n
 平台的各項權益和福利。同時，TTN持有者也可以參與TTN的社區治理。\n
-*關於TTN平台幣的更多使用說明與其在TTChain公鏈上的應用，請詳閱TTChain官網最新版本白皮書為主。\n
+*關於TTN平台幣的更多使用說明與其在INFIREUM公鏈上的應用，請詳閱INFIREUM官網最新版本白皮書為主。\n
 \n
 2、聲明\n
- 本附件條款屬於《用戶服務協議》的有效組成部分，與主協議不可分割且具有同等法律效力。如果存在某一（些）條款與《用戶服務協議》產生爭議，我公司擁有最終解釋權。您在使用TTChain平台提供的閃兌交易服務之前，必須同意接受本條款。當您按照我們的約定填寫信息、提交文件、閱讀並同意本協議且完成註冊程序後，即表示您已充分閱讀、理解並接受本協議的全部內容。如您不同意接受其中任何條款約定，您應立即停止註冊程序並停止使用相關服務。\n
+ 本附件條款屬於《用戶服務協議》的有效組成部分，與主協議不可分割且具有同等法律效力。如果存在某一（些）條款與《用戶服務協議》產生爭議，我公司擁有最終解釋權。您在使用INFIREUM平台提供的閃兌交易服務之前，必須同意接受本條款。當您按照我們的約定填寫信息、提交文件、閱讀並同意本協議且完成註冊程序後，即表示您已充分閱讀、理解並接受本協議的全部內容。如您不同意接受其中任何條款約定，您應立即停止註冊程序並停止使用相關服務。\n
 \n
 3、服務內容\n
- 3.1 TTChain平台向您提供區塊鏈資產交易技術服務，並在用戶需要時提供仲裁服務，以便促成您與其他用戶之間達成閃兌交易。\n
+ 3.1 INFIREUM平台向您提供區塊鏈資產交易技術服務，並在用戶需要時提供仲裁服務，以便促成您與其他用戶之間達成閃兌交易。\n
 \n
- 3.2 為避免誤解，特澄清如下：TTChain平台並不提供區塊鏈資產的自營買賣服務，亦不提供交易中介及定價服務。閃兌交易服務是為您和其他用戶之間提供技術支持，協助您與其他用戶之間達成閃兌交易的網絡信息技術平台。您應該事先自行與其他用戶聯繫並達成交易意向。TTChain平台不對交易過程中產生的糾紛或爭議承擔責任，也不對任何一方使用閃兌交易服務過程中可能遭受的損失承擔責任，雙方應自行解決相關事宜，無法協商一致的可以請求TTChain仲裁、或者起訴和您進行交易的對方用戶。\n
+ 3.2 為避免誤解，特澄清如下：INFIREUM平台並不提供區塊鏈資產的自營買賣服務，亦不提供交易中介及定價服務。閃兌交易服務是為您和其他用戶之間提供技術支持，協助您與其他用戶之間達成閃兌交易的網絡信息技術平台。您應該事先自行與其他用戶聯繫並達成交易意向。INFIREUM平台不對交易過程中產生的糾紛或爭議承擔責任，也不對任何一方使用閃兌交易服務過程中可能遭受的損失承擔責任，雙方應自行解決相關事宜，無法協商一致的可以請求INFIREUM仲裁、或者起訴和您進行交易的對方用戶。\n
 \n
- 3.3 對於您使用閃兌交易服務向其他用戶或區塊鏈礦工等各方所提供的服務而支付或收取的費用，將由參與交易各方自行互相提供相應的收據，與TTChain平台無關。\n
+ 3.3 對於您使用閃兌交易服務向其他用戶或區塊鏈礦工等各方所提供的服務而支付或收取的費用，將由參與交易各方自行互相提供相應的收據，與INFIREUM平台無關。\n
 \n
 4、閃兌交易服務使用規則\n
- 4.1用戶承擔TTChain錢包密語、賬號與密碼的保管責任，並就其賬號及密碼項下之一切活動（不論是否由用戶本人所為或得用戶本人授權而為）負全部責任。用戶賬號不是TTChain錢包密語，與用戶持有的區塊鏈資產無直接關聯，僅在使用TTChain服務時使用，收回賬號不會造成用戶的區塊鏈資產所有權變化或丟失。\n
+ 4.1用戶承擔INFIREUM錢包密語、賬號與密碼的保管責任，並就其賬號及密碼項下之一切活動（不論是否由用戶本人所為或得用戶本人授權而為）負全部責任。用戶賬號不是INFIREUM錢包密語，與用戶持有的區塊鏈資產無直接關聯，僅在使用INFIREUM服務時使用，收回賬號不會造成用戶的區塊鏈資產所有權變化或丟失。\n
 \n
- 4.2 用戶不應將其TTChain密語、賬號、密碼轉讓或出借予他人使用。如用戶發現其賬號遭他人非法使用，應立即通知本公司。因黑客行為或用戶的保管疏忽導致賬號、密碼遭他人非法使用所發生的一切責任，均應由用戶本人承擔，本公司不承擔任何責任。若因此造成本公司責任，用戶同意賠償本公司的損失。\n
+ 4.2 用戶不應將其INFIREUM密語、賬號、密碼轉讓或出借予他人使用。如用戶發現其賬號遭他人非法使用，應立即通知本公司。因黑客行為或用戶的保管疏忽導致賬號、密碼遭他人非法使用所發生的一切責任，均應由用戶本人承擔，本公司不承擔任何責任。若因此造成本公司責任，用戶同意賠償本公司的損失。\n
 \n
-4.3 當您使用閃兌交易服務與其他用戶產生糾紛時，TTChain或TTChain授權的第三方或您與TTChain一致同意的第三方有權基於您不可撤銷的授權受理您與其他會員因交易產生的爭議，並有權單方判斷與該爭議相關的事實及應適用的規則，進而作出處理決定，包括但不限於調整相關訂單的交易狀態，指令第三方支付公司或者客服將爭議貨款的全部或部分支付給交易一方或雙方。該處理決定對您有約束力。\n
+4.3 當您使用閃兌交易服務與其他用戶產生糾紛時，INFIREUM或INFIREUM授權的第三方或您與INFIREUM一致同意的第三方有權基於您不可撤銷的授權受理您與其他會員因交易產生的爭議，並有權單方判斷與該爭議相關的事實及應適用的規則，進而作出處理決定，包括但不限於調整相關訂單的交易狀態，指令第三方支付公司或者客服將爭議貨款的全部或部分支付給交易一方或雙方。該處理決定對您有約束力。\n
 \n
- 4.4 您理解並同意，TTChain或TTChain授權的第三方或您與TTChain一致同意的第三方並非司法機構，僅能以普通人的身份對證據進行鑑別，TTChain或TTChain授權的第三方或您與TTChain一致同意的第三方對爭議的調處完全是基於您不可撤銷得授權，其無法保證爭議處理結果符合您的期望，也不對爭議調處結論承擔任何責任。如您因此遭受損失，您同意自行向受益人索償。\n
+ 4.4 您理解並同意，INFIREUM或INFIREUM授權的第三方或您與INFIREUM一致同意的第三方並非司法機構，僅能以普通人的身份對證據進行鑑別，INFIREUM或INFIREUM授權的第三方或您與INFIREUM一致同意的第三方對爭議的調處完全是基於您不可撤銷得授權，其無法保證爭議處理結果符合您的期望，也不對爭議調處結論承擔任何責任。如您因此遭受損失，您同意自行向受益人索償。\n
 \n
-4.5 用戶在使用TTChain平台閃兌交易服務過程中，必須遵循以下原則：\n
+4.5 用戶在使用INFIREUM平台閃兌交易服務過程中，必須遵循以下原則：\n
 \n
   •遵守安哥拉共和國有關的法律和法規；\n
   •遵守用戶所在國家或地區有關的法律和法規；\n
   •遵守所有與網絡服務有關的網絡協議、規定和程序；\n
   •不得為任何非法目的而使用網絡服務系統；\n
-  •不得以任何形式使用TTChain平台服務侵犯本公司的商業利益，包括但不限於發布非經本公司許可的商業廣告；\n
-  •不得利用TTChain平台網絡服務系統進行任何可能對互聯網或移動網正常運轉造成不利影響的行為\n
+  •不得以任何形式使用INFIREUM平台服務侵犯本公司的商業利益，包括但不限於發布非經本公司許可的商業廣告；\n
+  •不得利用INFIREUM平台網絡服務系統進行任何可能對互聯網或移動網正常運轉造成不利影響的行為\n
   •不得利用本產品提供的網絡服務上傳、展示或傳播任何虛假的、騷擾性的、中傷他人的、辱罵性的、恐嚇性的、庸俗淫穢的或其他任何非法的信息數據；\n
   •不得侵犯其他任何第三方的專利權、著作權、商標權、名譽權或其他任何合法權益；\n
-  •不得利用TTChain平台服務系統進行任何不利於本公司的行為。\n
+  •不得利用INFIREUM平台服務系統進行任何不利於本公司的行為。\n
 \n
 5、風險提示\n
 \n
-5.1您了解並知悉，由於區塊鏈資產領域的法律法規政策尚未健全，該領域的數字代幣可能會產生無法兌現，技術變量等重大風險。對於其他金融資產。我們謹慎提醒您根據自身財務狀況和風險偏好，以合理的方式選擇持有或處置任何一種區塊鏈資產。您也了解TTChain提供的行情查看功能僅系抓取部分交易所的數字代幣匯率信息的搜索結果，並不表示為最新行情或最佳報價。\n
+5.1您了解並知悉，由於區塊鏈資產領域的法律法規政策尚未健全，該領域的數字代幣可能會產生無法兌現，技術變量等重大風險。對於其他金融資產。我們謹慎提醒您根據自身財務狀況和風險偏好，以合理的方式選擇持有或處置任何一種區塊鏈資產。您也了解INFIREUM提供的行情查看功能僅系抓取部分交易所的數字代幣匯率信息的搜索結果，並不表示為最新行情或最佳報價。\n
 \n
-5.2在使用TTChain服務時，若您或您的相對方未遵從本協議或相關網站說明，交易，支付頁面中之操作提示，規則，本公司並不保證交易會順利完成，且本公司不承擔責任損害賠償責任。如果發生重疊，而資金已先行入賬您的或您的交易方的TTChain錢包或第三方錢包，您理解區塊鏈操作具有的“不可逆”屬性，以及相關交易具有“不可撤銷”的特徵，由您及您的相對方自行承擔相應的風險後果。\n
+5.2在使用INFIREUM服務時，若您或您的相對方未遵從本協議或相關網站說明，交易，支付頁面中之操作提示，規則，本公司並不保證交易會順利完成，且本公司不承擔責任損害賠償責任。如果發生重疊，而資金已先行入賬您的或您的交易方的INFIREUM錢包或第三方錢包，您理解區塊鏈操作具有的“不可逆”屬性，以及相關交易具有“不可撤銷”的特徵，由您及您的相對方自行承擔相應的風險後果。\n
 \n
-5.3您理解並知悉，閃兌和幣幣兌換交易均值在第三方智能合約上發生，進行並完成。TTChain僅作為界面工具幫助用戶和第三方智能合約交互並顯示該已完成交易的相應結果。\n
+5.3您理解並知悉，閃兌和幣幣兌換交易均值在第三方智能合約上發生，進行並完成。INFIREUM僅作為界面工具幫助用戶和第三方智能合約交互並顯示該已完成交易的相應結果。\n
 \n
-5.4在您通過TTChain使用第三方服務時，本公司強烈建議您仔細閱讀這些第三方服務的用戶協議，所有權政策和其他相關的文件和信息等，了解交易對象及產品信息，謹慎評估風險後再在該第三方上進行交易。您理解該交易和有約束力的合同關係在您和您的相對方之間建立，與本公司無關。本公司對因您的交易行為造成的一切風險，責任，損失，費用不承擔任何責任。\n
+5.4在您通過INFIREUM使用第三方服務時，本公司強烈建議您仔細閱讀這些第三方服務的用戶協議，所有權政策和其他相關的文件和信息等，了解交易對象及產品信息，謹慎評估風險後再在該第三方上進行交易。您理解該交易和有約束力的合同關係在您和您的相對方之間建立，與本公司無關。本公司對因您的交易行為造成的一切風險，責任，損失，費用不承擔任何責任。\n
 \n
 5.5當您將區塊鏈資產轉給其他錢包地址時，您在交易過程中是否自行判斷對方是否為完全民事行為能力人並自行決定是否與對方進行交易或轉賬給對方等。\n
 \n
 5.6在轉賬過程中，如果出現“交易失敗”，“打包超時”等類似的異常信息提示時，您應通過相關區塊鏈系統的官方途徑或其他的區塊鏈查詢工具進行再次確認，以避免重複轉賬；否則，引發所引起的一切損失和費用應由您自行承擔。\n
 \n
-5.7您理解當您在TTChain上創建或引入錢包之後，您的密鑰庫，私鑰，助記詞等信息僅存儲在當前的這台移動設備中，不存儲在TTChain或本公司的服務器上。可以按照TTChain提供的操作指南採取同步錢包等方式更換移動設備。但如果您未保存或備份錢包密碼，私鑰，助記詞，密鑰庫等信息且在您移動設備丟失的情況下，您的區塊鏈資產將因此丟失，本公司無法為您找回。若您在導出，保存或備份錢包密碼，私鑰，助記詞，Keystore等信息的時候洩密，或保存或備份上述信息的設備或服務器被黑客竊取攻擊或控制等情況下，您的區塊鏈資產將因此丟失，本公司無法為您找回。原因導致產生的任何及所有損失應由您自行承擔。\n
+5.7您理解當您在INFIREUM上創建或引入錢包之後，您的密鑰庫，私鑰，助記詞等信息僅存儲在當前的這台移動設備中，不存儲在INFIREUM或本公司的服務器上。可以按照INFIREUM提供的操作指南採取同步錢包等方式更換移動設備。但如果您未保存或備份錢包密碼，私鑰，助記詞，密鑰庫等信息且在您移動設備丟失的情況下，您的區塊鏈資產將因此丟失，本公司無法為您找回。若您在導出，保存或備份錢包密碼，私鑰，助記詞，Keystore等信息的時候洩密，或保存或備份上述信息的設備或服務器被黑客竊取攻擊或控制等情況下，您的區塊鏈資產將因此丟失，本公司無法為您找回。原因導致產生的任何及所有損失應由您自行承擔。\n
 \n
 \n</string>
-    <string name="policy_agreement">我同意《 TTChainWallet兌換服務協議 》</string>
+    <string name="policy_agreement">我同意《 INFIREUM Wallet兌換服務協議 》</string>
 
-    <string name="privacy_title">《 TTChainWallet隱私政策 》</string>
+    <string name="privacy_title">《 INFIREUM Wallet隱私政策 》</string>
     <string name="privacy_update_time">最近更新於：2018年12月18日</string>
     <string name="app_restart_title">應用程式即將重啟</string>
     <string name="app_restart_message">重啟後即更換語言</string>
@@ -671,7 +671,7 @@ TTN 是TTChain交易平台本身的權益證明，平台通用基礎通證，TTN
 
     <string name="image_display_msg">開啟檔案</string>
     <string name="delete_account_title">確定要刪除帳號嗎？</string>
-    <string name="delete_account_message">刪除帳號後將清空TTChain App內所有的紀錄，請務必確認已經儲存備份的資訊後再執行。\n\n請注意，如在無備份帳號的情況下刪除帳號將永遠無法尋回帳號和內含的錢包等資產。</string>
+    <string name="delete_account_message">刪除帳號後將清空INFIREUM App內所有的紀錄，請務必確認已經儲存備份的資訊後再執行。\n\n請注意，如在無備份帳號的情況下刪除帳號將永遠無法尋回帳號和內含的錢包等資產。</string>
     <string name="delete_account_confirm_title">即將刪除帳號</string>
     <string name="delete_account_confirm_message">確認刪除後會立即重啟</string>
 
@@ -740,7 +740,7 @@ TTN 是TTChain交易平台本身的權益證明，平台通用基礎通證，TTN
     <string name="transaction_was_not_completed_title">BTC、USDT-Omni無法連續轉帳！</string>
     <string name="transaction_was_not_completed_message">剛轉出的 BTC、USDT-Omni 還未到帳，再轉第二筆為什麼會提示轉帳失敗？
 這是因為比特幣公鏈的設計邏輯關係，第一筆轉帳會佔用 UTXO（未消費的交易輸出）直至轉帳成功後才可被釋放。建議您等待第一筆 BTC、USDT-Omni 轉帳成功後，再操作第二筆。
-建議解決方式：使用TTChain公鏈轉賬BTC、USDT-Omni即可連續轉帳。
+建議解決方式：使用INFIREUM公鏈轉賬BTC、USDT-Omni即可連續轉帳。
 </string>
 
     <!-- Authentication -->
@@ -759,7 +759,7 @@ TTN 是TTChain交易平台本身的權益證明，平台通用基礎通證，TTN
     <string name="import_wallet_by_prk_enter_wallet_name_hint">請為新建的錢包命名</string>
     <string name="import_wallet_by_prk_enter_wallet_password">錢包密碼</string>
     <string name="import_wallet_by_prk_enter_wallet_password_confirm">再次輸入錢包密碼</string>
-    <string name="import_wallet_by_prk_tip_1">TTChain團隊不會保存您的錢包密碼，也無法在您遺失錢包密碼時協助尋回，請謹慎設立密碼與密碼提示。</string>
+    <string name="import_wallet_by_prk_tip_1">INFIREUM團隊不會保存您的錢包密碼，也無法在您遺失錢包密碼時協助尋回，請謹慎設立密碼與密碼提示。</string>
     <string name="import_wallet_by_prk_tip_2">如遺忘密碼將一併遺失錢包內的資產，請特別注意。</string>
 
 
@@ -897,7 +897,7 @@ TTN 是TTChain交易平台本身的權益證明，平台通用基礎通證，TTN
     <string name="restore_with_user_info_nick_confirm_password_hint">請再次輸入密碼</string>
     <string name="restore_with_user_info_nick_hint_password">密碼提示訊息</string>
     <string name="restore_with_user_info_nick_hint_password_hint">提示內容請勿與密碼一樣，以免被輕易盜取</string>
-    <string name="restore_with_user_info_nick_policy">我同意《TTChain隱私政策》</string>
+    <string name="restore_with_user_info_nick_policy">我同意《INFIREUM隱私政策》</string>
     <string name="account_info">帳號資訊</string>
 
     <!-- wallet settting fargment -->
@@ -934,16 +934,19 @@ TTN 是TTChain交易平台本身的權益證明，平台通用基礎通證，TTN
     <string name="create_wallet_by_hd_wallet_name_eth_hint">請為新建的乙太幣錢包命名</string>
     <string name="create_wallet_by_hd_wallet_password">錢包密碼</string>
     <string name="create_wallet_by_hd_wallet_confirm_password">再次輸入錢包密碼</string>
-    <string name="create_wallet_by_hd_wallet_tip_1">TTChain團隊不會保存您的錢包密碼，也無法在您遺失錢包密碼時協助尋回，請謹慎設立密碼與密碼提示。</string>
+    <string name="create_wallet_by_hd_wallet_tip_1">INFIREUM團隊不會保存您的錢包密碼，也無法在您遺失錢包密碼時協助尋回，請謹慎設立密碼與密碼提示。</string>
     <string name="create_wallet_by_hd_wallet_tip_2">如遺忘密碼將一併遺失錢包內的資產，請特別注意。</string>
 
     <string name="please_check_btc_wallet">請查看BTC錢包</string>
     <string name="please_check_usdt_wallet">請查看USDT錢包</string>
 
     <!-- fragment mnemonic start -->
-    <string name="mnemonic_start_tip_1">此行動條碼備份內容包含：所有TTChainWallet創建錢包及閃電錢包、聊天身分與聊天紀錄。</string>
-    <string name="mnemonic_start_tip_2">此行動條碼為TTChain為您貼心設計，供您日後可以方便快速恢復您帳號上的所有錢包。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
+    <string name="mnemonic_start_tip_1">此行動條碼備份內容包含：所有 INFIREUM Wallet 創建錢包及閃電錢包、聊天身分與聊天紀錄。</string>
+    <string name="mnemonic_start_tip_2">此行動條碼為 INFIREUM 為您貼心設計，供您日後可以方便快速恢復您帳號上的所有錢包。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
 
     <!-- restore by mnemonics -->
     <string name="restore_by_mnemonics_tip_2">輸入中文助記詞，共 12 個中文字</string>
+
+    <string name="mnemonic_start_warring_title">您確定要略過嗎？</string>
+    <string name="mnemonic_start_warring_message">備份帳號行動碼與您日後要維護資產安全、恢復帳號等動作相當重要。\n\n如在無備份帳號的情況下遺失手機或各種意外導致帳號遺失，將永遠無法尋回。</string>
 </resources>

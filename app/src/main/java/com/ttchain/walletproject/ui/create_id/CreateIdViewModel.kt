@@ -29,24 +29,8 @@ class CreateIdViewModel(
         buttonEnable.value = b
     }
 
-    fun onCreateClick(name: String, pwd: String, confirmPwd: String, note: String) {
+    fun onCreateClick(pwd: String, confirmPwd: String, note: String) {
         var isCorrect = true
-        when {
-            name.isEmpty() -> {
-                isCorrect = false
-                nameErrorLiveData.value = context.getString(R.string.g_e_emptyform)
-            }
-            RuleUtils.hasSpaceInStartOrEndOfString(name) -> {
-                isCorrect = false
-                nameErrorLiveData.value =
-                    context.getString(R.string.error_input_with_space_at_start_or_end)
-            }
-            !RuleUtils.isValidUserNameLength(name) -> {
-                isCorrect = false
-                nameErrorLiveData.value = context.getString(R.string.error_input_content_too_long)
-            }
-            else -> nameErrorLiveData.value = ""
-        }
         when {
             pwd.isEmpty() -> {
                 isCorrect = false
@@ -77,8 +61,7 @@ class CreateIdViewModel(
         when {
             note.isEmpty() -> {
                 isCorrect = false
-                noteErrorLiveData.value = ""
-                //                mView.setNoteError(mContext.getString(R.string.g_e_emptyform));
+                noteErrorLiveData.value = context.getString(R.string.g_e_emptyform)
             }
             RuleUtils.hasSpaceInStartOrEndOfString(note) -> {
                 isCorrect = false
@@ -93,7 +76,6 @@ class CreateIdViewModel(
         }
         if (isCorrect) {
             mUserBean = UserBean().apply {
-                this.name = name
                 this.pwd = pwd
                 this.note = note
                 pwdEncrypt = verifyRepository.encryptString(pwd)

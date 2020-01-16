@@ -5,17 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-
-    <com.ttchain.walletproject.view.CustomEditTextItem
-        android:id="@+id/customEditTextNickName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_16"
-        app:editTextHint="@string/restore_with_user_info_nick_name_hint"
-        app:editTextType="none"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleText="@string/restore_with_user_info_nick_name" />
-
     <com.ttchain.walletproject.view.CustomEditTextItem
         android:id="@+id/customEditTextPassword"
         android:layout_width="match_parent"
@@ -23,7 +12,7 @@
         android:layout_marginTop="@dimen/padding_16"
         app:editTextHint="@string/create_id_password"
         app:editTextType="password"
-        app:layout_constraintTop_toBottomOf="@+id/customEditTextNickName"
+        app:layout_constraintTop_toTopOf="parent"
         app:titleText="@string/pwd" />
 
     <com.ttchain.walletproject.view.CustomEditTextItem
@@ -50,10 +39,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/padding_24"
         app:layout_constraintBottom_toTopOf="@+id/create"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customEditTextHint">
+        app:layout_constraintStart_toStartOf="parent">
 
         <CheckBox
             android:id="@+id/agreement_ckb"

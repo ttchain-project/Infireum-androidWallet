@@ -37,7 +37,6 @@ class CreateIdFragment : BaseFragment() {
         }
         create.setOnClickListener {
             viewModel.onCreateClick(
-                customEditTextNickName.getText(),
                 customEditTextPassword.getText(),
                 customEditTextConfirmPassword.getText(),
                 customEditTextHint.getText()
@@ -45,9 +44,6 @@ class CreateIdFragment : BaseFragment() {
         }
         previous.setDelayClickListener {
             finishActivity()
-        }
-        customEditTextNickName.addTextChangeListener {
-            setCreateButtonEnable(!it.isNullOrEmpty())
         }
         customEditTextPassword.addTextChangeListener {
             setCreateButtonEnable(!it.isNullOrEmpty())
@@ -74,9 +70,6 @@ class CreateIdFragment : BaseFragment() {
             buttonEnable.observe(requireActivity()) {
                 create.setEnable(it)
             }
-            nameErrorLiveData.observe(requireActivity()) { msg ->
-                customEditTextNickName.setError(msg)
-            }
             pwdErrorLiveData.observe(requireActivity()) { msg ->
                 customEditTextPassword.setError(msg)
             }
@@ -84,7 +77,7 @@ class CreateIdFragment : BaseFragment() {
                 customEditTextConfirmPassword.setError(msg)
             }
             noteErrorLiveData.observe(requireActivity()) {
-                // note error gone
+                customEditTextHint.setError(it)
             }
             performCreateAccountRequestLiveData.observe(requireActivity()) {
                 if (mUserBean != null)

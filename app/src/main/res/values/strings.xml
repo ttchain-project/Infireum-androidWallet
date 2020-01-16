@@ -417,8 +417,7 @@
 
     <string name="pwd_confirm">Confirm password</string>
     <string name="click_to_display_backup_qrcode">Click to display backup qrcode</string>
-    <string name="backup_qrcode_tip">此行動條碼為甜甜圈錢包為您貼心設計，供您日後可方便快速恢復您在甜甜圈錢上的所有錢包帳號。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
-
+    <string name="backup_qrcode_tip">This mobile barcode is designed for you by the INFIREUM wallet, so that you can easily and quickly restore all your wallet accounts on INFIREUM in the future. \ n \ nBack up your account information properly and do not upload to Drive or access it on any public network. This is crucial for your future actions such as maintaining asset security and restoring your account.</string>
     <!--main-->
     <string name="tab_chat">Chat</string>
     <string name="tab_main_coin">Ｍain Chain</string>
@@ -615,9 +614,9 @@ TTN is the proof of the rights of TTChain trading platform itself. TTN is the ba
 8. We make no representation that any materials or Services on TTChain are appropriate, lawful or available in any locations out of Republic of Angola. If you choose to access our services from other locations instead of Republic of Angola, we assume absolutely no responsibility whatsoever in respect of any breach of the local law of your jurisdiction.\n
 \n
 \n</string>
-    <string name="policy_agreement">I agree《TTChainWallet Exchange Agreement》</string>
+    <string name="policy_agreement">I agree《INFIREUM Wallet Exchange Agreement》</string>
 
-    <string name="privacy_title">《TTChainWallet Privacy Policy》</string>
+    <string name="privacy_title">《INFIREUM Wallet Privacy Policy》</string>
     <string name="privacy_update_time">Last updated on: December 18, 2018</string>
     <string name="app_restart_title">The application will restart</string>
     <string name="app_restart_message">Change language after reboot</string>
@@ -911,9 +910,14 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
     <string name="please_check_usdt_wallet">Please check USDT wallet</string>
 
     <!-- fragment mnemonic start -->
-    <string name="mnemonic_start_tip_1">This mobile barcode backup contains: all TTChainWallet-created wallets and lightning wallets, chat identity and chat history.</string>
-    <string name="mnemonic_start_tip_2">This mobile barcode is designed by TTChain for you, so that you can easily and quickly restore all wallets on your account in the future.\n\n Make a backup copy of your account information and do not upload to Drive or access it on any public network. This is important for your future actions such as maintaining asset security and restoring your account.</string>
+    <string name="mnemonic_start_tip_1">This mobile barcode backup contains: all INFIREUM Wallet-created wallets and lightning wallets, chat identity and chat history.</string>
+    <string name="mnemonic_start_tip_2">This mobile barcode is designed by INFIREUM for you, so that you can easily and quickly restore all wallets on your account in the future.\n\n Make a backup copy of your account information and do not upload to Drive or access it on any public network. This is important for your future actions such as maintaining asset security and restoring your account.</string>
 
     <!-- restore by mnemonics -->
     <string name="restore_by_mnemonics_tip_2">Enter Chinese mnemonics, a total of 12 Chinese characters</string>
+
+
+    <string name="mnemonic_start_warring_title"> Are you sure you want to skip it? </string>
+    <string name="mnemonic_start_warring_message"> Backing up your account action code is very important for your future actions such as maintaining asset security and restoring your account. \ n \ nIf you lose your phone without a backup account, or if you lose your account due to various accidents, it will never be recovered. </string>
+
 </resources>
