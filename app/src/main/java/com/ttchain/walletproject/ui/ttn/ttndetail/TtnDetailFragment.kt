@@ -151,7 +151,7 @@ class TtnDetailFragment : BaseFragment() {
         when (viewModel.coinId) {
             CoinEnum.TTN.coinId -> setTitleAndIcon(
                 coinName,
-                R.mipmap.wallet_ttchain_logo
+                R.mipmap.ic_launcher_round
             )
             CoinEnum.BTCN.coinId -> setTitleAndIcon(
                 coinName,

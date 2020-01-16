@@ -111,7 +111,7 @@ class CommonAddressViewModel(
             mainCoinType === MainCoinType.BTC -> R.mipmap.icon_funds_bitcoin
             mainCoinType === MainCoinType.CIC -> R.mipmap.icon_list_cic_normal
             mainCoinType === MainCoinType.GUC -> R.mipmap.icon_list_guc_normal
-            else -> R.mipmap.wallet_coin_ttn_small
+            else -> R.mipmap.ic_launcher_round
         }
     }
 
