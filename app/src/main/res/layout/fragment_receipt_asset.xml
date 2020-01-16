@@ -65,8 +65,8 @@
 
         <ImageView
             android:id="@+id/qrcode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="216dp"
+            android:layout_height="216dp"
             android:layout_centerInParent="true"
             tools:src="@mipmap/ic_launcher" />
 
