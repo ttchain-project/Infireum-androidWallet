@@ -73,15 +73,6 @@ class LoginFragment : BaseFragment() {
             qrCodeParseLiveData.observe(requireActivity()) {
                 EnterPasswordActivity.launch(requireActivity(), it)
             }
-            hintLiveData.observe(requireActivity()) {
-                showInputDialog(
-                    getString(R.string.input_pwd),
-                    getString(R.string.input_pwd_to_parse_qr_code),
-                    it
-                ) { input ->
-                    getInput(input)
-                }
-            }
             hintErrorLiveData.observe(requireActivity()) {
                 onShowMessageDialog(getString(R.string.parse_qr_code_error))
             }
