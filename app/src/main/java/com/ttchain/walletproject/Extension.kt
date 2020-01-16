@@ -235,8 +235,8 @@ fun String.handleAmount(coinId: String): String {
 /**
  * 鏈 host
  */
-const val mainNetHost = "http://3.112.106.186" //主鏈 host
-const val testNetHost = "http://52.196.91.185" //測試鏈 AWS host
+const val mainNetHost = "http://3.1.196.86" //主鏈 host
+const val testNetHost = "http://3.1.196.86" //測試鏈 AWS host
 /**
  * 鏈 Server Port
  */
