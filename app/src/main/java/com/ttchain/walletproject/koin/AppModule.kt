@@ -9,6 +9,7 @@ import com.ttchain.walletproject.model.*
 import com.ttchain.walletproject.repository.*
 import com.ttchain.walletproject.ui.agreement.AgreementViewModel
 import com.ttchain.walletproject.ui.asset.AssetListViewModel
+import com.ttchain.walletproject.ui.asset_manage.AssetManageViewModel
 import com.ttchain.walletproject.ui.coin_record.CoinRecordViewModel
 import com.ttchain.walletproject.ui.coin_record.list.CoinRecordListViewModel
 import com.ttchain.walletproject.ui.coin_transfer.CoinTransferViewModel
@@ -31,6 +32,7 @@ import com.ttchain.walletproject.ui.me.usinglocker.UsingLockerViewModel
 import com.ttchain.walletproject.ui.receiptasset.ReceiptAssetViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.RestoreNoUserInfoViewModel
+import com.ttchain.walletproject.ui.search_coin.SearchCoinViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
 import com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultViewModel
 import com.ttchain.walletproject.ui.trend.TrendViewModel
@@ -75,6 +77,8 @@ val viewModelModule = module {
             get()
         )
     }
+    viewModel { AssetManageViewModel(get()) }
+    viewModel { SearchCoinViewModel(get(), get(), get(), get(), get(), get()) }
 
     viewModel { WalletMainViewModel(get(), get(), get()) }
     viewModel { WalletListViewModel(get(), get(), get(), get(), get(), get(), get(), get()) }
