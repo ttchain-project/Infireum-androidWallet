@@ -49,7 +49,8 @@ fun BaseDialogFragment.clear() {
 
 fun BaseDialogFragment.setBehaviorView(view: View) {
     view.parent?.let {
-        mBehavior = com.google.android.material.bottomsheet.BottomSheetBehavior.from(view.parent as View)
+        mBehavior =
+            com.google.android.material.bottomsheet.BottomSheetBehavior.from(view.parent as View)
     }
 }
 
@@ -219,9 +220,6 @@ fun String.handleAmount(coinId: String): String {
         CoinEnum.MCC.coinId -> {
             NumberUtils.show(NumberUtils.valueOf(this, 18), showNumber)
         }
-        CoinEnum.TTN1.coinId -> {
-            NumberUtils.show(NumberUtils.valueOf(this, 18), showNumber)
-        }
         CoinEnum.DAI1.coinId -> {
             NumberUtils.show(NumberUtils.valueOf(this, 18), showNumber)
         }
@@ -243,6 +241,7 @@ const val testNetHost = "http://52.196.91.185" //測試鏈 AWS host
  * 鏈 Server Port
  */
 const val serverPort = 9998
+
 fun getTtnServerNet(): String {
     return when {
         isMainNet -> "$mainNetHost:$serverPort/"
@@ -254,6 +253,7 @@ fun getTtnServerNet(): String {
  * 鏈 Client Port
  */
 const val clientPort = 9997
+
 fun getTtnClientNet(): String {
     return when {
         isMainNet -> "$mainNetHost:$clientPort/"

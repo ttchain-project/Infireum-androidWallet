@@ -72,8 +72,6 @@ class TtnRecordViewModel(
                             baseMainModel.getCoinDataByCoinId(CoinEnum.EXR.coinId)
                         mccCoinData =
                             baseMainModel.getCoinDataByCoinId(CoinEnum.MCC.coinId)
-                        ttn1CoinData =
-                            baseMainModel.getCoinDataByCoinId(CoinEnum.TTN1.coinId)
                         dai1CoinData =
                             baseMainModel.getCoinDataByCoinId(CoinEnum.DAI1.coinId)
                         tusd1CoinData =

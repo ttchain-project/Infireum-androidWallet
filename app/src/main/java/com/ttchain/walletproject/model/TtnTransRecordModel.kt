@@ -23,7 +23,6 @@ class TtnTransRecordModel {
     var ethnCoinData: CoinData? = null
     var exrCoinData: CoinData? = null
     var mccCoinData: CoinData? = null
-    var ttn1CoinData: CoinData? = null
     var dai1CoinData: CoinData? = null
     var tusd1CoinData: CoinData? = null
 
@@ -66,7 +65,6 @@ class TtnTransRecordModel {
             data.out!![0].token == CoinEnum.ETHN.inputName -> usdtnCoinData
             data.out!![0].token == CoinEnum.EXR.inputName -> exrCoinData
             data.out!![0].token == CoinEnum.MCC.inputName -> mccCoinData
-            data.out!![0].token == CoinEnum.TTN1.inputName -> ttn1CoinData
             data.out!![0].token == CoinEnum.DAI1.inputName -> dai1CoinData
             data.out!![0].token == CoinEnum.TUSD1.inputName -> tusd1CoinData
             else -> null
@@ -111,44 +109,39 @@ class TtnTransRecordModel {
 
         var balance = NumberUtils.valueOf(0.0)
 
-        when {
-            mCoinData.coinId == CoinEnum.TTN.coinId ->
+        when (mCoinData.coinId) {
+            CoinEnum.TTN.coinId ->
                 balance = data.balance?.let {
                     if (it.isNotEmpty()) NumberUtils.valueOf(it, 18) else NumberUtils.valueOf(0.0)
                 } ?: run {
                     NumberUtils.valueOf(0.0)
                 }
-            mCoinData.coinId == CoinEnum.BTCN.coinId -> for (outData in data.out!!) {
+            CoinEnum.BTCN.coinId -> for (outData in data.out!!) {
                 if (outData.token == CoinEnum.BTCN.inputName) {
                     balance = NumberUtils.valueOf(outData.balance, 8)
                 }
             }
-            mCoinData.coinId == CoinEnum.USDTN.coinId -> for (outData in data.out!!) {
+            CoinEnum.USDTN.coinId -> for (outData in data.out!!) {
                 if (outData.token == CoinEnum.USDTN.inputName) {
                     balance = NumberUtils.valueOf(outData.balance, 8)
                 }
             }
-            mCoinData.coinId == CoinEnum.EXR.coinId -> for (outData in data.out!!) {
+            CoinEnum.EXR.coinId -> for (outData in data.out!!) {
                 if (outData.token == CoinEnum.EXR.inputName) {
                     balance = NumberUtils.valueOf(outData.balance, 18)
                 }
             }
-            mCoinData.coinId == CoinEnum.MCC.coinId -> for (outData in data.out!!) {
+            CoinEnum.MCC.coinId -> for (outData in data.out!!) {
                 if (outData.token == CoinEnum.MCC.inputName) {
                     balance = NumberUtils.valueOf(outData.balance, 18)
                 }
             }
-            mCoinData.coinId == CoinEnum.TTN1.coinId -> for (outData in data.out!!) {
-                if (outData.token == CoinEnum.TTN1.inputName) {
-                    balance = NumberUtils.valueOf(outData.balance, 18)
-                }
-            }
-            mCoinData.coinId == CoinEnum.DAI1.coinId -> for (outData in data.out!!) {
+            CoinEnum.DAI1.coinId -> for (outData in data.out!!) {
                 if (outData.token == CoinEnum.DAI1.inputName) {
                     balance = NumberUtils.valueOf(outData.balance, 18)
                 }
             }
-            mCoinData.coinId == CoinEnum.TUSD1.coinId -> for (outData in data.out!!) {
+            CoinEnum.TUSD1.coinId -> for (outData in data.out!!) {
                 if (outData.token == CoinEnum.TUSD1.inputName) {
                     balance = NumberUtils.valueOf(outData.balance, 18)
                 }

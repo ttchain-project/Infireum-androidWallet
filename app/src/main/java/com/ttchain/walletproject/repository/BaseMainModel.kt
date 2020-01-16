@@ -141,15 +141,15 @@ open class BaseMainModel(
         return mDbHelper.getCoinDataByCoinId(coinId)
     }
 
-    fun getMainCoinDataByAddress(chainType: Int): CoinData {
-        val coinDataList = mDbHelper.getCoinDataListByWalletTypeId(chainType)
-        for (item in coinDataList) {
-            if (item.coinId == item.mainCoinId) {
-                return item
-            }
-        }
-        return CoinData()
-    }
+//    fun getMainCoinDataByAddress(chainType: Int): CoinData {
+//        val coinDataList = mDbHelper.getCoinDataListByWalletTypeId(chainType)
+//        for (item in coinDataList) {
+//            if (item.coinId == item.mainCoinId) {
+//                return item
+//            }
+//        }
+//        return CoinData()
+//    }
 
     fun getMainCoinDataByAddress(address: String): CoinData {
         val coinId = RuleUtils.getMainCoinId(address)

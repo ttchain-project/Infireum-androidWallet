@@ -70,16 +70,16 @@ class RuleUtils {
             return isValidPattern(LOWER_CASE_WORD_EXPRESSION_PATTERN, string)
         }
 
-        @JvmStatic
-        fun isValidAddress(address: String, type: Int): Boolean {
-            return when (type) {
-                GlobalConstant.WALLET_TYPE_ETH -> isValidPattern(ETH_ADDRESS_PATTERN, address)
-                GlobalConstant.WALLET_TYPE_CIC -> isValidPattern(CIC_ADDRESS_PATTERN, address)
-                GlobalConstant.WALLET_TYPE_GUC -> isValidPattern(GUC_ADDRESS_PATTERN, address)
-                GlobalConstant.WALLET_TYPE_BTC -> isValidPattern(BTC_ADDRESS_PATTERN, address)
-                else -> false
-            }
-        }
+//        @JvmStatic
+//        fun isValidAddress(address: String, type: Int): Boolean {
+//            return when (type) {
+//                GlobalConstant.WALLET_TYPE_ETH -> isValidPattern(ETH_ADDRESS_PATTERN, address)
+//                GlobalConstant.WALLET_TYPE_CIC -> isValidPattern(CIC_ADDRESS_PATTERN, address)
+//                GlobalConstant.WALLET_TYPE_GUC -> isValidPattern(GUC_ADDRESS_PATTERN, address)
+//                GlobalConstant.WALLET_TYPE_BTC -> isValidPattern(BTC_ADDRESS_PATTERN, address)
+//                else -> false
+//            }
+//        }
 
         @JvmStatic
         fun isMainCoinType(address: String, type: MainCoinType): Boolean {

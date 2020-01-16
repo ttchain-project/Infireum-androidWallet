@@ -118,12 +118,6 @@ class TtnDetailFragment : BaseFragment() {
                             fiat = viewModel.getFiat(coinId, amount)
                         }
                     }
-                    CoinEnum.TTN1.coinId -> when {
-                        response.token != null && response.token.ttn1.isNotEmpty() -> {
-                            amount = response.token.ttn1.handleAmount(coinId)
-                            fiat = viewModel.getFiat(coinId, amount)
-                        }
-                    }
                     CoinEnum.DAI1.coinId -> when {
                         response.token != null && response.token.dai1.isNotEmpty() -> {
                             amount = response.token.dai1.handleAmount(coinId)
@@ -178,10 +172,6 @@ class TtnDetailFragment : BaseFragment() {
             CoinEnum.MCC.coinId -> setTitleAndIcon(
                 coinName,
                 R.mipmap.icon_mcc_big
-            )
-            CoinEnum.TTN1.coinId -> setTitleAndIcon(
-                coinName,
-                R.mipmap.wallet_ttchain_logo
             )
             CoinEnum.DAI1.coinId -> setTitleAndIcon(
                 coinName,

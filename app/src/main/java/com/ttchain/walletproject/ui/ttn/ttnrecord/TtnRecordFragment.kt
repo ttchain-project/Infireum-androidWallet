@@ -76,18 +76,11 @@ class TtnRecordFragment : BaseFragment() {
         val coinRecordPagerAdapter = CoinRecordPagerAdapter(
             requireContext(), childFragmentManager, bundleValue
         )
-        if (bundleValue == CoinEnum.TTN1.coinId) {
-            tab_container.visibility = View.GONE
-            view_pager.apply {
-                adapter = coinRecordPagerAdapter
-            }
-        } else {
-            tab_container.visibility = View.VISIBLE
-            tab_layout.setupWithViewPager(view_pager.apply {
-                offscreenPageLimit = 4
-                adapter = coinRecordPagerAdapter
-                currentItem = 0
-            })
-        }
+        tab_container.visibility = View.VISIBLE
+        tab_layout.setupWithViewPager(view_pager.apply {
+            offscreenPageLimit = 4
+            adapter = coinRecordPagerAdapter
+            currentItem = 0
+        })
     }
 }

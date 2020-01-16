@@ -7,7 +7,6 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.ttchain.walletproject.ui.coin_record.list.CoinRecordListFragment
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.cache.GlobalConstant
-import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.model.CoinRecordListBean
 import com.ttchain.walletproject.model.RecordEntity
 
@@ -16,46 +15,35 @@ class CoinRecordPagerAdapter(private val mContext: Context, fm: FragmentManager,
     private val fragmentList: MutableList<Fragment> = arrayListOf()
 
     init {
-        when (coinId) {
-            CoinEnum.TTN1.coinId -> fragmentList.apply {
-                add(
-                    CoinRecordListFragment.newInstance(
-                        CoinRecordListBean(
-                            coinId, RecordEntity.NORMAL, GlobalConstant.TRANSACTION_STATE_ALL
-                        )
+        fragmentList.apply {
+            add(
+                CoinRecordListFragment.newInstance(
+                    CoinRecordListBean(
+                        coinId, RecordEntity.NORMAL, GlobalConstant.TRANSACTION_STATE_ALL
                     )
                 )
-            }
-            else -> fragmentList.apply {
-                add(
-                    CoinRecordListFragment.newInstance(
-                        CoinRecordListBean(
-                            coinId, RecordEntity.NORMAL, GlobalConstant.TRANSACTION_STATE_ALL
-                        )
+            )
+            add(
+                CoinRecordListFragment.newInstance(
+                    CoinRecordListBean(
+                        coinId, RecordEntity.NORMAL, GlobalConstant.TRANSACTION_STATE_OUTCOME
                     )
                 )
-                add(
-                    CoinRecordListFragment.newInstance(
-                        CoinRecordListBean(
-                            coinId, RecordEntity.NORMAL, GlobalConstant.TRANSACTION_STATE_OUTCOME
-                        )
+            )
+            add(
+                CoinRecordListFragment.newInstance(
+                    CoinRecordListBean(
+                        coinId, RecordEntity.NORMAL, GlobalConstant.TRANSACTION_STATE_INCOME
                     )
                 )
-                add(
-                    CoinRecordListFragment.newInstance(
-                        CoinRecordListBean(
-                            coinId, RecordEntity.NORMAL, GlobalConstant.TRANSACTION_STATE_INCOME
-                        )
+            )
+            add(
+                CoinRecordListFragment.newInstance(
+                    CoinRecordListBean(
+                        coinId, RecordEntity.NORMAL, GlobalConstant.TRANSACTION_STATE_FAIL
                     )
                 )
-                add(
-                    CoinRecordListFragment.newInstance(
-                        CoinRecordListBean(
-                            coinId, RecordEntity.NORMAL, GlobalConstant.TRANSACTION_STATE_FAIL
-                        )
-                    )
-                )
-            }
+            )
         }
     }
 

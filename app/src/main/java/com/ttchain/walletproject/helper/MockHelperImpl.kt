@@ -25,7 +25,6 @@ class MockHelperImpl(private val mContext: Context) : MockHelper {
             list.add(usdtTetherCoinData)
             //ttn coin
             list.add(ttnCoinData)
-            list.add(ttn1CoinData)
             list.add(btcnCoinData)
             list.add(ethnCoinData)
             list.add(usdtnCoinData)
@@ -301,7 +300,7 @@ class MockHelperImpl(private val mContext: Context) : MockHelper {
     private val ttnCoinData: CoinData
         get() {
             val data = CoinData()
-            data.chainType = GlobalConstant.WALLET_TYPE_GUC
+            data.chainType = 6
             data.coinId = CoinEnum.TTN.coinId
             data.contract = ""
             data.chainName = CoinEnum.TTN.coinName
@@ -313,24 +312,6 @@ class MockHelperImpl(private val mContext: Context) : MockHelper {
             data.iconPath = "https://hopeseed-api.bibi2u.com/images/Icon/USDT.png"
             data.mainCoinId = CoinEnum.TTN.coinId
             data.displayName = CoinEnum.TTN.coinName
-            return data
-        }
-
-    private val ttn1CoinData: CoinData
-        get() {
-            val data = CoinData()
-            data.chainType = GlobalConstant.WALLET_TYPE_GUC
-            data.coinId = CoinEnum.TTN1.coinId
-            data.contract = ""
-            data.chainName = CoinEnum.TTN1.coinName
-            data.fullName = CoinEnum.TTN1.coinName
-            data.digit = 18
-            data.isDefault = true
-            data.isDefaultSelected = true
-            data.isActive = true
-            data.iconPath = "https://hopeseed-api.bibi2u.com/images/Icon/USDT.png"
-            data.mainCoinId = CoinEnum.TTN.coinId
-            data.displayName = CoinEnum.TTN1.coinName
             return data
         }
 

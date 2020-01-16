@@ -42,15 +42,16 @@ class WalletListViewModel(
 
     fun getRateAndWalletData() {
         total = BigDecimal("0")
-        viewModelLaunch({
-            val result = helperRepository.allCoinToCurrency(coinRepository.getUserPrefFiatName())
+        viewModelScope.launch(customExceptionHandler {
+            getWalletData()
+            getRateAndWalletDataErrorLiveData.value = true
+        }) {
+            val result =
+                helperRepository.allCoinToCurrency(coinRepository.getUserPrefFiatName())
             fiatSymbol = coinRepository.getUserPrefFiatSymbol()
             rateList = result.data.orEmpty()
             getWalletData()
-        }, {
-            getWalletData()
-            getRateAndWalletDataErrorLiveData.value = true
-        })
+        }
     }
 
     fun getIdentityData(): IdentityData {

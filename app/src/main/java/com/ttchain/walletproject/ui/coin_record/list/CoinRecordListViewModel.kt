@@ -55,8 +55,7 @@ class CoinRecordListViewModel(
             mCoinId == CoinEnum.EXR.coinId ||
             mCoinId == CoinEnum.MCC.coinId ||
             mCoinId == CoinEnum.DAI1.coinId ||
-            mCoinId == CoinEnum.TUSD1.coinId ||
-            mCoinId == CoinEnum.TTN1.coinId
+            mCoinId == CoinEnum.TUSD1.coinId
         ) {
             queryBean = RecordQueryBean(
                 baseMainModel.ttnWalletID,

@@ -15,8 +15,6 @@ class TtnBalanceData {
     var exr = ""
     @SerializedName("mcc")
     var mcc = ""
-    @SerializedName("ttn1")
-    var ttn1 = ""
     @SerializedName("dai1")
     var dai1 = ""
     @SerializedName("tusd1")
