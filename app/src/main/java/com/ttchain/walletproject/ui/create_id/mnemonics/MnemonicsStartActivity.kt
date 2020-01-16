@@ -60,7 +60,7 @@ class MnemonicsStartActivity : BaseActivity() {
             MainActivity.launch(this)
         }
         create.setDelayClickListener {
-            onbackUp()
+            onBackUp()
         }
     }
 
@@ -90,7 +90,7 @@ class MnemonicsStartActivity : BaseActivity() {
         }
     }
 
-    private fun onbackUp() {
+    private fun onBackUp() {
         RxPermissions(this)
             .request(
                 Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -113,7 +113,7 @@ class MnemonicsStartActivity : BaseActivity() {
             .setBtnText(getString(R.string.g_confirm), getString(R.string.setting_backup_account))
             .setLeftBtnRedBg()
             .setOnLeftClickListener {
-                onbackUp()
+                onBackUp()
             }
             .setOnRightClickListener {
                 finishActivity()
