@@ -19,10 +19,6 @@ class MeViewModel(
     private val infoRepositoryCo: InfoRepositoryCo
 ):BaseViewModel() {
 
-    fun setNotificationSwitchOn(switchOn: Boolean) {
-        userHelp.setNotificationSwitchOn(switchOn)
-    }
-
     var performGetVersionLiveData = MutableLiveData<ApiVersionData>()
     fun performGetVersion() {
         viewModelLaunch {

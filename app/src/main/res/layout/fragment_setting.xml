@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/_F9F9F9">
@@ -12,49 +11,6 @@
         android:orientation="vertical"
         android:paddingBottom="100dp">
 
-        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--            android:id="@+id/top_container"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="100dp"-->
-        <!--            android:background="@color/_354252"-->
-        <!--            app:layout_constraintTop_toTopOf="parent">-->
-
-        <!--            <de.hdodenhof.circleimageview.CircleImageView-->
-        <!--                android:id="@+id/avatar_iv"-->
-        <!--                android:layout_width="56dp"-->
-        <!--                android:layout_height="56dp"-->
-        <!--                android:layout_marginStart="@dimen/padding_16"-->
-        <!--                app:civ_border_color="@color/white"-->
-        <!--                app:civ_border_width="2dp"-->
-        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--                app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--                app:layout_constraintTop_toTopOf="parent"-->
-        <!--                tools:src="@mipmap/user_avatar_default_01_180" />-->
-
-        <!--            <TextView-->
-        <!--                android:id="@+id/user_name_tv"-->
-        <!--                style="@style/PrimaryWhiteText.Small"-->
-        <!--                android:layout_width="0dp"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginStart="@dimen/padding_16"-->
-        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--                app:layout_constraintLeft_toRightOf="@+id/avatar_iv"-->
-        <!--                app:layout_constraintRight_toLeftOf="@+id/user_setting_btn"-->
-        <!--                app:layout_constraintTop_toTopOf="parent"-->
-        <!--                tools:text="你的名字你的名字" />-->
-
-        <!--            <ImageButton-->
-        <!--                android:id="@+id/user_setting_btn"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:background="@android:color/transparent"-->
-        <!--                android:padding="14dp"-->
-        <!--                android:src="@mipmap/tt_icon_setting"-->
-        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--                app:layout_constraintRight_toRightOf="parent"-->
-        <!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
         <TextView
             android:id="@+id/system_setting_tv"
@@ -65,26 +21,6 @@
             android:layout_marginTop="@dimen/padding_24"
             android:text="@string/setting_system_setting"
             android:textColor="@color/_506EF5" />
-
-<!--        <TextView-->
-<!--            android:id="@+id/textViewNotification"-->
-<!--            style="@style/PrimaryBlackText.SuperSmall"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="@dimen/padding_8"-->
-<!--            android:background="@drawable/ripple_white"-->
-<!--            android:clickable="true"-->
-<!--            android:drawableStart="@mipmap/setting_icon_message"-->
-<!--            android:drawableEnd="@mipmap/btn_next"-->
-<!--            android:drawablePadding="@dimen/padding_14"-->
-<!--            android:focusable="true"-->
-<!--            android:gravity="center_vertical"-->
-<!--            android:paddingStart="@dimen/padding_20"-->
-<!--            android:paddingTop="@dimen/padding_14"-->
-<!--            android:paddingEnd="@dimen/padding_18"-->
-<!--            android:paddingBottom="@dimen/padding_14"-->
-<!--            android:text="@string/setting_msg_notification"-->
-<!--            android:textColor="@color/_354252" />-->
 
         <TextView
             android:id="@+id/textViewLanguage"

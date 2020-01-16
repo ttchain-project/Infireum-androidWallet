@@ -10,7 +10,6 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.lifecycle.observe
-import com.afollestad.materialdialogs.MaterialDialog
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.downloader.Error
@@ -54,14 +53,6 @@ class MeFragment : BaseFragment() {
     }
 
     override fun initView() {
-//        textViewNotification?.setDelayClickListener {
-//            MaterialDialog.Builder(requireActivity()).items(
-//                getString(R.string.switch_on_notification),
-//                getString(R.string.switch_off_notification)
-//            ).itemsCallback { _, _, position, _ ->
-//                switchOnNotification(position == 0)
-//            }.show()
-//        }
         textViewLanguage?.setDelayClickListener {
             LanguageSettingActivity.launch(requireActivity())
         }
@@ -233,11 +224,6 @@ class MeFragment : BaseFragment() {
                 }
             }
         }
-    }
-
-    private fun switchOnNotification(switchOn: Boolean) {
-        viewModel.setNotificationSwitchOn(switchOn)
-        showToast(getString(R.string.setting_success))
     }
 
     private fun showVerifyDialog() {
