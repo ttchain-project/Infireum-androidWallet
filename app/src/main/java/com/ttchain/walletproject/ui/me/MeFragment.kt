@@ -54,14 +54,14 @@ class MeFragment : BaseFragment() {
     }
 
     override fun initView() {
-        textViewNotification?.setDelayClickListener {
-            MaterialDialog.Builder(requireActivity()).items(
-                getString(R.string.switch_on_notification),
-                getString(R.string.switch_off_notification)
-            ).itemsCallback { _, _, position, _ ->
-                switchOnNotification(position == 0)
-            }.show()
-        }
+//        textViewNotification?.setDelayClickListener {
+//            MaterialDialog.Builder(requireActivity()).items(
+//                getString(R.string.switch_on_notification),
+//                getString(R.string.switch_off_notification)
+//            ).itemsCallback { _, _, position, _ ->
+//                switchOnNotification(position == 0)
+//            }.show()
+//        }
         textViewLanguage?.setDelayClickListener {
             LanguageSettingActivity.launch(requireActivity())
         }
