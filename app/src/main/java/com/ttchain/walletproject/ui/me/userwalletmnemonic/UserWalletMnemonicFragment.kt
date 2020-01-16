@@ -57,47 +57,48 @@ class UserWalletMnemonicFragment : BaseFragment() {
             getMnemonicRx()
             getMnemonicRxLiveData.observe(requireActivity()) {
                 mnemonic = it
+                textViewMnemonics.text = mnemonic
                 val mnemonicList = mnemonic.split(" ")
-                mnemonicList.forEachIndexed { index, s ->
-                    when (index) {
-                        0 -> {
-                            textViewMnemonic1.text = s
-                        }
-                        1 -> {
-                            textViewMnemonic2.text = s
-                        }
-                        2 -> {
-                            textViewMnemonic3.text = s
-                        }
-                        3 -> {
-                            textViewMnemonic4.text = s
-                        }
-                        4 -> {
-                            textViewMnemonic5.text = s
-                        }
-                        5 -> {
-                            textViewMnemonic6.text = s
-                        }
-                        6 -> {
-                            textViewMnemonic7.text = s
-                        }
-                        7 -> {
-                            textViewMnemonic8.text = s
-                        }
-                        8 -> {
-                            textViewMnemonic9.text = s
-                        }
-                        9 -> {
-                            textViewMnemonic10.text = s
-                        }
-                        10 -> {
-                            textViewMnemonic11.text = s
-                        }
-                        11 -> {
-                            textViewMnemonic12.text = s
-                        }
-                    }
-                }
+//                mnemonicList.forEachIndexed { index, s ->
+//                    when (index) {
+//                        0 -> {
+//                            textViewMnemonic1.text = s
+//                        }
+//                        1 -> {
+//                            textViewMnemonic2.text = s
+//                        }
+//                        2 -> {
+//                            textViewMnemonic3.text = s
+//                        }
+//                        3 -> {
+//                            textViewMnemonic4.text = s
+//                        }
+//                        4 -> {
+//                            textViewMnemonic5.text = s
+//                        }
+//                        5 -> {
+//                            textViewMnemonic6.text = s
+//                        }
+//                        6 -> {
+//                            textViewMnemonic7.text = s
+//                        }
+//                        7 -> {
+//                            textViewMnemonic8.text = s
+//                        }
+//                        8 -> {
+//                            textViewMnemonic9.text = s
+//                        }
+//                        9 -> {
+//                            textViewMnemonic10.text = s
+//                        }
+//                        10 -> {
+//                            textViewMnemonic11.text = s
+//                        }
+//                        11 -> {
+//                            textViewMnemonic12.text = s
+//                        }
+//                    }
+//                }
             }
         }
     }

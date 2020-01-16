@@ -417,8 +417,7 @@
 
     <string name="pwd_confirm">Confirm password</string>
     <string name="click_to_display_backup_qrcode">Click to display backup qrcode</string>
-    <string name="backup_qrcode_tip">此行動條碼為甜甜圈錢包為您貼心設計，供您日後可方便快速恢復您在甜甜圈錢上的所有錢包帳號。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
-
+    <string name="backup_qrcode_tip">This mobile barcode is designed for you by the INFIREUM wallet, so that you can easily and quickly restore all your wallet accounts on INFIREUM in the future. \ n \ nBack up your account information properly and do not upload to Drive or access it on any public network. This is crucial for your future actions such as maintaining asset security and restoring your account.</string>
     <!--main-->
     <string name="tab_chat">Chat</string>
     <string name="tab_main_coin">Ｍain Chain</string>
@@ -911,8 +910,8 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
     <string name="please_check_usdt_wallet">Please check USDT wallet</string>
 
     <!-- fragment mnemonic start -->
-    <string name="mnemonic_start_tip_1">This mobile barcode backup contains: all TTChainWallet-created wallets and lightning wallets, chat identity and chat history.</string>
-    <string name="mnemonic_start_tip_2">This mobile barcode is designed by TTChain for you, so that you can easily and quickly restore all wallets on your account in the future.\n\n Make a backup copy of your account information and do not upload to Drive or access it on any public network. This is important for your future actions such as maintaining asset security and restoring your account.</string>
+    <string name="mnemonic_start_tip_1">This mobile barcode backup contains: all INFIREUM Wallet-created wallets and lightning wallets, chat identity and chat history.</string>
+    <string name="mnemonic_start_tip_2">This mobile barcode is designed by INFIREUM for you, so that you can easily and quickly restore all wallets on your account in the future.\n\n Make a backup copy of your account information and do not upload to Drive or access it on any public network. This is important for your future actions such as maintaining asset security and restoring your account.</string>
 
     <!-- restore by mnemonics -->
     <string name="restore_by_mnemonics_tip_2">Enter Chinese mnemonics, a total of 12 Chinese characters</string>

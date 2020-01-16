@@ -417,7 +417,7 @@
 
     <string name="pwd_confirm">再次輸入密碼</string>
     <string name="click_to_display_backup_qrcode">點選顯示備份行動條碼</string>
-    <string name="backup_qrcode_tip">此行動條碼為甜甜圈錢包為您貼心設計，供您日後可方便快速恢復您在甜甜圈錢上的所有錢包帳號。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
+    <string name="backup_qrcode_tip">此行動條碼為 INFIREUM 錢包為您貼心設計，供您日後可方便快速恢復您在 INFIREUM 上的所有錢包帳號。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
 
     <!--main-->
     <string name="tab_chat">聊天</string>
@@ -941,8 +941,8 @@ TTN 是TTChain交易平台本身的權益證明，平台通用基礎通證，TTN
     <string name="please_check_usdt_wallet">請查看USDT錢包</string>
 
     <!-- fragment mnemonic start -->
-    <string name="mnemonic_start_tip_1">此行動條碼備份內容包含：所有TTChainWallet創建錢包及閃電錢包、聊天身分與聊天紀錄。</string>
-    <string name="mnemonic_start_tip_2">此行動條碼為TTChain為您貼心設計，供您日後可以方便快速恢復您帳號上的所有錢包。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
+    <string name="mnemonic_start_tip_1">此行動條碼備份內容包含：所有 INFIREUM Wallet 創建錢包及閃電錢包、聊天身分與聊天紀錄。</string>
+    <string name="mnemonic_start_tip_2">此行動條碼為 INFIREUM 為您貼心設計，供您日後可以方便快速恢復您帳號上的所有錢包。\n\n請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
 
     <!-- restore by mnemonics -->
     <string name="restore_by_mnemonics_tip_2">輸入中文助記詞，共 12 個中文字</string>
