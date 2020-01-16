@@ -32,6 +32,7 @@ import com.ttchain.walletproject.ui.me.usinglocker.UsingLockerViewModel
 import com.ttchain.walletproject.ui.receiptasset.ReceiptAssetViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.RestoreNoUserInfoViewModel
+import com.ttchain.walletproject.ui.restorebymnemonics_new.restorewithuserinfo.RestoreWithUserInfoViewModel
 import com.ttchain.walletproject.ui.search_coin.SearchCoinViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
 import com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultViewModel
@@ -59,6 +60,7 @@ val viewModelModule = module {
     viewModel { MnemonicsStartViewModel(get(), get(), get(), get()) }
     viewModel { RestoreByMnemonicsViewModel(get(), get()) }
     viewModel { RestoreNoUserInfoViewModel(get(), get(), get()) }
+    viewModel { RestoreWithUserInfoViewModel(get(), get(), get()) }
     viewModel { AssetListViewModel(get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordViewModel(get(), get(), get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordListViewModel(get(), get()) }
