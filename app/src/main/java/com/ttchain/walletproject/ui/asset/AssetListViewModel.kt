@@ -27,21 +27,17 @@ class AssetListViewModel(
     private val userHelper: UserHelper,
     private val baseMainModel: BaseMainModel,
     private val coinRepository: CoinRepository,
-    private val helperRepository: HelperRepository,
+    private val helperRepository: HelperRepositoryCo,
     private val balanceApiRepository: BalanceApiRepository,
     private val balanceRepository: BalanceRepository
 ) : BaseRecyclerViewViewModel<CoinEntity>() {
 
     init {
-        add(
-            helperRepository.getAllCoinToCurrency(coinRepository.getUserPrefFiatName())
-                .toMain()
-                .subscribe({
-                    rateList = it.data ?: arrayListOf()
-                }, {
-                    consumerThrowable(it)
-                })
-        )
+        viewModelLaunch({
+            val result = helperRepository.allCoinToCurrency(coinRepository.getUserPrefFiatName())
+            rateList = result.data.orEmpty()
+        }, {
+        })
     }
 
     val performRefreshUiDataSubject = BehaviorSubject.create<RefreshUiDataBean>()

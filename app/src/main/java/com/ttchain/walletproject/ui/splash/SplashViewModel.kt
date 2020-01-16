@@ -3,25 +3,20 @@ package com.ttchain.walletproject.ui.splash
 import androidx.lifecycle.MutableLiveData
 import com.ttchain.walletproject.App.Companion.app
 import com.ttchain.walletproject.App.Companion.rateList
-import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseViewModel
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.model.UserHelper
 import com.ttchain.walletproject.repository.CoinRepository
-import com.ttchain.walletproject.repository.HelperRepository
+import com.ttchain.walletproject.repository.HelperRepositoryCo
 import com.ttchain.walletproject.repository.InfoRepositoryCo
 import com.ttchain.walletproject.repository.SplashRepository
-import com.ttchain.walletproject.toMain
 import com.ttchain.walletproject.utils.RuleUtils
 import com.ttchain.walletproject.utils.Utility
-import io.reactivex.Observable
-import io.reactivex.functions.BiFunction
-import io.reactivex.subjects.BehaviorSubject
 import java.util.*
 
 class SplashViewModel(
     private val infoRepositoryCo: InfoRepositoryCo,
-    private val helperRepository: HelperRepository,
+    private val helperRepositoryCo: HelperRepositoryCo,
     private val splashRepository: SplashRepository,
     private val coinRepository: CoinRepository,
     private val userHelper: UserHelper
@@ -32,180 +27,72 @@ class SplashViewModel(
     var launchMainResult = MutableLiveData<Boolean>()
     var launchLoginResult = MutableLiveData<Boolean>()
 
-    private val firstTaskResultCoinData = BehaviorSubject.create<Boolean>()
-    private val firstTaskResultFiatData = BehaviorSubject.create<Boolean>()
-
-    private val secondTaskResultCheckCoinToFiatRate = BehaviorSubject.create<Boolean>()
-    private val performGetFiatIdToUsdRateDataListSubject = BehaviorSubject.create<Boolean>()
-
-
-    init {
-        add(
-            Observable.combineLatest(
-                firstTaskResultCoinData,
-                firstTaskResultFiatData,
-                BiFunction<Boolean, Boolean, Boolean> { t1, t2 ->
-                    return@BiFunction t1 && t2
-                })
-                .subscribe({
-                    if (it) {
-                        firstTaskResult.value = it
-                    } else {
-                        isPageFinish = true
-                        throwableMessage.value =
-                            app.getString(R.string.error_loading_data_and_try_again)
-                    }
-                }, {
-                    isPageFinish = true
-                    throwableMessage.value = it.message
-                })
-        )
-
-        add(Observable.combineLatest(
-            secondTaskResultCheckCoinToFiatRate,
-            performGetFiatIdToUsdRateDataListSubject,
-            BiFunction<Boolean, Boolean, Boolean> { t1, t2 ->
-                return@BiFunction t1 && t2
-            })
-            .subscribe {
-                syncCoinDataAndCoinSelectionData(CoinEnum.BTC.coinId)
-                syncCoinDataAndCoinSelectionData(CoinEnum.ETH.coinId)
-                updateWalletDataDbMainCoinIdAndChainType()
-                if (userHelper.identityID != -1) {
-                    if (userHelper.userTouchId) {
-                        touchIdResult.value = it
-                    } else {
-                        launchMainResult.value = it
-                    }
-                } else {
-                    launchLoginResult.value = it
-                }
-            }
-        )
-    }
-
     fun performFirstSectionTask() {
         if (Utility.getInternetStatus(app)) {
-            performGetCoinDataList()
-            performGetFiatDataList()
+            performGetCoinListAndFiatList()
         } else {
-            performCheckCoinDbData()
-            performCheckFiatDbData()
+            performCheckCoinDataAndFiatData()
         }
     }
 
     fun performSecondSectionTask() {
-        performCheckCoinToFiatRate()
-        performGetFiatIdToUsdRateDataList()
+        performGetRateListAndUpdateWalletData()
     }
 
-    private fun performCheckCoinDbData() {
-        when {
-            splashRepository.isCoinDataEmpty() -> performCreateDefaultCoinDataList()
-            else -> {
-                firstTaskResultCoinData.onNext(true)
-            }
-        }
-    }
-
-    private fun performCheckFiatDbData() {
-        when {
-            splashRepository.isFiatDataEmpty() -> performCreateDefaultFiatDataList()
-            else -> firstTaskResultFiatData.onNext(true)
-        }
-    }
-
-    private fun performCreateDefaultCoinDataList() {
-        add(Observable.just(splashRepository.createDefaultCoinDataList())
-            .map { list ->
-                splashRepository.updateDefaultCoinDataList(list)
-                true
-            }
-            .toMain()
-            .subscribe({
-                performCheckCoinDbData()
-            }, {
-                isPageFinish = true
-                throwableMessage.value = it.message
-            })
-        )
-    }
-
-    private fun performCreateDefaultFiatDataList() {
-        add(Observable.just(splashRepository.createDefaultFiatDataList())
-            .map { data ->
-                splashRepository.updateDefaultFiatDataList(data)
-                true
-            }
-            .toMain()
-            .subscribe({
-                performCheckFiatDbData()
-            }, {
-                isPageFinish = true
-                throwableMessage.value = it.message
-            })
-        )
-    }
-
-    private fun performGetCoinDataList() {
+    private fun performGetCoinListAndFiatList() {
         viewModelLaunch({
             val result = infoRepositoryCo.getCoinTest()
             val response = result.data
-            coinRepository.updateCoinDataList(response ?: arrayListOf())
-            firstTaskResultCoinData.onNext(true)
+            coinRepository.updateCoinDataList(response.orEmpty())
+            val result2 = helperRepositoryCo.getFiatDataList()
+            val response2 = result2.data
+            splashRepository.updateFiatDataList(response2.orEmpty())
+            firstTaskResult.value = true
         }, {
-            performCheckCoinDbData()
+            performCheckCoinDataAndFiatData()
         })
     }
 
-    private fun performGetFiatDataList() {
-        add(helperRepository.performGetFiatDataList()
-            .map {
-                return@map it.data
+    private fun performCheckCoinDataAndFiatData() {
+        viewModelLaunch({
+            if (splashRepository.isCoinDataEmpty()) {
+                val list = splashRepository.createDefaultCoinDataList()
+                splashRepository.updateDefaultCoinDataList(list)
             }
-            .map {
-                splashRepository.updateFiatDataList(it)
-                return@map true
+            if (splashRepository.isFiatDataEmpty()) {
+                val list = splashRepository.createDefaultFiatDataList()
+                splashRepository.updateDefaultFiatDataList(list)
             }
-            .toMain()
-            .subscribe({
-                firstTaskResultFiatData.onNext(true)
-            }, {
-                performCheckFiatDbData()
-            })
-        )
+            firstTaskResult.value = true
+        }, {
+            isPageFinish = true
+            throwableMessage.value = it.message
+        })
     }
 
-    private fun performCheckCoinToFiatRate() {
-        add(
-            helperRepository.getAllCoinToCurrency(coinRepository.getUserPrefFiatName())
-                .toMain()
-                .subscribe({
-                    rateList = it.data ?: arrayListOf()
-                    secondTaskResultCheckCoinToFiatRate.onNext(true)
-                }, {
-                    secondTaskResultCheckCoinToFiatRate.onNext(true)
-                })
-        )
+    private fun performGetRateListAndUpdateWalletData() {
+        viewModelLaunch({
+            val result = helperRepositoryCo.allCoinToCurrency(coinRepository.getUserPrefFiatName())
+            rateList = result.data.orEmpty()
+            syncCoinDataAndCoinSelectionData(CoinEnum.BTC.coinId)
+            syncCoinDataAndCoinSelectionData(CoinEnum.ETH.coinId)
+            updateWalletDataDbMainCoinIdAndChainType()
+            launchResult()
+        }, {
+            launchResult()
+        })
     }
 
-    private fun performGetFiatIdToUsdRateDataList() {
-        add(helperRepository.performGetFiatIdToUsdRateDataList()
-            .map {
-                return@map it.data
+    private fun launchResult() {
+        if (userHelper.identityID != -1) {
+            if (userHelper.userTouchId) {
+                touchIdResult.value = true
+            } else {
+                launchMainResult.value = true
             }
-            .map {
-                splashRepository.updateFiatIdToUsdRateDataList(it)
-                return@map true
-            }
-            .toMain()
-            .subscribe(
-                {
-                    performGetFiatIdToUsdRateDataListSubject.onNext(true)
-                }, {
-                    performGetFiatIdToUsdRateDataListSubject.onNext(true)
-                })
-        )
+        } else {
+            launchLoginResult.value = true
+        }
     }
 
     private fun syncCoinDataAndCoinSelectionData(mainCoinId: String) {

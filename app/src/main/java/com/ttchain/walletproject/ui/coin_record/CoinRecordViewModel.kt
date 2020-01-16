@@ -8,7 +8,6 @@ import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.enums.MainCoinType
 import com.ttchain.walletproject.model.CoinRecordBean
 import com.ttchain.walletproject.repository.*
-import com.ttchain.walletproject.toMain
 import com.ttchain.walletproject.utils.RuleUtils
 import com.ttchain.walletproject.utils.Utils
 
@@ -20,7 +19,7 @@ class CoinRecordViewModel(
     private val omniExplorerRepository: OmniExplorerRepository,
     private val blockExplorerRepository: BlockExplorerRepository,
     private val baseCoinRecordRepository: BaseCoinRecordRepository,
-    private val helperRepository: HelperRepository,
+    private val helperRepository: HelperRepositoryCo,
     private val coinRepository: CoinRepository
 ) : BaseCoinRecordViewModel(
     etherscanApiRepository,
@@ -47,18 +46,14 @@ class CoinRecordViewModel(
 
     fun getCoinRecordBean(coinId: String) {
         mCoinId = coinId
-        add(
-            helperRepository.getAllCoinToCurrency(coinRepository.getUserPrefFiatName())
-                .toMain()
-                .compose(loadingView())
-                .subscribe({
-                    rateList = it.data ?: arrayListOf()
-                    val rate = getRate(coinId)
-                    coinRecordBean.value = coinRepository.getCoinRecordBean(coinId, rate)
-                    performSyncTransferRecordDataList()
-                }, {
-                })
-        )
+        viewModelLaunch({
+            val result = helperRepository.allCoinToCurrency(coinRepository.getUserPrefFiatName())
+            rateList = result.data.orEmpty()
+            val rate = getRate(coinId)
+            coinRecordBean.value = coinRepository.getCoinRecordBean(coinId, rate)
+            performSyncTransferRecordDataList()
+        }, {
+        })
         if (coinId == CoinEnum.BTC.coinId || coinId == CoinEnum.USDT.coinId || coinId == CoinEnum.ETH.coinId) {
             showLightButton.value = true
         }

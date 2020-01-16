@@ -22,7 +22,7 @@ class TtnTransferViewModel(
     private val ttnServerApiRepository: TtnServerApiRepository,
     private val baseMainModel: BaseMainModel,
     private val ttnRepository: TtnRepository,
-    private val helperRepository: HelperRepository,
+    private val helperRepository: HelperRepositoryCo,
     private val verifyRepository: VerifyRepository,
     private val broadcastRepository: BroadcastRepository
 ) : BaseViewModel() {
@@ -36,24 +36,15 @@ class TtnTransferViewModel(
     var ttnAddressLiveData = MutableLiveData<String>()
 
     init {
-        add(
-            helperRepository.getAllCoinToCurrency(
-                ttnRepository.getPrefFiatData().name
-            ).toMain()
-                .subscribe({
-                    rateList = it.data ?: arrayListOf()
-                    val fiatText =
-                        getFiatRateText(CoinEnum.TTN.coinId, ttnFee.toBigDecimal(), fiatSymbol)
-                    fiatTextLiveData.value = fiatText
-                }, {
-                })
-        )
-        add(Observable.just(baseMainModel.ttnWalletData)
-            .toMain()
-            .subscribe {
-                ttnAddressLiveData.value = it.address
-            }
-        )
+        viewModelLaunch({
+            val result = helperRepository.allCoinToCurrency(ttnRepository.getPrefFiatData().name)
+            rateList = result.data.orEmpty()
+            val fiatText = getFiatRateText(CoinEnum.TTN.coinId, ttnFee.toBigDecimal(), fiatSymbol)
+            fiatTextLiveData.value = fiatText
+            val address = getTtnWalletData().address
+            ttnAddressLiveData.value = address
+        }, {
+        })
     }
 
     val setCoinIdDataLiveData = MutableLiveData<CoinData>()
@@ -78,7 +69,7 @@ class TtnTransferViewModel(
     var getBalanceLiveData = MutableLiveData<ApiTtnBalanceResponse>()
 
     fun getBalance() {
-        val address = baseMainModel.ttnWalletData.address
+        val address = getTtnWalletData().address
         add(
             ttnServerApiRepository.performGetTtnBalanceWithContractAddress(address)
                 .toMain()
@@ -98,7 +89,7 @@ class TtnTransferViewModel(
             transCoinDigit = 18
             transToCoinId = coinId
             transReceiptAddress = address
-            transPayAddress = baseMainModel.ttnWalletData.address
+            transPayAddress = getTtnWalletData().address
             transComment = note
         }
     }
@@ -128,7 +119,7 @@ class TtnTransferViewModel(
     }
 
     fun performGetTtnNonce() {
-        val address = baseMainModel.ttnWalletData.address
+        val address = getTtnWalletData().address
         val privateKey = getWalletEpKey(baseMainModel.ttnWalletID)
         add(
             ttnServerApiRepository.performGetTtnBalanceWithContractAddress(address)
@@ -161,7 +152,7 @@ class TtnTransferViewModel(
     private fun signTtnTransaction(privateKey: String, nonce: String) {
         var trans = getTtnTransModel(nonce)
         trans = TtnUtils.signTransaction(trans, privateKey)
-        trans.from = baseMainModel.ttnWalletData.address
+        trans.from = getTtnWalletData().address
         performPostTtnBroadcast(trans)
     }
 

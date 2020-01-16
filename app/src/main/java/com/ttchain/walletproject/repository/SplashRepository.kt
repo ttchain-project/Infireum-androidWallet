@@ -359,37 +359,4 @@ class SplashRepository(
             i++
         }
     }
-
-    fun updateFiatIdToUsdRateDataList(apiDataList: List<ApiFiatTableData>) {
-        val toUsdFiatData = dbHelper.getFiatDataByName(GlobalConstant.DEFAULT_USD_FIAT_NAME)
-        if (toUsdFiatData._id < 0) {
-            return
-        }
-
-        var i = 0
-        val j = apiDataList.size
-        while (i < j) {
-            val model = apiDataList[i]
-            val fromFiatId = model.fiatId
-            val fromFiatData = dbHelper.getFiatDataByFiatId(fromFiatId)
-
-            if (fromFiatData._id > 0) {
-                val data = dbHelper.getFiatToFiatRateDataByFromFiatIDToFiatID(
-                    fromFiatData._id,
-                    toUsdFiatData._id
-                )
-                data.toFiatData = toUsdFiatData
-                data.fromFiatData = fromFiatData
-                data.rate = BigDecimal(model.toUSDRate.toString())
-                val time = TimeUtils.getNowTimestamp().toString()
-                data.syncData = time
-                if (data._id == -1) {
-                    dbHelper.addFiatToFiatRateData(data)
-                } else {
-                    dbHelper.updateFiatToFiatRateData(data)
-                }
-            }
-            i++
-        }
-    }
 }

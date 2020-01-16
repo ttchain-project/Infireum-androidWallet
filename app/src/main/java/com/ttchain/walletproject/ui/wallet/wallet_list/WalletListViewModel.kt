@@ -20,7 +20,6 @@ import com.ttchain.walletproject.utils.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.bitcoinj.core.Coin
 import java.math.BigDecimal
 import java.util.ArrayList
 
@@ -29,7 +28,7 @@ class WalletListViewModel(
     private val dbHelper: DbHelper,
     private val userHelper: UserHelper,
     private val coinRepository: CoinRepository,
-    private val helperRepository: HelperRepository,
+    private val helperRepository: HelperRepositoryCo,
     private val verifyRepository: VerifyRepository,
     private val ttnRepository: TtnRepository,
     private val ttnServerApiRepository: TtnServerApiRepository
@@ -43,18 +42,15 @@ class WalletListViewModel(
 
     fun getRateAndWalletData() {
         total = BigDecimal("0")
-        add(
-            helperRepository.getAllCoinToCurrency(coinRepository.getUserPrefFiatName())
-                .toMain()
-                .subscribe({
-                    fiatSymbol = coinRepository.getUserPrefFiatSymbol()
-                    rateList = it.data ?: arrayListOf()
-                    getWalletData()
-                }, {
-                    getWalletData()
-                    getRateAndWalletDataErrorLiveData.value = true
-                })
-        )
+        viewModelLaunch({
+            val result = helperRepository.allCoinToCurrency(coinRepository.getUserPrefFiatName())
+            fiatSymbol = coinRepository.getUserPrefFiatSymbol()
+            rateList = result.data.orEmpty()
+            getWalletData()
+        }, {
+            getWalletData()
+            getRateAndWalletDataErrorLiveData.value = true
+        })
     }
 
     fun getIdentityData(): IdentityData {
@@ -78,7 +74,6 @@ class WalletListViewModel(
 
     val fiatNameLiveData = MutableLiveData<String>()
 
-    // todo
     fun getWalletData() {
         viewModelScope.launch {
             withContext(Dispatchers.Main) {
@@ -171,7 +166,7 @@ class WalletListViewModel(
         )
         btc.childData = btcList.asReversed()
         eth.childData = ethList
-        getRateAndBalance()
+        getBalance()
     }
 
     private fun getStableData() {
@@ -356,21 +351,6 @@ class WalletListViewModel(
     }
 
     var ttnAddress = ttnRepository.getTtnWalletData().address
-    val ttnFiatSymbol = ttnRepository.getPrefFiatData().symbol
-
-    fun getRateAndBalance() {
-        add(
-            helperRepository.getAllCoinToCurrency(ttnRepository.getPrefFiatData().name)
-                .toMain()
-                .subscribe({
-                    rateList = it.data ?: arrayListOf()
-                    getBalance()
-                }, {
-                })
-        )
-    }
-
-    var getBalanceLiveData = MutableLiveData<ApiTtnBalanceResponse>()
 
     fun getBalance() {
         add(
@@ -389,7 +369,7 @@ class WalletListViewModel(
                         -1,
                         CoinEnum.TTN.coinName,
                         NumberUtils.show(ttnAmount),
-                        getFiatRateText(CoinEnum.TTN.coinId, ttnAmount, ttnFiatSymbol),
+                        getFiatRateText(CoinEnum.TTN.coinId, ttnAmount, fiatSymbol),
                         ttnIcon
                     )
 
@@ -406,7 +386,7 @@ class WalletListViewModel(
                                     getFiatRateText(
                                         CoinEnum.TTN.coinId,
                                         BigDecimal(amount),
-                                        ttnFiatSymbol
+                                        fiatSymbol
                                     ),
                                     ""
                                 )
@@ -422,6 +402,4 @@ class WalletListViewModel(
                 })
         )
     }
-
-
 }

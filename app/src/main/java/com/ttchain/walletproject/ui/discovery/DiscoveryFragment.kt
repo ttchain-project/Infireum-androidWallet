@@ -52,20 +52,19 @@ class DiscoveryFragment : BaseFragment() {
     }
 
     override fun initView() {
-        swipeLayout.setOnRefreshListener {
+        swipeLayout?.setOnRefreshListener {
             swipeLayout.isRefreshing = true
             viewModel.apply {
                 getQuotes()
                 getNews()
             }
         }
-        trend_rv.layoutManager = object : LinearLayoutManager(requireContext()) {
+        trend_rv?.layoutManager = object : LinearLayoutManager(requireContext()) {
             override fun canScrollVertically(): Boolean {
                 return false
             }
         }
-        trend_rv.adapter = mTrendAdapter
-        trend_rv.apply {
+        trend_rv?.apply {
             isNestedScrollingEnabled = false
             layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
             adapter = mTrendAdapter
@@ -73,7 +72,7 @@ class DiscoveryFragment : BaseFragment() {
         mMediaAdapter.setOnItemClickListener {
             launchQuick(it)
         }
-        media_rv.apply {
+        media_rv?.apply {
             layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
             adapter = mMediaAdapter
         }
@@ -81,7 +80,7 @@ class DiscoveryFragment : BaseFragment() {
         mDappAdapter.setOnItemClickListener {
             launchQuick(it)
         }
-        dapp_rv.apply {
+        dapp_rv?.apply {
             layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
             adapter = mDappAdapter
         }
@@ -89,7 +88,7 @@ class DiscoveryFragment : BaseFragment() {
         mBlockChainExplorerAdapter.setOnItemClickListener {
             launchQuick(it)
         }
-        blockchain_explorer_rv.apply {
+        blockchain_explorer_rv?.apply {
             layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
             adapter = mBlockChainExplorerAdapter
         }
@@ -100,11 +99,11 @@ class DiscoveryFragment : BaseFragment() {
         viewModel.apply {
             quotesResult.observe(owner) {
                 //設定漲跌幅價格單位
-                price_tv.text = getString(R.string.usd_price).format(getUserPrefFiatName())
+                price_tv?.text = getString(R.string.usd_price).format(getUserPrefFiatName())
                 mTrendAdapter.updateData(it)
             }
             newsResult.observe(owner) {
-                swipeLayout.isRefreshing = false
+                swipeLayout?.isRefreshing = false
             }
 //            bannerResult.observe(owner) {
 //                banner.setAutoPlay(true)
