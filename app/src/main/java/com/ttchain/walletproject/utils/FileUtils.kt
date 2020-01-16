@@ -32,20 +32,20 @@ object FileUtils {
             return Environment.MEDIA_MOUNTED == state || Environment.MEDIA_MOUNTED_READ_ONLY == state
         }
 
-    val folder: File
-        get() {
-            var folder = File(
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString() +
-                        File.separator + "TTChain"
-            )
-            if (!folder.exists()) {
-                if (!folder.mkdirs()) {
-                    folder =
-                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                }
-            }
-            return folder
-        }
+//    val folder: File
+//        get() {
+//            var folder = File(
+//                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString() +
+//                        File.separator + "Infireum"
+//            )
+//            if (!folder.exists()) {
+//                if (!folder.mkdirs()) {
+//                    folder =
+//                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+//                }
+//            }
+//            return folder
+//        }
 
     val saveQrCodeFolder: File
         get() {
