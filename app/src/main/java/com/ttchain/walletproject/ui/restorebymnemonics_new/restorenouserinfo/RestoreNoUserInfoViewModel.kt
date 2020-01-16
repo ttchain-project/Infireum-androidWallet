@@ -22,32 +22,16 @@ class RestoreNoUserInfoViewModel(
     //    private val userBeanSubject = BehaviorSubject.create<UserBean>()
     private var userBean: UserBean? = null
 
-    val nameErrorLiveData = MutableLiveData<String>()
     val pwdErrorLiveData = MutableLiveData<String>()
     val confirmPasswordErrorLiveData = MutableLiveData<String>()
     val hintPasswordErrorLiveData = MutableLiveData<String>()
 
     fun onRestoreClick(
-        name: String,
         pwd: String,
         confirmPassword: String,
         note: String
     ) {
         var isCorrect = true
-
-        if (name.isEmpty()) {
-            isCorrect = false
-            nameErrorLiveData.value = context.getString(R.string.g_e_emptyform)
-        } else if (RuleUtils.hasSpaceInStartOrEndOfString(name)) {
-            isCorrect = false
-            nameErrorLiveData.value =
-                context.getString(R.string.error_input_with_space_at_start_or_end)
-        } else if (!RuleUtils.isValidUserNameLength(name)) {
-            isCorrect = false
-            nameErrorLiveData.value = context.getString(R.string.error_input_content_too_long)
-        } else {
-            nameErrorLiveData.value = ""
-        }
 
         if (pwd.isEmpty()) {
             isCorrect = false
@@ -97,7 +81,6 @@ class RestoreNoUserInfoViewModel(
 
         if (isCorrect) {
             userBean = (UserBean().apply {
-                this.name = name
                 this.pwd = pwd
                 this.note = note
                 pwdEncrypt = baseMainModel.encryptString(context, pwd)

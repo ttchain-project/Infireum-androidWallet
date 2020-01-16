@@ -8,7 +8,6 @@ import com.ttchain.walletproject.model.ApiVersionData
 import com.ttchain.walletproject.model.DbHelper
 import com.ttchain.walletproject.model.SystemHelper
 import com.ttchain.walletproject.model.UserHelper
-import com.ttchain.walletproject.repository.ImRepositoryCo
 import com.ttchain.walletproject.repository.InfoRepositoryCo
 import com.ttchain.walletproject.repository.VerifyRepository
 
@@ -17,7 +16,6 @@ class MeViewModel(
     private val dbHelper: DbHelper,
     private val systemHelper: SystemHelper,
     private val verifyRepository: VerifyRepository,
-    private val imRepositoryCo: ImRepositoryCo,
     private val infoRepositoryCo: InfoRepositoryCo
 ):BaseViewModel() {
 

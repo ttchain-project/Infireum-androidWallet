@@ -6,10 +6,8 @@ import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.observe
 import com.ttchain.walletproject.*
 import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.RestoreNoUserInfoFragment
-import com.ttchain.walletproject.ui.restorebymnemonics_new.restorewithuserinfo.RestoreWithUserInfoFragment
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.model.ResponseUserIdentity
-import kotlinx.android.synthetic.main.dialog_input.*
 import kotlinx.android.synthetic.main.fragment_restore_by_mnemonics_new.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -67,7 +65,7 @@ class RestoreByMnemonicsFragment : BaseFragment() {
             isLoading.observe(requireActivity()) {
                 if (it) onShowLoading() else onHideLoading()
             }
-            preLoginLiveData.observe(requireActivity()) {
+            systemWalletInitLiveData.observe(requireActivity()) {
                 activity.addFragment(
                     R.id.content_view,
                     RestoreNoUserInfoFragment.newInstance(
@@ -75,15 +73,15 @@ class RestoreByMnemonicsFragment : BaseFragment() {
                     )
                 )
             }
-            getUserInfoLiveData.observe(requireActivity()) { data ->
-                activity.addFragment(
-                    R.id.content_view,
-                    RestoreWithUserInfoFragment.newInstance(
-                        data,
-                        responseUserIdentity ?: ResponseUserIdentity()
-                    )
-                )
-            }
+//            getUserInfoLiveData.observe(requireActivity()) { data ->
+//                activity.addFragment(
+//                    R.id.content_view,
+//                    RestoreWithUserInfoFragment.newInstance(
+//                        data,
+//                        responseUserIdentity ?: ResponseUserIdentity()
+//                    )
+//                )
+//            }
         }
     }
 

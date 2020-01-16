@@ -46,11 +46,7 @@ class RestoreNoUserInfoFragment : BaseFragment() {
     }
 
     override fun initView() {
-        customEditTextNickName.visibility = View.VISIBLE
         linearLayoutPolicy.visibility = View.VISIBLE
-        customEditTextNickName.addTextChangeListener {
-            checkButtonEnable()
-        }
         customEditTextPassword.addTextChangeListener {
             checkButtonEnable()
         }
@@ -65,7 +61,6 @@ class RestoreNoUserInfoFragment : BaseFragment() {
         }
         next.setOnClickListener {
             viewModel.onRestoreClick(
-                customEditTextNickName.getText(),
                 customEditTextPassword.getText(),
                 customEditTextConfirmPassword.getText(),
                 customEditTextHint.getText()
@@ -76,9 +71,6 @@ class RestoreNoUserInfoFragment : BaseFragment() {
     private fun initData() {
         viewModel.apply {
             responseUserIdentity = bundleValueResponseUserIdentity
-            nameErrorLiveData.observe(requireActivity()) {
-                customEditTextNickName.setError(it)
-            }
             pwdErrorLiveData.observe(requireActivity()) {
                 customEditTextPassword.setError(it)
             }
@@ -107,8 +99,7 @@ class RestoreNoUserInfoFragment : BaseFragment() {
 
     private fun checkButtonEnable() {
         next.setEnable(
-            customEditTextNickName.getText().isNotEmpty() &&
-                    customEditTextPassword.getText().isNotEmpty() &&
+            customEditTextPassword.getText().isNotEmpty() &&
                     customEditTextConfirmPassword.getText().isNotEmpty() &&
                     customEditTextHint.getText().isNotEmpty()
         )

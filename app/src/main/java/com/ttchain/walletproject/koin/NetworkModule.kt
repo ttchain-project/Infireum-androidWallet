@@ -100,10 +100,6 @@ val networkModule = module {
         providesApiCo<HelperApiCo>(get(), BuildConfig.GIT_HELPER_API_URL)
     }
     single { providesApi<BroadcastApi>(get(), BuildConfig.GIT_HELPER_API_URL) }
-//    single { providesApi<ImApi>(get(), BuildConfig.GIT_IM_API_URL) }
-    single { providesApiCo<ImApiCo>(get(), BuildConfig.GIT_IM_API_URL) }
-//    single { providesApi<RedEnvelopeApi>(get(), BuildConfig.GIT_IM_API_URL) }
-//    single { providesApi<RocketChatApi>(get(), BuildConfig.ROCKET_CHAT_API_URL) }
 //    single { providesApi<InfoApi>(get(), BuildConfig.GIT_IM_API_URL) }
     single { providesApiCo<InfoApiCo>(get(), BuildConfig.GIT_IM_API_URL) }
 //

@@ -1,6 +1,5 @@
 package com.ttchain.walletproject.ui.userwalletsqrcodeparseresult
 
-import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
 import com.ttchain.walletproject.base.BaseViewModel
@@ -10,21 +9,20 @@ import com.ttchain.walletproject.database.data.IdentityData
 import com.ttchain.walletproject.database.data.WalletData
 import com.ttchain.walletproject.enums.ChainType
 import com.ttchain.walletproject.enums.CoinEnum
-import com.ttchain.walletproject.model.*
-import com.ttchain.walletproject.repository.ImRepositoryCo
+import com.ttchain.walletproject.model.DbHelper
+import com.ttchain.walletproject.model.UserBean
+import com.ttchain.walletproject.model.UserHelper
+import com.ttchain.walletproject.model.UserWalletQrCodeImageBean
 import com.ttchain.walletproject.repository.VerifyRepository
 import com.ttchain.walletproject.utils.Utility
-import com.ttchain.walletproject.utils.Utils
 import timber.log.Timber
 import java.math.BigDecimal
 import java.util.*
 
 class UserWalletQrCodeParseResultViewModel(
     private val dbHelper: DbHelper,
-    private val context: Context,
     private val userHelper: UserHelper,
-    private val verifyRepository: VerifyRepository,
-    private val imRepositoryCo: ImRepositoryCo
+    private val verifyRepository: VerifyRepository
 ) : BaseViewModel() {
 
     var userBean = UserBean()
@@ -39,43 +37,11 @@ class UserWalletQrCodeParseResultViewModel(
         qrCodeImageBean = bean
         Timber.e("qrCodeImageBean: ${Gson().toJson(qrCodeImageBean)}")
         viewModelLaunch {
-            //            val responseUserIdentity = BitcoinjNew.init(bean.content.system.mnemonic)
-//            Timber.e("responseUserIdentity: ${Gson().toJson(responseUserIdentity)}")
-//            val walletContents = bean.content.system.wallets
-//            for (walletContent in walletContents) {
-//                when (walletContent.mainCoinID) {
-//                    CoinEnum.ETH.coinId -> {
-//                        walletContent.address = responseUserIdentity.ethereum?.address.orEmpty()
-//                        walletContent.privateKey =
-//                            responseUserIdentity.ethereum?.privateKey.orEmpty()
-//                    }
-//                    CoinEnum.BTC.coinId -> {
-//                        walletContent.address = responseUserIdentity.bitcoin?.address.orEmpty()
-//                        walletContent.privateKey =
-//                            responseUserIdentity.bitcoin?.privateKey.orEmpty()
-//                    }
-//                    else -> {
-//                        walletContent.address = responseUserIdentity.noprefix?.address.orEmpty()
-//                        walletContent.privateKey =
-//                            responseUserIdentity.noprefix?.privateKey.orEmpty()
-//                    }
-//                }
-//            }
             getQrCodeImageWalletsLiveData.value = true
-            val request = PreLoginRequest().apply {
-                userID = Utility.hashIdentityIdFromMnemonic(bean.content.system.mnemonic)
-                deviceID = Utils.getDeviceId(context)
-            }
-            val preLoginResult = imRepositoryCo.preLogin(request)
-            val date = preLoginResult.data
-            when (date?.status) {
-                ImRepositoryCo.USER_EXIST -> getUserInfo(date.uid)
-//                        else -> preLoginLiveData.value = true
-            }
         }
     }
 
-    fun isExistWalletAddress(importWalletAddress: String): Boolean {
+    private fun isExistWalletAddress(importWalletAddress: String): Boolean {
         val walletDataList = dbHelper.getWalletDataList()
         for (data in walletDataList) {
             if (data.address == importWalletAddress) {
@@ -85,22 +51,11 @@ class UserWalletQrCodeParseResultViewModel(
         return false
     }
 
-    var userName = ""
-
-    private fun getUserInfo(uuid: String) {
-        viewModelLaunch {
-            val result = imRepositoryCo.iMGetUserData(UUID.fromString(uuid))
-            val data = result.data
-            userName = data?.nickName ?: ""
-        }
-    }
-
     val onCreateClickLiveData = MutableLiveData<Boolean>()
     val onCreateClickErrorLiveData = MutableLiveData<Throwable>()
 
     fun onCreateClick(pwd: String?, note: String?) {
         val mUserBean = UserBean().apply {
-            this.name = userName
             this.pwd = pwd ?: ""
             this.note = note ?: ""
             pwdEncrypt = verifyRepository.encryptString(pwd ?: "")

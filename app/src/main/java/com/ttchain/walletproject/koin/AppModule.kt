@@ -33,7 +33,6 @@ import com.ttchain.walletproject.ui.receiptasset.ReceiptAssetViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.restoremnemonicswalletlist.RestoreWalletListViewModel
 import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.RestoreNoUserInfoViewModel
-import com.ttchain.walletproject.ui.restorebymnemonics_new.restorewithuserinfo.RestoreWithUserInfoViewModel
 import com.ttchain.walletproject.ui.search_coin.SearchCoinViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
 import com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultViewModel
@@ -56,12 +55,11 @@ val viewModelModule = module {
     viewModel { LoginViewModel(get()) }
     viewModel { AgreementViewModel(get(), get()) }
     viewModel { EnterPasswordViewModel() }
-    viewModel { UserWalletQrCodeParseResultViewModel(get(), get(), get(), get(), get()) }
+    viewModel { UserWalletQrCodeParseResultViewModel(get(), get(), get()) }
     viewModel { CreateIdViewModel(get(), get(), get()) }
     viewModel { MnemonicsStartViewModel(get(), get(), get(), get()) }
-    viewModel { RestoreByMnemonicsViewModel(get(), get()) }
+    viewModel { RestoreByMnemonicsViewModel() }
     viewModel { RestoreNoUserInfoViewModel(get(), get(), get()) }
-    viewModel { RestoreWithUserInfoViewModel(get(), get(), get()) }
     viewModel { RestoreWalletListViewModel(get()) }
     viewModel { AssetListViewModel(get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordViewModel(get(), get(), get(), get(), get(), get(), get(), get(), get()) }
@@ -90,7 +88,7 @@ val viewModelModule = module {
     viewModel { DappViewModel(get(), get()) }
     viewModel { TrendViewModel(get(), get()) }
     viewModel { WebViewViewModel(get(), get(), get()) }
-    viewModel { MeViewModel(get(), get(), get(), get(), get(), get()) }
+    viewModel { MeViewModel(get(), get(), get(), get(), get()) }
     viewModel { LanguageSettingViewModel(get()) }
     viewModel { CurrencyViewModel(get(), get()) }
     viewModel { CommonAddressViewModel(get(), get(), get(), get()) }
@@ -124,7 +122,6 @@ val repositoryModule = module {
     single { InfoRepositoryCo(get()) }
     single { HelperRepository(get()) }
     single { HelperRepositoryCo(get()) }
-    single { ImRepositoryCo(get()) }
     single { BroadcastRepository(get()) }
     single { BalanceApiRepository(get()) }
     single { TtnServerApiRepository(get()) }

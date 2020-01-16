@@ -20,17 +20,6 @@
             android:orientation="vertical">
 
             <com.ttchain.walletproject.view.CustomEditTextItem
-                android:id="@+id/customEditTextNickName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/padding_16"
-                android:visibility="gone"
-                app:editTextHint="@string/restore_with_user_info_nick_name_hint"
-                app:editTextType="none"
-                app:titleText="@string/restore_with_user_info_nick_name"
-                tools:visibility="visible" />
-
-            <com.ttchain.walletproject.view.CustomEditTextItem
                 android:id="@+id/customEditTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
