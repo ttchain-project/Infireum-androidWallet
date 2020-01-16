@@ -11,7 +11,6 @@
         android:orientation="vertical"
         android:paddingBottom="100dp">
 
-
         <TextView
             android:id="@+id/system_setting_tv"
             style="@style/PrimaryText.Mini"
@@ -27,6 +26,7 @@
             style="@style/PrimaryBlackText.SuperSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
             android:background="@drawable/ripple_white"
             android:clickable="true"
             android:drawableStart="@mipmap/setting_icon_language"
