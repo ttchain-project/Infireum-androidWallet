@@ -5,6 +5,6 @@ enum class ChainType(val value: Int) {
     BTC(0),
     ETH(1),
     CIC(2),
-    TTN(3)
+    TTN(6)
 
 }

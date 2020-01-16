@@ -21,7 +21,7 @@ class BottomTabView : ConstraintLayout {
         onItemClickListener?.invoke(status)
     }
 
-    lateinit var currentPosition: BottomTabState
+    private lateinit var currentPosition: BottomTabState
 
     constructor(context: Context) : super(context) {
         init(context)
