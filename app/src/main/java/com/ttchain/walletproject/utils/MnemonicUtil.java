@@ -103,8 +103,8 @@ public class MnemonicUtil {
 
     public static List<String> getWords() {
         if (WORD_LIST == null) {
-            WORD_LIST = Collections.unmodifiableList(chineseSimplifiedWordList());
-//            WORD_LIST = Collections.unmodifiableList(populateWordList());
+//            WORD_LIST = Collections.unmodifiableList(chineseSimplifiedWordList());
+            WORD_LIST = Collections.unmodifiableList(populateWordList());
         }
         return WORD_LIST;
     }

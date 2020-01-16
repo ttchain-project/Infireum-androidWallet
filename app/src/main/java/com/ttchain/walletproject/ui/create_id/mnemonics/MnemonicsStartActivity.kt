@@ -67,9 +67,10 @@ class MnemonicsStartActivity : BaseActivity() {
                 )
                 .subscribe { granted ->
                     if (granted) {
-                        showTwoInputDialog()
+//                        showTwoInputDialog()
+                        viewModel.getTwoInput(bundleValue.pwd, bundleValue.note)
                     } else {
-                        //                            showPermissionDenied(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE, getString(R.string.g_pick_photo_permission_request));
+                        //showPermissionDenied(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE, getString(R.string.g_pick_photo_permission_request));
                     }
                 }
         }
@@ -116,17 +117,14 @@ class MnemonicsStartActivity : BaseActivity() {
     }
 
 
-    private fun showTwoInputDialog() {
-        val twoInputDialog = TwoInputDialog()
-            .setTitle("請輸入錢包密碼")
-            .setInputOne("密碼", "請輸入您的錢包密碼")
-            .setInputTwo("顯示密碼提示訊息", "")
-            .setOnConfirmClickListener { inputOne, inputTwo ->
-                viewModel.getTwoInput(inputOne, inputTwo)
-            }
-        supportFragmentManager.addDialog(twoInputDialog, TwoInputDialog::class.java.simpleName)
-    }
-
-
-
+//    private fun showTwoInputDialog() {
+//        val twoInputDialog = TwoInputDialog()
+//            .setTitle("請輸入錢包密碼")
+//            .setInputOne("密碼", "請輸入您的錢包密碼")
+//            .setInputTwo("顯示密碼提示訊息", "")
+//            .setOnConfirmClickListener { inputOne, inputTwo ->
+//                viewModel.getTwoInput(inputOne, inputTwo)
+//            }
+//        supportFragmentManager.addDialog(twoInputDialog, TwoInputDialog::class.java.simpleName)
+//    }
 }
