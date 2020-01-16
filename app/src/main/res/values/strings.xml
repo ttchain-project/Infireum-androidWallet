@@ -914,10 +914,10 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
     <string name="mnemonic_start_tip_2">This mobile barcode is designed by INFIREUM for you, so that you can easily and quickly restore all wallets on your account in the future.\n\n Make a backup copy of your account information and do not upload to Drive or access it on any public network. This is important for your future actions such as maintaining asset security and restoring your account.</string>
 
     <!-- restore by mnemonics -->
-    <string name="restore_by_mnemonics_tip_2">Enter Chinese mnemonics, a total of 12 Chinese characters</string>
+    <string name="restore_by_mnemonics_tip_2">Enter mnemonics, a total of 12 characters</string>
 
 
     <string name="mnemonic_start_warring_title"> Are you sure you want to skip it? </string>
-    <string name="mnemonic_start_warring_message"> Backing up your account action code is very important for your future actions such as maintaining asset security and restoring your account. \ n \ nIf you lose your phone without a backup account, or if you lose your account due to various accidents, it will never be recovered. </string>
+    <string name="mnemonic_start_warring_message"> Backing up your account action code is very important for your future actions such as maintaining asset security and restoring your account. \n\nIf you lose your phone without a backup account, or if you lose your account due to various accidents, it will never be recovered. </string>
 
 </resources>
