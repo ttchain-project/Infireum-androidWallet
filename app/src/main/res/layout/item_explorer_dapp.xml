@@ -7,17 +7,19 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="@dimen/padding_3"
         app:layout_constraintBottom_toTopOf="@+id/name_tv"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@mipmap/no_image"/>
+        tools:ignore="ContentDescription"
+        tools:src="@mipmap/no_image" />
 
     <TextView
-        style="@style/PrimaryBlackText.Mini"
         android:id="@+id/name_tv"
+        style="@style/PrimaryBlackText.Mini"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -26,7 +28,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon"
-        android:layout_marginTop="@dimen/padding_3"
         tools:text="augur" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
