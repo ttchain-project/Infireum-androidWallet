@@ -941,4 +941,7 @@ TTN 是INFIREUM交易平台本身的权益证明，平台通用基础通证，TT
 
     <!-- restore by mnemonics -->
     <string name="restore_by_mnemonics_tip_2">输入中文助记词，共 12 个中文字</string>
+
+    <string name="mnemonic_start_warring_title">您确定要略过吗？ </string>
+    <string name="mnemonic_start_warring_message">备份帐号行动码与您日后要维护资产安全、恢复帐号等动作相当重要。 \n\n如在无备份帐号的情况下遗失手机或各种意外导致帐号遗失，将永远无法寻回。 </string>
 </resources>

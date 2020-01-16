@@ -915,4 +915,9 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
 
     <!-- restore by mnemonics -->
     <string name="restore_by_mnemonics_tip_2">Enter Chinese mnemonics, a total of 12 Chinese characters</string>
+
+
+    <string name="mnemonic_start_warring_title"> Are you sure you want to skip it? </string>
+    <string name="mnemonic_start_warring_message"> Backing up your account action code is very important for your future actions such as maintaining asset security and restoring your account. \ n \ nIf you lose your phone without a backup account, or if you lose your account due to various accidents, it will never be recovered. </string>
+
 </resources>

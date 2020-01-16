@@ -103,8 +103,8 @@ class MnemonicsStartActivity : BaseActivity() {
 
     private fun showWarningDialog() {
         val warningDialog = WarningDialog()
-            .setTitle("您確定要略過嗎？")
-            .setContent("備份帳號行動碼與您日後要維護資產安全、恢復帳號等動作相當重要。\n\n如在無備份帳號的情況下遺失手機或各種意外導致帳號遺失，將永遠無法尋回。")
+            .setTitle(getString(R.string.mnemonic_start_warring_title))
+            .setContent(getString(R.string.mnemonic_start_warring_message))
             .setBtnText(getString(R.string.g_confirm), getString(R.string.setting_backup_account))
             .setLeftBtnRedBg()
             .setOnRightClickListener {
@@ -126,7 +126,6 @@ class MnemonicsStartActivity : BaseActivity() {
             }
         supportFragmentManager.addDialog(twoInputDialog, TwoInputDialog::class.java.simpleName)
     }
-
 
 
 }
