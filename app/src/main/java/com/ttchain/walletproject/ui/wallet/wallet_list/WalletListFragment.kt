@@ -72,7 +72,7 @@ class WalletListFragment : BaseFragment() {
         } else if (coinType == STABLE_COIN) {
             viewModel.onClickStableCoin()
         }
-        expandable_list.apply {
+        expandable_list?.apply {
             setOnScrollListener(object : AbsListView.OnScrollListener {
                 override fun onScrollStateChanged(view: AbsListView, scrollState: Int) {
 
@@ -85,7 +85,7 @@ class WalletListFragment : BaseFragment() {
                     totalItemCount: Int
                 ) {
                     val topRowVerticalPosition = if (childCount == 0) 0 else getChildAt(0).top
-                    swipe_layout.isEnabled = firstVisibleItem == 0 && topRowVerticalPosition >= 0
+                    swipe_layout?.isEnabled = firstVisibleItem == 0 && topRowVerticalPosition >= 0
                 }
             })
             isNestedScrollingEnabled = false
@@ -101,8 +101,8 @@ class WalletListFragment : BaseFragment() {
             walletId = groupData.walletID
             viewModel.launchAssetListActivity(groupData, childPosition)
         }
-        swipe_layout.setOnRefreshListener {
-            swipe_layout.isRefreshing = true
+        swipe_layout?.setOnRefreshListener {
+            swipe_layout?.isRefreshing = true
             viewModel.getRateAndWalletData()
         }
     }
@@ -111,7 +111,7 @@ class WalletListFragment : BaseFragment() {
         viewModel.apply {
             getRateAndWalletDataErrorLiveData.observe(this@WalletListFragment) {
                 if (it) {
-                    swipe_layout.isRefreshing = false
+                    swipe_layout?.isRefreshing = false
                 }
             }
             isLoading.observe(this@WalletListFragment) {
@@ -125,13 +125,13 @@ class WalletListFragment : BaseFragment() {
             }
             mainDataLiveData.observe(this@WalletListFragment) {
                 mAdapter.updateData(it)
-                swipe_layout.isRefreshing = false
+                swipe_layout?.isRefreshing = false
             }
             totalAssetAmountLiveData.observe(this@WalletListFragment) {
-                total_amount_tv.text = it
+                total_amount_tv?.text = it
             }
             fiatNameLiveData.observe(requireActivity()) {
-                currency_symbol_tv.text = it
+                currency_symbol_tv?.text = it
             }
             launchAssetListActivityLiveData.observe(this@WalletListFragment) {
                 if (it)

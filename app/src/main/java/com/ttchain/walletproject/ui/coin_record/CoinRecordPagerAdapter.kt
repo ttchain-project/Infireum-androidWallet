@@ -1,4 +1,4 @@
-package com.git4u.tt_wallet_android.activity.coin.record_new
+package com.ttchain.walletproject.ui.coin_record
 
 import android.content.Context
 import androidx.fragment.app.Fragment

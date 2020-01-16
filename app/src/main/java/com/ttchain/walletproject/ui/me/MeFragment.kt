@@ -54,7 +54,7 @@ class MeFragment : BaseFragment() {
     }
 
     override fun initView() {
-        textViewNotification.setDelayClickListener {
+        textViewNotification?.setDelayClickListener {
             MaterialDialog.Builder(requireActivity()).items(
                 getString(R.string.switch_on_notification),
                 getString(R.string.switch_off_notification)
@@ -62,32 +62,32 @@ class MeFragment : BaseFragment() {
                 switchOnNotification(position == 0)
             }.show()
         }
-        textViewLanguage.setDelayClickListener {
+        textViewLanguage?.setDelayClickListener {
             LanguageSettingActivity.launch(requireActivity())
         }
-//        textViewCheckUpdate.setDelayClickListener {
+//        textViewCheckUpdate?.setDelayClickListener {
 //            viewModel.performGetVersion()
 //        }
-        textViewCommonAddress.setDelayClickListener {
+        textViewCommonAddress?.setDelayClickListener {
             CommonAddressActivity.launch(requireActivity())
         }
-        textViewCurrency.setDelayClickListener {
+        textViewCurrency?.setDelayClickListener {
             CurrencyActivity.launch(requireActivity())
         }
-        export_btc_container.setDelayClickListener {
+        export_btc_container?.setDelayClickListener {
             SelectExportWalletActivity.launch(requireActivity(), CoinEnum.BTC)
         }
-        export_eth_container.setDelayClickListener {
+        export_eth_container?.setDelayClickListener {
             SelectExportWalletActivity.launch(requireActivity(), CoinEnum.ETH)
         }
-        textViewBackupWallet.setDelayClickListener {
+        textViewBackupWallet?.setDelayClickListener {
             position = 2
             showVerifyDialog()
         }
-        textViewDelete.setDelayClickListener {
+        textViewDelete?.setDelayClickListener {
             showDeleteAccountWarnDialog()
         }
-        textViewBackup.setDelayClickListener {
+        textViewBackup?.setDelayClickListener {
             val drawableStart =
                 ContextCompat.getDrawable(requireContext(), R.mipmap.setting_icon_export)
             drawableStart?.setBounds(
@@ -106,7 +106,7 @@ class MeFragment : BaseFragment() {
                     drawableEnd.minimumWidth,
                     drawableEnd.minimumHeight
                 )
-                textViewBackup.setCompoundDrawables(drawableStart, null, drawableEnd, null)
+                textViewBackup?.setCompoundDrawables(drawableStart, null, drawableEnd, null)
             } else {
                 export_btc_container.visibility = View.VISIBLE
                 export_eth_container.visibility = View.VISIBLE
@@ -117,16 +117,16 @@ class MeFragment : BaseFragment() {
                     drawableEnd.minimumWidth,
                     drawableEnd.minimumHeight
                 )
-                textViewBackup.setCompoundDrawables(drawableStart, null, drawableEnd, null)
+                textViewBackup?.setCompoundDrawables(drawableStart, null, drawableEnd, null)
             }
         }
         // 使用密碼鎖
-        textViewUsingLocker.setDelayClickListener {
+        textViewUsingLocker?.setDelayClickListener {
             UsingLockerActivity.launch(requireActivity())
         }
         //工程師模式
         if (BuildConfig.DEBUG) {
-            wallet_setting_tv.setOnLongClickListener {
+            wallet_setting_tv?.setOnLongClickListener {
                 isMainNet = !isMainNet
                 showToast("isMainNet: $isMainNet")
                 return@setOnLongClickListener false

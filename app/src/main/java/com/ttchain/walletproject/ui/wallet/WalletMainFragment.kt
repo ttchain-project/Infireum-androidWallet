@@ -27,12 +27,12 @@ class WalletMainFragment : BaseFragment() {
 //        add_wallet_btn.setDelayClickListener {
 //        }
         val pagerAdapter = WalletMainPagerAdapter(requireContext(), childFragmentManager)
-        view_pager.apply {
+        view_pager?.apply {
             offscreenPageLimit = 2
             adapter = pagerAdapter
             currentItem = 0
         }.run {
-            tab_layout.setupWithViewPager(this)
+            tab_layout?.setupWithViewPager(this)
         }
 
     }
