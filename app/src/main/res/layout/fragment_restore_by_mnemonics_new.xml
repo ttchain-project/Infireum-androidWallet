@@ -42,29 +42,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_tv" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/editTextMnemonics"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_40"
             android:layout_marginTop="@dimen/padding_48"
+            android:layout_marginEnd="@dimen/padding_40"
+            android:background="@drawable/bg_mnemonic"
+            android:padding="@dimen/padding_24"
+            android:textColor="@color/_354252"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dec_tv">
-
-            <EditText
-                android:id="@+id/editTextMnemonics"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/padding_40"
-                android:layout_marginEnd="@dimen/padding_40"
-                android:background="@drawable/bg_mnemonic"
-                android:padding="@dimen/padding_24"
-                android:textColor="@color/_354252"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toBottomOf="@+id/dec_tv" />
 
         <com.ttchain.walletproject.view.NextButton
             android:id="@+id/next"

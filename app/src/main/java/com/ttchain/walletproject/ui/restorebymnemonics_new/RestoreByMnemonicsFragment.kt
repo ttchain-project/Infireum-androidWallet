@@ -49,7 +49,8 @@ class RestoreByMnemonicsFragment : BaseFragment() {
         if (BuildConfig.DEBUG) {
             title_tv.setDelayClickListener {
                 editTextMnemonics.setText(
-                    "患 烘 杭 有 六 污 星 吏 踏 师 业 材"
+//                    "患 烘 杭 有 六 污 星 吏 踏 师 业 材"
+                    "thrive visit task frown maze useful bench perfect comic fly pottery draw"
                 )
             }
         }

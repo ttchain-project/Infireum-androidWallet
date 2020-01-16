@@ -65,9 +65,9 @@ class MeFragment : BaseFragment() {
         textViewLanguage?.setDelayClickListener {
             LanguageSettingActivity.launch(requireActivity())
         }
-//        textViewCheckUpdate?.setDelayClickListener {
-//            viewModel.performGetVersion()
-//        }
+        textViewCheckUpdate?.setDelayClickListener {
+            viewModel.performGetVersion()
+        }
         textViewCommonAddress?.setDelayClickListener {
             CommonAddressActivity.launch(requireActivity())
         }
