@@ -7,11 +7,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NavUtils
 import androidx.core.app.TaskStackBuilder
-import com.afollestad.materialdialogs.MaterialDialog
 import com.ttchain.walletproject.App
 import com.ttchain.walletproject.ContextWrapper
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.addDialog
+import com.ttchain.walletproject.dialog.MessageDialog
 import com.ttchain.walletproject.dialog.ProgressDialog
 import com.ttchain.walletproject.utils.Utility
 import kotlinx.android.synthetic.main.view_toolbar.*
@@ -19,18 +19,7 @@ import kotlinx.android.synthetic.main.view_toolbar.*
 abstract class BaseActivity : AppCompatActivity() {
 
     private var mProgressDialog: ProgressDialog? = null
-    private var mMessageDialog: MaterialDialog? = null
-    private var mMessageDialogFinish: MaterialDialog? = null
-
-    private var mActiveServiceDialog: MaterialDialog? = null
-    /**
-     * The ActiveServiceDialog is showing or not.
-     *
-     * @return
-     */
-    private val isShowingActiveServiceDialog: Boolean
-        get() = mActiveServiceDialog != null && mActiveServiceDialog!!.isShowing
-
+    private var messageDialog: MessageDialog? = null
 
     protected abstract val layoutId: Int
 
@@ -50,9 +39,9 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
 
-//    override fun attachBaseContext(newBase: Context) {
-//        super.attachBaseContext(ContextWrapper.wrap(newBase, Utility.getPrefLocal(newBase)))
-//    }
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ContextWrapper.wrap(newBase, Utility.getPrefLocal(newBase)))
+    }
 
     protected fun displayHomeButton(isDisplay: Boolean) {
         supportActionBar?.setDisplayHomeAsUpEnabled(isDisplay)
@@ -98,48 +87,33 @@ abstract class BaseActivity : AppCompatActivity() {
         mProgressDialog = null
     }
 
-    fun onShowMessageDialog(msg: String?) {
-        onShowMessageDialog(msg, false)
+    fun onShowMessageDialog(msg: String) {
+        messageDialog = MessageDialog()
+            .setMessageText(msg)
+            .setPositiveButtonText(getString(R.string.g_ok))
+        supportFragmentManager.addDialog(messageDialog!!, "messageDialog")
     }
 
-    fun onShowMessageDialog(msg: String?, showLatest: Boolean) {
-        if (msg.isNullOrEmpty() && mMessageDialog != null && mMessageDialog!!.isShowing && !showLatest) {
-            return
-        }
-        mMessageDialog = MaterialDialog.Builder(this)
-            .content(msg!!)
-            .positiveText(R.string.g_ok)
-            .show()
-    }
-
-    fun onShowMessageDialogFinish(msg: String?) {
-        if (msg.isNullOrEmpty() && mMessageDialogFinish != null && mMessageDialogFinish!!.isShowing) {
-            return
-        }
-        mMessageDialogFinish = MaterialDialog.Builder(this)
-            .autoDismiss(false)
-            .cancelable(false)
-            .content(msg!!)
-            .positiveText(R.string.g_ok)
-            .onPositive { dialog, _ ->
-                dialog.dismiss()
-                finish()
+    fun onShowMessageDialogFinish(msg: String) {
+        messageDialog = MessageDialog()
+            .setMessageText(msg)
+            .setPositiveButtonText(getString(R.string.g_ok))
+            .setPositiveButtonListener {
+                finishActivity()
+            }.apply {
+                isCancelable = false
             }
-            .show()
+        supportFragmentManager.addDialog(messageDialog!!, "messageDialog")
     }
 
-    fun closeAllDialog() {
+    private fun closeAllDialog() {
         if (mProgressDialog != null && mProgressDialog?.isAdded == true) {
             mProgressDialog?.dismissAllowingStateLoss()
             mProgressDialog = null
         }
-        if (mMessageDialog != null) {
-            mMessageDialog?.dismiss()
-            mMessageDialog = null
-        }
-        if (mMessageDialogFinish != null) {
-            mMessageDialogFinish?.dismiss()
-            mMessageDialogFinish = null
+        if (messageDialog != null) {
+            messageDialog?.dismissAllowingStateLoss()
+            messageDialog = null
         }
     }
 
@@ -148,10 +122,6 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        if (isShowingActiveServiceDialog) {
-            mActiveServiceDialog?.dismiss()
-            mActiveServiceDialog = null
-        }
         closeAllDialog()
         super.onDestroy()
     }

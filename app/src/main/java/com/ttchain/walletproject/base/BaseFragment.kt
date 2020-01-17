@@ -87,8 +87,6 @@ abstract class BaseFragment : Fragment() {
         }
     }
 
-    private var mInputDialog: MaterialDialog? = null
-
     fun showInputDialog(
         title: String,
         content: String,
@@ -102,50 +100,6 @@ abstract class BaseFragment : Fragment() {
             .setHintText(hint)
             .setOnConfirmClickListener(inputCallBack)
         childFragmentManager.addDialog(inputDialog, "inputDialog")
-    }
-
-    fun showInputDialog(
-        title: String,
-        content: String,
-        hint: String,
-        positive: String,
-        negative: String,
-        inputCallBack: MaterialDialog.InputCallback?,
-        negativeCallback: MaterialDialog.SingleButtonCallback
-    ) {
-        if (mInputDialog == null) {
-            activity?.let {
-                mInputDialog = MaterialDialog.Builder(it)
-                    .title(title)
-                    .content(content)
-                    .input(
-                        hint,
-                        "",
-                        false,
-                        inputCallBack ?: MaterialDialog.InputCallback { _, _ ->
-                        })
-                    .inputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
-                    .positiveText(positive)
-                    .negativeText(negative)
-                    .cancelable(false)
-                    .positiveColor(ResourcesCompat.getColor(resources, R.color.red_700, null))
-                    .onPositive { dialog, _ ->
-                        dialog.dismiss()
-                        releaseInputDialog()
-                    }
-                    .onNegative(negativeCallback)
-                    .autoDismiss(false)
-                    .build()
-            }
-        }
-        mInputDialog?.show()
-    }
-
-    fun releaseInputDialog() {
-        if (mInputDialog != null) {
-            mInputDialog?.dismiss()
-            mInputDialog = null
-        }
     }
 
     private var messageDialog: MessageDialog? = null
@@ -418,18 +372,6 @@ abstract class BaseFragment : Fragment() {
         }
     }
 
-    private var mTwoInputDialog: MaterialDialog? = null
-
-    interface ValidateTwoInput {
-        fun validate(input1: String, input2: String): Int
-    }
-
-    fun releaseTwoInputDialog() {
-        if (mTwoInputDialog != null) {
-            mTwoInputDialog?.dismiss()
-            mTwoInputDialog = null
-        }
-    }
     private var dappConfirmDialog: MaterialDialog? = null
 
     @SuppressLint("SetTextI18n")

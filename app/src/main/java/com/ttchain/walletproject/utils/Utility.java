@@ -28,13 +28,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.git4u.tt_wallet_android.net.model.Function3Response;
 import com.git4u.tt_wallet_android.net.model.Function4Response;
 import com.scottyab.aescrypt.AESCrypt;
 import com.ttchain.walletproject.BuildConfig;
-import com.ttchain.walletproject.R;
 import com.ttchain.walletproject.model.BiResponse;
+import com.ttchain.walletproject.model.UserHelperImpl;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -404,15 +403,6 @@ public class Utility {
         return rIds;
     }
 
-    public static void confirmExitApp(final Activity activity) {
-        new MaterialDialog.Builder(activity)
-                .title(R.string.app_name)
-                .content(R.string.g_a_exit)
-                .positiveText(R.string.g_close)
-                .negativeText(R.string.g_cancel)
-                .onPositive((dialog, which) -> activity.finish()).show();
-    }
-
     public static int getStatusBarHeight(Context context) {
         int result = 0;
         int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
@@ -734,6 +724,10 @@ public class Utility {
 
     private static String getBytesToMBString(long bytes) {
         return String.format(Locale.ENGLISH, "%.2fMb", bytes / (1024.00 * 1024.00));
+    }
+
+    public static Locale getPrefLocal(Context context) {
+        return getPrefLocal(new UserHelperImpl(context).getPreferLanguage());
     }
 
     public static Locale getPrefLocal(String language) {

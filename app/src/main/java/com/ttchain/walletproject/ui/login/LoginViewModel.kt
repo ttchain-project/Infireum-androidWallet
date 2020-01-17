@@ -17,7 +17,6 @@ class LoginViewModel(
     private var qrCodeImageBean: UserWalletQrCodeImageBean? = null
     var qrCodeImagePwd: String = ""
 
-    val hintLiveData = MutableLiveData<String>()
     val hintErrorLiveData = MutableLiveData<Throwable>()
     val qrCodeParseLiveData = MutableLiveData<UserWalletQrCodeImageBean>()
 

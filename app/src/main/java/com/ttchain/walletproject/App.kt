@@ -12,11 +12,7 @@ import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 import java.lang.ref.WeakReference
 
-val preferenceHelper: Preferences by lazy {
-    App.preferenceHelper
-}
-
-class App :MultiDexApplication() {
+class App : MultiDexApplication() {
 
     companion object {
 
