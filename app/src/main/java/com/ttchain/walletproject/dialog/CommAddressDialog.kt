@@ -6,6 +6,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDialog
 import androidx.fragment.app.DialogFragment
 import com.ttchain.walletproject.R
+import com.ttchain.walletproject.addDialog
 import com.ttchain.walletproject.setDelayClickListener
 import kotlinx.android.synthetic.main.dialog_com_address.view.*
 

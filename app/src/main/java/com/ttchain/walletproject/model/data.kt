@@ -422,7 +422,9 @@ data class AddressBean(var addressID: Int = -1) : Serializable {
     var coinName: String = ""
     var address: String = ""
     var icon: Int = 0
+    var uuid: String = ""
 }
+
 data class BalanceBean(var _id: Int = -1) : Serializable {
     var address: String = ""
     var coinId: String = ""

@@ -71,7 +71,8 @@ class CommonAddressFragment : BaseRecyclerViewFragmentNew<AddressEntity>() {
                 OperationCommAddressActivity.launch(
                     requireActivity(),
                     item.data.addressID,
-                    item.data.address
+                    item.data.address,
+                    item.data.uuid
                 )
             }
         }
@@ -131,7 +132,7 @@ class CommonAddressFragment : BaseRecyclerViewFragmentNew<AddressEntity>() {
     }
 
     private fun launchOperationCommAddressActivity(addressID: Int) {
-        OperationCommAddressActivity.launch(requireActivity(), addressID, "")
+        OperationCommAddressActivity.launch(requireActivity(), addressID, "", "")
     }
 
 }

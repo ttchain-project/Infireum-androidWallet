@@ -920,4 +920,8 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
     <string name="mnemonic_start_warring_title"> Are you sure you want to skip it? </string>
     <string name="mnemonic_start_warring_message"> Backing up your account action code is very important for your future actions such as maintaining asset security and restoring your account. \n\nIf you lose your phone without a backup account, or if you lose your account due to various accidents, it will never be recovered. </string>
 
+
+    <string name="confirm_delete_address">Confirm to delete this address?</string>
+    <string name="popmeun_operation_edit">Edit info</string>
+    <string name="popmeun_operation_delete">Delete address</string>
 </resources>

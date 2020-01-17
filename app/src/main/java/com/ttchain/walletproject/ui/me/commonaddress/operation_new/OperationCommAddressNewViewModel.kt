@@ -203,7 +203,6 @@ class OperationCommAddressNewViewModel(
             this.note = note
             this.uuId = uuId
             mainCoinId = RuleUtils.getMainCoinId(address)
-
         })
     }
 
@@ -236,10 +235,31 @@ class OperationCommAddressNewViewModel(
         })
     }
 
-    fun getAddressData(_id: Int) = if (_id != -1) {
+    private fun getAddressData(_id: Int) = if (_id != -1) {
         dbHelper.getAddressData(_id)
     } else {
         AddressData()
     }
 
+    val deleteAddressBookLiveData = MutableLiveData<Boolean>()
+
+    fun deleteAddressBook(uuid: String) {
+        val identityId = baseMainModel.identityId
+        add(
+
+            helperRepository.performDeleteAddressBookData(
+                identityId,
+                uuid,
+                RuleUtils.getChainType(address).value
+            ).toMain()
+                .subscribe({
+                    dbHelper.deleteAddressData(this.addressID)
+                    RxBus.getInstance().post(RxBusTag.REVIEW_ADDRESS_FINISH, true)
+                    RxBus.getInstance().post(RxBusTag.COMMON_ADDRESS_FINISH, true)
+                    deleteAddressBookLiveData.value = it.data
+                }, {
+                    consumerThrowable(it)
+                })
+        )
+    }
 }

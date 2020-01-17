@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseActivity
 import com.ttchain.walletproject.changeFragment
+import java.util.*
 
 class OperationCommAddressActivity : BaseActivity() {
 
@@ -22,7 +23,8 @@ class OperationCommAddressActivity : BaseActivity() {
             R.id.content_view,
             OperationCommAddressFragment.newInstance(
                 intent.getIntExtra(_ID, -1),
-                intent.getStringExtra(_ADDRESS) ?: ""
+                intent.getStringExtra(_ADDRESS).orEmpty(),
+                intent.getStringExtra(_UUID).orEmpty()
             )
         )
     }
@@ -31,8 +33,9 @@ class OperationCommAddressActivity : BaseActivity() {
 
         val _ID = "_ID"
         val _ADDRESS = "_ADDRESS"
+        val _UUID = "_UUID"
 
-        fun launch(activity: Activity, addressID: Int?, address: String) {
+        fun launch(activity: Activity, addressID: Int?, address: String, uuid:String) {
             activity.startActivity(
                 Intent(
                     activity,
@@ -40,6 +43,7 @@ class OperationCommAddressActivity : BaseActivity() {
                 ).apply {
                     putExtra(_ID, addressID)
                     putExtra(_ADDRESS, address)
+                    putExtra(_UUID, uuid)
                 })
         }
     }

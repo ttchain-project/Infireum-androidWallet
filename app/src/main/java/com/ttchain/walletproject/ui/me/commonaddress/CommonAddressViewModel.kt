@@ -99,6 +99,7 @@ class CommonAddressViewModel(
             bean.addressID = data._id
             bean.icon = getWalletIconByAddress(address)
             bean.address = address
+            bean.uuid = data.uuId
             addressEntityList.add(AddressEntity(AddressEntity.NORMAL, bean))
         }
         return addressEntityList
