@@ -23,6 +23,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterInside
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.scottyab.aescrypt.AESCrypt
 import com.ttchain.walletproject.App.Companion.isMainNet
 import com.ttchain.walletproject.base.BaseDialogFragment
 import com.ttchain.walletproject.enums.CoinEnum
@@ -137,14 +138,32 @@ fun String.performCopyString(context: Context) {
     clipboard.primaryClip = ClipData.newPlainText(null, this)
     context.showToast(context.getString(R.string.g_copied))
 }
-//
-//fun String.encryptString(context: Context): String {
-//    return preferenceHelper.encrypt(context, this)
-//}
-//
-//fun String.decryptString(context: Context): String {
-//    return preferenceHelper.decrypt(context, this)
-//}
+
+fun encrypt(context: Context, plaintext: String): String {
+    return try {
+        AESCrypt.encrypt(context.getString(R.string.aeskey), plaintext)
+    } catch (e: Exception) {
+        e.printStackTrace()
+        plaintext
+    }
+}
+
+fun decrypt(context: Context, cipherText: String): String {
+    return try {
+        AESCrypt.decrypt(context.getString(R.string.aeskey), cipherText)
+    } catch (e: Exception) {
+        e.printStackTrace()
+        cipherText
+    }
+}
+
+fun String.encryptString(context: Context): String {
+    return encrypt(context, this)
+}
+
+fun String.decryptString(context: Context): String {
+    return decrypt(context, this)
+}
 
 /**
  * 外開url

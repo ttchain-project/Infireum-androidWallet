@@ -1,7 +1,6 @@
 package com.ttchain.walletproject.ui.me
 
 import androidx.lifecycle.MutableLiveData
-import com.ttchain.walletproject.App.Companion.preferenceHelper
 import com.ttchain.walletproject.base.BaseViewModel
 import com.ttchain.walletproject.database.data.IdentityData
 import com.ttchain.walletproject.model.ApiVersionData
@@ -34,7 +33,6 @@ class MeViewModel(
 
     private fun removeUserIdentityData() {
         systemHelper.removeUserIdentityPreferences(userHelp.identityID)
-        preferenceHelper.removePfeData()
         userHelp.removeUserTouchId()
         userHelp.removeIdentityID()
         userHelp.removeSelectedWalletID()

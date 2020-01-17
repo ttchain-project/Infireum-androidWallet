@@ -3,7 +3,8 @@ package com.ttchain.walletproject.model
 import android.content.Context
 import android.os.Build
 import androidx.core.content.edit
-import com.ttchain.walletproject.App.Companion.preferenceHelper
+import com.ttchain.walletproject.decryptString
+import com.ttchain.walletproject.encryptString
 import com.ttchain.walletproject.utils.Utility
 import java.util.*
 
@@ -92,15 +93,16 @@ class UserHelperImpl(private val mContext: Context) : UserHelper {
         get() {
             val prefs =
                 mContext.getSharedPreferences(ApiHelperImpl.API_DATA_PREFS, Context.MODE_PRIVATE)
-            return if (preferenceHelper.decrypt(
-                    mContext,
-                    prefs.getString(CREATE_RESPONSE, "").orEmpty()
-                ) != ""
-            ) preferenceHelper.decrypt(mContext, prefs.getString(CREATE_RESPONSE, "").orEmpty()) else ""
+            val decryptString =
+                prefs.getString(CREATE_RESPONSE, "").orEmpty().decryptString(mContext)
+            return when {
+                decryptString.isNotEmpty() -> decryptString
+                else -> ""
+            }
         }
         set(value) {
             mContext.getSharedPreferences(ApiHelperImpl.API_DATA_PREFS, Context.MODE_PRIVATE).edit {
-                putString(CREATE_RESPONSE, preferenceHelper.encrypt(mContext, value))
+                putString(CREATE_RESPONSE, value.encryptString(mContext))
             }
         }
 

@@ -2,7 +2,6 @@ package com.ttchain.walletproject
 
 import android.content.Context
 import androidx.multidex.MultiDexApplication
-import com.ttchain.walletproject.cache.Preferences
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.koin.appModule
 import com.ttchain.walletproject.model.DecimalData
@@ -46,8 +45,6 @@ class App : MultiDexApplication() {
 
         lateinit var INSTANCE: WeakReference<App>
 
-        lateinit var preferenceHelper: Preferences
-
         const val FAST_CLICK_DELAY_TIME = 500
         var clickLastClickTime = 0L
 
@@ -59,8 +56,6 @@ class App : MultiDexApplication() {
         super.onCreate()
         INSTANCE = WeakReference(this)
         app = this
-        preferenceHelper =
-            Preferences(applicationContext.getSharedPreferences("setting", MODE_PRIVATE))
 
         // koin
         startKoin {

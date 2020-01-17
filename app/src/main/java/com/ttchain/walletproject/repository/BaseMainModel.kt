@@ -5,11 +5,12 @@ import android.content.Context
 import android.net.Uri
 import android.text.TextUtils
 import androidx.core.content.FileProvider
-import com.ttchain.walletproject.App.Companion.preferenceHelper
 import com.ttchain.walletproject.cache.GlobalConstant
 import com.ttchain.walletproject.database.data.CoinData
 import com.ttchain.walletproject.database.data.IdentityData
 import com.ttchain.walletproject.database.data.WalletData
+import com.ttchain.walletproject.decryptString
+import com.ttchain.walletproject.encryptString
 import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.model.ApiHelper
 import com.ttchain.walletproject.model.DbHelper
@@ -106,11 +107,11 @@ open class BaseMainModel(
     }
 
     fun encryptString(context: Context, string: String): String {
-        return preferenceHelper.encrypt(context, string)
+        return string.encryptString(context)
     }
 
     fun decryptString(context: Context, string: String): String {
-        return preferenceHelper.decrypt(context, string)
+        return string.decryptString(context)
     }
 
     fun getRawPwd(mContext: Context): String {

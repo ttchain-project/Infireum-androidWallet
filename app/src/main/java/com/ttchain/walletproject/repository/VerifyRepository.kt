@@ -2,8 +2,9 @@ package com.ttchain.walletproject.repository
 
 import android.content.Context
 import android.text.TextUtils
-import com.ttchain.walletproject.App.Companion.preferenceHelper
 import com.ttchain.walletproject.database.data.IdentityData
+import com.ttchain.walletproject.decryptString
+import com.ttchain.walletproject.encryptString
 import com.ttchain.walletproject.model.DbHelper
 import com.ttchain.walletproject.model.UserHelper
 import com.ttchain.walletproject.utils.Utility
@@ -38,7 +39,7 @@ class VerifyRepository(
     }
 
     fun encryptString(string: String): String {
-        return preferenceHelper.encrypt(context, string)
+        return string.encryptString(context)
     }
 
     fun getWalletEpKey(walletID: Int): String {
@@ -49,6 +50,6 @@ class VerifyRepository(
     }
 
     fun decryptString(string: String): String {
-        return preferenceHelper.decrypt(context, string)
+        return string.decryptString(context)
     }
 }
