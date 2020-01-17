@@ -1,0 +1,16 @@
+#Fri Jan 17 15:47:22 CST 2020
+path.3=classes3.dex
+path.2=classes2.dex
+path.1=classes.dex
+renamed.4=classes5.dex
+path.0=classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+base.4=/Users/wuyiru/walletproject/app/build/intermediates/dex/proPlayDebug/mergeExtDexProPlayDebug/out/classes4.dex
+renamed.0=classes.dex
+base.3=/Users/wuyiru/walletproject/app/build/intermediates/dex/proPlayDebug/mergeExtDexProPlayDebug/out/classes3.dex
+base.2=/Users/wuyiru/walletproject/app/build/intermediates/dex/proPlayDebug/mergeExtDexProPlayDebug/out/classes2.dex
+base.1=/Users/wuyiru/walletproject/app/build/intermediates/dex/proPlayDebug/mergeProjectDexProPlayDebug/out/classes.dex
+base.0=/Users/wuyiru/walletproject/app/build/intermediates/dex/proPlayDebug/mergeExtDexProPlayDebug/out/classes.dex
+path.4=classes4.dex

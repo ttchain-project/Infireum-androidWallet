@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ms:Banner-androidx:2.3.17@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/b74c22daf7cd754eb923b5c815fbde14/Banner-androidx-2.3.17/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/b74c22daf7cd754eb923b5c815fbde14/Banner-androidx-2.3.17/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.ms/Banner-androidx/2.3.17/c81bbec268ab432d3576430f2b19e3e4a3042373/Banner-androidx-2.3.17-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.ms/Banner-androidx/2.3.17/f2c9e36fc51e69b23a58eb902cd3bb6d0446f900/Banner-androidx-2.3.17-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

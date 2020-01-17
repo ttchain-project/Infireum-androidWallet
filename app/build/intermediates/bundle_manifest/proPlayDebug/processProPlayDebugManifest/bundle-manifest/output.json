@@ -1,0 +1,1 @@
+[{"outputType":{"type":"BUNDLE_MANIFEST"},"apkData":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"1.0.0","enabled":true,"outputFile":"app-pro-play-debug.apk","fullName":"proPlayDebug","baseName":"pro-play-debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.ttchain.walletproject.dev","split":"","minSdkVersion":"21"}}]

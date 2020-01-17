@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.QuincySx:BlockchainWallet-Crypto:0.1.16-beta@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/e433666c99f97251dd99490231503074/BlockchainWallet-Crypto-0.1.16-beta/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/e433666c99f97251dd99490231503074/BlockchainWallet-Crypto-0.1.16-beta/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

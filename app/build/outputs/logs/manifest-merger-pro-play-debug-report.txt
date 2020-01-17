@@ -1,0 +1,759 @@
+-- Merging decision tree log ---
+provider#androidx.core.content.FileProvider
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:206:9-214:20
+	android:grantUriPermissions
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:210:13-47
+	android:authorities
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:208:13-60
+	android:exported
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:209:13-37
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:207:13-62
+manifest
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:2:1-217:12
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:2:1-217:12
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:2:1-217:12
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:2:1-217:12
+MERGED from [com.google.android.material:material:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/946093075d78eb9f74f58a48d61f96ab/material-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:17:1-34:12
+MERGED from [com.afollestad.material-dialogs:commons:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e4bac37a85520cb83585adc7dd7a080d/jetified-commons-0.9.6.0/AndroidManifest.xml:2:1-14:12
+MERGED from [com.github.yalantis:ucrop:2.2.2] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e30e516e6dcffde332ce27fa297030db/jetified-ucrop-2.2.2/AndroidManifest.xml:2:1-11:12
+MERGED from [com.jsibbold:zoomage:1.2.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8fa05646f501502741b1e594509f2d46/jetified-zoomage-1.2.0/AndroidManifest.xml:2:1-12:12
+MERGED from [org.koin:koin-androidx-viewmodel:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/349bc6590a4a3d812375ee9d1d4c9259/koin-androidx-viewmodel-2.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [org.koin:koin-androidx-scope:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a999201a0c13dddc3cb5e84b7c3abea2/koin-androidx-scope-2.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.ms:Banner-androidx:2.3.17] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b74c22daf7cd754eb923b5c815fbde14/Banner-androidx-2.3.17/AndroidManifest.xml:2:1-9:12
+MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e51b9fd7d2e06913cb269c86dce0e720/jetified-core-0.9.6.0/AndroidManifest.xml:2:1-15:12
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e22c9a11f0e8680755e14f296a19a42f/jetified-library-1.4.2/AndroidManifest.xml:6:1-16:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/93bc303e0edf41378a70a682ebb74605/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/0588f1680d8c002d349b6281f1a6043e/core-ktx-1.1.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/140e197d83343f156dc84b9dfd575292/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d6af80f241fc38d7dc85309aa19b9ef3/lifecycle-extensions-2.1.0/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.fragment:fragment-ktx:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b861c0bef19b030d1651d99937bed00a/fragment-ktx-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f6058528b5b8e3ff9adcd87479369978/activity-ktx-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/7af837f6ac8752511ef417229ce99259/lifecycle-viewmodel-ktx-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.multidex:multidex:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2f412b909b1a98b99c97682b13ebb211/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/43908d07557c65a2b936f90e306c0f85/lifecycle-livedata-ktx-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/69b52a5faedb54e2a8c1f282e4879622/jetified-BaseRecyclerViewAdapterHelper-2.9.40/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android:flexbox:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/3763d2b0f9184f548b79d44ffbcb836a/flexbox-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [com.contrarywind:Android-PickerView:4.1.6] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8a5b5d519c75dab08387a9aa91d0da3e/Android-PickerView-4.1.6/AndroidManifest.xml:2:1-11:12
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:17:1-56:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/20320e90de746c929d63eec1465caf9e/rxandroid-2.1.1/AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.room:room-rxjava2:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/5da9a26c2dd826633131a2d66caa0c1a/room-rxjava2-2.2.3/AndroidManifest.xml:17:1-24:12
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.5] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/00a5fef86143ff89d538380132476a46/jetified-rxpermissions-0.9.5/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.stetho:stetho-okhttp3:1.5.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a7c471d6e88d548ca9cdee8060895b29/stetho-okhttp3-1.5.1/AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d85debad21134847a096ee01970698b4/jetified-glide-4.9.0/AndroidManifest.xml:2:1-12:12
+MERGED from [com.mindorks.android:prdownloader:0.4.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/486e369a55423c9f71d00ff2ffebac08/prdownloader-0.4.0/AndroidManifest.xml:17:1-26:12
+MERGED from [com.scottyab:aescrypt:0.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/cf7e57afcaaa94ff8c1199b57d4c76bf/aescrypt-0.0.1/AndroidManifest.xml:2:1-12:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/110ee042695f68c551aacf9683f7723e/jetified-circleimageview-2.2.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.QuincySx:BlockchainWallet-Crypto:0.1.16-beta] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e433666c99f97251dd99490231503074/BlockchainWallet-Crypto-0.1.16-beta/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:17:1-30:12
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8cb5044682129de71b7279ae8d15bb77/jetified-timber-4.7.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/38a503b4f6519e6904bcd167919f8ddd/lifecycle-livedata-core-ktx-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [org.koin:koin-android:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/fca350940e73a82e503f6f62ca12ac82/koin-android-2.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/4b5b42ad315c37cc8e23ff006c2bb3aa/recyclerview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d9fd0f9d2413d1485b690ac340fd0bdd/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/cc49b32293b6ca9e924e3f5ec7f94c93/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/3c86d6f3154e362e2ac7bcaee0a8b231/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f3e56877bc6da310e08a648eecbd26a4/transition-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/dfb1f22e942c156be6987681931b441d/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/bc16c119e93617f7f4bd3188565e6df6/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/24dca681329175a03d53e389a45c201a/appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/4681ba69b992d1066d0f86ff962fa316/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/29a6593c42d1f7975c962d8d95b5ed40/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d87973ebeeaea2fc000b73c69c9f5f39/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/1138a1941bf86b99853b89ce79c7fc71/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e7c663d08d0478d87f07969d53991dd8/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/164e16dd8741398891092fcad60e6640/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/fe76cbed9b9df926e6dd828b9c57ebf7/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9d820099421ea00e96b2625ea6c19c4c/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/07b17ca9bfc2ccf3f9284ac94fb47df2/activity-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/50dbf37e10b7bd5c1bf2c0fff2d83243/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/0aa511544b3ee110c63a1446fbe2c5e4/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2444e4ac8bf5e41fc0222e63298b7bae/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/df2ac4fe6b88cbdd1c862077d2fdf1ec/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/12e3091321384669e8f586318ef1d685/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/4f67ff4ac0fdb67eb669010cec74a33a/lifecycle-service-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/1dab23c110954a3fdc6ae220778a8acb/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/5121bdb578841b1f04d55a3eccda21e9/lifecycle-livedata-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/fa301fe4f1b3537f3a6689e0543f6dc4/lifecycle-livedata-core-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/7c6636ec62ad2c4f482a80212e8dde81/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b0af4bd25e8bd0125497169244a78c79/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f6af1f60f41a53f5595450555fe2a9f8/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.stetho:stetho:1.5.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f329874fdcfe70ea772d7473575965f4/jetified-stetho-1.5.1/AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2ef931233153b20acb3ff83069609154/jetified-gifdecoder-4.9.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/0f4501d13c165054fa137530cafc3fd1/sqlite-framework-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/7034d30b19b127a19660862334887356/sqlite-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/225c82d8c731985fb415caed199cb7eb/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b49a3cb0a0186e54d18812f26e6e4ce2/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c9eb4efc2103a05ad6203fd4d78919fe/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a7ac5d9832a55e02f327cca94b1b2adb/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2958bfeff871706e37e023803895bb19/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.contrarywind:wheelview:4.0.8] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/be6441e75ad49c353f57b64e28fdced8/wheelview-4.0.8/AndroidManifest.xml:2:1-17:12
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:2:1-217:12
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:2:1-217:12
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:2:1-217:12
+	package
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:4:5-40
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:2:1-217:12
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:2:1-217:12
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:8:5-76
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:8:22-73
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:9:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:11:5-83
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:11:22-80
+application
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:13:5-215:19
+MERGED from [com.google.android.material:material:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/946093075d78eb9f74f58a48d61f96ab/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/946093075d78eb9f74f58a48d61f96ab/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:27:5-32:19
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:27:5-32:19
+MERGED from [com.afollestad.material-dialogs:commons:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e4bac37a85520cb83585adc7dd7a080d/jetified-commons-0.9.6.0/AndroidManifest.xml:12:5-20
+MERGED from [com.afollestad.material-dialogs:commons:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e4bac37a85520cb83585adc7dd7a080d/jetified-commons-0.9.6.0/AndroidManifest.xml:12:5-20
+MERGED from [org.koin:koin-androidx-viewmodel:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/349bc6590a4a3d812375ee9d1d4c9259/koin-androidx-viewmodel-2.0.1/AndroidManifest.xml:7:5-20
+MERGED from [org.koin:koin-androidx-viewmodel:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/349bc6590a4a3d812375ee9d1d4c9259/koin-androidx-viewmodel-2.0.1/AndroidManifest.xml:7:5-20
+MERGED from [org.koin:koin-androidx-scope:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a999201a0c13dddc3cb5e84b7c3abea2/koin-androidx-scope-2.0.1/AndroidManifest.xml:7:5-20
+MERGED from [org.koin:koin-androidx-scope:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a999201a0c13dddc3cb5e84b7c3abea2/koin-androidx-scope-2.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e51b9fd7d2e06913cb269c86dce0e720/jetified-core-0.9.6.0/AndroidManifest.xml:13:5-20
+MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e51b9fd7d2e06913cb269c86dce0e720/jetified-core-0.9.6.0/AndroidManifest.xml:13:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/140e197d83343f156dc84b9dfd575292/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/140e197d83343f156dc84b9dfd575292/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d6af80f241fc38d7dc85309aa19b9ef3/lifecycle-extensions-2.1.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d6af80f241fc38d7dc85309aa19b9ef3/lifecycle-extensions-2.1.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:46:5-54:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:46:5-54:19
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.5] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/00a5fef86143ff89d538380132476a46/jetified-rxpermissions-0.9.5/AndroidManifest.xml:11:5-20
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.5] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/00a5fef86143ff89d538380132476a46/jetified-rxpermissions-0.9.5/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.stetho:stetho-okhttp3:1.5.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a7c471d6e88d548ca9cdee8060895b29/stetho-okhttp3-1.5.1/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.stetho:stetho-okhttp3:1.5.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a7c471d6e88d548ca9cdee8060895b29/stetho-okhttp3-1.5.1/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d85debad21134847a096ee01970698b4/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d85debad21134847a096ee01970698b4/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
+MERGED from [com.scottyab:aescrypt:0.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/cf7e57afcaaa94ff8c1199b57d4c76bf/aescrypt-0.0.1/AndroidManifest.xml:10:5-20
+MERGED from [com.scottyab:aescrypt:0.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/cf7e57afcaaa94ff8c1199b57d4c76bf/aescrypt-0.0.1/AndroidManifest.xml:10:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/110ee042695f68c551aacf9683f7723e/jetified-circleimageview-2.2.0/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/110ee042695f68c551aacf9683f7723e/jetified-circleimageview-2.2.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:24:5-28:19
+MERGED from [androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:24:5-28:19
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8cb5044682129de71b7279ae8d15bb77/jetified-timber-4.7.1/AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8cb5044682129de71b7279ae8d15bb77/jetified-timber-4.7.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.core:core:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/df2ac4fe6b88cbdd1c862077d2fdf1ec/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/df2ac4fe6b88cbdd1c862077d2fdf1ec/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:22:5-28:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:22:5-28:19
+MERGED from [com.facebook.stetho:stetho:1.5.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f329874fdcfe70ea772d7473575965f4/jetified-stetho-1.5.1/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.stetho:stetho:1.5.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f329874fdcfe70ea772d7473575965f4/jetified-stetho-1.5.1/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2ef931233153b20acb3ff83069609154/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2ef931233153b20acb3ff83069609154/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2958bfeff871706e37e023803895bb19/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2958bfeff871706e37e023803895bb19/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.contrarywind:wheelview:4.0.8] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/be6441e75ad49c353f57b64e28fdced8/wheelview-4.0.8/AndroidManifest.xml:11:5-15:19
+MERGED from [com.contrarywind:wheelview:4.0.8] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/be6441e75ad49c353f57b64e28fdced8/wheelview-4.0.8/AndroidManifest.xml:11:5-15:19
+	tools:ignore
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:23:9-48
+	android:roundIcon
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:19:9-54
+	android:icon
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:17:9-43
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/df2ac4fe6b88cbdd1c862077d2fdf1ec/core-1.1.0/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:20:9-35
+	android:label
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:18:9-41
+	android:hardwareAccelerated
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:16:9-43
+	tools:targetApi
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:25:9-28
+	android:allowBackup
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:15:9-36
+		REJECTED from [com.contrarywind:wheelview:4.0.8] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/be6441e75ad49c353f57b64e28fdced8/wheelview-4.0.8/AndroidManifest.xml:12:9-35
+	android:theme
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:21:9-44
+	tools:replace
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:24:9-44
+	android:usesCleartextTraffic
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:22:9-44
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:14:9-28
+activity#com.ttchain.walletproject.ui.splash.SplashActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:26:9-34:20
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:28:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:29:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:27:13-53
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:30:13-33:29
+action#android.intent.action.MAIN
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:32:17-77
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:32:27-74
+activity#com.ttchain.walletproject.ui.main.MainActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:36:9-39:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:38:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:39:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:37:13-49
+activity#com.ttchain.walletproject.ui.login.LoginActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:41:9-44:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:43:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:44:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:42:13-51
+activity#com.ttchain.walletproject.ui.agreement.AgreementActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:46:9-49:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:48:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:49:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:47:13-59
+activity#com.ttchain.walletproject.ui.scanner_new.ScannerActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:51:9-54:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:53:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:54:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:52:13-59
+activity#com.ttchain.walletproject.ui.enter_password.EnterPasswordActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:56:9-59:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:58:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:59:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:57:13-68
+activity#com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:61:9-64:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:63:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:64:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:62:13-96
+activity#com.ttchain.walletproject.ui.create_id.CreateIdActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:66:9-69:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:68:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:69:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:67:13-58
+activity#com.ttchain.walletproject.ui.dapp.DappActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:71:9-74:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:73:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:74:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:72:13-49
+activity#com.ttchain.walletproject.ui.trend.TrendActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:76:9-79:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:78:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:79:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:77:13-51
+activity#com.ttchain.walletproject.ui.webview.WebViewActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:81:9-84:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:83:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:84:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:82:13-55
+activity#com.ttchain.walletproject.ui.me.selectexportwallet.SelectExportWalletActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:86:9-89:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:88:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:89:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:87:13-105
+activity#com.ttchain.walletproject.ui.me.languagesetting.LanguageSettingActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:91:9-94:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:93:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:94:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:92:13-74
+activity#com.ttchain.walletproject.ui.me.currency.CurrencyActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:96:9-99:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:98:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:99:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:97:13-60
+activity#com.ttchain.walletproject.ui.me.commonaddress.CommonAddressActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:101:9-104:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:103:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:104:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:102:13-70
+activity#com.ttchain.walletproject.ui.me.commonaddress.operation_new.OperationCommAddressActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:106:9-109:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:108:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:109:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:107:13-91
+activity#com.ttchain.walletproject.ui.wallet.exportkey.ExportKeyActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:111:9-114:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:113:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:114:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:112:13-66
+activity#com.ttchain.walletproject.ui.me.selectbackupmethod.SelectBackupMethodActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:116:9-119:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:118:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:119:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:117:13-80
+activity#com.ttchain.walletproject.ui.me.userwalletmnemonic.UserWalletMnemonicActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:121:9-124:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:123:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:124:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:122:13-80
+activity#com.ttchain.walletproject.ui.me.userwalletsqrcode.UserWalletQrCodeActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:126:9-129:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:128:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:129:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:127:13-77
+activity#com.ttchain.walletproject.ui.me.usinglocker.UsingLockerActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:131:9-134:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:133:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:134:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:132:13-66
+activity#com.ttchain.walletproject.ui.create_id.mnemonics.MnemonicsStartActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:136:9-139:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:138:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:139:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:137:13-74
+activity#com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:141:9-144:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:143:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:144:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:142:13-81
+activity#com.ttchain.walletproject.ui.success_login.SuccessLoginActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:146:9-149:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:148:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:149:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:147:13-66
+activity#com.ttchain.walletproject.ui.ttn.ttndetail.TtnDetailActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:151:9-154:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:153:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:154:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:152:13-63
+activity#com.ttchain.walletproject.ui.ttn.ttntransfer.TtnTransferActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:156:9-159:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:158:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:159:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:157:13-67
+activity#com.ttchain.walletproject.ui.ttn.ttnreceipt.TtnReceiptAssetActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:161:9-164:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:163:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:164:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:162:13-70
+activity#com.ttchain.walletproject.ui.ttn.ttnrecord.TtnRecordActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:166:9-169:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:168:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:169:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:167:13-63
+activity#com.ttchain.walletproject.ui.asset.AssetListActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:171:9-174:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:173:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:174:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:172:13-55
+activity#com.ttchain.walletproject.ui.coin_record.CoinRecordActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:176:9-179:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:178:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:179:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:177:13-62
+activity#com.ttchain.walletproject.ui.receiptasset.ReceiptAssetActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:181:9-184:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:183:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:184:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:182:13-65
+activity#com.ttchain.walletproject.ui.coin_transfer.CoinTransferActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:186:9-189:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:188:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:189:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:187:13-66
+activity#com.ttchain.walletproject.ui.transferrecorddetail.TransferRecordDetailActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:191:9-194:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:193:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:194:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:192:13-81
+activity#com.ttchain.walletproject.ui.asset_manage.AssetManageActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:196:9-199:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:198:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:199:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:197:13-64
+activity#com.ttchain.walletproject.ui.search_coin.SearchCoinActivity
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:201:9-204:67
+	android:screenOrientation
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:203:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:204:13-64
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:202:13-62
+uses-sdk
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/946093075d78eb9f74f58a48d61f96ab/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/946093075d78eb9f74f58a48d61f96ab/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.afollestad.material-dialogs:commons:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e4bac37a85520cb83585adc7dd7a080d/jetified-commons-0.9.6.0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.afollestad.material-dialogs:commons:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e4bac37a85520cb83585adc7dd7a080d/jetified-commons-0.9.6.0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.yalantis:ucrop:2.2.2] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e30e516e6dcffde332ce27fa297030db/jetified-ucrop-2.2.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.2] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e30e516e6dcffde332ce27fa297030db/jetified-ucrop-2.2.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.jsibbold:zoomage:1.2.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8fa05646f501502741b1e594509f2d46/jetified-zoomage-1.2.0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.jsibbold:zoomage:1.2.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8fa05646f501502741b1e594509f2d46/jetified-zoomage-1.2.0/AndroidManifest.xml:8:5-10:41
+MERGED from [org.koin:koin-androidx-viewmodel:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/349bc6590a4a3d812375ee9d1d4c9259/koin-androidx-viewmodel-2.0.1/AndroidManifest.xml:5:5-44
+MERGED from [org.koin:koin-androidx-viewmodel:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/349bc6590a4a3d812375ee9d1d4c9259/koin-androidx-viewmodel-2.0.1/AndroidManifest.xml:5:5-44
+MERGED from [org.koin:koin-androidx-scope:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a999201a0c13dddc3cb5e84b7c3abea2/koin-androidx-scope-2.0.1/AndroidManifest.xml:5:5-44
+MERGED from [org.koin:koin-androidx-scope:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a999201a0c13dddc3cb5e84b7c3abea2/koin-androidx-scope-2.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.ms:Banner-androidx:2.3.17] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b74c22daf7cd754eb923b5c815fbde14/Banner-androidx-2.3.17/AndroidManifest.xml:5:5-7:41
+MERGED from [com.ms:Banner-androidx:2.3.17] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b74c22daf7cd754eb923b5c815fbde14/Banner-androidx-2.3.17/AndroidManifest.xml:5:5-7:41
+MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e51b9fd7d2e06913cb269c86dce0e720/jetified-core-0.9.6.0/AndroidManifest.xml:8:5-11:75
+MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e51b9fd7d2e06913cb269c86dce0e720/jetified-core-0.9.6.0/AndroidManifest.xml:8:5-11:75
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e22c9a11f0e8680755e14f296a19a42f/jetified-library-1.4.2/AndroidManifest.xml:12:5-14:41
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e22c9a11f0e8680755e14f296a19a42f/jetified-library-1.4.2/AndroidManifest.xml:12:5-14:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/93bc303e0edf41378a70a682ebb74605/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/93bc303e0edf41378a70a682ebb74605/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/0588f1680d8c002d349b6281f1a6043e/core-ktx-1.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/0588f1680d8c002d349b6281f1a6043e/core-ktx-1.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/140e197d83343f156dc84b9dfd575292/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/140e197d83343f156dc84b9dfd575292/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d6af80f241fc38d7dc85309aa19b9ef3/lifecycle-extensions-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d6af80f241fc38d7dc85309aa19b9ef3/lifecycle-extensions-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b861c0bef19b030d1651d99937bed00a/fragment-ktx-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b861c0bef19b030d1651d99937bed00a/fragment-ktx-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f6058528b5b8e3ff9adcd87479369978/activity-ktx-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f6058528b5b8e3ff9adcd87479369978/activity-ktx-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/7af837f6ac8752511ef417229ce99259/lifecycle-viewmodel-ktx-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/7af837f6ac8752511ef417229ce99259/lifecycle-viewmodel-ktx-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.multidex:multidex:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2f412b909b1a98b99c97682b13ebb211/multidex-2.0.1/AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2f412b909b1a98b99c97682b13ebb211/multidex-2.0.1/AndroidManifest.xml:20:5-43
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/43908d07557c65a2b936f90e306c0f85/lifecycle-livedata-ktx-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/43908d07557c65a2b936f90e306c0f85/lifecycle-livedata-ktx-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/69b52a5faedb54e2a8c1f282e4879622/jetified-BaseRecyclerViewAdapterHelper-2.9.40/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/69b52a5faedb54e2a8c1f282e4879622/jetified-BaseRecyclerViewAdapterHelper-2.9.40/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android:flexbox:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/3763d2b0f9184f548b79d44ffbcb836a/flexbox-1.1.0/AndroidManifest.xml:22:5-24:41
+MERGED from [com.google.android:flexbox:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/3763d2b0f9184f548b79d44ffbcb836a/flexbox-1.1.0/AndroidManifest.xml:22:5-24:41
+MERGED from [com.contrarywind:Android-PickerView:4.1.6] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8a5b5d519c75dab08387a9aa91d0da3e/Android-PickerView-4.1.6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.contrarywind:Android-PickerView:4.1.6] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8a5b5d519c75dab08387a9aa91d0da3e/Android-PickerView-4.1.6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:20:5-44
+MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/20320e90de746c929d63eec1465caf9e/rxandroid-2.1.1/AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/20320e90de746c929d63eec1465caf9e/rxandroid-2.1.1/AndroidManifest.xml:18:5-43
+MERGED from [androidx.room:room-rxjava2:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/5da9a26c2dd826633131a2d66caa0c1a/room-rxjava2-2.2.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-rxjava2:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/5da9a26c2dd826633131a2d66caa0c1a/room-rxjava2-2.2.3/AndroidManifest.xml:20:5-22:41
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.5] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/00a5fef86143ff89d538380132476a46/jetified-rxpermissions-0.9.5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.5] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/00a5fef86143ff89d538380132476a46/jetified-rxpermissions-0.9.5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.stetho:stetho-okhttp3:1.5.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a7c471d6e88d548ca9cdee8060895b29/stetho-okhttp3-1.5.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.stetho:stetho-okhttp3:1.5.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a7c471d6e88d548ca9cdee8060895b29/stetho-okhttp3-1.5.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d85debad21134847a096ee01970698b4/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d85debad21134847a096ee01970698b4/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.mindorks.android:prdownloader:0.4.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/486e369a55423c9f71d00ff2ffebac08/prdownloader-0.4.0/AndroidManifest.xml:22:5-24:41
+MERGED from [com.mindorks.android:prdownloader:0.4.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/486e369a55423c9f71d00ff2ffebac08/prdownloader-0.4.0/AndroidManifest.xml:22:5-24:41
+MERGED from [com.scottyab:aescrypt:0.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/cf7e57afcaaa94ff8c1199b57d4c76bf/aescrypt-0.0.1/AndroidManifest.xml:6:5-8:41
+MERGED from [com.scottyab:aescrypt:0.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/cf7e57afcaaa94ff8c1199b57d4c76bf/aescrypt-0.0.1/AndroidManifest.xml:6:5-8:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/110ee042695f68c551aacf9683f7723e/jetified-circleimageview-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/110ee042695f68c551aacf9683f7723e/jetified-circleimageview-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.QuincySx:BlockchainWallet-Crypto:0.1.16-beta] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e433666c99f97251dd99490231503074/BlockchainWallet-Crypto-0.1.16-beta/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.QuincySx:BlockchainWallet-Crypto:0.1.16-beta] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e433666c99f97251dd99490231503074/BlockchainWallet-Crypto-0.1.16-beta/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:20:5-22:41
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8cb5044682129de71b7279ae8d15bb77/jetified-timber-4.7.1/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/8cb5044682129de71b7279ae8d15bb77/jetified-timber-4.7.1/AndroidManifest.xml:5:5-43
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/38a503b4f6519e6904bcd167919f8ddd/lifecycle-livedata-core-ktx-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/38a503b4f6519e6904bcd167919f8ddd/lifecycle-livedata-core-ktx-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [org.koin:koin-android:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/fca350940e73a82e503f6f62ca12ac82/koin-android-2.0.1/AndroidManifest.xml:5:5-44
+MERGED from [org.koin:koin-android:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/fca350940e73a82e503f6f62ca12ac82/koin-android-2.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/4b5b42ad315c37cc8e23ff006c2bb3aa/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/4b5b42ad315c37cc8e23ff006c2bb3aa/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d9fd0f9d2413d1485b690ac340fd0bdd/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d9fd0f9d2413d1485b690ac340fd0bdd/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/cc49b32293b6ca9e924e3f5ec7f94c93/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/cc49b32293b6ca9e924e3f5ec7f94c93/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/3c86d6f3154e362e2ac7bcaee0a8b231/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/3c86d6f3154e362e2ac7bcaee0a8b231/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f3e56877bc6da310e08a648eecbd26a4/transition-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f3e56877bc6da310e08a648eecbd26a4/transition-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/dfb1f22e942c156be6987681931b441d/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/dfb1f22e942c156be6987681931b441d/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/bc16c119e93617f7f4bd3188565e6df6/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/bc16c119e93617f7f4bd3188565e6df6/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/24dca681329175a03d53e389a45c201a/appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/24dca681329175a03d53e389a45c201a/appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/4681ba69b992d1066d0f86ff962fa316/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/4681ba69b992d1066d0f86ff962fa316/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/29a6593c42d1f7975c962d8d95b5ed40/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/29a6593c42d1f7975c962d8d95b5ed40/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d87973ebeeaea2fc000b73c69c9f5f39/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d87973ebeeaea2fc000b73c69c9f5f39/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/1138a1941bf86b99853b89ce79c7fc71/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/1138a1941bf86b99853b89ce79c7fc71/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e7c663d08d0478d87f07969d53991dd8/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e7c663d08d0478d87f07969d53991dd8/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/164e16dd8741398891092fcad60e6640/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/164e16dd8741398891092fcad60e6640/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/fe76cbed9b9df926e6dd828b9c57ebf7/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/fe76cbed9b9df926e6dd828b9c57ebf7/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9d820099421ea00e96b2625ea6c19c4c/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9d820099421ea00e96b2625ea6c19c4c/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/07b17ca9bfc2ccf3f9284ac94fb47df2/activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/07b17ca9bfc2ccf3f9284ac94fb47df2/activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/50dbf37e10b7bd5c1bf2c0fff2d83243/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/50dbf37e10b7bd5c1bf2c0fff2d83243/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/0aa511544b3ee110c63a1446fbe2c5e4/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/0aa511544b3ee110c63a1446fbe2c5e4/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2444e4ac8bf5e41fc0222e63298b7bae/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2444e4ac8bf5e41fc0222e63298b7bae/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/df2ac4fe6b88cbdd1c862077d2fdf1ec/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/df2ac4fe6b88cbdd1c862077d2fdf1ec/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/12e3091321384669e8f586318ef1d685/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/12e3091321384669e8f586318ef1d685/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/4f67ff4ac0fdb67eb669010cec74a33a/lifecycle-service-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/4f67ff4ac0fdb67eb669010cec74a33a/lifecycle-service-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/1dab23c110954a3fdc6ae220778a8acb/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/1dab23c110954a3fdc6ae220778a8acb/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/5121bdb578841b1f04d55a3eccda21e9/lifecycle-livedata-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/5121bdb578841b1f04d55a3eccda21e9/lifecycle-livedata-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/fa301fe4f1b3537f3a6689e0543f6dc4/lifecycle-livedata-core-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/fa301fe4f1b3537f3a6689e0543f6dc4/lifecycle-livedata-core-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/7c6636ec62ad2c4f482a80212e8dde81/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/7c6636ec62ad2c4f482a80212e8dde81/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b0af4bd25e8bd0125497169244a78c79/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b0af4bd25e8bd0125497169244a78c79/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f6af1f60f41a53f5595450555fe2a9f8/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f6af1f60f41a53f5595450555fe2a9f8/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.stetho:stetho:1.5.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f329874fdcfe70ea772d7473575965f4/jetified-stetho-1.5.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.stetho:stetho:1.5.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/f329874fdcfe70ea772d7473575965f4/jetified-stetho-1.5.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2ef931233153b20acb3ff83069609154/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2ef931233153b20acb3ff83069609154/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/0f4501d13c165054fa137530cafc3fd1/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/0f4501d13c165054fa137530cafc3fd1/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/7034d30b19b127a19660862334887356/sqlite-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/7034d30b19b127a19660862334887356/sqlite-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/225c82d8c731985fb415caed199cb7eb/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/225c82d8c731985fb415caed199cb7eb/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b49a3cb0a0186e54d18812f26e6e4ce2/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/b49a3cb0a0186e54d18812f26e6e4ce2/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c9eb4efc2103a05ad6203fd4d78919fe/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c9eb4efc2103a05ad6203fd4d78919fe/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a7ac5d9832a55e02f327cca94b1b2adb/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/a7ac5d9832a55e02f327cca94b1b2adb/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2958bfeff871706e37e023803895bb19/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/2958bfeff871706e37e023803895bb19/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.contrarywind:wheelview:4.0.8] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/be6441e75ad49c353f57b64e28fdced8/wheelview-4.0.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.contrarywind:wheelview:4.0.8] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/be6441e75ad49c353f57b64e28fdced8/wheelview-4.0.8/AndroidManifest.xml:7:5-9:41
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.afollestad.material-dialogs:core:0.9.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/e51b9fd7d2e06913cb269c86dce0e720/jetified-core-0.9.6.0/AndroidManifest.xml:11:9-72
+	android:targetSdkVersion
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:211:13-213:54
+	android:resource
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:213:17-51
+	android:name
+		ADDED from /Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:212:17-67
+uses-permission#android.permission.USE_BIOMETRIC
+ADDED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:24:5-72
+	android:name
+		ADDED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:24:22-69
+uses-permission#android.permission.USE_FINGERPRINT
+ADDED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:25:5-74
+	android:name
+		ADDED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:25:22-71
+activity#androidx.biometric.DeviceCredentialHandlerActivity
+ADDED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:28:9-31:67
+	android:exported
+		ADDED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:30:13-36
+	android:theme
+		ADDED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:31:13-64
+	android:name
+		ADDED from [androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:29:13-78
+uses-permission#android.permission.CAMERA
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:22:5-65
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:22:22-62
+uses-feature#android.hardware.camera
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:25:5-27:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:27:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:26:9-47
+uses-feature#android.hardware.camera.front
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:28:5-30:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:30:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:29:9-53
+uses-feature#android.hardware.camera.autofocus
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:33:5-35:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:35:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:34:9-57
+uses-feature#android.hardware.camera.flash
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:36:5-38:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:38:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:37:9-53
+uses-feature#android.hardware.screen.landscape
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:39:5-41:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:41:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:40:9-57
+uses-feature#android.hardware.wifi
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:42:5-44:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:44:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:43:9-45
+activity#com.journeyapps.barcodescanner.CaptureActivity
+ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:47:9-53:63
+	android:screenOrientation
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:50:13-56
+	android:clearTaskOnLaunch
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:49:13-45
+	android:stateNotNeeded
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:51:13-42
+	android:windowSoftInputMode
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:53:13-60
+	android:theme
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:52:13-54
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:48:13-74
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:26:13-74
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:25:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:24:13-79

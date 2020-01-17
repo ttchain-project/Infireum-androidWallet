@@ -1,0 +1,453 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ttchain.walletproject.dev"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:6:5-67
+11-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:6:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:7:5-79
+12-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:7:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:8:5-76
+13-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:8:22-73
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:9:5-80
+14-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:9:22-77
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:10:5-81
+15-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:10:22-78
+16    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+16-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:11:5-83
+16-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:11:22-80
+17    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+17-->[androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:24:5-72
+17-->[androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:24:22-69
+18    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+18-->[androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:25:5-74
+18-->[androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:25:22-71
+19    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+19-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:22:5-65
+19-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:22:22-62
+20    <uses-feature
+20-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:25:5-27:36
+21        android:name="android.hardware.camera"
+21-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:26:9-47
+22        android:required="false" />
+22-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:27:9-33
+23    <uses-feature
+23-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:28:5-30:36
+24        android:name="android.hardware.camera.front"
+24-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:29:9-53
+25        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+25-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:30:9-33
+26    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+27    <uses-feature
+27-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:33:5-35:36
+28        android:name="android.hardware.camera.autofocus"
+28-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:34:9-57
+29        android:required="false" />
+29-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:35:9-33
+30    <uses-feature
+30-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:36:5-38:36
+31        android:name="android.hardware.camera.flash"
+31-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:37:9-53
+32        android:required="false" />
+32-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:38:9-33
+33    <uses-feature
+33-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:39:5-41:36
+34        android:name="android.hardware.screen.landscape"
+34-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:40:9-57
+35        android:required="false" />
+35-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:41:9-33
+36    <uses-feature
+36-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:42:5-44:36
+37        android:name="android.hardware.wifi"
+37-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:43:9-45
+38        android:required="false" />
+38-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:44:9-33
+39
+40    <application
+40-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:13:5-215:19
+41        android:name="com.ttchain.walletproject.App"
+41-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:14:9-28
+42        android:allowBackup="false"
+42-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:15:9-36
+43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+43-->[androidx.core:core:1.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/df2ac4fe6b88cbdd1c862077d2fdf1ec/core-1.1.0/AndroidManifest.xml:24:18-86
+44        android:debuggable="true"
+45        android:hardwareAccelerated="true"
+45-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:16:9-43
+46        android:icon="@mipmap/ic_launcher"
+46-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:17:9-43
+47        android:label="@string/app_name"
+47-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:18:9-41
+48        android:roundIcon="@mipmap/ic_launcher_round"
+48-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:19:9-54
+49        android:supportsRtl="true"
+49-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:20:9-35
+50        android:testOnly="true"
+51        android:theme="@style/PrimaryTheme"
+51-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:21:9-44
+52        android:usesCleartextTraffic="true" >
+52-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:22:9-44
+53        <activity
+53-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:26:9-34:20
+54            android:name="com.ttchain.walletproject.ui.splash.SplashActivity"
+54-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:27:13-53
+55            android:screenOrientation="portrait"
+55-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:28:13-49
+56            android:windowSoftInputMode="stateHidden|adjustPan" >
+56-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:29:13-64
+57            <intent-filter>
+57-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:30:13-33:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:31:17-69
+58-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:31:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:32:17-77
+60-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:32:27-74
+61            </intent-filter>
+62        </activity>
+63        <activity
+63-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:36:9-39:67
+64            android:name="com.ttchain.walletproject.ui.main.MainActivity"
+64-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:37:13-49
+65            android:screenOrientation="portrait"
+65-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:38:13-49
+66            android:windowSoftInputMode="stateHidden|adjustPan" />
+66-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:39:13-64
+67        <activity
+67-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:41:9-44:67
+68            android:name="com.ttchain.walletproject.ui.login.LoginActivity"
+68-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:42:13-51
+69            android:screenOrientation="portrait"
+69-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:43:13-49
+70            android:windowSoftInputMode="stateHidden|adjustPan" />
+70-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:44:13-64
+71        <activity
+71-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:46:9-49:67
+72            android:name="com.ttchain.walletproject.ui.agreement.AgreementActivity"
+72-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:47:13-59
+73            android:screenOrientation="portrait"
+73-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:48:13-49
+74            android:windowSoftInputMode="stateHidden|adjustPan" />
+74-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:49:13-64
+75        <activity
+75-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:51:9-54:67
+76            android:name="com.ttchain.walletproject.ui.scanner_new.ScannerActivity"
+76-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:52:13-59
+77            android:screenOrientation="portrait"
+77-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:53:13-49
+78            android:windowSoftInputMode="stateHidden|adjustPan" />
+78-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:54:13-64
+79        <activity
+79-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:56:9-59:67
+80            android:name="com.ttchain.walletproject.ui.enter_password.EnterPasswordActivity"
+80-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:57:13-68
+81            android:screenOrientation="portrait"
+81-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:58:13-49
+82            android:windowSoftInputMode="stateHidden|adjustPan" />
+82-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:59:13-64
+83        <activity
+83-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:61:9-64:67
+84            android:name="com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultActivity"
+84-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:62:13-96
+85            android:screenOrientation="portrait"
+85-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:63:13-49
+86            android:windowSoftInputMode="stateHidden|adjustPan" />
+86-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:64:13-64
+87        <activity
+87-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:66:9-69:67
+88            android:name="com.ttchain.walletproject.ui.create_id.CreateIdActivity"
+88-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:67:13-58
+89            android:screenOrientation="portrait"
+89-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:68:13-49
+90            android:windowSoftInputMode="stateHidden|adjustPan" />
+90-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:69:13-64
+91        <activity
+91-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:71:9-74:67
+92            android:name="com.ttchain.walletproject.ui.dapp.DappActivity"
+92-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:72:13-49
+93            android:screenOrientation="portrait"
+93-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:73:13-49
+94            android:windowSoftInputMode="stateHidden|adjustPan" />
+94-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:74:13-64
+95        <activity
+95-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:76:9-79:67
+96            android:name="com.ttchain.walletproject.ui.trend.TrendActivity"
+96-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:77:13-51
+97            android:screenOrientation="portrait"
+97-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:78:13-49
+98            android:windowSoftInputMode="stateHidden|adjustPan" />
+98-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:79:13-64
+99        <activity
+99-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:81:9-84:67
+100            android:name="com.ttchain.walletproject.ui.webview.WebViewActivity"
+100-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:82:13-55
+101            android:screenOrientation="portrait"
+101-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:83:13-49
+102            android:windowSoftInputMode="stateHidden|adjustPan" />
+102-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:84:13-64
+103        <activity
+103-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:86:9-89:67
+104            android:name="com.ttchain.walletproject.ui.me.selectexportwallet.SelectExportWalletActivity"
+104-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:87:13-105
+105            android:screenOrientation="portrait"
+105-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:88:13-49
+106            android:windowSoftInputMode="stateHidden|adjustPan" />
+106-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:89:13-64
+107        <activity
+107-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:91:9-94:67
+108            android:name="com.ttchain.walletproject.ui.me.languagesetting.LanguageSettingActivity"
+108-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:92:13-74
+109            android:screenOrientation="portrait"
+109-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:93:13-49
+110            android:windowSoftInputMode="stateHidden|adjustPan" />
+110-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:94:13-64
+111        <activity
+111-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:96:9-99:67
+112            android:name="com.ttchain.walletproject.ui.me.currency.CurrencyActivity"
+112-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:97:13-60
+113            android:screenOrientation="portrait"
+113-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:98:13-49
+114            android:windowSoftInputMode="stateHidden|adjustPan" />
+114-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:99:13-64
+115        <activity
+115-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:101:9-104:67
+116            android:name="com.ttchain.walletproject.ui.me.commonaddress.CommonAddressActivity"
+116-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:102:13-70
+117            android:screenOrientation="portrait"
+117-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:103:13-49
+118            android:windowSoftInputMode="stateHidden|adjustPan" />
+118-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:104:13-64
+119        <activity
+119-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:106:9-109:67
+120            android:name="com.ttchain.walletproject.ui.me.commonaddress.operation_new.OperationCommAddressActivity"
+120-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:107:13-91
+121            android:screenOrientation="portrait"
+121-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:108:13-49
+122            android:windowSoftInputMode="stateHidden|adjustPan" />
+122-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:109:13-64
+123        <activity
+123-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:111:9-114:67
+124            android:name="com.ttchain.walletproject.ui.wallet.exportkey.ExportKeyActivity"
+124-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:112:13-66
+125            android:screenOrientation="portrait"
+125-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:113:13-49
+126            android:windowSoftInputMode="stateHidden|adjustPan" />
+126-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:114:13-64
+127        <activity
+127-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:116:9-119:67
+128            android:name="com.ttchain.walletproject.ui.me.selectbackupmethod.SelectBackupMethodActivity"
+128-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:117:13-80
+129            android:screenOrientation="portrait"
+129-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:118:13-49
+130            android:windowSoftInputMode="stateHidden|adjustPan" />
+130-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:119:13-64
+131        <activity
+131-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:121:9-124:67
+132            android:name="com.ttchain.walletproject.ui.me.userwalletmnemonic.UserWalletMnemonicActivity"
+132-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:122:13-80
+133            android:screenOrientation="portrait"
+133-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:123:13-49
+134            android:windowSoftInputMode="stateHidden|adjustPan" />
+134-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:124:13-64
+135        <activity
+135-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:126:9-129:67
+136            android:name="com.ttchain.walletproject.ui.me.userwalletsqrcode.UserWalletQrCodeActivity"
+136-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:127:13-77
+137            android:screenOrientation="portrait"
+137-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:128:13-49
+138            android:windowSoftInputMode="stateHidden|adjustPan" />
+138-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:129:13-64
+139        <activity
+139-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:131:9-134:67
+140            android:name="com.ttchain.walletproject.ui.me.usinglocker.UsingLockerActivity"
+140-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:132:13-66
+141            android:screenOrientation="portrait"
+141-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:133:13-49
+142            android:windowSoftInputMode="stateHidden|adjustPan" />
+142-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:134:13-64
+143        <activity
+143-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:136:9-139:67
+144            android:name="com.ttchain.walletproject.ui.create_id.mnemonics.MnemonicsStartActivity"
+144-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:137:13-74
+145            android:screenOrientation="portrait"
+145-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:138:13-49
+146            android:windowSoftInputMode="stateHidden|adjustPan" />
+146-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:139:13-64
+147        <activity
+147-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:141:9-144:67
+148            android:name="com.ttchain.walletproject.ui.restorebymnemonics_new.RestoreByMnemonicsActivity"
+148-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:142:13-81
+149            android:screenOrientation="portrait"
+149-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:143:13-49
+150            android:windowSoftInputMode="stateHidden|adjustPan" />
+150-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:144:13-64
+151        <activity
+151-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:146:9-149:67
+152            android:name="com.ttchain.walletproject.ui.success_login.SuccessLoginActivity"
+152-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:147:13-66
+153            android:screenOrientation="portrait"
+153-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:148:13-49
+154            android:windowSoftInputMode="stateHidden|adjustPan" />
+154-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:149:13-64
+155        <activity
+155-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:151:9-154:67
+156            android:name="com.ttchain.walletproject.ui.ttn.ttndetail.TtnDetailActivity"
+156-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:152:13-63
+157            android:screenOrientation="portrait"
+157-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:153:13-49
+158            android:windowSoftInputMode="stateHidden|adjustPan" />
+158-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:154:13-64
+159        <activity
+159-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:156:9-159:67
+160            android:name="com.ttchain.walletproject.ui.ttn.ttntransfer.TtnTransferActivity"
+160-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:157:13-67
+161            android:screenOrientation="portrait"
+161-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:158:13-49
+162            android:windowSoftInputMode="stateHidden|adjustPan" />
+162-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:159:13-64
+163        <activity
+163-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:161:9-164:67
+164            android:name="com.ttchain.walletproject.ui.ttn.ttnreceipt.TtnReceiptAssetActivity"
+164-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:162:13-70
+165            android:screenOrientation="portrait"
+165-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:163:13-49
+166            android:windowSoftInputMode="stateHidden|adjustPan" />
+166-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:164:13-64
+167        <activity
+167-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:166:9-169:67
+168            android:name="com.ttchain.walletproject.ui.ttn.ttnrecord.TtnRecordActivity"
+168-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:167:13-63
+169            android:screenOrientation="portrait"
+169-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:168:13-49
+170            android:windowSoftInputMode="stateHidden|adjustPan" />
+170-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:169:13-64
+171        <activity
+171-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:171:9-174:67
+172            android:name="com.ttchain.walletproject.ui.asset.AssetListActivity"
+172-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:172:13-55
+173            android:screenOrientation="portrait"
+173-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:173:13-49
+174            android:windowSoftInputMode="stateHidden|adjustPan" />
+174-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:174:13-64
+175        <activity
+175-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:176:9-179:67
+176            android:name="com.ttchain.walletproject.ui.coin_record.CoinRecordActivity"
+176-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:177:13-62
+177            android:screenOrientation="portrait"
+177-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:178:13-49
+178            android:windowSoftInputMode="stateHidden|adjustPan" />
+178-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:179:13-64
+179        <activity
+179-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:181:9-184:67
+180            android:name="com.ttchain.walletproject.ui.receiptasset.ReceiptAssetActivity"
+180-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:182:13-65
+181            android:screenOrientation="portrait"
+181-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:183:13-49
+182            android:windowSoftInputMode="stateHidden|adjustPan" />
+182-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:184:13-64
+183        <activity
+183-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:186:9-189:67
+184            android:name="com.ttchain.walletproject.ui.coin_transfer.CoinTransferActivity"
+184-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:187:13-66
+185            android:screenOrientation="portrait"
+185-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:188:13-49
+186            android:windowSoftInputMode="stateHidden|adjustPan" />
+186-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:189:13-64
+187        <activity
+187-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:191:9-194:67
+188            android:name="com.ttchain.walletproject.ui.transferrecorddetail.TransferRecordDetailActivity"
+188-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:192:13-81
+189            android:screenOrientation="portrait"
+189-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:193:13-49
+190            android:windowSoftInputMode="stateHidden|adjustPan" />
+190-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:194:13-64
+191        <activity
+191-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:196:9-199:67
+192            android:name="com.ttchain.walletproject.ui.asset_manage.AssetManageActivity"
+192-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:197:13-64
+193            android:screenOrientation="portrait"
+193-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:198:13-49
+194            android:windowSoftInputMode="stateHidden|adjustPan" />
+194-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:199:13-64
+195        <activity
+195-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:201:9-204:67
+196            android:name="com.ttchain.walletproject.ui.search_coin.SearchCoinActivity"
+196-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:202:13-62
+197            android:screenOrientation="portrait"
+197-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:203:13-49
+198            android:windowSoftInputMode="stateHidden|adjustPan" />
+198-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:204:13-64
+199
+200        <provider
+201            android:name="androidx.core.content.FileProvider"
+201-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:207:13-62
+202            android:authorities="com.ttchain.walletproject.dev.provider"
+202-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:208:13-60
+203            android:exported="false"
+203-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:209:13-37
+204            android:grantUriPermissions="true" >
+204-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:210:13-47
+205            <meta-data
+205-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:211:13-213:54
+206                android:name="android.support.FILE_PROVIDER_PATHS"
+206-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:212:17-67
+207                android:resource="@xml/file_paths" />
+207-->/Users/wuyiru/walletproject/app/src/main/AndroidManifest.xml:213:17-51
+208        </provider>
+209
+210        <activity
+210-->[androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:28:9-31:67
+211            android:name="androidx.biometric.DeviceCredentialHandlerActivity"
+211-->[androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:29:13-78
+212            android:exported="true"
+212-->[androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:30:13-36
+213            android:theme="@style/DeviceCredentialHandlerTheme" />
+213-->[androidx.biometric:biometric:1.0.1] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/d4233de4688389d4d152c3b597704ef2/biometric-1.0.1/AndroidManifest.xml:31:13-64
+214        <activity
+214-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:47:9-53:63
+215            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+215-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:48:13-74
+216            android:clearTaskOnLaunch="true"
+216-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:49:13-45
+217            android:screenOrientation="sensorLandscape"
+217-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:50:13-56
+218            android:stateNotNeeded="true"
+218-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:51:13-42
+219            android:theme="@style/zxing_CaptureTheme"
+219-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:52:13-54
+220            android:windowSoftInputMode="stateAlwaysHidden" />
+220-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/9b49e9104f429d643fcba86273e92b20/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:53:13-60
+221
+222        <service
+222-->[androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:25:9-27:40
+223            android:name="androidx.room.MultiInstanceInvalidationService"
+223-->[androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:26:13-74
+224            android:exported="false" />
+224-->[androidx.room:room-runtime:2.2.3] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/c7b25f92ba40f851468a8286fd708869/room-runtime-2.2.3/AndroidManifest.xml:27:13-37
+225
+226        <provider
+226-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:23:9-27:43
+227            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+227-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:24:13-79
+228            android:authorities="com.ttchain.walletproject.dev.lifecycle-process"
+228-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:25:13-69
+229            android:exported="false"
+229-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:26:13-37
+230            android:multiprocess="true" />
+230-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/wuyiru/.gradle/caches/transforms-2/files-2.1/41b1b78f76167ae9169a5afa46973960/lifecycle-process-2.1.0/AndroidManifest.xml:27:13-40
+231    </application>
+232
+233</manifest>
