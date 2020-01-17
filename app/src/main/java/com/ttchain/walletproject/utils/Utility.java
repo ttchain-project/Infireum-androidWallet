@@ -35,6 +35,7 @@ import com.scottyab.aescrypt.AESCrypt;
 import com.ttchain.walletproject.BuildConfig;
 import com.ttchain.walletproject.R;
 import com.ttchain.walletproject.model.BiResponse;
+import com.ttchain.walletproject.model.UserHelperImpl;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -734,6 +735,10 @@ public class Utility {
 
     private static String getBytesToMBString(long bytes) {
         return String.format(Locale.ENGLISH, "%.2fMb", bytes / (1024.00 * 1024.00));
+    }
+
+    public static Locale getPrefLocal(Context context) {
+        return getPrefLocal(new UserHelperImpl(context).getPreferLanguage());
     }
 
     public static Locale getPrefLocal(String language) {
