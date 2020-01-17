@@ -65,7 +65,7 @@ enum class CoinEnum(
     ),
     TTN(
         "IFRC", "", "ifrc",
-        "Identifier_IFRC", R.mipmap.coin_ttn, 10.0
+        "Identifier_IFRC", R.mipmap.wallet_ttchain_logo, 10.0
     ),
     DAI1(
         "DAI1", "", "dai1",
