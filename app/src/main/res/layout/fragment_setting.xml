@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/padding_18"
-            android:layout_marginTop="@dimen/padding_24"
+            android:layout_marginTop="@dimen/padding_16"
             android:text="@string/setting_system_setting"
             android:textColor="@color/_506EF5" />
 
@@ -64,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/padding_18"
-            android:layout_marginTop="@dimen/padding_24"
+            android:layout_marginTop="@dimen/padding_16"
             android:text="@string/setting_wallet_setting"
             android:textColor="@color/_506EF5" />
 

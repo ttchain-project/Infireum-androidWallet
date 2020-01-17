@@ -28,12 +28,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.git4u.tt_wallet_android.net.model.Function3Response;
 import com.git4u.tt_wallet_android.net.model.Function4Response;
 import com.scottyab.aescrypt.AESCrypt;
 import com.ttchain.walletproject.BuildConfig;
-import com.ttchain.walletproject.R;
 import com.ttchain.walletproject.model.BiResponse;
 import com.ttchain.walletproject.model.UserHelperImpl;
 
@@ -403,15 +401,6 @@ public class Utility {
         }
         typedArray.recycle();
         return rIds;
-    }
-
-    public static void confirmExitApp(final Activity activity) {
-        new MaterialDialog.Builder(activity)
-                .title(R.string.app_name)
-                .content(R.string.g_a_exit)
-                .positiveText(R.string.g_close)
-                .negativeText(R.string.g_cancel)
-                .onPositive((dialog, which) -> activity.finish()).show();
     }
 
     public static int getStatusBarHeight(Context context) {
