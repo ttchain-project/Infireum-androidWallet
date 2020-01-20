@@ -93,16 +93,12 @@ val networkModule = module {
             .build()
     }
 
-//    single { providesApi<MikeApi>(get(), BuildConfig.MIKE_API_URL) }
     single { providesApi<BalanceApi>(get(), BuildConfig.GIT_WALLET_BALANCE_API_URL) }
     single { providesApi<HelperApi>(get(), BuildConfig.GIT_HELPER_API_URL) }
-    single {
-        providesApiCo<HelperApiCo>(get(), BuildConfig.GIT_HELPER_API_URL)
-    }
+    single { providesApiCo<HelperApiCo>(get(), BuildConfig.GIT_HELPER_API_URL) }
     single { providesApi<BroadcastApi>(get(), BuildConfig.GIT_HELPER_API_URL) }
-//    single { providesApi<InfoApi>(get(), BuildConfig.GIT_IM_API_URL) }
-    single { providesApiCo<InfoApiCo>(get(), BuildConfig.GIT_IM_API_URL) }
-//
+    single { providesApiCo<InfoApiCo>(get(), BuildConfig.GIT_HELPER_API_URL) }
+    //
     single { providesApi<BlockExplorerApi>(get(), BuildConfig.BLOCKEXPLORER_API_URL) }
     single { providesApi<EtherscanApi>(get(), BuildConfig.ETHERSCAN_API_URL) }
     single { providesApi<OmniExplorerApi>(get(), BuildConfig.OMNIEXPLORER_API_URL) }

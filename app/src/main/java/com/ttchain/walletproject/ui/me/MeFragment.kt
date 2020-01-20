@@ -17,6 +17,7 @@ import com.tbruyelle.rxpermissions2.RxPermissions
 import com.ttchain.walletproject.*
 import com.ttchain.walletproject.App.Companion.isMainNet
 import com.ttchain.walletproject.base.BaseFragment
+import com.ttchain.walletproject.cache.GlobalConstant
 import com.ttchain.walletproject.dialog.StatusDialog
 import com.ttchain.walletproject.dialog.UpdateVersionDialogFragment
 import com.ttchain.walletproject.dialog.WarningDialog
@@ -154,7 +155,7 @@ class MeFragment : BaseFragment() {
                         .setOnUpdateClickListener {
                             if (FeatureUtils.isPlayPlatform) {
                                 try {
-                                    val appPackageName = "com.ttc.tt_wallet_android.beta"
+                                    val appPackageName = "com.ttchain.walletproject.beta"
                                     startActivity(
                                         Intent(
                                             Intent.ACTION_VIEW,
@@ -262,7 +263,7 @@ class MeFragment : BaseFragment() {
         childFragmentManager.addDialog(warningDialog, "deleteAccountWarning")
     }
 
-    private val fileName = "TtnProBeta.apk"
+    private val fileName = "${GlobalConstant.APP_NAME}ProBeta.apk"
 
     private fun downloadApk() {
 
