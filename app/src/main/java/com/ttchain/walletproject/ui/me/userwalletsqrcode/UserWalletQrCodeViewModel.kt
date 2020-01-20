@@ -6,6 +6,7 @@ import android.text.TextUtils
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
 import com.ttchain.walletproject.base.BaseViewModel
+import com.ttchain.walletproject.cache.GlobalConstant
 import com.ttchain.walletproject.database.data.WalletData
 import com.ttchain.walletproject.enums.ChainType
 import com.ttchain.walletproject.enums.CoinEnum
@@ -188,7 +189,7 @@ class UserWalletQrCodeViewModel(
                 val cal = Calendar.getInstance(Locale.getDefault())
                 cal.timeInMillis = qrCodeGeneratedTimeStamp
                 val sdf = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
-                val fileName = "TTChain_" + sdf.format(cal.time) + ".png"
+                val fileName = "${GlobalConstant.APP_NAME}_${sdf.format(cal.time)}.png"
                 val f = File(FileUtils.saveQrCodeFolder.toString() + File.separator + fileName)
                 f.createNewFile()
                 //Convert bitmap to byte array

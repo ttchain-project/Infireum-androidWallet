@@ -11,6 +11,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 public class GlobalConstant {
+    public static final String APP_NAME = "Infireum";
     public static final int NORMAL_SPAN_COUNT = 1;
     public static final int PRODUCT_SPAN_COUNT_NORMAL = 2;
     public static final int MAIN_CATEGORY_SPAN_SIZE = 3;

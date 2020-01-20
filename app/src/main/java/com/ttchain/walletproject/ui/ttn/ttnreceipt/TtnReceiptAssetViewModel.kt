@@ -41,7 +41,7 @@ TtnReceiptAssetViewModel(
             val result = suspendCancellableCoroutine<String> {
                 val walletData = baseMainModel.ttnWalletData
                 val walletName = walletData.name.replace(" ", "")
-                val fileName = "TTChain_$walletName.png"
+                val fileName = "${GlobalConstant.APP_NAME}_$walletName.png"
                 val f = File(FileUtils.saveQrCodeFolder.toString() + File.separator + fileName)
                 f.createNewFile()
                 //Convert bitmap to byte array

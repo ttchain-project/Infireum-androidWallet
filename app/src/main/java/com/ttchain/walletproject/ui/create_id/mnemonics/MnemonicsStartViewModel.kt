@@ -6,6 +6,7 @@ import android.text.TextUtils
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
 import com.ttchain.walletproject.base.BaseViewModel
+import com.ttchain.walletproject.cache.GlobalConstant
 import com.ttchain.walletproject.database.data.AssetData
 import com.ttchain.walletproject.database.data.CoinSelectionData
 import com.ttchain.walletproject.database.data.IdentityData
@@ -315,7 +316,7 @@ class MnemonicsStartViewModel(
                 val cal = Calendar.getInstance(Locale.getDefault())
                 cal.timeInMillis = qrCodeGeneratedTimeStamp
                 val sdf = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
-                val fileName = "TTChain_" + sdf.format(cal.time) + ".png"
+                val fileName = "${GlobalConstant.APP_NAME}_${sdf.format(cal.time)}.png"
 
                 val f = File(FileUtils.saveQrCodeFolder.toString() + File.separator + fileName)
                 f.createNewFile()
