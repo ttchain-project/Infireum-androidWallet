@@ -21,7 +21,9 @@ import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.cache.GlobalConstant
 import com.ttchain.walletproject.enums.CoinEnum
+import com.ttchain.walletproject.performCopyString
 import com.ttchain.walletproject.rx.RxBus
+import com.ttchain.walletproject.setDelayClickListener
 import kotlinx.android.synthetic.main.fragment_receipt_asset.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -59,13 +61,11 @@ class ReceiptAssetFragment : BaseFragment() {
             .subscribe({ s ->
                 viewModel.coinId = s
                 viewModel.performUpdateQrCodeBitmap()
-                viewModel.performGetQrCodeTitleName()
-            }, { throwable -> })
+            }, {
+            })
 
         viewModel.apply {
             updateCoinID()
-            performGetTitleName()
-            performGetQrCodeTitleName()
             performGetUserSelectedWallet()
             performUpdateQrCodeBitmap()
         }
@@ -74,18 +74,28 @@ class ReceiptAssetFragment : BaseFragment() {
     override fun initView() {
         setHasOptionsMenu(true)
         viewModel.coinId = bundleCoinID
+        requireActivity().title = getString(R.string.receipt)
+        wallet_address.setDelayClickListener {
+            wallet_address.text.toString().performCopyString(it.context)
+        }
+        save_btn.setDelayClickListener {
+            val rootView =
+                requireActivity().window.decorView.findViewById<View>(android.R.id.content)
+            viewModel.performDownloadQrCode(rootView)
+        }
     }
 
     private fun initData() {
         viewModel.apply {
             performGetQrCodeBitmapLiveData.observe(viewLifecycleOwner) { bitmap ->
-                qrcode!!.setImageBitmap(bitmap)
+                qrcode?.setImageBitmap(bitmap)
             }
-            performGetQrCodeTitleNameLiveData.observe(requireActivity()) { name ->
-                //                mView.setQrCodeTitle(name + " " + getString(R.string.receipt_address))
+            performDownloadQrCodeLiveData.observe(requireActivity()) { path ->
+                showToast(getString(R.string.download_success) + path)
             }
-            performGetTitleNameLiveData.observe(requireActivity()) {
-                // !?
+            performDownloadQrCodeErrorLiveData.observe(requireActivity()) { throwable ->
+                onHideLoading()
+                showToast(getString(R.string.fail) + " " + throwable.toString())
             }
             performGetUserSelectedWalletLiveData.observe(requireActivity()) { data ->
                 when (data.mainCoinId) {
@@ -121,12 +131,12 @@ class ReceiptAssetFragment : BaseFragment() {
     }
 
     private fun setWalletName(name: String, drawable: Drawable?) {
-        wallet_name.text = name
-        wallet_name.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null)
+        wallet_name?.text = name
+        wallet_name?.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null)
     }
 
     private fun setWalletAddress(address: String) {
-        wallet_address.text = address
+        wallet_address?.text = address
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

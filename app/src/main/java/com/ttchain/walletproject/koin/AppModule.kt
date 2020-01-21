@@ -64,19 +64,11 @@ val viewModelModule = module {
     viewModel { AssetListViewModel(get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordViewModel(get(), get(), get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordListViewModel(get(), get()) }
-    viewModel { ReceiptAssetViewModel(get(), get(), get(), get()) }
+    viewModel { ReceiptAssetViewModel(get(), get(), get()) }
     viewModel { BaseCoinTransferViewModel(get(), get(), get(), get(), get(), get()) }
     viewModel {
         CoinTransferViewModel(
-            get(),
-            get(),
-            get(),
-            get(),
-            get(),
-            get(),
-            get(),
-            get(),
-            get()
+            get(), get(), get(), get(), get(), get(), get(), get(), get()
         )
     }
     viewModel { AssetManageViewModel(get()) }

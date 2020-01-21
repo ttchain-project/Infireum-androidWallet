@@ -12,18 +12,19 @@ import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.getScreenWidth
 import com.ttchain.walletproject.model.DbHelper
 import com.ttchain.walletproject.model.ImTokenReceiptQrCode
-import com.ttchain.walletproject.model.UserHelper
 import com.ttchain.walletproject.repository.WalletRepository
-import com.ttchain.walletproject.toMain
 import com.ttchain.walletproject.utils.BarCodeUtil
 import com.ttchain.walletproject.utils.FileUtils
 import com.ttchain.walletproject.utils.RuleUtils
 import com.ttchain.walletproject.utils.Utils
-import io.reactivex.Observable
+import kotlinx.coroutines.suspendCancellableCoroutine
+import java.io.ByteArrayOutputStream
+import java.io.File
+import java.io.FileOutputStream
+import kotlin.coroutines.resume
 
 class ReceiptAssetViewModel(
     private val context: Context,
-    private val userHelper: UserHelper,
     private val dbHelper: DbHelper,
     private val walletRepository: WalletRepository
 ) : BaseViewModel() {
@@ -48,15 +49,6 @@ class ReceiptAssetViewModel(
         return if (list.isNotEmpty()) {
             list[0]
         } else CoinData()
-    }
-
-    val performGetQrCodeTitleNameLiveData = MutableLiveData<String>()
-
-    fun performGetQrCodeTitleName() {
-        viewModelLaunch {
-            val coinData = getCoinDataByCoinID(coinId)
-            performGetQrCodeTitleNameLiveData.value = coinData.displayName
-        }
     }
 
     private fun getCoinDataByCoinID(coinID: Int): CoinData {
@@ -105,31 +97,33 @@ class ReceiptAssetViewModel(
         }
     }
 
-    val performGetTitleNameLiveData = MutableLiveData<String>()
+    val performDownloadQrCodeLiveData = MutableLiveData<String>()
+    val performDownloadQrCodeErrorLiveData = MutableLiveData<Throwable>()
 
-    fun performGetTitleName() {
-        add(Observable.just("")
-            .map {
-                return@map getDefaultWalletTitleName()
+    fun performDownloadQrCode(rootView: View) {
+        viewModelLaunch({
+            val bitmap = Utils.createBitmapFromView(rootView)
+            val result = suspendCancellableCoroutine<String> {
+                val walletData = walletRepository.getUserSelectedWalletData()
+                val walletName = walletData.name.replace(" ", "")
+                val fileName = "TTChain_$walletName.png"
+                val f = File(FileUtils.saveQrCodeFolder.toString() + File.separator + fileName)
+                f.createNewFile()
+                //Convert bitmap to byte array
+                val bos = ByteArrayOutputStream()
+                bitmap.compress(Bitmap.CompressFormat.PNG, 0 /*ignored for PNG*/, bos)
+                val bitmapData = bos.toByteArray()
+                //write the bytes in file
+                val fos = FileOutputStream(f)
+                fos.write(bitmapData)
+                fos.flush()
+                fos.close()
+                it.resume(FileUtils.saveQrCodeFolder.absolutePath)
             }
-            .toMain()
-            .subscribe({ title ->
-                performGetTitleNameLiveData.value = title
-            }, {
-            })
-        )
-    }
-
-    private fun getDefaultWalletTitleName(): String {
-        val id = userHelper.selectedWalletID
-        val walletData = dbHelper.getWalletData(id)
-        return if (walletData != null) {
-            getWalletTitleNameByAddress(walletData.address)
-        } else ""
-    }
-
-    private fun getWalletTitleNameByAddress(address: String): String {
-        return RuleUtils.getDefaultWalletTitle(address)
+            performDownloadQrCodeLiveData.value = result
+        }, {
+            performDownloadQrCodeErrorLiveData.value = it
+        })
     }
 
     val performGetUserSelectedWalletLiveData = MutableLiveData<WalletData>()
@@ -158,5 +152,4 @@ class ReceiptAssetViewModel(
     private fun getSaveTmpFileName(): String {
         return GlobalConstant.TMP_SCREENSHOT_IMAGE_NAME
     }
-
 }
