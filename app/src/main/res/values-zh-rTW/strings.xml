@@ -421,8 +421,8 @@
 
     <!--main-->
     <string name="tab_chat">聊天</string>
-    <string name="tab_main_coin">主鏈幣</string>
-    <string name="tab_stable_coin">穩定幣</string>
+    <string name="tab_main_coin">數位資產</string>
+    <string name="tab_stable_coin">InBIQ</string>
     <string name="main_total_assets">總資產</string>
 
     <!--select_import_wallet_method-->

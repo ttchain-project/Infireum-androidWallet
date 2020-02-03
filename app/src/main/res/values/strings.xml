@@ -307,7 +307,7 @@
     <string name="stable_coin_eth">ETH type</string>
     <string name="stable_coin">Stable Coin</string>
     <string name="sto_coin">Listed Coin</string>
-    <string name="tab_explorer">Discovery</string>
+    <string name="tab_explorer">Discover</string>
     <string name="tab_social">Social</string>
     <string name="tab_setting">Setting</string>
     <string name="create_new_wallet">Create new wallet</string>
@@ -420,8 +420,8 @@
     <string name="backup_qrcode_tip">This mobile barcode is designed for you by the INFIREUM wallet, so that you can easily and quickly restore all your wallet accounts on INFIREUM in the future. \ n \ nBack up your account information properly and do not upload to Drive or access it on any public network. This is crucial for your future actions such as maintaining asset security and restoring your account.</string>
     <!--main-->
     <string name="tab_chat">Chat</string>
-    <string name="tab_main_coin">Ｍain Chain</string>
-    <string name="tab_stable_coin">Stable Coin</string>
+    <string name="tab_main_coin">Digital Assets</string>
+    <string name="tab_stable_coin">InBIQ</string>
     <string name="main_total_assets">Total Assets</string>
 
     <!--select_import_wallet_method-->

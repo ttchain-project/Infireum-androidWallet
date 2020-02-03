@@ -420,8 +420,8 @@
     <string name="backup_qrcode_tip">此行动条码为 INFIREUM 钱包为您贴心设计，供您日后可方便快速恢复您在 INFIREUM 上的所有钱包帐号。 \n\n请妥善备份您的帐号资讯，并且不要上传至云端硬碟或在任何公用网路上存取。这与您日后要维护资产安全、恢复帐号等动作至关重要。 </string>
     <!--main-->
     <string name="tab_chat">聊天</string>
-    <string name="tab_main_coin">主链币</string>
-    <string name="tab_stable_coin">稳定币</string>
+    <string name="tab_main_coin">数位资产</string>
+    <string name="tab_stable_coin">InBIQ</string>
     <string name="main_total_assets">总资产</string>
 
     <!--select_import_wallet_method-->
