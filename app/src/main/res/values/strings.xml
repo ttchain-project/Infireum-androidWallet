@@ -39,7 +39,7 @@
     <string name="create_id_create">Create</string>
     <string name="create_id_name">Identity name</string>
     <string name="create_id_password">Password</string>
-    <string name="create_id_confirm_password">Reenter password</string>
+    <string name="create_id_confirm_password">Re-enter password</string>
     <string name="create_id_password_note">Password reminder message</string>
     <string name="g_camera_permission_request">To enable QR code scanning, please enable access to camera</string>
     <string name="g_pick_photo_permission_request">To enabled access to the album， please enable access to file</string>
@@ -97,8 +97,8 @@
     <string name="setting_identity_name_and_pwd">Set identity name and password</string>
     <string name="input_identity_name">Please enter identity name</string>
     <string name="wallet_pwd">Wallet password</string>
-    <string name="fill_in_pwd_confirm">Reenter password</string>
-    <string name="pwd_hint_message">Password reminder information</string>
+    <string name="fill_in_pwd_confirm">Re-enter password</string>
+    <string name="pwd_hint_message">Password Reminder</string>
     <string name="start_import">Start importing</string>
     <string name="restore_identity">Restore identity</string>
     <string name="import_etherum_wallet">Import ETHERUM wallet</string>
@@ -152,7 +152,7 @@
     <string name="fill_in_wallet_pwd_p">Please enter wallet password</string>
     <string name="fill_in_receipt_address_p">Please enter receipt address</string>
     <string name="fill_in_amount_p">Please Enter amount</string>
-    <string name="pwd">Passwod</string>
+    <string name="pwd">Password</string>
     <string name="g_copied">Address copied</string>
     <string name="fail_verify_pwd_and_reinput_p">Password verification failed, please enter again</string>
 
@@ -415,7 +415,7 @@
     <string name="release_to_send">release to send</string>
     <string name="transaction_packing">(packing)</string>
 
-    <string name="pwd_confirm">Confirm password</string>
+    <string name="pwd_confirm">Confirm Password</string>
     <string name="click_to_display_backup_qrcode">Click to display backup qrcode</string>
     <string name="backup_qrcode_tip">This mobile barcode is designed for you by the INFIREUM wallet, so that you can easily and quickly restore all your wallet accounts on INFIREUM in the future. \ n \ nBack up your account information properly and do not upload to Drive or access it on any public network. This is crucial for your future actions such as maintaining asset security and restoring your account.</string>
     <!--main-->

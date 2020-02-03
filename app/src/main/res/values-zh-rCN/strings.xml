@@ -38,7 +38,7 @@
     <string name="create_id_title">备份帐号行动条码</string>
     <string name="create_id_create">创建</string>
     <string name="create_id_name">帐号建立仅限英文字母与数字组合，至少8个字元</string>
-    <string name="create_id_password">建议使用英文字母大小写与数字组合</string>
+    <string name="create_id_password">密码</string>
     <string name="create_id_confirm_password">请再次输入密码</string>
     <string name="create_id_password_note">提示内容请勿与密码一样，以免被轻易盗取</string>
     <string name="g_camera_permission_request">如要开启条码扫描功能，请允许开启相机权限</string>

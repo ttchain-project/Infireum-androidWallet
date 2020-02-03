@@ -38,7 +38,7 @@
     <string name="create_id_title">備份帳號行動條碼</string>
     <string name="create_id_create">創建</string>
     <string name="create_id_name">帳號建立僅限英文字母與數字組合，至少8個字元</string>
-    <string name="create_id_password">建議使用英文字母大小寫與數字組合</string>
+    <string name="create_id_password">密碼</string>
     <string name="create_id_confirm_password">請再次輸入密碼</string>
     <string name="create_id_password_note">提示內容請勿與密碼一樣，以免被輕易盜取</string>
     <string name="g_camera_permission_request">如要開啟條碼掃描功能，請允許開啟相機權限</string>
