@@ -520,9 +520,9 @@
     <string name="system_loading">System loading, please wait</string>
 
     <!--login-->
-    <string name="login_by_qrcode">Restore QR Code</string>
-    <string name="login_by_mnemonics">Restore mnemonics</string>
-    <string name="agree_privacy_policy">I agree《TTChain Privacy Policy》</string>
+    <string name="login_by_qrcode">Retrieve via QR Code</string>
+    <string name="login_by_mnemonics">Retrieve via Mnemonics</string>
+    <string name="agree_privacy_policy">I agree《InfiniteChain Privacy Policy》</string>
 
     <!--asset list-->
     <string name="main_chain_assets">Main Chain Assets</string>
