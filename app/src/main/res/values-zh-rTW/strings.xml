@@ -31,9 +31,9 @@
     <string name="tab_mine">我的</string>
 
     <string name="login_title">創建您的第一個數字身份輕鬆管理多鏈錢包</string>
-    <string name="login_create">註冊新帳號</string>
-    <string name="login_desc">註冊帳號將自動新增多鏈錢包</string>
-    <string name="login_restore">原有帳號登入</string>
+    <string name="login_create">註冊</string>
+    <string name="login_desc">設置新帳戶後，系統會自動創建一個電子錢包</string>
+    <string name="login_restore">登入</string>
     <string name="login_or">或</string>
     <string name="create_id_title">備份帳號行動條碼</string>
     <string name="create_id_create">創建</string>

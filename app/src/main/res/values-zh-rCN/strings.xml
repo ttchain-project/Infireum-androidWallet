@@ -31,9 +31,9 @@
     <string name="tab_mine">我的</string>
 
     <string name="login_title">创建您的第一个数字身份轻松管理多链钱包</string>
-    <string name="login_create">注册新帐号</string>
-    <string name="login_desc">注册帐号将自动新增多链钱包</string>
-    <string name="login_restore">原有帐号登入</string>
+    <string name="login_create">注册</string>
+    <string name="login_desc">设置新帐户后，系统会自动创建一个电子钱包</string>
+    <string name="login_restore">登入</string>
     <string name="login_or">或</string>
     <string name="create_id_title">备份帐号行动条码</string>
     <string name="create_id_create">创建</string>

@@ -31,9 +31,9 @@
     <string name="tab_mine">Me</string>
 
     <string name="login_title">Create your first digital identity\nEasily manage multi-chain wallets</string>
-    <string name="login_create">Register New Account</string>
-    <string name="login_desc">Registered account will automatically add multi-chain wallet</string>
-    <string name="login_restore">Original Account Login</string>
+    <string name="login_create">Sign Up</string>
+    <string name="login_desc">An e-wallet will automatically be created once you set up a new account</string>
+    <string name="login_restore">Log In</string>
     <string name="login_or">Or</string>
     <string name="create_id_title">Create identity</string>
     <string name="create_id_create">Create</string>
