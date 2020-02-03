@@ -33,6 +33,7 @@
             android:id="@+id/create"
             style="@style/PrimaryButtonAppleGreen"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/padding_20"
             android:layout_marginEnd="@dimen/padding_20"
             android:text="@string/click_to_display_backup_qrcode"

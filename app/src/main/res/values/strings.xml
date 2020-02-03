@@ -176,7 +176,7 @@
     <string name="receipt">Deposit</string>
     <string name="choose_wallet_type">Select wallet type</string>
     <string name="create_identity_desc">Asset security cannot be guaranteed without proper backup. After deleting the app or wallet, you need your back up files to restore wallet.</string>
-    <string name="create_identity_desc_2">Please make a backup in a safe environment with no cameras around.</string>
+    <string name="create_identity_desc_2">Warning: Do not disclose your QR code to anyone.</string>
     <string name="back_up_mnemonic">Backup mnemonic</string>
     <string name="back_up_qr_code">Backup QR CODE</string>
     <string name="back_up_mnemonic_desc">Please carefully record the mnemonic below and we will verify it in the next step.</string>
@@ -910,8 +910,8 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
     <string name="please_check_usdt_wallet">Please check USDT wallet</string>
 
     <!-- fragment mnemonic start -->
-    <string name="mnemonic_start_tip_1">This mobile barcode backup contains: all INFIREUM Wallet-created wallets and lightning wallets, chat identity and chat history.</string>
-    <string name="mnemonic_start_tip_2">This mobile barcode is designed by INFIREUM for you, so that you can easily and quickly restore all wallets on your account in the future.\n\n Make a backup copy of your account information and do not upload to Drive or access it on any public network. This is important for your future actions such as maintaining asset security and restoring your account.</string>
+    <string name="mnemonic_start_tip_1">This QR code grants access to all Infireum wallets, chat history, account identity, and will allow you to recover your account.</string>
+    <string name="mnemonic_start_tip_2">It is recommended to keep a physical copy of your QR code. It is always advised to have multiple copies of your recovery phrase and store it in multiple locations to prevent loss from calamities like floods, earthquake, fire, etc.</string>
 
     <!-- restore by mnemonics -->
     <string name="restore_by_mnemonics_tip_2">Enter mnemonics, a total of 12 characters</string>

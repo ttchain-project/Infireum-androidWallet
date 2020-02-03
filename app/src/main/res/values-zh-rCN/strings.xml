@@ -176,7 +176,7 @@
     <string name="receipt">收款</string>
     <string name="choose_wallet_type">选择钱包类型</string>
     <string name="create_identity_desc">没有妥善备份就无法保障资产安全。删除程序或钱包后，你需要备份文件来恢复钱包。</string>
-    <string name="create_identity_desc_2">请在四周无人、确保没有摄像头的安全环境进行备份。</string>
+    <string name="create_identity_desc_2">警告：请勿将您的QR码透露给任何人。</string>
     <string name="back_up_mnemonic">备份助记词</string>
     <string name="back_up_qr_code">备份QRCODE</string>
     <string name="back_up_mnemonic_desc">请仔细抄写下方助记词，我们将在下一步验证。</string>
@@ -936,8 +936,8 @@ TTN 是INFIREUM交易平台本身的权益证明，平台通用基础通证，TT
     <string name="please_check_usdt_wallet">请查看USDT钱包</string>
 
     <!-- fragment mnemonic start -->
-    <string name="mnemonic_start_tip_1">此行动条码备份内容包含：所有 INFIREUM Wallet创建钱包及闪电钱包，聊天身分与聊天记录。</string>
-    <string name="mnemonic_start_tip_2">此行动条码为 INFIREUM 为您贴心设计，供您日后可以方便快速恢复您帐号上的所有钱包。\n\n请妥善备份您的帐号资讯，并且不要上传至云端硬碟或在任何公用网路上存取。这与您日后要维护资产安全、恢复帐号等动作至关重要。</string>
+    <string name="mnemonic_start_tip_1">此行动条码备份内容包含：所有Infireum钱包，聊天记录，帐户身份，并允许您恢复帐户。</string>
+    <string name="mnemonic_start_tip_2">建议保留您的行动条码的实体副本，并将其存储在多个位置，以防止洪水，地震，火灾等灾难造成的损失。</string>
 
     <!-- restore by mnemonics -->
     <string name="restore_by_mnemonics_tip_2">输入助记词，共 12 个字</string>
