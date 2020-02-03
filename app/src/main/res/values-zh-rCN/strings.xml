@@ -218,7 +218,7 @@
     <string name="hint_mini_version_limit">目前手机版本低于最低版本，请更新版本</string>
     <string name="hint_launch_hockey_app_download_page">若安装过程遇到问题，请点击这里</string>
     <string name="fail_backup">备份失败</string>
-    <string name="version_is_latest">目前已是最新版本</string>
+    <string name="version_is_latest">您已是最新版本</string>
     <string name="now_version_comma">当前版本:</string>
     <string name="error_input_with_space_at_start_or_end">首尾不得空白</string>
     <string name="error_input_content_too_long">内容长度过长</string>
@@ -440,10 +440,10 @@
     <string name="setting_wallet_setting">钱包设定</string>
     <string name="setting_currency">变更计价货币</string>
     <string name="setting_export">导出</string>
-    <string name="setting_account_safety">帐号安全</string>
+    <string name="setting_account_safety">安全设定</string>
     <string name="setting_backup_account">备份帐号</string>
     <string name="setting_delete_account">删除帐号</string>
-    <string name="setting_using_locker">使用密码锁</string>
+    <string name="setting_using_locker">其他安全功能</string>
 
     <!--export private key-->
     <string name="export_private_key_qrcode">行动条码</string>

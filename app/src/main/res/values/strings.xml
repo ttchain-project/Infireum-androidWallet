@@ -58,7 +58,7 @@
     <string name="choose_asset_type">Select asset type</string>
     <string name="choose_wallet">Select wallet type</string>
     <string name="fill_in_amount">Enter amount</string>
-    <string name="common_address">Common used address</string>
+    <string name="common_address">Addresses</string>
     <string name="hint_fill_in_valid_bth_address">Enter a valid bitcoin address</string>
     <string name="hint_fill_in_valid_eth_address">Enter a valid eth address or ens domain(end in .eth)</string>
 
@@ -218,7 +218,7 @@
     <string name="hint_mini_version_limit">There is a new version, please update now to enjoy full functionality</string>
     <string name="hint_launch_hockey_app_download_page">Click here to launch download apk website</string>
     <string name="fail_backup">Backup fail</string>
-    <string name="version_is_latest">You currently have the latest version</string>
+    <string name="version_is_latest">You have the latest version.</string>
     <string name="now_version_comma">Current version:</string>
     <string name="error_input_with_space_at_start_or_end">Must not be blank at the beginning and end</string>
     <string name="error_input_content_too_long">Text overflow</string>
@@ -438,12 +438,12 @@
     <string name="setting_language">Language</string>
     <string name="setting_check_version">Check for version updates</string>
     <string name="setting_wallet_setting">Wallet Setting</string>
-    <string name="setting_currency">Currency unit</string>
+    <string name="setting_currency">Currency</string>
     <string name="setting_export">Export</string>
-    <string name="setting_account_safety">Identity Safety</string>
+    <string name="setting_account_safety">Security setting</string>
     <string name="setting_backup_account">Backup identity</string>
     <string name="setting_delete_account">Delete account</string>
-    <string name="setting_using_locker">Using locker</string>
+    <string name="setting_using_locker">Additional security</string>
 
     <!--export private key-->
     <string name="export_private_key_qrcode">QR code</string>
