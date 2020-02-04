@@ -441,7 +441,7 @@
     <string name="setting_currency">Currency</string>
     <string name="setting_export">Export</string>
     <string name="setting_account_safety">Security setting</string>
-    <string name="setting_backup_account">Backup identity</string>
+    <string name="setting_backup_account">Back Up Your Account</string>
     <string name="setting_delete_account">Delete account</string>
     <string name="setting_using_locker">Additional security</string>
 
@@ -537,7 +537,7 @@
     <string name="select_backup_method_title">Select backup method</string>
     <string name="select_backup_method_qrcode">Qr code</string>
     <string name="select_backup_method_mnemonics">Mnemonics</string>
-    <string name="select_backup_method_recommend">Recommend</string>
+    <string name="select_backup_method_recommend">Recommended</string>
 
     <!--transfer status dialog-->
     <string name="transfer_success_title">Transfer Success</string>
