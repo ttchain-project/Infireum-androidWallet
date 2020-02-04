@@ -642,7 +642,7 @@ TTN is the proof of the rights of TTChain trading platform itself. TTN is the ba
 
     <string name="image_display_msg">Open file </string>
     <string name="delete_account_title">Are you sure you want to delete your account?</string>
-    <string name="delete_account_message">After deleting the account, all the records in the TTChain App will be cleared. Please make sure that the backup information has been saved before executing.\n\nPlease note that if you delete an account without a backup account, you will never be able to retrieve assets such as your account and the included wallet.</string>
+    <string name="delete_account_message">After deleting the account, all the records in the INFIREUM App will be cleared. Please make sure that the backup information has been saved before executing.\n\nPlease note that if you delete an account without a backup account, you will never be able to retrieve assets such as your account and the included wallet.</string>
     <string name="delete_account_confirm_title">Account will be deleted</string>
     <string name="delete_account_confirm_message">Confirm that it will be restarted immediately after deletion</string>
 

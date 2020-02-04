@@ -246,7 +246,6 @@ class OperationCommAddressNewViewModel(
     fun deleteAddressBook(uuid: String) {
         val identityId = baseMainModel.identityId
         add(
-
             helperRepository.performDeleteAddressBookData(
                 identityId,
                 uuid,
