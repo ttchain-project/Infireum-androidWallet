@@ -739,7 +739,7 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
     <string name="select_export_wallet_title_eth">Select the exported wallet (ETH)</string>
 
     <!-- Add a common address -->
-    <string name="operation_comm_address_title">Add common address</string>
+    <string name="operation_comm_address_title">Add new wallet address</string>
     <string name="operation_comm_address_name">Name</string>
     <string name="operation_comm_address_name_hint">Please name this wallet</string>
     <string name="operation_comm_address_address">Address</string>
