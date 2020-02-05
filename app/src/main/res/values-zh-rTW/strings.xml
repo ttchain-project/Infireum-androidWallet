@@ -388,7 +388,7 @@
     <string name="send_receipt_msg">發送收款信息</string>
     <string name="trend">即時行情</string>
     <string name="hot_group">熱門群組</string>
-    <string name="media">幣圈財經媒體</string>
+    <string name="media">幣圈新媒體</string>
     <string name="blockchain_explorer">區塊鏈瀏覽器</string>
     <string name="account_setting">帳戶設定</string>
     <string name="basic_setting">基本設置</string>
@@ -723,8 +723,9 @@ TTN 是INFIREUM交易平台本身的權益證明，平台通用基礎通證，TT
     <string name="quote_change">漲跌幅</string>
     <string name="hot_group_subtitle">最火社群等您來參與</string>
     <string name="media_subtitle">幣圈新知都在這</string>
-    <string name="dapp_subtitle">遊戲一把抓</string>
-    <string name="blockchain_explorer_subtitle">快速查詢您的交易資訊</string>
+    <string name="dapp">去中心化應用程式(DApp)</string>
+    <string name="dapp_subtitle">最熱門的DApp</string>
+    <string name="blockchain_explorer_subtitle">瀏覽區塊，交易，哈希率和更多資訊！</string>
 
     <string name="host_learn_more">了解更多</string>
     <string name="host_check_file">檢查檔案中</string>
