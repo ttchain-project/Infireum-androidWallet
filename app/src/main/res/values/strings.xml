@@ -846,7 +846,7 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
     <!-- user wallet mnemonic fragment -->     
     <string name="user_wallet_mnemonic_title">Backup account</string>
     <string name="user_wallet_mnemonic_message_1">Backup account-mnemonic</string>
-    <string name="user_wallet_mnemonic_message_2">Back up your account information and do not upload to Drive or access it on any public network. This is crucial for your future actions such as maintaining asset security and restoring your account. </string>
+    <string name="user_wallet_mnemonic_message_2">This 12-word phrase is a set of words that allows you to recover and use your wallet.\n\nWARNING: Never store your recovery seed phrase in any digital form.</string>
 
     <!-- enter password fragment -->
     <string name="enter_password_top_message">Please enter your account password</string>

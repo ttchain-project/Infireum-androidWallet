@@ -876,7 +876,7 @@ TTN 是INFIREUM交易平台本身的權益證明，平台通用基礎通證，TT
     <!-- user wallet mnemonic fragment -->
     <string name="user_wallet_mnemonic_title">備份帳號</string>
     <string name="user_wallet_mnemonic_message_1">備份帳號－助記詞</string>
-    <string name="user_wallet_mnemonic_message_2">請妥善備份您的帳號資訊，並且不要上傳至雲端硬碟或在任何公用網路上存取。這與您日後要維護資產安全、恢復帳號等動作至關重要。</string>
+    <string name="user_wallet_mnemonic_message_2">這個12字的詞組是一組單詞，可讓您恢復和使用錢包。\n\n警告：切勿以任何數字形式存儲您的恢復種子詞組。</string>
 
 
     <!-- enter password fragment -->

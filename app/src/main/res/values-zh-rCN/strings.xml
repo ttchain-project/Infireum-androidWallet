@@ -872,7 +872,7 @@ TTN 是INFIREUM交易平台本身的权益证明，平台通用基础通证，TT
     <!-- user wallet mnemonic fragment -->
     <string name="user_wallet_mnemonic_title">备份帐号</string>
     <string name="user_wallet_mnemonic_message_1">备份帐号－助记词</string>
-    <string name="user_wallet_mnemonic_message_2">请妥善备份您的帐号资讯，并且不要上传至云端硬碟或在任何公用网路上存取。这与您日后要维护资产安全、恢复帐号等动作至关重要。 </string>
+    <string name="user_wallet_mnemonic_message_2">这个12字的词组是一组单词，可让您恢复和使用钱包。\n\n警告：切勿以任何数字形式存储您的恢复种子词组。</string>
 
     <!-- enter password fragment -->
     <string name="enter_password_top_message">请输入帐号密码</string>
