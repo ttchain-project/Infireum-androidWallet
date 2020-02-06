@@ -467,7 +467,7 @@
     <string name="transfer_transfer_amount">Transfer Amount</string>
     <string name="transfer_miner_fee_custom">Custom</string>
     <string name="transfer_select_common_address">Common used address</string>
-    <string name="transfer_note">Note</string>
+    <string name="transfer_note">Note(optional)</string>
     <string name="transfer_note_input">Please enter a description within 20 character</string>
     <string name="transfer_modify">MODIFY</string>
     <string name="transfer_confirm">Transfer Confirm</string>

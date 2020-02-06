@@ -468,7 +468,7 @@
     <string name="transfer_transfer_amount">轉帳金額</string>
     <string name="transfer_miner_fee_custom">輸入自定義礦工費用</string>
     <string name="transfer_select_common_address">選擇常用地址</string>
-    <string name="transfer_note">留言</string>
+    <string name="transfer_note">留言(選填)</string>
     <string name="transfer_note_input">請輸入留言內容</string>
     <string name="transfer_modify">修改</string>
     <string name="transfer_confirm">轉帳確認</string>
