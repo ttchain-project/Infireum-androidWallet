@@ -466,7 +466,7 @@
     <!--transfer-->
     <string name="transfer_transfer_amount">Transfer Amount</string>
     <string name="transfer_miner_fee_custom">Custom</string>
-    <string name="transfer_select_common_address">Commonly used addresses</string>
+    <string name="transfer_select_common_address">Commonly Used Addresses</string>
     <string name="transfer_note">Note(optional)</string>
     <string name="transfer_note_input">Please enter a description within 20 character</string>
     <string name="transfer_modify">MODIFY</string>
