@@ -482,7 +482,7 @@
     <string name="ttn_deposit">Deposit</string>
     <string name="ttn_withdraw">Withdraw</string>
     <string name="ttn_detail_transfer">Lightning Transfer</string>
-    <string name="ttn_detail_receipt">Lightning Receipt</string>
+    <string name="ttn_detail_receipt">Lightning Deposit</string>
     <string name="ttn_detail_record">Transaction Details</string>
     <string name="ttn_receipt_pay">Lightning transfer</string>
     <string name="ttn_deposit_amount">Deposit amount</string>
