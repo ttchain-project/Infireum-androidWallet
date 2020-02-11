@@ -466,7 +466,7 @@
     <!--transfer-->
     <string name="transfer_transfer_amount">Transfer Amount</string>
     <string name="transfer_miner_fee_custom">Custom</string>
-    <string name="transfer_select_common_address">Common used address</string>
+    <string name="transfer_select_common_address">Commonly used addresses</string>
     <string name="transfer_note">Note(optional)</string>
     <string name="transfer_note_input">Please enter a description within 20 character</string>
     <string name="transfer_modify">MODIFY</string>
@@ -476,7 +476,7 @@
     <string name="transfer_choose_withdraw_currency">Please select the proposed currency</string>
 
     <!--ttn transfer-->
-    <string name="ttn_transfer_receipt_address_hint">Please enter TTN address or scan the qrcode</string>
+    <string name="ttn_transfer_receipt_address_hint">Please enter IFR address or scan the qrcode</string>
     <string name="lighten_transfer">Lightning Transfer</string>
     <string name="lighten_wallet">Lightning Wallet</string>
     <string name="ttn_deposit">Deposit</string>
@@ -845,7 +845,7 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
 
     <!-- user wallet mnemonic fragment -->     
     <string name="user_wallet_mnemonic_title">Backup account</string>
-    <string name="user_wallet_mnemonic_message_1">Backup account-mnemonic</string>
+    <string name="user_wallet_mnemonic_message_1">Recovery Seed Phrase</string>
     <string name="user_wallet_mnemonic_message_2">This 12-word phrase is a set of words that allows you to recover and use your wallet.\n\nWARNING: Never store your recovery seed phrase in any digital form.</string>
 
     <!-- enter password fragment -->

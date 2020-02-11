@@ -477,7 +477,7 @@
     <string name="transfer_choose_withdraw_currency">請選擇提出幣種</string>
 
     <!--ttn transfer-->
-    <string name="ttn_transfer_receipt_address_hint">請輸入TTN閃電支付的收款地址 或 掃描行動條碼</string>
+    <string name="ttn_transfer_receipt_address_hint">請輸入IFR閃電支付的收款地址 或 掃描行動條碼</string>
     <string name="lighten_transfer">閃電支付</string>
     <string name="lighten_wallet">閃電錢包</string>
     <string name="ttn_deposit">存入</string>

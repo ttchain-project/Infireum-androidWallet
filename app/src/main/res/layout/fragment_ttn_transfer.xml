@@ -153,14 +153,19 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
+                <TextView
                     android:id="@+id/common_address_btn"
-                    style="@style/PrimaryButtonTtn30"
                     android:layout_width="wrap_content"
-                    android:background="@drawable/bg_apple_green_radius_30"
                     android:layout_height="20dp"
-                    android:drawableEnd="@mipmap/arrow_right_white"
+                    android:background="@drawable/bg_apple_green_radius_30"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/padding_12"
+                    android:paddingEnd="@dimen/padding_12"
+                    android:paddingTop="@dimen/padding_1"
+                    android:paddingBottom="@dimen/padding_1"
                     android:text="@string/transfer_select_common_address"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -242,6 +247,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/padding_8"
+                    android:textSize="@dimen/sp_14"
                     android:background="@android:color/transparent"
                     android:hint="@string/transfer_note_input"
                     android:inputType="text"
