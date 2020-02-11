@@ -898,7 +898,7 @@ TTN 是INFIREUM交易平台本身的權益證明，平台通用基礎通證，TT
     <string name="restore_with_user_info_nick_confirm_password_hint">請再次輸入密碼</string>
     <string name="restore_with_user_info_nick_hint_password">密碼提示訊息</string>
     <string name="restore_with_user_info_nick_hint_password_hint">提示內容請勿與密碼一樣，以免被輕易盜取</string>
-    <string name="restore_with_user_info_nick_policy">我同意《INFIREUM隱私政策》</string>
+    <string name="restore_with_user_info_nick_policy">我同意《InfiniteChain隱私政策》</string>
     <string name="account_info">帳號資訊</string>
 
     <!-- wallet settting fargment -->

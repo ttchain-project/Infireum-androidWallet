@@ -16,7 +16,7 @@ class MeViewModel(
     private val systemHelper: SystemHelper,
     private val verifyRepository: VerifyRepository,
     private val infoRepositoryCo: InfoRepositoryCo
-):BaseViewModel() {
+) : BaseViewModel() {
 
     var performGetVersionLiveData = MutableLiveData<ApiVersionData>()
     fun performGetVersion() {
@@ -40,14 +40,14 @@ class MeViewModel(
         userHelp.removeRocketChatData()
     }
 
-    var onClickExitIdentityConfirmLiveData = MutableLiveData<String>()
+    var onClickExitIdentityConfirmLiveData = MutableLiveData<Boolean>()
 
     fun onClickExitIdentityConfirm() {
         viewModelLaunch({
             removeUserIdentityData()
-            onClickExitIdentityConfirmLiveData.value = ""
+            onClickExitIdentityConfirmLiveData.value = true
         }, {
-
+            onClickExitIdentityConfirmLiveData.value = false
         })
     }
 

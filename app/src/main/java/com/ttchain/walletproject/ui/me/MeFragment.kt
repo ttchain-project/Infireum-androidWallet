@@ -201,8 +201,10 @@ class MeFragment : BaseFragment() {
                 }
             }
             onClickExitIdentityConfirmLiveData.observe(owner) {
-                finishActivity()
-                LoginActivity.launch(requireActivity())
+                if (it) {
+                    finishActivity()
+                    LoginActivity.launch(requireActivity())
+                }
             }
             getVerifyIdentityPwdObservableLiveData.observe(owner) {
                 if (it) {

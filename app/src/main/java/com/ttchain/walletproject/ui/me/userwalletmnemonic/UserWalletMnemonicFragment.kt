@@ -15,9 +15,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class UserWalletMnemonicFragment : BaseFragment() {
 
     companion object {
-        fun newInstance() = UserWalletMnemonicFragment().apply {
-
-        }
+        fun newInstance() = UserWalletMnemonicFragment()
     }
 
     private var mnemonic = ""
