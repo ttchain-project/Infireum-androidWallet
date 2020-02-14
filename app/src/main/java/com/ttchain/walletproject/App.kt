@@ -41,7 +41,7 @@ class App : MultiDexApplication() {
         var ethRelayAddress = "0x3aa9e7dca3ab1ef343010c05dd4c323c0b0441e2"
         var ttnRelayAddress = "e658e4a47103b4578fd2ba6aa52af1b9fc67c129"
         // ttn鏈tx瀏覽器
-        const val TTN_TX_RESULT_URL = "http://3.112.106.186/tables_txresult.html?tx="
+        const val TTN_TX_RESULT_URL = "http://3.1.196.86/tables_txresult.html?tx="
 
         lateinit var INSTANCE: WeakReference<App>
 
