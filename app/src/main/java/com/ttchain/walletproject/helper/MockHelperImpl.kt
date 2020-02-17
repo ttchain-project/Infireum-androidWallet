@@ -117,7 +117,7 @@ class MockHelperImpl(private val mContext: Context) : MockHelper {
 
             val chData = FiatData()
             chData.fiatId = 0
-            chData.name = "CNY"
+            chData.name = "USD"
             chData.symbol = "¥"
 
             val zhData = FiatData()

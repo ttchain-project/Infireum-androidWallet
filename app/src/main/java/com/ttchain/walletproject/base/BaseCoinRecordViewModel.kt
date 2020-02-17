@@ -19,6 +19,7 @@ import io.reactivex.subjects.BehaviorSubject
 import java.io.Serializable
 import java.util.ArrayList
 import java.util.HashMap
+import java.util.concurrent.TimeUnit
 
 open class BaseCoinRecordViewModel(
     private val etherscanApiRepository: EtherscanApiRepository,
@@ -230,7 +231,7 @@ open class BaseCoinRecordViewModel(
         queryMap["page"] = queryMapBean.pageNow.toString()
         queryMap["offset"] = queryMapBean.offset.toString()
         queryMap["sort"] = "desc"
-        queryMap["apikey"] = "YourApiKey"
+        queryMap["apikey"] = "YourApiKeyToken"
         return queryMap
     }
 
@@ -245,7 +246,7 @@ open class BaseCoinRecordViewModel(
         queryMap["page"] = queryMapBean.pageNow.toString()
         queryMap["offset"] = queryMapBean.offset.toString()
         queryMap["sort"] = "desc"
-        queryMap["apikey"] = "YourApiKey"
+        queryMap["apikey"] = "YourApiKeyToken"
         return queryMap
     }
 
@@ -259,7 +260,7 @@ open class BaseCoinRecordViewModel(
         queryMap["page"] = pageNow.toString()
         queryMap["offset"] = offset.toString()
         queryMap["sort"] = "desc"
-        queryMap["apikey"] = "YourApiKey"
+        queryMap["apikey"] = "YourApiKeyToken"
         return queryMap
     }
 
@@ -279,7 +280,7 @@ open class BaseCoinRecordViewModel(
         queryMap["page"] = pageNowToken.toString()
         queryMap["offset"] = offset.toString()
         queryMap["sort"] = "desc"
-        queryMap["apikey"] = "YourApiKey"
+        queryMap["apikey"] = "YourApiKeyToken"
         return queryMap
     }
 
@@ -368,6 +369,7 @@ open class BaseCoinRecordViewModel(
     fun performGetApiEthTransactionRecordDataList(queryMap: Map<String, String>) {
         add(
             etherscanApiRepository.performGetEtherscanApiResult(queryMap)
+                .delay(1000, TimeUnit.MILLISECONDS)
                 .toMain()
                 .compose(loadingView(showLoading = true, closeLoading = false))
                 .subscribe({ result ->
@@ -379,6 +381,7 @@ open class BaseCoinRecordViewModel(
                     ) {
                         pageNow++
                         resultTransactionDataList?.addAll(list)
+
                         performGetApiEthTransactionRecordDataList(getQueryMap())
                     } else {
                         resultTransactionDataList?.let {

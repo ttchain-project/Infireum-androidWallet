@@ -51,7 +51,7 @@ class CoinRecordFragment : BaseFragment() {
             getCoinRecordBean(bundleValue)
         }
         super.onViewCreated(view, savedInstanceState)
-        setHasOptionsMenu(true)
+//        setHasOptionsMenu(true)
         initView()
     }
 
