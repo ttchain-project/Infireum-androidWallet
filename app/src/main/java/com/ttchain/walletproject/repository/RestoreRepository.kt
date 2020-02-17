@@ -127,7 +127,7 @@ class RestoreRepository(private val dbHelper: DbHelper, private val userHelper: 
             }
             val fiatDataList = dbHelper.getFiatDataList()
             if (fiatDataList.isNotEmpty()) {
-                identityData.prefFiatData = fiatDataList[0]
+                identityData.prefFiatData = fiatDataList[2]
             }
             val languageDataList = dbHelper.getLanguageDataList()
             if (languageDataList.isNotEmpty()) {

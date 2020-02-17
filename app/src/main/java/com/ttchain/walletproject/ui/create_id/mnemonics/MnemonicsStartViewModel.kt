@@ -22,6 +22,7 @@ import com.ttchain.walletproject.utils.FileUtils
 import com.ttchain.walletproject.utils.RuleUtils
 import com.ttchain.walletproject.utils.Utility
 import kotlinx.coroutines.suspendCancellableCoroutine
+import timber.log.Timber
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
@@ -98,7 +99,7 @@ class MnemonicsStartViewModel(
         identityData.name = userBean.name
         val fiatDataList = dbHelper.getFiatDataList()
         if (fiatDataList.isNotEmpty()) {
-            identityData.prefFiatData = fiatDataList[0]
+            identityData.prefFiatData = fiatDataList[2]
         }
         val languageDataList = dbHelper.getLanguageDataList()
         if (languageDataList.isNotEmpty()) {
