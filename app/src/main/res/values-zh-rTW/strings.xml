@@ -954,4 +954,7 @@ TTN 是INFIREUM交易平台本身的權益證明，平台通用基礎通證，TT
     <string name="confirm_delete_address">確定刪除此地址?</string>
     <string name="popmeun_operation_edit">編輯資訊</string>
     <string name="popmeun_operation_delete">刪除地址</string>
+
+    <string name="mnemonics_error_blank">助記符的開頭和結尾不得為空</string>
+
 </resources>

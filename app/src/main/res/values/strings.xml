@@ -925,4 +925,6 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
     <string name="confirm_delete_address">Confirm to delete this address?</string>
     <string name="popmeun_operation_edit">Edit info</string>
     <string name="popmeun_operation_delete">Delete address</string>
+
+    <string name="mnemonics_error_blank">Mnemonic must not be blank at the beginning and end</string>
 </resources>

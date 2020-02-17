@@ -11,8 +11,12 @@ class RestoreByMnemonicsViewModel : BaseViewModel() {
     var responseUserIdentity: ResponseUserIdentity? = null
 
     fun setMnemonics(mnemonics: String) {
+        if (mnemonics.first().toString() == " " || mnemonics.last().toString() == " ") {
+            systemWalletInitLiveData.value = false
+            return
+        }
         viewModelLaunch {
-            val result = BitcoinjNew.systemWalletInit(mnemonics)
+            val result = BitcoinjNew.systemWalletInit(mnemonics.trim())
             responseUserIdentity = result
             systemWalletInitLiveData.value = true
         }

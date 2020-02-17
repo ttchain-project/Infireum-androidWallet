@@ -950,4 +950,6 @@ TTN 是INFIREUM交易平台本身的权益证明，平台通用基础通证，TT
     <string name="popmeun_operation_edit">编辑资讯</string>
     <string name="popmeun_operation_delete">删除地址</string>
 
+    <string name="mnemonics_error_blank">助记符的开头和结尾不得为空</string>
+
 </resources>

@@ -48,7 +48,8 @@ class RestoreByMnemonicsFragment : BaseFragment() {
             title_tv.setDelayClickListener {
                 editTextMnemonics.setText(
 //                    "患 烘 杭 有 六 污 星 吏 踏 师 业 材"
-                    "thrive visit task frown maze useful bench perfect comic fly pottery draw"
+//                    "thrive visit task frown maze useful bench perfect comic fly pottery draw"
+                    "step double despair sugar tongue kitchen plastic bar public elite cattle priority"
                 )
             }
         }
@@ -66,12 +67,16 @@ class RestoreByMnemonicsFragment : BaseFragment() {
                 if (it) onShowLoading() else onHideLoading()
             }
             systemWalletInitLiveData.observe(requireActivity()) {
-                activity.addFragment(
-                    R.id.content_view,
-                    RestoreNoUserInfoFragment.newInstance(
-                        responseUserIdentity ?: ResponseUserIdentity()
+                if (it) {
+                    activity.addFragment(
+                        R.id.content_view,
+                        RestoreNoUserInfoFragment.newInstance(
+                            responseUserIdentity ?: ResponseUserIdentity()
+                        )
                     )
-                )
+                } else {
+                    onShowMessageDialog(getString(R.string.mnemonics_error_blank))
+                }
             }
 //            getUserInfoLiveData.observe(requireActivity()) { data ->
 //                activity.addFragment(
