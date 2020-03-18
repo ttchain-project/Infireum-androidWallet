@@ -689,7 +689,7 @@ TTN is the proof of the rights of TTChain trading platform itself. TTN is the ba
     <string name="help_center">Help Center</string>
     <string name="about_us">About Us</string>
     <string name="trend_subtitle">Latest ups and downs</string>
-    <string name="coin_type">Currency</string>
+    <string name="coin_type">Asset</string>
     <string name="usd_price">Price (%s)</string>
     <string name="quote_change">Price Change</string>
     <string name="hot_group_subtitle">The most popular community waiting for you to participate</string>
