@@ -448,19 +448,19 @@
     <!--export private key-->
     <string name="export_private_key_qrcode">QR code</string>
     <string name="export_private_key_pky">Private key</string>
-    <string name="export_private_key_title">Please read the precautions before exporting</string>
+    <string name="export_private_key_title">Warning</string>
     <string name="export_private_key_qrcode_1">Direct scanning only</string>
-    <string name="export_private_key_qrcode_2">The QR code is forbidden to save, take screenshots or photos. It is only for users to scan directly in a secure environment to easily import the wallet</string>
-    <string name="export_private_key_qrcode_3">Use in a safe environment</string>
-    <string name="export_private_key_qrcode_4">Please make sure there is no one or no camera around before use. Once the QR code is acquired by others, it will cause irreparable loss of assets</string>
+    <string name="export_private_key_qrcode_2">Please do not save the QR code by taking a photograph or screenshot. The QR code should only be scanned in a secure environment to ensure the safety of your assets.</string>
+    <string name="export_private_key_qrcode_3">Ensure the Safety of your Environment</string>
+    <string name="export_private_key_qrcode_4">Please make sure there are no other persons and/or cameras around before using your QR code. Once your QR code is acquired by others, your assets are no longer secure.</string>
     <string name="export_private_key_qrcode_show">Display QR code</string>
 
-    <string name="export_private_key_pky_1">Save offline</string>
-    <string name="export_private_key_pky_2">Don\'t save to email, notepad, web, chat, etc., it\'s very dangerous</string>
-    <string name="export_private_key_pky_3">Please do not transmit with the internet</string>
-    <string name="export_private_key_pky_4">Please do not transmit with the internet, once acquired by a hacker, it will cause irreparable loss of assets. It is recommended to transmit with offline devices by scanning QR code.</string>
-    <string name="export_private_key_pky_5">Password management tool save</string>
-    <string name="export_private_key_pky_6">It is recommended to manage with the password management tool</string>
+    <string name="export_private_key_pky_1">Do Not Save Online</string>
+    <string name="export_private_key_pky_2">Please do not save the Private Key to your email, notepad, cloud, chat etc. as it would compromise the security of your assets.</string>
+    <string name="export_private_key_pky_3">Do Not Transmit Online</string>
+    <string name="export_private_key_pky_4">Please make sure that your Private Key is not sent over the internet. Leaving a copy of your Private Key online increases the risk of it being acquired by malicious actors who will be able to access all the assets in this wallet. It is recommended to scan your QR instead.</string>
+    <string name="export_private_key_pky_5">Password Management Tool</string>
+    <string name="export_private_key_pky_6">It is recommended that you use our password management tool to ensure that your account remains accessible even if you forget your password.</string>
     <string name="export_private_key_pky_show">Display private key</string>
 
     <!--transfer-->

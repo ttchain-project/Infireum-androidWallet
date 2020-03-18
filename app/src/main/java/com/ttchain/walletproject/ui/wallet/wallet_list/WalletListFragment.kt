@@ -109,38 +109,38 @@ class WalletListFragment : BaseFragment() {
 
     private fun initData() {
         viewModel.apply {
-            getRateAndWalletDataErrorLiveData.observe(this@WalletListFragment) {
+            getRateAndWalletDataErrorLiveData.observe(viewLifecycleOwner) {
                 if (it) {
                     swipe_layout?.isRefreshing = false
                 }
             }
-            isLoading.observe(this@WalletListFragment) {
+            isLoading.observe(viewLifecycleOwner) {
                 if (it) onShowLoading() else onHideLoading()
             }
-            throwableMessage.observe(this@WalletListFragment) {
+            throwableMessage.observe(viewLifecycleOwner) {
                 when {
                     viewModel.isPageFinish -> onShowMessageDialogFinish(it)
                     else -> onShowMessageDialog(it)
                 }
             }
-            mainDataLiveData.observe(this@WalletListFragment) {
+            mainDataLiveData.observe(viewLifecycleOwner) {
                 mAdapter.updateData(it)
                 swipe_layout?.isRefreshing = false
             }
-            totalAssetAmountLiveData.observe(this@WalletListFragment) {
+            totalAssetAmountLiveData.observe(viewLifecycleOwner) {
                 total_amount_tv?.text = it
             }
             fiatNameLiveData.observe(requireActivity()) {
                 currency_symbol_tv?.text = it
             }
-            launchAssetListActivityLiveData.observe(this@WalletListFragment) {
+            launchAssetListActivityLiveData.observe(viewLifecycleOwner) {
                 if (it)
                     AssetListActivity.launch(requireActivity())
             }
-            launchCoinRecordLiveData.observe(this@WalletListFragment) {
+            launchCoinRecordLiveData.observe(viewLifecycleOwner) {
                 CoinRecordActivity.launch(requireActivity(), it, walletId)
             }
-            launchTtnCoinRecordLiveData.observe(this@WalletListFragment) {
+            launchTtnCoinRecordLiveData.observe(viewLifecycleOwner) {
                 TtnDetailActivity.launch(requireActivity(), it)
             }
         }

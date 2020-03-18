@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_F9F9F9"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewChangeWalletName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16"
+        android:background="@color/white"
+        android:drawableEnd="@mipmap/arrow_right_black"
+        android:paddingStart="@dimen/padding_18"
+        android:paddingTop="@dimen/padding_14"
+        android:paddingEnd="@dimen/padding_18"
+        android:paddingBottom="@dimen/padding_14"
+        android:text="@string/wallet_setting_change_wallet_name"
+        android:textColor="@color/_354252"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/textViewWalletPasswordHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableEnd="@mipmap/arrow_right_black"
+        android:paddingStart="@dimen/padding_18"
+        android:paddingTop="@dimen/padding_14"
+        android:paddingEnd="@dimen/padding_18"
+        android:paddingBottom="@dimen/padding_14"
+        android:text="@string/wallet_setting_wallet_password_hint"
+        android:textColor="@color/_354252"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/textViewExportWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableEnd="@mipmap/arrow_right_black"
+        android:paddingStart="@dimen/padding_18"
+        android:paddingTop="@dimen/padding_14"
+        android:paddingEnd="@dimen/padding_18"
+        android:paddingBottom="@dimen/padding_14"
+        android:text="@string/wallet_setting_export_wallet"
+        android:textColor="@color/_354252"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/textViewDeleteWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16"
+        android:background="@color/white"
+        android:drawableEnd="@mipmap/btn_next_red"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/padding_18"
+        android:paddingTop="@dimen/padding_14"
+        android:paddingEnd="@dimen/padding_18"
+        android:paddingBottom="@dimen/padding_14"
+        android:text="@string/wallet_setting_delete_wallet"
+        android:textColor="@color/_FB6B5B"
+        android:textSize="@dimen/sp_14" />
+
+</LinearLayout>

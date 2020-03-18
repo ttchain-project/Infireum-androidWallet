@@ -449,7 +449,7 @@
     <!--export private key-->
     <string name="export_private_key_qrcode">行動條碼</string>
     <string name="export_private_key_pky">私鑰</string>
-    <string name="export_private_key_title">導出前請先閱讀注意事項</string>
+    <string name="export_private_key_title">注意事項</string>
     <string name="export_private_key_qrcode_1">此行動條碼僅供直接掃描</string>
     <string name="export_private_key_qrcode_2">請不要截圖或拍照來保存此行動條碼，僅供用戶在安全環境下自行使用掃描方式快速導入錢包。</string>
     <string name="export_private_key_qrcode_3">請在安全環境下使用</string>

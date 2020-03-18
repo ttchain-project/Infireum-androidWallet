@@ -448,7 +448,7 @@
     <!--export private key-->
     <string name="export_private_key_qrcode">行动条码</string>
     <string name="export_private_key_pky">私钥</string>
-    <string name="export_private_key_title">导出前请先阅读注意事项</string>
+    <string name="export_private_key_title">注意事项</string>
     <string name="export_private_key_qrcode_1">此行动条码仅供直接扫描</string>
     <string name="export_private_key_qrcode_2">请不要截图或拍照来保存此行动条码，仅供用户在安全环境下自行使用扫描方式快速导入钱包。</string>
     <string name="export_private_key_qrcode_3">请在安全环境下使用</string>

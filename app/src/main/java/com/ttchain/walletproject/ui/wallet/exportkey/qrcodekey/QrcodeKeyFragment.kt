@@ -40,7 +40,7 @@ class QrcodeKeyFragment : BaseFragment() {
 
     private fun initData() {
         viewModel.apply {
-            performGetQrCodeBitmapLiveData.observe(requireActivity()) { bitmap ->
+            performGetQrCodeBitmapLiveData.observe(viewLifecycleOwner) { bitmap ->
                 qrcode.setImageBitmap(bitmap)
             }
         }

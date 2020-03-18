@@ -16,6 +16,7 @@ import com.ttchain.walletproject.rx.RxBus
 import com.ttchain.walletproject.setDelayClickListener
 import com.ttchain.walletproject.ui.coin_transfer.CoinTransferActivity
 import com.ttchain.walletproject.ui.receiptasset.ReceiptAssetActivity
+import com.ttchain.walletproject.ui.wallet_setting.WalletSettingActivity
 import kotlinx.android.synthetic.main.fragment_coin_record.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -51,7 +52,7 @@ class CoinRecordFragment : BaseFragment() {
             getCoinRecordBean(bundleValue)
         }
         super.onViewCreated(view, savedInstanceState)
-//        setHasOptionsMenu(true)
+        setHasOptionsMenu(true)
         initView()
     }
 
@@ -73,22 +74,22 @@ class CoinRecordFragment : BaseFragment() {
 //            lighten_btn.setDelayClickListener {
 //                launchTtnDeposit()
 //            }
-            coinRecordBean.observe(this@CoinRecordFragment) {
+            coinRecordBean.observe(viewLifecycleOwner) {
                 setCoinRecordBean(it)
             }
-//            showLightButton.observe(this@CoinRecordFragment) {
+//            showLightButton.observe(viewLifecycleOwner) {
 //                if (it) showLightenBtn()
 //            }
-            syncTransRecordDataListFinish.observe(this@CoinRecordFragment) {
+            syncTransRecordDataListFinish.observe(viewLifecycleOwner) {
                 initViewPager()
             }
-            launchReceiptAsset.observe(this@CoinRecordFragment) {
+            launchReceiptAsset.observe(viewLifecycleOwner) {
                 launchReceiptAssetActivity(it)
             }
-            launchCoinTransfer.observe(this@CoinRecordFragment) {
+            launchCoinTransfer.observe(viewLifecycleOwner) {
                 if (it) launchCoinTransferActivity()
             }
-//            launchTtnDeposit.observe(this@CoinRecordFragment) {
+//            launchTtnDeposit.observe(viewLifecycleOwner) {
 //                if (it.isNotEmpty())
 //                    launchTtnDepositActivity(it, baseMainModel.selectedWalletID)
 //            }
@@ -103,7 +104,7 @@ class CoinRecordFragment : BaseFragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.wallet_setting -> {
-//                WalletSettingActivity.launch(requireActivity())
+                WalletSettingActivity.launch(requireActivity())
                 return true
             }
         }

@@ -179,6 +179,16 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <activity
+            android:name=".ui.wallet_setting.WalletSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.wallet_setting.walletpasswordhint.WalletPasswordHintActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
             android:name=".ui.receiptasset.ReceiptAssetActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />

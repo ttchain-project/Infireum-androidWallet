@@ -37,7 +37,7 @@ class TtnDetailFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setHasOptionsMenu(true)
+//        setHasOptionsMenu(true)
         initView()
         initData()
     }

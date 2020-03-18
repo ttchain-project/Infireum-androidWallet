@@ -44,6 +44,7 @@ import com.ttchain.walletproject.ui.ttn.ttntransfer.TtnTransferViewModel
 import com.ttchain.walletproject.ui.wallet.WalletMainViewModel
 import com.ttchain.walletproject.ui.wallet.exportkey.ExportKeyViewModel
 import com.ttchain.walletproject.ui.wallet.wallet_list.WalletListViewModel
+import com.ttchain.walletproject.ui.wallet_setting.WalletSettingViewModel
 import com.ttchain.walletproject.ui.webview.WebViewViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -64,6 +65,7 @@ val viewModelModule = module {
     viewModel { AssetListViewModel(get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordViewModel(get(), get(), get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordListViewModel(get(), get()) }
+    viewModel { WalletSettingViewModel(get(), get(), get(), get()) }
     viewModel { ReceiptAssetViewModel(get(), get(), get()) }
     viewModel { BaseCoinTransferViewModel(get(), get(), get(), get(), get(), get()) }
     viewModel {

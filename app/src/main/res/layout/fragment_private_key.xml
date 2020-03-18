@@ -8,8 +8,10 @@
     <TextView
         android:id="@+id/title_tv"
         style="@style/TextBlack.Big"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_40"
+        android:layout_marginEnd="@dimen/padding_40"
         android:layout_marginTop="@dimen/padding_20"
         android:text="@string/export_private_key_title"
         android:textColor="@color/black"

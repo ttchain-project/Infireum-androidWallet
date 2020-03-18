@@ -44,7 +44,7 @@ class PrivateKeyFragment : BaseFragment() {
 
     private fun initData() {
         viewModel.apply {
-            performGetWalletEpKeyLiveData.observe(requireActivity()) {
+            performGetWalletEpKeyLiveData.observe(viewLifecycleOwner) {
                 private_key.text = it
             }
         }
