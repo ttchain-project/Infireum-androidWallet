@@ -32,13 +32,13 @@ TtnReceiptAssetViewModel(
         }
     }
 
-    val performDownloadQrCodeLiveData = MutableLiveData<String>()
+    val performDownloadQrCodeLiveData = MutableLiveData<File>()
     val performDownloadQrCodeErrorLiveData = MutableLiveData<Throwable>()
 
     fun performDownloadQrCode(rootView: View) {
         viewModelLaunch({
             val bitmap = Utils.createBitmapFromView(rootView)
-            val result = suspendCancellableCoroutine<String> {
+            val result = suspendCancellableCoroutine<File> {
                 val walletData = baseMainModel.ttnWalletData
                 val walletName = walletData.name.replace(" ", "")
                 val fileName = "${GlobalConstant.APP_NAME}_$walletName.png"
@@ -53,7 +53,7 @@ TtnReceiptAssetViewModel(
                 fos.write(bitmapData)
                 fos.flush()
                 fos.close()
-                it.resume(FileUtils.saveQrCodeFolder.absolutePath)
+                it.resume(FileUtils.saveQrCodeFolder)
             }
             performDownloadQrCodeLiveData.value = result
         }, {

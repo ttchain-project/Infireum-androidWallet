@@ -1,12 +1,10 @@
 package com.ttchain.walletproject
 
 import android.app.Activity
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
+import android.content.*
 import android.net.Uri
 import android.os.Build
+import android.provider.MediaStore
 import android.provider.Settings
 import android.text.Html
 import android.util.Patterns
@@ -295,4 +293,19 @@ fun Fragment.startSettingActivity(requestCode: Int) {
     startActivityForResult(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
         data = Uri.parse("package:${requireContext().applicationContext.packageName}")
     }, requestCode)
+}
+
+/**
+ * 將圖片放入系統相簿
+ */
+fun Activity.addImageToGallery(fileName: String, filePath: String) {
+    contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, ContentValues().apply {
+        put(MediaStore.Images.Media.TITLE, fileName)
+        put(MediaStore.Images.Media.DISPLAY_NAME, fileName)
+        put(MediaStore.Images.Media.DATE_ADDED, System.currentTimeMillis() / 1000)
+        put(MediaStore.Images.Media.DATE_MODIFIED, System.currentTimeMillis() / 1000)
+        put(MediaStore.Images.Media.DATE_TAKEN, System.currentTimeMillis() / 1000)
+        put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg")
+        put(MediaStore.MediaColumns.DATA, filePath)
+    })
 }

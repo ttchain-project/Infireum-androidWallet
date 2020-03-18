@@ -12,6 +12,7 @@ import androidx.lifecycle.observe
 import com.ttchain.walletproject.rx.RxBusTag
 import com.tbruyelle.rxpermissions2.RxPermissions
 import com.ttchain.walletproject.R
+import com.ttchain.walletproject.addImageToGallery
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.model.UserWalletQrCodeInputBean
 import com.ttchain.walletproject.rx.RxBus
@@ -86,8 +87,9 @@ class UserWalletQrCodeFragment : BaseFragment() {
             performGetQrCodeBitmapLiveData.observe(requireActivity()) {
                 setQrCodeBitmap(it)
             }
-            storeQrCodeLiveData.observe(requireActivity()) { path ->
-                showToast(getString(R.string.qr_code_backup_success) + path)
+            storeQrCodeLiveData.observe(requireActivity()) { file ->
+                requireActivity().addImageToGallery(file.name, file.absolutePath)
+                showToast(getString(R.string.qr_code_backup_success) + file.absolutePath)
             }
             storeQrCodeErrorLiveData.observe(requireActivity()) { throwable ->
                 onHideLoading()

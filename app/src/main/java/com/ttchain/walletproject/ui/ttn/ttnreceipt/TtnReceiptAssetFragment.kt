@@ -13,6 +13,7 @@ import androidx.core.content.FileProvider
 import androidx.lifecycle.observe
 import com.tbruyelle.rxpermissions2.RxPermissions
 import com.ttchain.walletproject.R
+import com.ttchain.walletproject.addImageToGallery
 import com.ttchain.walletproject.base.BaseFragment
 import com.ttchain.walletproject.cache.GlobalConstant
 import com.ttchain.walletproject.performCopyString
@@ -67,8 +68,9 @@ class TtnReceiptAssetFragment : BaseFragment() {
                 wallet_address.text = address
                 viewModel.performGetQrCodeBitmap(address)
             }
-            performDownloadQrCodeLiveData.observe(requireActivity()) { path ->
-                showToast(getString(R.string.download_success) + path)
+            performDownloadQrCodeLiveData.observe(requireActivity()) { file ->
+                requireActivity().addImageToGallery(file.name, file.absolutePath)
+                showToast(getString(R.string.download_success) + file.absolutePath)
             }
             performDownloadQrCodeErrorLiveData.observe(requireActivity()) { throwable ->
                 onHideLoading()

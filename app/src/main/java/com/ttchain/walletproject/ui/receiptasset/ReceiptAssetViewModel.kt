@@ -97,13 +97,13 @@ class ReceiptAssetViewModel(
         }
     }
 
-    val performDownloadQrCodeLiveData = MutableLiveData<String>()
+    val performDownloadQrCodeLiveData = MutableLiveData<File>()
     val performDownloadQrCodeErrorLiveData = MutableLiveData<Throwable>()
 
     fun performDownloadQrCode(rootView: View) {
         viewModelLaunch({
             val bitmap = Utils.createBitmapFromView(rootView)
-            val result = suspendCancellableCoroutine<String> {
+            val result = suspendCancellableCoroutine<File> {
                 val walletData = walletRepository.getUserSelectedWalletData()
                 val walletName = walletData.name.replace(" ", "")
                 val fileName = "${GlobalConstant.APP_NAME}_$walletName.png"
@@ -118,7 +118,7 @@ class ReceiptAssetViewModel(
                 fos.write(bitmapData)
                 fos.flush()
                 fos.close()
-                it.resume(FileUtils.saveQrCodeFolder.absolutePath)
+                it.resume(FileUtils.saveQrCodeFolder)
             }
             performDownloadQrCodeLiveData.value = result
         }, {

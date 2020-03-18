@@ -178,14 +178,14 @@ class UserWalletQrCodeViewModel(
         }
     }
 
-    var storeQrCodeLiveData = MutableLiveData<String>()
+    var storeQrCodeLiveData = MutableLiveData<File>()
     var storeQrCodeErrorLiveData = MutableLiveData<Throwable>()
 
     fun storeQrCode() {
-        viewModelLaunch {
+        viewModelLaunch ({
             val string = getImageBeanJsonStringCompress()
             val bitmap = BarCodeUtil.onQrCodeGenAsync(context, 512f, 512f, string)
-            val result = suspendCancellableCoroutine<String> {
+            val result = suspendCancellableCoroutine<File> {
                 val cal = Calendar.getInstance(Locale.getDefault())
                 cal.timeInMillis = qrCodeGeneratedTimeStamp
                 val sdf = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
@@ -201,9 +201,11 @@ class UserWalletQrCodeViewModel(
                 fos.write(bitmapData)
                 fos.flush()
                 fos.close()
-                it.resume(FileUtils.saveQrCodeFolder.absolutePath)
+                it.resume(FileUtils.saveQrCodeFolder)
             }
             storeQrCodeLiveData.value = result
-        }
+        }, {
+            storeQrCodeErrorLiveData.value = it
+        })
     }
 }

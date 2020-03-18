@@ -307,13 +307,13 @@ class MnemonicsStartViewModel(
         }
     }
 
-    val storeQrCodeLiveData = MutableLiveData<String>()
+    val storeQrCodeLiveData = MutableLiveData<File>()
     val storeQrCodeErrorLiveData = MutableLiveData<Throwable>()
 
     private fun storeQrCode() {
         viewModelLaunch({
             val bitmap = BarCodeUtil.onQrCodeGenAsync(context, 512f, 512f, imageBeanJsonString)
-            val result = suspendCancellableCoroutine<String> {
+            val result = suspendCancellableCoroutine<File> {
                 val cal = Calendar.getInstance(Locale.getDefault())
                 cal.timeInMillis = qrCodeGeneratedTimeStamp
                 val sdf = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
@@ -331,7 +331,7 @@ class MnemonicsStartViewModel(
                 fos.write(bitmapdata)
                 fos.flush()
                 fos.close()
-                it.resume(FileUtils.saveQrCodeFolder.absolutePath)
+                it.resume(FileUtils.saveQrCodeFolder)
             }
             storeQrCodeLiveData.value = result
         }, {

@@ -80,8 +80,9 @@ class MnemonicsStartActivity : BaseActivity() {
                 finish_btn.visibility = View.VISIBLE
                 skip_btn.visibility = View.GONE
             }
-            storeQrCodeLiveData.observe(this@MnemonicsStartActivity) { path ->
-                showToast(getString(R.string.qr_code_backup_success) + path)
+            storeQrCodeLiveData.observe(this@MnemonicsStartActivity) { file ->
+                addImageToGallery(file.name, file.absolutePath)
+                showToast(getString(R.string.qr_code_backup_success) + file.absolutePath)
             }
             storeQrCodeErrorLiveData.observe(this@MnemonicsStartActivity) { throwable ->
                 onHideLoading()
