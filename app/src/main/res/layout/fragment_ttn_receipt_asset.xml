@@ -18,21 +18,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_weight="0.26">
 
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/padding_20"
+            android:layout_height="@dimen/padding_20"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_marginStart="@dimen/padding_32"
+            android:layout_marginEnd="@dimen/padding_4"
+            app:layout_constraintBottom_toTopOf="@+id/wallet_address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/wallet_title"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
         <TextView
             android:id="@+id/wallet_title"
             style="@style/PrimaryBlackText.Small"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/padding_32"
-            android:layout_marginEnd="@dimen/padding_32"
-            android:drawableStart="@mipmap/tt_icon_receipt_asset"
-            android:drawablePadding="@dimen/padding_4"
             android:gravity="center_vertical"
-            android:text="@string/ttn_receipt_pay"
+            tools:text="@string/ttn_receipt_pay"
             android:theme="@style/WalletAddressTheme.Clickable"
             app:layout_constraintBottom_toTopOf="@+id/wallet_address"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icon"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -70,7 +79,8 @@
             android:layout_width="216dp"
             android:layout_height="216dp"
             android:layout_centerInParent="true"
-            tools:src="@mipmap/ic_launcher" />
+            tools:src="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
 
     </RelativeLayout>
 

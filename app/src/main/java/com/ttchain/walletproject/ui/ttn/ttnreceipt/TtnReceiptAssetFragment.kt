@@ -32,13 +32,14 @@ class TtnReceiptAssetFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setHasOptionsMenu(true)
+//        setHasOptionsMenu(true)
         initView()
         initData()
     }
 
     override fun initView() {
         viewModel.getTtnWalletData()
+        wallet_title.text = GlobalConstant.DEFAULT_WALLET_NAME_TTN
         wallet_address.setDelayClickListener {
             wallet_address.text.toString().performCopyString(requireContext())
         }

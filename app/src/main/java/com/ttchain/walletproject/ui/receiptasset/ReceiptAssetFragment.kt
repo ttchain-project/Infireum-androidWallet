@@ -74,7 +74,7 @@ class ReceiptAssetFragment : BaseFragment() {
     }
 
     override fun initView() {
-        setHasOptionsMenu(true)
+//        setHasOptionsMenu(true)
         viewModel.coinId = bundleCoinID
         requireActivity().title = getString(R.string.receipt)
         wallet_address.setDelayClickListener {
