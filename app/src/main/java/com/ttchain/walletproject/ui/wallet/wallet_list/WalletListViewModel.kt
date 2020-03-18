@@ -363,7 +363,8 @@ class WalletListViewModel(
                 .subscribe({
                     //TTN
                     var ttnAmount = BigDecimal(it.balance.handleAmount(CoinEnum.TTN.coinId))
-//                    total = total.add(ttnAmount)
+                    total = total.add(getFiatRate(CoinEnum.TTN.coinId, ttnAmount))
+                    totalAssetAmountLiveData.value = NumberUtils.showFiat(total)
                     val ttnCoinID = getCoinIDByCoinId(CoinEnum.TTN.coinId)
                     val ttnIcon = getIconPathByCoinId(ttnCoinID)
                     for (assetData in dbHelper.getAssetDataListByCoinIDs(listOf(ttnCoinID))) {

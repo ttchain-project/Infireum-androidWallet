@@ -13,7 +13,7 @@ object NumberUtils {
     val decimalFormat_8 = DecimalFormat("0.0000")
     val decimalFormat_common_8 = DecimalFormat("#,###,###.########")
 
-    val df_pound_2 = DecimalFormat("#.##")
+    val df_pound_2 = DecimalFormat("0.00")
     val df_zero_4 = DecimalFormat("0.0000")
 
     //除法運算默認精確度
