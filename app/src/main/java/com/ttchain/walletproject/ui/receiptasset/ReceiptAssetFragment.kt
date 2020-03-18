@@ -1,5 +1,6 @@
 package com.ttchain.walletproject.ui.receiptasset
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
@@ -16,6 +17,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.os.bundleOf
 import androidx.lifecycle.observe
+import com.tbruyelle.rxpermissions2.RxPermissions
 import com.ttchain.walletproject.rx.RxBusTag
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseFragment
@@ -79,9 +81,19 @@ class ReceiptAssetFragment : BaseFragment() {
             wallet_address.text.toString().performCopyString(it.context)
         }
         save_btn.setDelayClickListener {
-            val rootView =
-                requireActivity().window.decorView.findViewById<View>(android.R.id.content)
-            viewModel.performDownloadQrCode(rootView)
+            RxPermissions(requireActivity())
+                .request(
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+                )
+                .subscribe { granted ->
+                    if (granted) {
+                        val rootView =
+                            requireActivity().window.decorView.findViewById<View>(android.R.id.content)
+                        viewModel.performDownloadQrCode(rootView)
+                    }
+                }
+
         }
     }
 
