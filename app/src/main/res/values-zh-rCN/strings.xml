@@ -669,7 +669,7 @@ TTN 是INFIREUM交易平台本身的权益证明，平台通用基础通证，TT
 
     <string name="image_display_msg">开启档案</string>
     <string name="delete_account_title">确定要删除帐号吗？</string>
-    <string name="delete_account_message">删除帐号后将清空INFIREUM App内所有的纪录，请务必确认已经储存备份的资讯后再执行。\n\n请注意，如在无备份帐号的情况下删除帐号将永远无法寻回帐号和内含的钱包等资产。</string>
+    <string name="delete_account_message">删除帐号后将清空Infireum Wallet App内所有的纪录，请务必确认已经储存备份的资讯后再执行。\n\n请注意，如在无备份帐号的情况下删除帐号将永远无法寻回帐号和内含的钱包等资产。</string>
     <string name="delete_account_confirm_title">即将删除帐号</string>
     <string name="delete_account_confirm_message">确认删除后会立即重启</string>
 
