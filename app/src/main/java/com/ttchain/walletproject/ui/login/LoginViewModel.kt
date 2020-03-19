@@ -27,6 +27,10 @@ class LoginViewModel(
             } else {
                 Gzip.decompress(qrCodeString)
             }
+            if (qRCodeResult.isEmpty()) {
+                hintErrorLiveData.value = Throwable("Not in GZIP format")
+                return@viewModelLaunch
+            }
             try {
                 val bean = Gson().fromJson(qRCodeResult, UserWalletQrCodeImageBean::class.java)
                 qrCodeImageBean = bean

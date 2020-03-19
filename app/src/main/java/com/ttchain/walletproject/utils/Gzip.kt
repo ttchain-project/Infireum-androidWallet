@@ -43,7 +43,6 @@ object Gzip {
             bis.close()
             sb.toString()
         } catch (e: IOException) {
-            e.printStackTrace()
             ""
         }
     }
