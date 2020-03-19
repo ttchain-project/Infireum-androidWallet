@@ -718,7 +718,7 @@ TTN 是INFIREUM交易平台本身的权益证明，平台通用基础通证，TT
     <string name="trend_subtitle">最新涨跌资讯</string>
     <string name="coin_type">币种</string>
     <string name="usd_price">价格 (%s)</string>
-    <string name="quote_change">涨跌幅</string>
+    <string name="quote_change">涨跌幅 (24h)</string>
     <string name="hot_group_subtitle">最火社群等您来参与</string>
     <string name="media_subtitle">币圈新知都在这</string>
     <string name="dapp">去中心化应用程式(DApp)</string>

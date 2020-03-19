@@ -386,7 +386,7 @@
     <string name="receive_amount">Receive coin amount</string>
     <string name="input_receive_amount">Input receive coin amount</string>
     <string name="send_receipt_msg">Send receipt message</string>
-    <string name="trend">Trend</string>
+    <string name="trend">Updates</string>
     <string name="hot_group">Hot group</string>
     <string name="media">News</string>
     <string name="blockchain_explorer">Block Explorer</string>
@@ -688,10 +688,10 @@ TTN is the proof of the rights of TTChain trading platform itself. TTN is the ba
     <string name="privacy_policy">Private Policy</string>
     <string name="help_center">Help Center</string>
     <string name="about_us">About Us</string>
-    <string name="trend_subtitle">Latest ups and downs</string>
+    <string name="trend_subtitle">Latest trends in the space</string>
     <string name="coin_type">Asset</string>
     <string name="usd_price">Price (%s)</string>
-    <string name="quote_change">Price Change</string>
+    <string name="quote_change">Price Change (24h)</string>
     <string name="hot_group_subtitle">The most popular community waiting for you to participate</string>
     <string name="media_subtitle">Latest announcements and updates</string>
     <string name="dapp">Decentralised Applications</string>

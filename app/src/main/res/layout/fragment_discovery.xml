@@ -240,13 +240,18 @@
                             android:layout_below="@+id/price_tv"
                             android:layout_marginLeft="@dimen/padding_24"
                             android:layout_marginRight="@dimen/padding_24"
-                            android:gravity="end"
+                            android:gravity="end|center_vertical"
+                            android:maxLines="1"
+                            app:autoSizeMaxTextSize="@dimen/mini_text"
+                            app:autoSizeMinTextSize="8sp"
+                            app:autoSizeStepGranularity="1sp"
+                            app:autoSizeTextType="uniform"
                             android:lineSpacingExtra="0sp"
                             android:text="@string/quote_change"
-                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@+id/price_tv"
                             app:layout_constraintLeft_toRightOf="@+id/price_tv"
                             app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="@+id/price_tv" />
 
                         <View
                             android:layout_width="0dp"
