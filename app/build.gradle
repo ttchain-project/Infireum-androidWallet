@@ -43,6 +43,12 @@ android {
                 keyPassword "$project.keyPassword"
             }
         }
+        debug {
+            keyAlias 'debug'
+            keyPassword 'tw.com.ttchain.wallet'
+            storeFile file('../key/ttchain.jks')
+            storePassword 'tw.com.ttchain.wallet'
+        }
     }
 
     flavorDimensions "api", "platform"
