@@ -862,11 +862,10 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
     <string name="restore_with_user_info_nick_name">Nickname</string>
     <string name="restore_with_user_info_nick_name_hint">This nickname refers to you in the chat system. Do not use indecent text</string>
     <string name="restore_with_user_info_nick_password">Password</string>
-    <string name="restore_with_user_info_nick_password_hint">It is recommended to use a combination of English case and numbers</string>
-    <string name="restore_with_user_info_nick_confirm_password">Confirm password</string>
-    <string name="restore_with_user_info_nick_confirm_password_hint">Please enter your password again</string>
-    <string name="restore_with_user_info_nick_hint_password">Password reminder message</string>
-    <string name="restore_with_user_info_nick_hint_password_hint">The content of the prompt should not be the same as the password to avoid being easily stolen</string>
+    <string name="restore_with_user_info_nick_confirm_password">Confirm Password</string>
+    <string name="restore_with_user_info_nick_confirm_password_hint">Re-enter password</string>
+    <string name="restore_with_user_info_nick_hint_password">Password Reminder</string>
+    <string name="restore_with_user_info_nick_hint_password_hint">Password reminder message</string>
     <string name="restore_with_user_info_nick_policy">I agree with the InfiniteChain Privacy Policy</string>
     <string name="account_info">Account information</string>
 

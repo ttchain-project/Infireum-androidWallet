@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/padding_16"
-                app:editTextHint="@string/restore_with_user_info_nick_password_hint"
+                app:editTextHint="@string/restore_with_user_info_nick_password"
                 app:editTextType="password"
                 app:titleText="@string/restore_with_user_info_nick_password" />
 

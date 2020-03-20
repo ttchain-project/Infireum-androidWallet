@@ -34,7 +34,7 @@
             android:layout_marginStart="-4dp"
             android:backgroundTint="@color/_B9C0CA"
             android:gravity="center_vertical"
-            android:hint="@string/restore_with_user_info_nick_password_hint"
+            android:hint="@string/restore_with_user_info_nick_password"
             android:inputType="textPassword"
             android:maxLines="1"
             android:paddingEnd="35dp"

@@ -888,11 +888,10 @@ TTN 是INFIREUM交易平台本身的权益证明，平台通用基础通证，TT
     <string name="restore_with_user_info_nick_name">昵称</string>
     <string name="restore_with_user_info_nick_name_hint">该昵称在聊天系统代表您的称呼，不要使用不雅文字</string>
     <string name="restore_with_user_info_nick_password">密码</string>
-    <string name="restore_with_user_info_nick_password_hint">建议使用英文字母大小写与数字组合</string>
     <string name="restore_with_user_info_nick_confirm_password">再次输入密码</string>
     <string name="restore_with_user_info_nick_confirm_password_hint">请再次输入密码</string>
-    <string name="restore_with_user_info_nick_hint_password">密码提示消息</string>
-    <string name="restore_with_user_info_nick_hint_password_hint">提示内容不要与密码一样，以免被轻易盗取</string>
+    <string name="restore_with_user_info_nick_hint_password">密码提示</string>
+    <string name="restore_with_user_info_nick_hint_password_hint">密码提示消息</string>
     <string name="restore_with_user_info_nick_policy">我同意《InfiniteChain隐私政策》</string>
     <string name="account_info">帐号资讯</string>
 
