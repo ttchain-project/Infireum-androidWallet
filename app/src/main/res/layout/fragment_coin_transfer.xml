@@ -32,22 +32,30 @@
 
                 <TextView
                     android:id="@+id/transfer_title_tv"
-                    style="@style/PrimaryBlackText.Mini"
+                    style="@style/PrimaryBlackText.SuperSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/transfer_transfer_amount"
-                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/transfer_available_tv"
                     style="@style/PrimaryBlackText.Mini"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/padding_4"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
                     android:textColor="#7F8890"
-                    app:layout_constraintLeft_toRightOf="@+id/transfer_title_tv"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:autoSizeMaxTextSize="@dimen/super_small_text"
+                    app:autoSizeMinTextSize="4sp"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="@+id/transfer_title_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/transfer_all_btn"
+                    app:layout_constraintStart_toEndOf="@+id/transfer_title_tv"
+                    app:layout_constraintTop_toTopOf="@+id/transfer_title_tv"
                     tools:text="(ETH餘額：100.12345678)" />
 
                 <TextView
@@ -87,7 +95,7 @@
 
                 <TextView
                     android:id="@+id/miner_fee_title_tv"
-                    style="@style/PrimaryBlackText.Mini"
+                    style="@style/PrimaryBlackText.SuperSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/miner_fee"
@@ -349,7 +357,7 @@
 
                 <TextView
                     android:id="@+id/receipt_address_title_tv"
-                    style="@style/PrimaryBlackText.Mini"
+                    style="@style/PrimaryBlackText.SuperSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/receipt_address"
@@ -396,7 +404,7 @@
 
                 <TextView
                     android:id="@+id/pay_address_title_tv"
-                    style="@style/PrimaryBlackText.Mini"
+                    style="@style/PrimaryBlackText.SuperSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/payment_address"
@@ -438,7 +446,7 @@
 
                 <TextView
                     android:id="@+id/note_title_tv"
-                    style="@style/PrimaryBlackText.Mini"
+                    style="@style/PrimaryBlackText.SuperSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/transfer_note"

@@ -417,7 +417,7 @@
 
     <string name="pwd_confirm">再次输入密码</string>
     <string name="click_to_display_backup_qrcode">点选显示备份行动条码</string>
-    <string name="backup_qrcode_tip">此行动条码为 INFIREUM 钱包为您贴心设计，供您日后可方便快速恢复您在 INFIREUM 上的所有钱包帐号。 \n\n请妥善备份您的帐号资讯，并且不要上传至云端硬碟或在任何公用网路上存取。这与您日后要维护资产安全、恢复帐号等动作至关重要。 </string>
+    <string name="backup_qrcode_tip">此行动条码为 INFIREUM 钱包为您贴心设计，供您日后可方便快速恢复您在 INFIREUM 上的所有钱包帐号。\n\n请妥善备份您的帐号资讯，并且不要上传至云端硬碟或在任何公用网路上存取。这与您日后要维护资产安全、恢复帐号等动作至关重要。 </string>
     <!--main-->
     <string name="tab_chat">聊天</string>
     <string name="tab_main_coin">数位资产</string>
@@ -476,7 +476,7 @@
     <string name="transfer_choose_withdraw_currency">请选择提出币种</string>
 
     <!--ttn transfer-->
-    <string name="ttn_transfer_receipt_address_hint">请输入IFR闪电支付的收款地址 或 扫描行动条码</string>
+    <string name="ttn_transfer_receipt_address_hint">请输入IFRC闪电支付的收款地址 或 扫描行动条码</string>
     <string name="lighten_transfer">闪电支付</string>
     <string name="lighten_wallet">闪电钱包</string>
     <string name="ttn_deposit">存入</string>
@@ -872,7 +872,7 @@ TTN 是INFIREUM交易平台本身的权益证明，平台通用基础通证，TT
     <!-- user wallet mnemonic fragment -->
     <string name="user_wallet_mnemonic_title">备份帐号</string>
     <string name="user_wallet_mnemonic_message_1">备份帐号－助记词</string>
-    <string name="user_wallet_mnemonic_message_2">这个12字的词组是一组单词，可让您恢复和使用钱包。\n\n警告：切勿以任何数字形式存储您的恢复种子词组。</string>
+    <string name="user_wallet_mnemonic_message_2">重要提示：这个12个字的词组对于恢复帐户至关重要。 请确保记下该种子短语，因为您将无法找回您的帐户或没有该帐户存储的数字资产。 Infireum对由于丢失您的种子短语而造成的资产损失不承担任何责任。\n\n警告：为防止黑客入侵，强烈建议用户不要以任何数字形式存储您的恢复种子短语。</string>
 
     <!-- enter password fragment -->
     <string name="enter_password_top_message">请输入帐号密码</string>

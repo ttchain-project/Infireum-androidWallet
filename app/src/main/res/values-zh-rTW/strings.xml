@@ -477,7 +477,7 @@
     <string name="transfer_choose_withdraw_currency">請選擇提出幣種</string>
 
     <!--ttn transfer-->
-    <string name="ttn_transfer_receipt_address_hint">請輸入IFR閃電支付的收款地址 或 掃描行動條碼</string>
+    <string name="ttn_transfer_receipt_address_hint">請輸入IFRC閃電支付的收款地址 或 掃描行動條碼</string>
     <string name="lighten_transfer">閃電支付</string>
     <string name="lighten_wallet">閃電錢包</string>
     <string name="ttn_deposit">存入</string>
@@ -876,7 +876,7 @@ TTN 是INFIREUM交易平台本身的權益證明，平台通用基礎通證，TT
     <!-- user wallet mnemonic fragment -->
     <string name="user_wallet_mnemonic_title">備份帳號</string>
     <string name="user_wallet_mnemonic_message_1">備份帳號－助記詞</string>
-    <string name="user_wallet_mnemonic_message_2">這個12字的詞組是一組單詞，可讓您恢復和使用錢包。\n\n警告：切勿以任何數字形式存儲您的恢復種子詞組。</string>
+    <string name="user_wallet_mnemonic_message_2">重要提示：這個12個字的詞組對於恢復帳戶至關重要。 請確保記下該種子短語，因為您將無法找回您的帳戶或沒有該帳戶存儲的數字資產。 Infireum對由於丟失您的種子短語而造成的資產損失不承擔任何責任。\n\n警告：為防止黑客入侵，強烈建議用戶不要以任何數字形式存儲您的恢復種子短語。</string>
 
 
     <!-- enter password fragment -->

@@ -417,7 +417,7 @@
 
     <string name="pwd_confirm">Confirm Password</string>
     <string name="click_to_display_backup_qrcode">Click to display backup qrcode</string>
-    <string name="backup_qrcode_tip">This mobile barcode is designed for you by the INFIREUM wallet, so that you can easily and quickly restore all your wallet accounts on INFIREUM in the future. \ n \ nBack up your account information properly and do not upload to Drive or access it on any public network. This is crucial for your future actions such as maintaining asset security and restoring your account.</string>
+    <string name="backup_qrcode_tip">This QR code grants access to all Infireum wallets, chat history, account identity, and will allow you to recover your account.\n\nIt is recommended to keep a physical copy of your QR code. It is always advised to have multiple copies of your recovery phrase and store it in multiple locations to prevent loss from calamities like floods, earthquake, fire, etc.</string>
     <!--main-->
     <string name="tab_chat">Chat</string>
     <string name="tab_main_coin">Digital Assets</string>
@@ -468,7 +468,7 @@
     <string name="transfer_miner_fee_custom">Custom</string>
     <string name="transfer_select_common_address">Commonly Used Addresses</string>
     <string name="transfer_note">Note(optional)</string>
-    <string name="transfer_note_input">Please enter a description within 20 character</string>
+    <string name="transfer_note_input">Please enter a description within 20 characters</string>
     <string name="transfer_modify">MODIFY</string>
     <string name="transfer_confirm">Transfer Confirm</string>
     <string name="transfer_address_input_hint">Please enter the %s address or scan the barcode</string>
@@ -476,7 +476,7 @@
     <string name="transfer_choose_withdraw_currency">Please select the proposed currency</string>
 
     <!--ttn transfer-->
-    <string name="ttn_transfer_receipt_address_hint">Please enter IFR address or scan the qrcode</string>
+    <string name="ttn_transfer_receipt_address_hint">Please enter IFRC address or scan the QR code</string>
     <string name="lighten_transfer">Lightning Transfer</string>
     <string name="lighten_wallet">Lightning Wallet</string>
     <string name="ttn_deposit">Deposit</string>
@@ -846,7 +846,7 @@ Suggested solution: use TTChain public chain transfer BTC, USDT-Omni.
     <!-- user wallet mnemonic fragment -->     
     <string name="user_wallet_mnemonic_title">Backup account</string>
     <string name="user_wallet_mnemonic_message_1">Recovery Seed Phrase</string>
-    <string name="user_wallet_mnemonic_message_2">This 12-word phrase is a set of words that allows you to recover and use your wallet.\n\nWARNING: Never store your recovery seed phrase in any digital form.</string>
+    <string name="user_wallet_mnemonic_message_2">Important: This 12-word phrase is vital for account recovery. Please make sure that you note down this seed phrase, as you will not be able to recover your account nor digital assets stored without it. Infireum takes no responsibility for lost assets due to the loss of your seed phrase.\n\nWarning: To prevent hacking, users are strongly advised against storing your recovery seed phrase in any digital form.</string>
 
     <!-- enter password fragment -->
     <string name="enter_password_top_message">Please enter your account password</string>

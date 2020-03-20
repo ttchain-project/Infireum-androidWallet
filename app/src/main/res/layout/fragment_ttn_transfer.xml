@@ -36,7 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/transfer_transfer_amount"
-                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -45,24 +45,27 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/padding_4"
+                    android:gravity="center_vertical"
                     android:maxLines="1"
                     android:textColor="#7F8890"
                     app:autoSizeMaxTextSize="@dimen/super_small_text"
-                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeMinTextSize="4sp"
                     app:autoSizeStepGranularity="1sp"
                     app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="@+id/transfer_title_tv"
                     app:layout_constraintEnd_toStartOf="@+id/transfer_all_btn"
                     app:layout_constraintStart_toEndOf="@+id/transfer_title_tv"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/transfer_title_tv"
                     tools:text="(ETH餘額：100.12345678)" />
 
-                <Button
+                <TextView
                     android:id="@+id/transfer_all_btn"
-                    style="@style/PrimaryButtonTtn30"
+                    style="@style/PrimaryButtonAppleGreen"
                     android:layout_width="wrap_content"
-                    android:background="@drawable/bg_apple_green_radius_30"
                     android:layout_height="20dp"
+                    android:gravity="center"
                     android:text="@string/transfer_all_amount"
+                    android:textSize="@dimen/sp_12"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -160,8 +163,8 @@
                     android:background="@drawable/bg_apple_green_radius_30"
                     android:gravity="center_vertical"
                     android:paddingStart="@dimen/padding_12"
-                    android:paddingEnd="@dimen/padding_12"
                     android:paddingTop="@dimen/padding_1"
+                    android:paddingEnd="@dimen/padding_12"
                     android:paddingBottom="@dimen/padding_1"
                     android:text="@string/transfer_select_common_address"
                     android:textColor="@color/white"
@@ -247,10 +250,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/padding_8"
-                    android:textSize="@dimen/sp_14"
                     android:background="@android:color/transparent"
                     android:hint="@string/transfer_note_input"
                     android:inputType="text"
+                    android:textSize="@dimen/sp_14"
                     app:layout_constraintTop_toBottomOf="@+id/note_title_tv" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

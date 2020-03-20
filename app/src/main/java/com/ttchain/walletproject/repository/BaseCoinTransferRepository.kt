@@ -111,7 +111,7 @@ class BaseCoinTransferRepository(
         val walletData = dbHelper.getWalletData(walletID)
 
         bean.viewCoinRemindAmount =
-            "( ${coinData.displayName}%s : ${NumberUtils.showNew(
+            "( ${coinData.displayName} %s : ${NumberUtils.showNew(
                 assetData.amount,
                 coinData.digit
             )} )"

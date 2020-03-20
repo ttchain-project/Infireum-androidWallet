@@ -65,7 +65,7 @@ class UserWalletQrCodeFragment : BaseFragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.download -> {
-                RxPermissions(activity!!)
+                RxPermissions(requireActivity())
                     .request(
                         Manifest.permission.WRITE_EXTERNAL_STORAGE,
                         Manifest.permission.READ_EXTERNAL_STORAGE
@@ -84,18 +84,18 @@ class UserWalletQrCodeFragment : BaseFragment() {
 
     private fun initData() {
         viewModel.apply {
-            performGetQrCodeBitmapLiveData.observe(requireActivity()) {
+            performGetQrCodeBitmapLiveData.observe(viewLifecycleOwner) {
                 setQrCodeBitmap(it)
             }
-            storeQrCodeLiveData.observe(requireActivity()) { file ->
+            storeQrCodeLiveData.observe(viewLifecycleOwner) { file ->
                 requireActivity().addImageToGallery(file.name, file.absolutePath)
                 showToast(getString(R.string.qr_code_backup_success) + file.absolutePath)
             }
-            storeQrCodeErrorLiveData.observe(requireActivity()) { throwable ->
+            storeQrCodeErrorLiveData.observe(viewLifecycleOwner) { throwable ->
                 onHideLoading()
                 showToast(getString(R.string.qr_code_backup_fail) + " " + throwable.toString())
             }
-            isLoading.observe(requireActivity()) {
+            isLoading.observe(viewLifecycleOwner) {
                 if (it) onShowLoading() else onHideLoading()
             }
         }
