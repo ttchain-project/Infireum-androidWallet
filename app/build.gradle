@@ -246,9 +246,9 @@ dependencies {
     //alternately - if using Java8, use the following instead of lifecycle-compiler
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
     //Room
-    implementation "androidx.room:room-runtime:$room_version"
-    implementation "androidx.room:room-rxjava2:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
+//    implementation "androidx.room:room-runtime:$room_version"
+//    implementation "androidx.room:room-rxjava2:$room_version"
+//    kapt "androidx.room:room-compiler:$room_version"
     //Koin
     implementation "org.koin:koin-androidx-scope:$koin_version"
     implementation "org.koin:koin-androidx-viewmodel:$koin_version"
