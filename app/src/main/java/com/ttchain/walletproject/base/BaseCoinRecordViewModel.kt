@@ -231,7 +231,7 @@ open class BaseCoinRecordViewModel(
         queryMap["page"] = queryMapBean.pageNow.toString()
         queryMap["offset"] = queryMapBean.offset.toString()
         queryMap["sort"] = "desc"
-        queryMap["apikey"] = "YourApiKeyToken"
+        queryMap["apikey"] = "TCJ1F7G87UX5FD34YPPEIZ4H8QEWP5HHV1"
         return queryMap
     }
 
@@ -246,7 +246,7 @@ open class BaseCoinRecordViewModel(
         queryMap["page"] = queryMapBean.pageNow.toString()
         queryMap["offset"] = queryMapBean.offset.toString()
         queryMap["sort"] = "desc"
-        queryMap["apikey"] = "YourApiKeyToken"
+        queryMap["apikey"] = "TCJ1F7G87UX5FD34YPPEIZ4H8QEWP5HHV1"
         return queryMap
     }
 
@@ -260,7 +260,7 @@ open class BaseCoinRecordViewModel(
         queryMap["page"] = pageNow.toString()
         queryMap["offset"] = offset.toString()
         queryMap["sort"] = "desc"
-        queryMap["apikey"] = "YourApiKeyToken"
+        queryMap["apikey"] = "TCJ1F7G87UX5FD34YPPEIZ4H8QEWP5HHV1"
         return queryMap
     }
 
@@ -280,7 +280,7 @@ open class BaseCoinRecordViewModel(
         queryMap["page"] = pageNowToken.toString()
         queryMap["offset"] = offset.toString()
         queryMap["sort"] = "desc"
-        queryMap["apikey"] = "YourApiKeyToken"
+        queryMap["apikey"] = "TCJ1F7G87UX5FD34YPPEIZ4H8QEWP5HHV1"
         return queryMap
     }
 
