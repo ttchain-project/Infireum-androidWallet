@@ -151,7 +151,7 @@
     <string name="trade_transaction_account">Transaction</string>
     <string name="fill_in_wallet_pwd_p">Please enter wallet password</string>
     <string name="fill_in_receipt_address_p">Please enter receipt address</string>
-    <string name="fill_in_amount_p">Please Enter amount</string>
+    <string name="fill_in_amount_p">Please enter amount</string>
     <string name="pwd">Password</string>
     <string name="g_copied">Address copied</string>
     <string name="fail_verify_pwd_and_reinput_p">Password verification failed, please enter again</string>

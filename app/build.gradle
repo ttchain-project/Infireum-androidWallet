@@ -6,7 +6,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.ttchain.walletproject"
+        applicationId "com.infinitepay.infireum"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -129,7 +129,6 @@ android {
 
     variantFilter { variant ->
         def needed = variant.name in [
-                'proWebBeta',            // for beta releases on Web
                 'proPlayBeta',           // for beta releases on Play
                 'proPlayPreBeta',        // for preBeta releases on Play
                 'proPlayDebug',
