@@ -541,7 +541,7 @@
 
     <!--transfer status dialog-->
     <string name="transfer_success_title">Transfer Success</string>
-    <string name="transfer_success_detail">Your transaction request has already done.You can check the transaction status from record.</string>
+    <string name="transfer_success_detail">Your request has been completed. You may view the transaction status from the transaction ID (TXID) report.</string>
     <string name="transfer_success_and_check_record">Check record</string>
     <string name="back">Back</string>
     <string name="deposit_success_title">Deposit Success</string>

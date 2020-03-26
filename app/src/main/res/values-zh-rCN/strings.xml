@@ -541,7 +541,7 @@
 
     <!--transfer status dialog-->
     <string name="transfer_success_title">转帐成功</string>
-    <string name="transfer_success_detail">您的转帐请求已经成功。您可以到转帐纪录查看此笔交易状态。</string>
+    <string name="transfer_success_detail">您的转帐请求已经成功。您可以从交易ID（TXID）报告中查看交易状态。</string>
     <string name="transfer_success_and_check_record">查看转帐纪录</string>
     <string name="back">返回</string>
     <string name="deposit_success_title">存入成功</string>

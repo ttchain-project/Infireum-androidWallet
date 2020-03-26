@@ -542,7 +542,7 @@
 
     <!--transfer status dialog-->
     <string name="transfer_success_title">轉帳成功</string>
-    <string name="transfer_success_detail">您的轉帳請求已經成功。您可以到轉帳紀錄查看此筆交易狀態。</string>
+    <string name="transfer_success_detail">您的轉帳請求已經成功。您可以從交易ID（TXID）報告中查看交易狀態。</string>
     <string name="transfer_success_and_check_record">查看轉帳紀錄</string>
     <string name="back">返回</string>
     <string name="deposit_success_title">存入成功</string>
