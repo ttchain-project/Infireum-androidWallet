@@ -3,6 +3,7 @@ package com.ttchain.walletproject.repository
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.ttchain.walletproject.App
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.cache.GlobalConstant
 import com.ttchain.walletproject.database.data.AssetData
@@ -453,7 +454,10 @@ class CoinRepository(
         return result
     }
 
-    private fun createCoinEntity(@CoinEntity.Companion.CoinType entityType: Int, bean: CoinBean): CoinEntity {
+    private fun createCoinEntity(
+        @CoinEntity.Companion.CoinType entityType: Int,
+        bean: CoinBean
+    ): CoinEntity {
         return CoinEntity(entityType, bean)
     }
 
@@ -479,7 +483,10 @@ class CoinRepository(
         return coinBeanList
     }
 
-    private fun getCoinBeanList(@CoinEntity.Companion.CoinType entityType: Int, identifier: String): MutableList<CoinBean> {
+    private fun getCoinBeanList(
+        @CoinEntity.Companion.CoinType entityType: Int,
+        identifier: String
+    ): MutableList<CoinBean> {
         initLockCoinMap()
 
         val id = userHelper.selectedWalletID
@@ -607,13 +614,12 @@ class CoinRepository(
                         bean.amount = NumberUtils.showNew(assetData.amount, bean.digit)
                     }
                     bean.amountValue = assetData.amount.toDouble()
-                    val rate = dbHelper.getCoinToFiatRateDataFromCoinIDToFiatId(
-                        selectionData.coinData._id,
-                        usdFiatData.fiatId
-                    )
+                    val rate =
+                        App.rateList.find {
+                            it.identifier == selectionData.coinData.coinId
+                        }?.rate?.toBigDecimal() ?: 0.toBigDecimal()
 
-                    val price =
-                        assetData.amount.multiply(rate.rate).multiply(fiatToFiatRateData.rate)
+                    val price = assetData.amount.multiply(rate)
 
                     if (userHelper.privacyMode) {
                         bean.exchange = "$fiatName$fiatSymbol****"
