@@ -62,7 +62,7 @@
     <string name="hint_fill_in_valid_bth_address">Enter a valid bitcoin address</string>
     <string name="hint_fill_in_valid_eth_address">Enter a valid eth address or ens domain(end in .eth)</string>
 
-    <string name="error_pwd_rule">Must contain at least 8 characters</string>
+    <string name="error_pwd_rule">Please make sure your password is at least 8 characters long. Do not use any symbols</string>
     <string name="error_pwd_not_equal">Two password entries do not match</string>
     <string name="fail_create">Creation failed</string>
     <string name="error_mnemonic_position">Incorrect mnemonic order</string>
