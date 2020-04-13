@@ -59,7 +59,7 @@ val viewModelModule = module {
     viewModel { UserWalletQrCodeParseResultViewModel(get(), get(), get()) }
     viewModel { CreateIdViewModel(get(), get(), get()) }
     viewModel { MnemonicsStartViewModel(get(), get(), get(), get()) }
-    viewModel { RestoreByMnemonicsViewModel() }
+    viewModel { RestoreByMnemonicsViewModel(get()) }
     viewModel { RestoreNoUserInfoViewModel(get(), get(), get()) }
     viewModel { RestoreWalletListViewModel(get()) }
     viewModel { AssetListViewModel(get(), get(), get(), get(), get(), get(), get()) }

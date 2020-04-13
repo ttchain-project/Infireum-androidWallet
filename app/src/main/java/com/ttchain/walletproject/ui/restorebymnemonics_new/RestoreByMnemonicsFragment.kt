@@ -74,9 +74,10 @@ class RestoreByMnemonicsFragment : BaseFragment() {
                             responseUserIdentity ?: ResponseUserIdentity()
                         )
                     )
-                } else {
-                    onShowMessageDialog(getString(R.string.mnemonics_error_blank))
                 }
+            }
+            mnemonicsIsWrong.observe(viewLifecycleOwner) {
+                onShowMessageDialog(it)
             }
 //            getUserInfoLiveData.observe(requireActivity()) { data ->
 //                activity.addFragment(
