@@ -238,7 +238,7 @@ class ScannerFragment : BaseFragment(), BarcodeCallback {
         val amount = ImTokenReceiptQrCode.getAmountFromQrCode(result)
 //        val parserCoinId = parserScanResultCoinId(result)
         RxBus.getInstance().post(RxBusTag.SCANNER_ADDRESS_TAG, scanAddress)
-        RxBus.getInstance().post(RxBusTag.SCANNER_AMOUNT_TAG, amount)
+//        RxBus.getInstance().post(RxBusTag.SCANNER_AMOUNT_TAG, amount)
         requireActivity().setResult(
             Activity.RESULT_OK,
             Intent().apply {

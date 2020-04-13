@@ -349,7 +349,7 @@ class CoinTransferViewModel(
                     .subtract(minerFeeModel.minerFeeEditBean.minerFeeCoinAmount)
             else -> baseCoinTransferModel.getBaseCoinTransferBean().transWalletCoinRemindAmount
         }
-        amountItemContent.value = NumberUtils.show(amount, showNumber)
+        amountItemContent.value = NumberUtils.show(amount, baseCoinTransferModel.getBaseCoinTransferBean().transCoinDigit)
     }
 
     var verifyUerPwdLiveData = MutableLiveData<Boolean>()

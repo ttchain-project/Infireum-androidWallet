@@ -99,11 +99,11 @@ class CoinTransferFragment : BaseFragment() {
                 setReceiptAddress(it)
             }, {
             })
-        RxBus.getInstance().register<String>(RxBusTag.SCANNER_AMOUNT_TAG)
-            .subscribe({
-                setAmountItemContent(it)
-            }, {
-            })
+//        RxBus.getInstance().register<String>(RxBusTag.SCANNER_AMOUNT_TAG)
+//            .subscribe({
+//                setAmountItemContent(it)
+//            }, {
+//            })
         RxBus.getInstance().register<Int>(RxBusTag.SELECT_WALLET_OK)
             .map { walletId ->
                 viewModel.setSelectedWalletId(walletId)
@@ -240,7 +240,7 @@ class CoinTransferFragment : BaseFragment() {
         RxBus.getInstance().unregister(RxBusTag.SELECT_WALLET_OK)
         RxBus.getInstance().unregister(RxBusTag.UPDATE_MINER_FEE_EDIT_BEAN_OK)
         RxBus.getInstance().unregister(RxBusTag.SCANNER_ADDRESS_TAG)
-        RxBus.getInstance().unregister(RxBusTag.SCANNER_AMOUNT_TAG)
+//        RxBus.getInstance().unregister(RxBusTag.SCANNER_AMOUNT_TAG)
         viewModel.baseCoinTransferModel.coinTransferBean = null
     }
 
