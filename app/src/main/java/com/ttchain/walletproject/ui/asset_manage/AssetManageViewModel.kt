@@ -12,7 +12,6 @@ class AssetManageViewModel(
     private val coinRepository: CoinRepository
 ) : BaseRecyclerViewViewModel<CoinEntity>() {
 
-
     fun requestData() {
         performGetAssetCoinBeanList()
     }

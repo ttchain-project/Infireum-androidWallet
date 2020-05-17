@@ -1,4 +1,4 @@
-package com.git4u.tt_wallet_android.activity.asset_new
+package com.ttchain.walletproject.ui.asset_manage
 
 import android.os.Bundle
 import android.view.Menu
@@ -12,8 +12,6 @@ import com.ttchain.walletproject.enums.ManageBeanIdType
 import com.ttchain.walletproject.model.CoinEntity
 import com.ttchain.walletproject.rx.RxBus
 import com.ttchain.walletproject.rx.RxBusTag
-import com.ttchain.walletproject.ui.asset_manage.AssetManageAdapter
-import com.ttchain.walletproject.ui.asset_manage.AssetManageViewModel
 import com.ttchain.walletproject.ui.search_coin.SearchCoinActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
