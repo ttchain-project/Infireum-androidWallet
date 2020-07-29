@@ -7,11 +7,13 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.observe
 import com.tbruyelle.rxpermissions2.RxPermissions
-import com.ttchain.walletproject.*
+import com.ttchain.walletproject.R
+import com.ttchain.walletproject.addDialog
+import com.ttchain.walletproject.addImageToGallery
 import com.ttchain.walletproject.base.BaseActivity
-import com.ttchain.walletproject.dialog.TwoInputDialog
 import com.ttchain.walletproject.dialog.WarningDialog
 import com.ttchain.walletproject.model.UserBean
+import com.ttchain.walletproject.setDelayClickListener
 import com.ttchain.walletproject.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_mnemonics_start.*
 import org.koin.androidx.viewmodel.ext.android.viewModel

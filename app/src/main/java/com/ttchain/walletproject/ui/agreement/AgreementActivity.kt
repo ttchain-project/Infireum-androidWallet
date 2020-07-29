@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.lifecycle.observe
 import com.ttchain.walletproject.R
 import com.ttchain.walletproject.base.BaseActivity
-import com.ttchain.walletproject.changeFragment
 import com.ttchain.walletproject.enums.AgreementEnum
 import com.ttchain.walletproject.html
 import com.ttchain.walletproject.setDelayClickListener

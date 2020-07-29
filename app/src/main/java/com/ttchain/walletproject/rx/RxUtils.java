@@ -1,7 +1,6 @@
 package com.ttchain.walletproject.rx;
 
 
-
 import com.ttchain.walletproject.net.ApiException;
 
 import java.lang.reflect.Field;
