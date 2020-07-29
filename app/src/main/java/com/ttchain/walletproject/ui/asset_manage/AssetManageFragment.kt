@@ -39,6 +39,8 @@ class AssetManageFragment : BaseRecyclerViewFragmentNew<CoinEntity>() {
         initData()
     }
 
+    override fun isEnableRefresh() = false
+
     override fun onDestroy() {
         super.onDestroy()
         RxBus.getInstance().post(RxBusTag.ASSET_FRAGMENT_FINISH, true)

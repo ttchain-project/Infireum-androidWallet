@@ -65,7 +65,7 @@ android {
         }
 
         pro {
-            buildConfigField "String", "GIT_WALLET_BALANCE_API_URL", "\"http://54.64.162.167:3206/\""
+            buildConfigField "String", "GIT_WALLET_BALANCE_API_URL", "\"http://bitcoinnode.ttchaintech.com:3206/\""
             buildConfigField "String", "GIT_HELPER_API_URL", "\"http://sit-api.ttchainwallet.com\""
 
             buildConfigField "String", "MAINNET_INFURA_IO_API_URL", "\"https://mainnet.infura.io/\""

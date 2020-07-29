@@ -35,12 +35,12 @@ import com.ttchain.walletproject.ui.restorebymnemonics_new.restoremnemonicswalle
 import com.ttchain.walletproject.ui.restorebymnemonics_new.restorenouserinfo.RestoreNoUserInfoViewModel
 import com.ttchain.walletproject.ui.search_coin.SearchCoinViewModel
 import com.ttchain.walletproject.ui.splash.SplashViewModel
-import com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultViewModel
 import com.ttchain.walletproject.ui.trend.TrendViewModel
 import com.ttchain.walletproject.ui.ttn.ttndetail.TtnDetailViewModel
 import com.ttchain.walletproject.ui.ttn.ttnreceipt.TtnReceiptAssetViewModel
 import com.ttchain.walletproject.ui.ttn.ttnrecord.TtnRecordViewModel
 import com.ttchain.walletproject.ui.ttn.ttntransfer.TtnTransferViewModel
+import com.ttchain.walletproject.ui.userwalletsqrcodeparseresult.UserWalletQrCodeParseResultViewModel
 import com.ttchain.walletproject.ui.wallet.WalletMainViewModel
 import com.ttchain.walletproject.ui.wallet.exportkey.ExportKeyViewModel
 import com.ttchain.walletproject.ui.wallet.wallet_list.WalletListViewModel
@@ -62,21 +62,18 @@ val viewModelModule = module {
     viewModel { RestoreByMnemonicsViewModel(get()) }
     viewModel { RestoreNoUserInfoViewModel(get(), get(), get()) }
     viewModel { RestoreWalletListViewModel(get()) }
-    viewModel { AssetListViewModel(get(), get(), get(), get(), get(), get(), get()) }
+    viewModel { AssetListViewModel(get(), get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordViewModel(get(), get(), get(), get(), get(), get(), get(), get(), get()) }
     viewModel { CoinRecordListViewModel(get(), get()) }
     viewModel { WalletSettingViewModel(get(), get(), get(), get()) }
     viewModel { ReceiptAssetViewModel(get(), get(), get()) }
     viewModel { BaseCoinTransferViewModel(get(), get(), get(), get(), get(), get()) }
     viewModel {
-        CoinTransferViewModel(
-            get(), get(), get(), get(), get(), get(), get(), get(), get()
-        )
+        CoinTransferViewModel(get(), get(), get(), get(), get(), get(), get(), get(), get())
     }
     viewModel { AssetManageViewModel(get()) }
-    viewModel { SearchCoinViewModel(get(), get(), get(), get(), get(), get()) }
-
-    viewModel { WalletMainViewModel(get(), get(), get()) }
+    viewModel { SearchCoinViewModel(get(), get(), get(), get(), get(), get(), get()) }
+    viewModel { WalletMainViewModel(get(), get(), get(), get()) }
     viewModel { WalletListViewModel(get(), get(), get(), get(), get(), get(), get(), get()) }
     viewModel { DiscoveryViewModel(get(), get(), get()) }
     viewModel { DappViewModel(get(), get()) }

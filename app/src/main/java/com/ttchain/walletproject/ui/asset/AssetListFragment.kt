@@ -56,8 +56,10 @@ class AssetListFragment : BaseRecyclerViewFragmentNew<CoinEntity>() {
 
     override fun initView() {
         requireActivity().title = ""
-        viewModel.getSelectedWalletDataRx()
-        viewModel.setTitle()
+        viewModel.apply {
+            getSelectedWalletDataRx()
+            setTitle()
+        }
         asset_manage.setDelayClickListener {
             AssetManageActivity.launch(requireActivity())
         }
@@ -143,7 +145,11 @@ class AssetListFragment : BaseRecyclerViewFragmentNew<CoinEntity>() {
                 if (it) {
 //                    viewModel.channel.send(RefreshUiDataBean(b = true, b1 = false, b2 = true))
                     viewModel.performRefreshUiDataSubject.onNext(
-                        RefreshUiDataBean(b = true, b1 = false, b2 = true)
+                        RefreshUiDataBean(
+                            loading = true,
+                            refresh = false,
+                            updateBalance = true
+                        )
                     )
                 }
             }, {
@@ -152,7 +158,11 @@ class AssetListFragment : BaseRecyclerViewFragmentNew<CoinEntity>() {
             .subscribe({
                 if (it) {
                     viewModel.performRefreshUiDataSubject.onNext(
-                        RefreshUiDataBean(b = false, b1 = false, b2 = false)
+                        RefreshUiDataBean(
+                            loading = false,
+                            refresh = false,
+                            updateBalance = false
+                        )
                     )
                 }
             }, {
@@ -161,7 +171,11 @@ class AssetListFragment : BaseRecyclerViewFragmentNew<CoinEntity>() {
             .subscribe({
                 if (it) {
                     viewModel.performRefreshUiDataSubject.onNext(
-                        RefreshUiDataBean(b = true, b1 = false, b2 = true)
+                        RefreshUiDataBean(
+                            loading = true,
+                            refresh = false,
+                            updateBalance = true
+                        )
                     )
                 }
             }, {
@@ -169,7 +183,11 @@ class AssetListFragment : BaseRecyclerViewFragmentNew<CoinEntity>() {
         viewModel.apply {
             addSubscribe()
             performRefreshUiDataSubject.onNext(
-                RefreshUiDataBean(b = true, b1 = false, b2 = true)
+                RefreshUiDataBean(
+                    loading = true,
+                    refresh = false,
+                    updateBalance = true
+                )
             )
         }
     }
@@ -179,7 +197,11 @@ class AssetListFragment : BaseRecyclerViewFragmentNew<CoinEntity>() {
         viewModel.apply {
             if (getSettingChanged()) {
                 performRefreshUiDataSubject.onNext(
-                    RefreshUiDataBean(b = false, b1 = false, b2 = false)
+                    RefreshUiDataBean(
+                        loading = false,
+                        refresh = false,
+                        updateBalance = false
+                    )
                 )
                 setSettingChangedPerformTaskFinish()
             }

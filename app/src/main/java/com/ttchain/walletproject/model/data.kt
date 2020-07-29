@@ -287,6 +287,13 @@ data class MainnetInfuraRequest(
     }
 }
 
+data class BalanceBody(
+    @SerializedName("to")
+    var to: String = "",
+    @SerializedName("data")
+    var data: String = ""
+)
+
 /**
  * BTC廣播 data class
  */

@@ -466,6 +466,35 @@ class BaseCoinTransferRepository(
     }
 
     companion object {
+
+        fun getInfuraEthBalanceModel(address: String): MainnetInfuraRequest {
+            return MainnetInfuraRequest().apply {
+                jsonrpc = "2.0"
+                method = "eth_getBalance"
+                id = 1
+                addParamsItem(address)
+                addParamsItem("latest")
+            }
+        }
+
+        fun getInfuraErc20BalanceModel(
+            address: String,
+            contract: String
+        ): MainnetInfuraRequest {
+            return MainnetInfuraRequest().apply {
+                jsonrpc = "2.0"
+                method = "eth_call"
+                id = 1
+                val reAddress = address.replace("0x", "")
+                val body = BalanceBody(
+                    to = contract,
+                    data = "0x70a08231000000000000000000000000$reAddress"
+                )
+                addParamsItem(body)
+                addParamsItem("latest")
+            }
+        }
+
         fun getMainnetInfuraEthBroadcastModel(
             signText: String,
             comment: String = ""

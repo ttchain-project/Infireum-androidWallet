@@ -1,6 +1,5 @@
 package com.ttchain.walletproject.ui.asset
 
-import android.text.TextUtils
 import androidx.lifecycle.MutableLiveData
 import com.ttchain.walletproject.App.Companion.rateList
 import com.ttchain.walletproject.R
@@ -19,7 +18,10 @@ import com.ttchain.walletproject.utils.RuleUtils
 import io.reactivex.Observable
 import io.reactivex.functions.BiFunction
 import io.reactivex.subjects.BehaviorSubject
+import org.json.JSONObject
+import timber.log.Timber
 import java.math.BigDecimal
+import java.math.BigInteger
 import java.util.*
 
 class AssetListViewModel(
@@ -29,7 +31,8 @@ class AssetListViewModel(
     private val coinRepository: CoinRepository,
     private val helperRepository: HelperRepositoryCo,
     private val balanceApiRepository: BalanceApiRepository,
-    private val balanceRepository: BalanceRepository
+    private val balanceRepository: BalanceRepository,
+    private val broadcastRepository: BroadcastRepository
 ) : BaseRecyclerViewViewModel<CoinEntity>() {
 
     init {
@@ -53,6 +56,7 @@ class AssetListViewModel(
                         bean.runUpdateRateAndBalanceDataTask
                     )
                 }, {
+                    Timber.e(" ${it.message}")
                 })
         )
     }
@@ -169,6 +173,7 @@ class AssetListViewModel(
                     currencySymbolLiveData.value = fiatName
                     enableAssetButtonLiveData.value =
                         !RuleUtils.isMainCoinType(bean.address, MainCoinType.BTC)
+                    @Suppress("UNCHECKED_CAST")
                     val list = result.response2 as List<CoinEntity>
 
                     onSubscribeComplete(list)
@@ -277,16 +282,28 @@ class AssetListViewModel(
             if (chainType == ChainType.ETH.value || chainType == ChainType.BTC.value) {
                 val assetDataList = ArrayList(walletData.coinAssetList ?: arrayListOf())
                 for (assetData in assetDataList) {
-                    performUpdateBalanceByCoinApiRequest(
+//                    performUpdateBalanceByCoinApiRequest(
+//                        walletData.address,
+//                        assetData.coinData.coinId
+//                    )
+
+                    val balanceCoinData = dbHelper.getCoinDataByCoinId(assetData.coinData.coinId)
+                    performGetErc20Balance(
                         walletData.address,
+                        balanceCoinData.contract,
                         assetData.coinData.coinId
                     )
                 }
             } else {
                 val mainCoinData = baseMainModel.getMainCoinDataByAddress(walletData.address)
                 if (mainCoinData._id > 0) {
-                    performUpdateBalanceByCoinApiRequest(
+//                    performUpdateBalanceByCoinApiRequest(
+//                        walletData.address,
+//                        mainCoinData.coinId
+//                    )
+                    performGetErc20Balance(
                         walletData.address,
+                        mainCoinData.contract,
                         mainCoinData.coinId
                     )
                 }
@@ -294,15 +311,20 @@ class AssetListViewModel(
         }
     }
 
-    private fun performUpdateBalanceByCoinApiRequest(address: String, coinId: String) {
-        if (TextUtils.isEmpty(address) || TextUtils.isEmpty(coinId)) {
-            return
-        }
+    private fun performGetErc20Balance(address: String, contract: String?, coinId: String) {
+        val model =
+            if (contract != null)
+                BaseCoinTransferRepository.getInfuraErc20BalanceModel(address, contract)
+            else BaseCoinTransferRepository.getInfuraEthBalanceModel(address)
+
         add(
-            balanceApiRepository.performGetBalance(
-                address,
-                balanceRepository.getBalanceQueryMap(coinId)
-            )
+            broadcastRepository.performMainnetInfuraRequest(model)
+                .map {
+                    val balance = BigInteger(it.data?.replace("0x", ""), 16)
+                    val jsonObj = JSONObject()
+                    jsonObj.put("balance", balance)
+                    return@map jsonObj.toString()
+                }
                 .flatMap {
                     return@flatMap Observable.fromIterable(
                         balanceRepository.getAssetDataList(
@@ -322,11 +344,39 @@ class AssetListViewModel(
         )
     }
 
+//    private fun performUpdateBalanceByCoinApiRequest(address: String, coinId: String) {
+//        if (TextUtils.isEmpty(address) || TextUtils.isEmpty(coinId)) {
+//            return
+//        }
+//        add(
+//            balanceApiRepository.performGetBalance(
+//                address,
+//                balanceRepository.getBalanceQueryMap(coinId)
+//            )
+//                .flatMap {
+//                    return@flatMap Observable.fromIterable(
+//                        balanceRepository.getAssetDataList(
+//                            it, address, coinId
+//                        )
+//                    )
+//                }
+//                .map {
+//                    return@map balanceRepository.updateAssetData(it)
+//                }
+//                .toMain()
+//                .subscribe({
+//                    updateCoinBalanceSubject.onNext(true)
+//                }, {
+//                    updateCoinBalanceSubject.onNext(true)
+//                })
+//        )
+//    }
+
     public override fun refreshRequest() {
         super.refreshRequest()
         setNextPage(-1)
         performRefreshUiDataSubject.onNext(
-            RefreshUiDataBean(false, b1 = true, b2 = true)
+            RefreshUiDataBean(false, refresh = true, updateBalance = true)
         )
     }
 }

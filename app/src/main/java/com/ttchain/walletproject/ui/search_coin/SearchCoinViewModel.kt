@@ -1,16 +1,18 @@
 package com.ttchain.walletproject.ui.search_coin
 
 import android.content.Context
-import android.text.TextUtils
 import androidx.core.util.Pair
 import com.ttchain.walletproject.base.BaseRecyclerViewViewModel
 import com.ttchain.walletproject.cache.GlobalConstant
+import com.ttchain.walletproject.enums.CoinEnum
 import com.ttchain.walletproject.model.CoinEntity
 import com.ttchain.walletproject.repository.*
 import com.ttchain.walletproject.toMain
 import com.ttchain.walletproject.utils.RuleUtils
 import com.ttchain.walletproject.utils.Utils
 import io.reactivex.Observable
+import org.json.JSONObject
+import java.math.BigInteger
 import java.util.concurrent.TimeUnit
 
 class SearchCoinViewModel(
@@ -19,7 +21,8 @@ class SearchCoinViewModel(
     private val coinRepository: CoinRepository,
     private val balanceRepository: BalanceRepository,
     private val helperRepository: HelperRepository,
-    private val balanceApiRepository: BalanceApiRepository
+    private val balanceApiRepository: BalanceApiRepository,
+    private val broadcastRepository: BroadcastRepository
 ) : BaseRecyclerViewViewModel<CoinEntity>() {
 
     private var queryWord = ""
@@ -124,14 +127,64 @@ class SearchCoinViewModel(
     private fun performUpdateCoinAssetRequest(coinId: String) {
         val walletData = baseMainModel.selectedWalletData
         val coinData = baseMainModel.getCoinDataByCoinId(coinId)
+//        if (walletData._id > 0 && coinData._id > 0) {
+//            performUpdateBalanceByCoinApiRequest(walletData.address, coinId)
+//        }
+
         if (walletData._id > 0 && coinData._id > 0) {
-            performUpdateBalanceByCoinApiRequest(walletData.address, coinId)
+            when (walletData.mainCoinId) {
+                CoinEnum.BTC.coinId -> {
+                    performUpdateBalanceByCoinApiRequest(
+                        walletData.address,
+                        coinId
+                    )
+                }
+                else -> {
+                    performGetErc20Balance(
+                        walletData.address,
+                        null,
+                        walletData.mainCoinId
+                    )
+                }
+            }
         }
     }
 
+    private fun performGetErc20Balance(address: String, contract: String?, coinId: String) {
+        val model =
+            if (contract != null)
+                BaseCoinTransferRepository.getInfuraErc20BalanceModel(address, contract)
+            else BaseCoinTransferRepository.getInfuraEthBalanceModel(address)
+
+        add(
+            broadcastRepository.performMainnetInfuraRequest(model)
+                .map {
+                    val balance = BigInteger(it.data?.replace("0x", ""), 16)
+                    val jsonObj = JSONObject()
+                    jsonObj.put("balance", balance)
+                    return@map jsonObj.toString()
+                }
+                .flatMap {
+                    return@flatMap Observable.fromIterable(
+                        balanceRepository.getAssetDataList(
+                            it, address, coinId
+                        )
+                    )
+                }
+                .map {
+                    return@map balanceRepository.updateAssetData(it)
+                }
+                .toMain()
+                .subscribe({
+                    updateCoinBalanceSubject.onNext(true)
+                }, {
+                    updateCoinBalanceSubject.onNext(true)
+                })
+        )
+    }
 
     private fun performUpdateBalanceByCoinApiRequest(address: String, coinId: String) {
-        if (TextUtils.isEmpty(address) || TextUtils.isEmpty(coinId)) {
+        if (address.isEmpty() || coinId.isEmpty()) {
             return
         }
         add(

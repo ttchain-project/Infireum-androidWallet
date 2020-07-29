@@ -29,6 +29,7 @@ class SearchCoinFragment : BaseRecyclerViewFragmentNew<CoinEntity>() {
     override val mBaseSwipeRefreshLayoutId = R.id.swipe_layout
     override fun setAdapter() = mAdapter
     override val layoutId = R.layout.fragment_search_coin
+    override fun isEnableRefresh() = false
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
