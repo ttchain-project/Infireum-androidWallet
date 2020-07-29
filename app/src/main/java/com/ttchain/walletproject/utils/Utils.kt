@@ -42,7 +42,7 @@ object Utils {
         val mConnectivityManager =
             context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            mConnectivityManager.getNetworkCapabilities(mConnectivityManager.activeNetwork).run {
+            mConnectivityManager.getNetworkCapabilities(mConnectivityManager.activeNetwork)?.run {
                 return when {
                     hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
                     hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true

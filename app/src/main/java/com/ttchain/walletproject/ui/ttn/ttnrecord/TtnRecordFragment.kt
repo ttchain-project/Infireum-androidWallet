@@ -14,7 +14,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class TtnRecordFragment : BaseFragment() {
 
     companion object {
-        fun newInstance(id: String) = TtnRecordFragment().apply {
+        fun newInstance(id: String?) = TtnRecordFragment().apply {
             arguments = bundleOf(TtnRecordActivity._ID to id)
         }
     }

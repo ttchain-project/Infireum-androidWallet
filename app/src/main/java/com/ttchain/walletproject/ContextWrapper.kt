@@ -9,28 +9,23 @@ import java.util.Locale
 class ContextWrapper(base: Context) : android.content.ContextWrapper(base) {
     companion object {
 
-        fun wrap(context: Context?, newLocale: Locale): Context? {
+        fun wrap(context: Context, newLocale: Locale): Context {
+            var myContext = context
 
-            val res = context?.resources
-            val configuration = res?.configuration
-            Locale.setDefault(newLocale)
+            val res = myContext.resources
+            val configuration = res.configuration
 
-            return when {
-                Build.VERSION.SDK_INT >= Build.VERSION_CODES.N -> {
-                    configuration?.let {
-                        it.setLocale(newLocale)
-                        it.setLayoutDirection(newLocale)
-                        context.createConfigurationContext(configuration)
-                    } ?: run {
-                        context
-                    }
-                }
-                else -> {
-                    configuration?.setLocale(newLocale)
-                    res?.updateConfiguration(configuration, res.displayMetrics)
-                    context
-                }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                val localeList = LocaleList(newLocale)
+                LocaleList.setDefault(localeList)
+                configuration.setLocales(localeList)
+                myContext = myContext.createConfigurationContext(configuration)
+            } else {
+                configuration.locale = newLocale
+                res.updateConfiguration(configuration, res.displayMetrics)
             }
+
+            return myContext
         }
     }
 }

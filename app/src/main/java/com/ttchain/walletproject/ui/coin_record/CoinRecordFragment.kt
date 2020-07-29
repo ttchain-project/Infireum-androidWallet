@@ -29,7 +29,7 @@ class CoinRecordFragment : BaseFragment() {
             }
         }
 
-        fun newInstance(coinId: String, walletId: Int): CoinRecordFragment {
+        fun newInstance(coinId: String?, walletId: Int): CoinRecordFragment {
             return CoinRecordFragment().apply {
                 arguments = bundleOf(
                     CoinRecordActivity._ID to coinId,

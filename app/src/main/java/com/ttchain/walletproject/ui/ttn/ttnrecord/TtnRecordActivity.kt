@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.view_toolbar.*
 
 class TtnRecordActivity : BaseActivity() {
 
-    private val bundleValue: String by lazy {
+    private val bundleValue: String? by lazy {
         intent.getStringExtra(_ID)
     }
 

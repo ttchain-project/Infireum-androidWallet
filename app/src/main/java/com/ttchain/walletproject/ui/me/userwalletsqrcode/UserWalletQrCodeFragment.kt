@@ -23,13 +23,13 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class UserWalletQrCodeFragment : BaseFragment() {
     companion object {
 
-        fun newInstance(bean: UserWalletQrCodeInputBean) = UserWalletQrCodeFragment().apply {
+        fun newInstance(bean: UserWalletQrCodeInputBean?) = UserWalletQrCodeFragment().apply {
             arguments = bundleOf(UserWalletQrCodeActivity._ID to bean)
         }
     }
 
     private val bundleValue: UserWalletQrCodeInputBean? by lazy {
-        arguments?.getParcelable(UserWalletQrCodeActivity._ID) as UserWalletQrCodeInputBean
+        arguments?.getParcelable<UserWalletQrCodeInputBean>(UserWalletQrCodeActivity._ID)
     }
 
     private val viewModel by viewModel<UserWalletQrCodeViewModel>()

@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_wallet_password_hint.*
 class WalletPasswordHintFragment : BaseFragment() {
 
     companion object {
-        fun newInstance(passwordHint: String) = WalletPasswordHintFragment().apply {
+        fun newInstance(passwordHint: String?) = WalletPasswordHintFragment().apply {
             arguments = bundleOf(WalletPasswordHintActivity.BUNDLE_PASSWORD_HINT to passwordHint)
         }
     }

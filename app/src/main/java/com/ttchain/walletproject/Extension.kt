@@ -133,7 +133,7 @@ fun Context.showToast(message: String) {
 
 fun String.performCopyString(context: Context) {
     val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-    clipboard.primaryClip = ClipData.newPlainText(null, this)
+    clipboard.setPrimaryClip(ClipData.newPlainText(null, this))
     context.showToast(context.getString(R.string.g_copied))
 }
 

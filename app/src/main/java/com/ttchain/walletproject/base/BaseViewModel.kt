@@ -3,7 +3,6 @@ package com.ttchain.walletproject.base
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.ttchain.walletproject.App
 import com.ttchain.walletproject.App.Companion.app
 import com.ttchain.walletproject.App.Companion.rateList
 import com.ttchain.walletproject.R
@@ -19,13 +18,14 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.Subject
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import timber.log.Timber
 import java.math.BigDecimal
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
-import kotlin.coroutines.suspendCoroutine
 
 abstract class BaseViewModel : AndroidViewModel(app) {
     val RATE_DATA_CACHE_TIME_IN_SEC = 60 * 5

@@ -278,7 +278,7 @@ class WebViewFragment : BaseFragment() {
                     return@OnMenuItemClickListener true
                 }
                 R.id.copy -> {
-                    web_view.url.performCopyString(requireContext())
+                    web_view.url?.performCopyString(requireContext())
                     return@OnMenuItemClickListener true
                 }
                 R.id.share -> {
