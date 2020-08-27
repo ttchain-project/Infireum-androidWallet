@@ -48,6 +48,7 @@ public class GlobalConstant {
     public static final String DEFAULT_WALLET_NAME_CIC = "CIC Wallet";
     public static final String DEFAULT_WALLET_NAME_GUC = "GUC Wallet";
     public static final String DEFAULT_WALLET_NAME_TTN = "IFRC Wallet";
+    public static final String DEFAULT_WALLET_NAME_IFR = "IFR Wallet";
 
     public static final String DEFAULT_USD_FIAT_NAME = "USD";
 

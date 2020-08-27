@@ -74,7 +74,7 @@ val viewModelModule = module {
     viewModel { AssetManageViewModel(get()) }
     viewModel { SearchCoinViewModel(get(), get(), get(), get(), get(), get(), get()) }
     viewModel { WalletMainViewModel(get(), get(), get(), get()) }
-    viewModel { WalletListViewModel(get(), get(), get(), get(), get(), get(), get(), get()) }
+    viewModel { WalletListViewModel(get(), get(), get(), get(), get(), get(), get(), get(), get()) }
     viewModel { DiscoveryViewModel(get(), get(), get()) }
     viewModel { DappViewModel(get(), get()) }
     viewModel { TrendViewModel(get(), get()) }

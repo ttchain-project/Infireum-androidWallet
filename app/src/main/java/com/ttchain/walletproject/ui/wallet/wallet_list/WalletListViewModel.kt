@@ -21,7 +21,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.math.BigDecimal
-import java.util.ArrayList
+import java.math.BigInteger
+import java.util.*
 
 class WalletListViewModel(
     private val context: Context,
@@ -30,6 +31,7 @@ class WalletListViewModel(
     private val coinRepository: CoinRepository,
     private val helperRepository: HelperRepositoryCo,
     private val verifyRepository: VerifyRepository,
+    private val broadcastRepository: BroadcastRepository,
     private val ttnRepository: TtnRepository,
     private val ttnServerApiRepository: TtnServerApiRepository
 ) : BaseViewModel() {
@@ -94,6 +96,9 @@ class WalletListViewModel(
     var btc = ExpandableListBean()
     var eth = ExpandableListBean()
     var ttn = ExpandableListBean()
+    var ifr = ExpandableListBean()
+
+    private var ethAddress = ""
 
     private fun getMainData() {
         //BTC
@@ -146,6 +151,8 @@ class WalletListViewModel(
                     )
                 }
                 CoinEnum.ETH.coinId -> {
+                    if (walletData.isFromSystem)
+                        ethAddress = walletData.address
                     val amount =
                         dbHelper.getAssetDataByWalletIDAndCoinID(walletData._id, ethCoinID).amount
                     ethList.add(
@@ -168,6 +175,7 @@ class WalletListViewModel(
         btc.childData = btcList.asReversed()
         eth.childData = ethList
         getBalance()
+        performGetErc20Balance(ethAddress, CoinEnum.IFR.coinId, CoinEnum.IFR.coinId)
     }
 
     private fun getStableData() {
@@ -223,7 +231,7 @@ class WalletListViewModel(
 
     private fun getTotalAssetAmount() {
         if (category == CoinRepository.COIN_MAIN_CHAIN_IDENTIFIER) {
-            total=  BigDecimal("0")
+            total = BigDecimal("0")
             //BTC
             var btcAmount = BigDecimal("0")
             val btcCoinID = getCoinIDByCoinId(CoinEnum.BTC.coinId)
@@ -256,6 +264,7 @@ class WalletListViewModel(
     val launchCoinRecordLiveData = MutableLiveData<String>()
     val launchTtnCoinRecordLiveData = MutableLiveData<String>()
     val launchAssetListActivityLiveData = MutableLiveData<Boolean>()
+    val launchIfcCoinRecordLiveData = MutableLiveData<String>()
 
     fun launchAssetListActivity(expandableData: ExpandableListBean, childPosition: Int) {
         val walletID = expandableData.childData[childPosition].walletID
@@ -277,6 +286,10 @@ class WalletListViewModel(
             }
             CoinEnum.TTN.coinName -> {
                 launchTtnCoinRecordLiveData.value = CoinEnum.TTN.coinId
+                return
+            }
+            CoinEnum.IFR.coinName -> {
+                launchIfcCoinRecordLiveData.value = CoinEnum.IFR.coinId
                 return
             }
         }
@@ -400,10 +413,63 @@ class WalletListViewModel(
                     }
 
                     ttn.childData = ttnList
-                    val groupList = listOf(btc, eth, ttn)
-                    mainDataLiveData.value = groupList
+//                    val groupList = listOf(btc, eth, ttn)
+//                    mainDataLiveData.value = groupList
                 }, {
                 })
+        )
+    }
+
+    private fun performGetErc20Balance(address: String, contract: String?, coinId: String) {
+        val model =
+            if (contract != null)
+                BaseCoinTransferRepository.getInfuraErc20BalanceModel(address, contract)
+            else BaseCoinTransferRepository.getInfuraEthBalanceModel(address)
+
+        add(
+            broadcastRepository.performMainnetInfuraRequest(model)
+                .map {
+                    val balance = BigInteger(it.data?.replace("0x", ""), 16)
+                    balance.toString()
+                }
+                .subscribe({ balance ->
+                    val coinData = dbHelper.getCoinDataByCoinId(coinId)
+//                    val picAmount = BigDecimal(balance.handleAmount(CoinEnum.IFR.coinId))
+                    val picAmount = BigDecimal(balance).multiply(BigDecimal("1E-" + coinData.digit))
+                    val picCoinID = getCoinIDByCoinId(CoinEnum.IFR.coinId)
+                    val picIcon = getIconPathByCoinId(picCoinID)
+                    total = total.add(getFiatRate(CoinEnum.IFR.coinId, picAmount))
+                    totalAssetAmountLiveData.value = NumberUtils.showFiat(total)
+                    ifr = ExpandableListBean(
+                        -1,
+                        CoinEnum.IFR.coinName,
+                        NumberUtils.show(picAmount),
+                        getFiatRateText(CoinEnum.IFR.coinId, picAmount, fiatSymbol),
+                        picIcon
+                    )
+
+                    val list = ArrayList<ExpandableListBean>()
+                    list.clear()
+                    for (walletData in getWalletDataList()) {
+                        if (walletData.mainCoinId == CoinEnum.ETH.coinId) {
+                            if (walletData.isFromSystem) {
+                                list.add(
+                                    ExpandableListBean(
+                                        walletData._id,
+                                        walletData.name,
+                                        NumberUtils.show(picAmount),
+                                        getFiatRateText(CoinEnum.IFR.coinId, picAmount, fiatSymbol),
+                                        ""
+                                    )
+                                )
+                            }
+                        }
+                    }
+
+                    ifr.childData = list
+                    val groupList = listOf(btc, eth, ttn, ifr)
+                    mainDataLiveData.value = groupList
+                }, { })
         )
     }
 }

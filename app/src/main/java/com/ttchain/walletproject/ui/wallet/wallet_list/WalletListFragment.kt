@@ -143,6 +143,9 @@ class WalletListFragment : BaseFragment() {
             launchTtnCoinRecordLiveData.observe(viewLifecycleOwner) {
                 TtnDetailActivity.launch(requireActivity(), it)
             }
+            launchIfcCoinRecordLiveData.observe(viewLifecycleOwner) {
+                CoinRecordActivity.launch(requireActivity(), it)
+            }
         }
     }
 }
